@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D572729F29ACA79100A9C72E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729A29ACA79100A9C72E /* BaseViewController.swift */; };
+		D57272A029ACA79100A9C72E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729B29ACA79100A9C72E /* ViewModel.swift */; };
+		D57272A129ACA79100A9C72E /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729C29ACA79100A9C72E /* Interactor.swift */; };
+		D57272A229ACA79100A9C72E /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729D29ACA79100A9C72E /* Presenter.swift */; };
+		D57272A329ACA79100A9C72E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729E29ACA79100A9C72E /* LoaderView.swift */; };
+		D57272A529ACB41100A9C72E /* Adopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272A429ACB41100A9C72E /* Adopter.swift */; };
+		D57272AB29ACB9F400A9C72E /* WeightHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272A729ACB9F400A9C72E /* WeightHistoryPresenter.swift */; };
+		D57272AC29ACB9F400A9C72E /* WeightHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272A829ACB9F400A9C72E /* WeightHistoryViewController.swift */; };
+		D57272AD29ACB9F400A9C72E /* WeightHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272A929ACB9F400A9C72E /* WeightHistoryInteractor.swift */; };
+		D57272AE29ACB9F400A9C72E /* WeightHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272AA29ACB9F400A9C72E /* WeightHistoryViewModel.swift */; };
+		D57272B029ACBA2700A9C72E /* WeightHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57272AF29ACBA2700A9C72E /* WeightHistory.storyboard */; };
+		D57272B629ACBF6C00A9C72E /* MedicalHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272B229ACBF6C00A9C72E /* MedicalHistoryPresenter.swift */; };
+		D57272B729ACBF6C00A9C72E /* MedicalHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272B329ACBF6C00A9C72E /* MedicalHistoryViewController.swift */; };
+		D57272B829ACBF6C00A9C72E /* MedicalHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272B429ACBF6C00A9C72E /* MedicalHistoryInteractor.swift */; };
+		D57272B929ACBF6C00A9C72E /* MedicalHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272B529ACBF6C00A9C72E /* MedicalHistoryViewModel.swift */; };
+		D57272BB29ACBF7E00A9C72E /* MedicalHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57272BA29ACBF7E00A9C72E /* MedicalHistory.storyboard */; };
+		D57272BF29ACE6F600A9C72E /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272BE29ACE6F600A9C72E /* AddButton.swift */; };
+		D57272C529ACEAB900A9C72E /* LitterHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272C129ACEAB900A9C72E /* LitterHistoryPresenter.swift */; };
+		D57272C629ACEAB900A9C72E /* LitterHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272C229ACEAB900A9C72E /* LitterHistoryViewController.swift */; };
+		D57272C729ACEAB900A9C72E /* LitterHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272C329ACEAB900A9C72E /* LitterHistoryInteractor.swift */; };
+		D57272C829ACEAB900A9C72E /* LitterHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272C429ACEAB900A9C72E /* LitterHistoryViewModel.swift */; };
+		D57272CA29ACEAD700A9C72E /* LitterHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57272C929ACEAD700A9C72E /* LitterHistory.storyboard */; };
+		D5F0C6F729A90BEA002A0F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C6F629A90BEA002A0F65 /* AppDelegate.swift */; };
+		D5F0C6F929A90BEA002A0F65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C6F829A90BEA002A0F65 /* SceneDelegate.swift */; };
+		D5F0C6FB29A90BEA002A0F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C6FA29A90BEA002A0F65 /* ViewController.swift */; };
+		D5F0C6FE29A90BEA002A0F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C6FC29A90BEA002A0F65 /* Main.storyboard */; };
+		D5F0C70029A90BEF002A0F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C6FF29A90BEF002A0F65 /* Assets.xcassets */; };
+		D5F0C70329A90BEF002A0F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C70129A90BEF002A0F65 /* LaunchScreen.storyboard */; };
+		D5F0C71229A90D85002A0F65 /* KittenCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C70E29A90D85002A0F65 /* KittenCardPresenter.swift */; };
+		D5F0C71329A90D85002A0F65 /* KittenCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C70F29A90D85002A0F65 /* KittenCardViewController.swift */; };
+		D5F0C71429A90D85002A0F65 /* KittenCardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C71029A90D85002A0F65 /* KittenCardInteractor.swift */; };
+		D5F0C71529A90D85002A0F65 /* KittenCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C71129A90D85002A0F65 /* KittenCardViewModel.swift */; };
+		D5F0C71829A90DD7002A0F65 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C71729A90DD7002A0F65 /* Storyboard.storyboard */; };
+		D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C71929A90E48002A0F65 /* KittenCard.storyboard */; };
+		D5F0C71E29A91B86002A0F65 /* Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C71D29A91B86002A0F65 /* Kitten.swift */; };
+		D5F0C72429A91D2D002A0F65 /* LitterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C72029A91D2D002A0F65 /* LitterPresenter.swift */; };
+		D5F0C72529A91D2D002A0F65 /* LitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C72129A91D2D002A0F65 /* LitterViewController.swift */; };
+		D5F0C72629A91D2D002A0F65 /* LitterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C72229A91D2D002A0F65 /* LitterInteractor.swift */; };
+		D5F0C72729A91D2D002A0F65 /* LitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C72329A91D2D002A0F65 /* LitterViewModel.swift */; };
+		D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C72829A91D3C002A0F65 /* Litter.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D572729A29ACA79100A9C72E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D572729B29ACA79100A9C72E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D572729C29ACA79100A9C72E /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		D572729D29ACA79100A9C72E /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		D572729E29ACA79100A9C72E /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		D57272A429ACB41100A9C72E /* Adopter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adopter.swift; sourceTree = "<group>"; };
+		D57272A729ACB9F400A9C72E /* WeightHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightHistoryPresenter.swift; sourceTree = "<group>"; };
+		D57272A829ACB9F400A9C72E /* WeightHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightHistoryViewController.swift; sourceTree = "<group>"; };
+		D57272A929ACB9F400A9C72E /* WeightHistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightHistoryInteractor.swift; sourceTree = "<group>"; };
+		D57272AA29ACB9F400A9C72E /* WeightHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightHistoryViewModel.swift; sourceTree = "<group>"; };
+		D57272AF29ACBA2700A9C72E /* WeightHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeightHistory.storyboard; sourceTree = "<group>"; };
+		D57272B229ACBF6C00A9C72E /* MedicalHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalHistoryPresenter.swift; sourceTree = "<group>"; };
+		D57272B329ACBF6C00A9C72E /* MedicalHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalHistoryViewController.swift; sourceTree = "<group>"; };
+		D57272B429ACBF6C00A9C72E /* MedicalHistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalHistoryInteractor.swift; sourceTree = "<group>"; };
+		D57272B529ACBF6C00A9C72E /* MedicalHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalHistoryViewModel.swift; sourceTree = "<group>"; };
+		D57272BA29ACBF7E00A9C72E /* MedicalHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MedicalHistory.storyboard; sourceTree = "<group>"; };
+		D57272BE29ACE6F600A9C72E /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		D57272C129ACEAB900A9C72E /* LitterHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterHistoryPresenter.swift; sourceTree = "<group>"; };
+		D57272C229ACEAB900A9C72E /* LitterHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterHistoryViewController.swift; sourceTree = "<group>"; };
+		D57272C329ACEAB900A9C72E /* LitterHistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterHistoryInteractor.swift; sourceTree = "<group>"; };
+		D57272C429ACEAB900A9C72E /* LitterHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterHistoryViewModel.swift; sourceTree = "<group>"; };
+		D57272C929ACEAD700A9C72E /* LitterHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LitterHistory.storyboard; sourceTree = "<group>"; };
+		D5F0C6F329A90BEA002A0F65 /* FosterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FosterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F0C6F629A90BEA002A0F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5F0C6F829A90BEA002A0F65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D5F0C6FA29A90BEA002A0F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5F0C6FD29A90BEA002A0F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D5F0C6FF29A90BEF002A0F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5F0C70229A90BEF002A0F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D5F0C70429A90BEF002A0F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5F0C70E29A90D85002A0F65 /* KittenCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardPresenter.swift; sourceTree = "<group>"; };
+		D5F0C70F29A90D85002A0F65 /* KittenCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardViewController.swift; sourceTree = "<group>"; };
+		D5F0C71029A90D85002A0F65 /* KittenCardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardInteractor.swift; sourceTree = "<group>"; };
+		D5F0C71129A90D85002A0F65 /* KittenCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardViewModel.swift; sourceTree = "<group>"; };
+		D5F0C71729A90DD7002A0F65 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		D5F0C71929A90E48002A0F65 /* KittenCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KittenCard.storyboard; sourceTree = "<group>"; };
+		D5F0C71D29A91B86002A0F65 /* Kitten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitten.swift; sourceTree = "<group>"; };
+		D5F0C72029A91D2D002A0F65 /* LitterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterPresenter.swift; sourceTree = "<group>"; };
+		D5F0C72129A91D2D002A0F65 /* LitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterViewController.swift; sourceTree = "<group>"; };
+		D5F0C72229A91D2D002A0F65 /* LitterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterInteractor.swift; sourceTree = "<group>"; };
+		D5F0C72329A91D2D002A0F65 /* LitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterViewModel.swift; sourceTree = "<group>"; };
+		D5F0C72829A91D3C002A0F65 /* Litter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Litter.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5F0C6F029A90BEA002A0F65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D572729929ACA77500A9C72E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D572729A29ACA79100A9C72E /* BaseViewController.swift */,
+				D572729B29ACA79100A9C72E /* ViewModel.swift */,
+				D572729C29ACA79100A9C72E /* Interactor.swift */,
+				D572729D29ACA79100A9C72E /* Presenter.swift */,
+				D572729E29ACA79100A9C72E /* LoaderView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D57272A629ACB97600A9C72E /* weighingHistory */ = {
+			isa = PBXGroup;
+			children = (
+				D57272A829ACB9F400A9C72E /* WeightHistoryViewController.swift */,
+				D57272A929ACB9F400A9C72E /* WeightHistoryInteractor.swift */,
+				D57272A729ACB9F400A9C72E /* WeightHistoryPresenter.swift */,
+				D57272AA29ACB9F400A9C72E /* WeightHistoryViewModel.swift */,
+				D57272AF29ACBA2700A9C72E /* WeightHistory.storyboard */,
+			);
+			path = weighingHistory;
+			sourceTree = "<group>";
+		};
+		D57272B129ACBF4300A9C72E /* MedicalHistory */ = {
+			isa = PBXGroup;
+			children = (
+				D57272B329ACBF6C00A9C72E /* MedicalHistoryViewController.swift */,
+				D57272B229ACBF6C00A9C72E /* MedicalHistoryPresenter.swift */,
+				D57272B429ACBF6C00A9C72E /* MedicalHistoryInteractor.swift */,
+				D57272B529ACBF6C00A9C72E /* MedicalHistoryViewModel.swift */,
+				D57272BA29ACBF7E00A9C72E /* MedicalHistory.storyboard */,
+			);
+			path = MedicalHistory;
+			sourceTree = "<group>";
+		};
+		D57272BC29ACE6CD00A9C72E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D57272BD29ACE6D300A9C72E /* Components */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D57272BD29ACE6D300A9C72E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D57272BE29ACE6F600A9C72E /* AddButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D57272C029ACEA9B00A9C72E /* LitterHistory */ = {
+			isa = PBXGroup;
+			children = (
+				D57272C229ACEAB900A9C72E /* LitterHistoryViewController.swift */,
+				D57272C329ACEAB900A9C72E /* LitterHistoryInteractor.swift */,
+				D57272C129ACEAB900A9C72E /* LitterHistoryPresenter.swift */,
+				D57272C429ACEAB900A9C72E /* LitterHistoryViewModel.swift */,
+				D57272C929ACEAD700A9C72E /* LitterHistory.storyboard */,
+			);
+			path = LitterHistory;
+			sourceTree = "<group>";
+		};
+		D5F0C6EA29A90BEA002A0F65 = {
+			isa = PBXGroup;
+			children = (
+				D5F0C6F529A90BEA002A0F65 /* FosterApp */,
+				D5F0C6F429A90BEA002A0F65 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D5F0C6F429A90BEA002A0F65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5F0C6F329A90BEA002A0F65 /* FosterApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5F0C6F529A90BEA002A0F65 /* FosterApp */ = {
+			isa = PBXGroup;
+			children = (
+				D57272BC29ACE6CD00A9C72E /* Helpers */,
+				D5F0C71B29A91B66002A0F65 /* Data */,
+				D5F0C70C29A90CCB002A0F65 /* Resources */,
+				D5F0C70A29A90C17002A0F65 /* Modules */,
+				D5F0C6FA29A90BEA002A0F65 /* ViewController.swift */,
+				D5F0C6FC29A90BEA002A0F65 /* Main.storyboard */,
+			);
+			path = FosterApp;
+			sourceTree = "<group>";
+		};
+		D5F0C70A29A90C17002A0F65 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D57272C029ACEA9B00A9C72E /* LitterHistory */,
+				D57272B129ACBF4300A9C72E /* MedicalHistory */,
+				D57272A629ACB97600A9C72E /* weighingHistory */,
+				D5F0C71F29A91D15002A0F65 /* Litter */,
+				D5F0C71629A90DC4002A0F65 /* TabBar */,
+				D5F0C70D29A90D54002A0F65 /* KittenCard */,
+				D5F0C70B29A90CA4002A0F65 /* App */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D5F0C70B29A90CA4002A0F65 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D5F0C6F629A90BEA002A0F65 /* AppDelegate.swift */,
+				D5F0C6F829A90BEA002A0F65 /* SceneDelegate.swift */,
+				D5F0C70129A90BEF002A0F65 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D5F0C70C29A90CCB002A0F65 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D572729929ACA77500A9C72E /* Base */,
+				D5F0C6FF29A90BEF002A0F65 /* Assets.xcassets */,
+				D5F0C70429A90BEF002A0F65 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D5F0C70D29A90D54002A0F65 /* KittenCard */ = {
+			isa = PBXGroup;
+			children = (
+				D5F0C70F29A90D85002A0F65 /* KittenCardViewController.swift */,
+				D5F0C71029A90D85002A0F65 /* KittenCardInteractor.swift */,
+				D5F0C70E29A90D85002A0F65 /* KittenCardPresenter.swift */,
+				D5F0C71129A90D85002A0F65 /* KittenCardViewModel.swift */,
+				D5F0C71929A90E48002A0F65 /* KittenCard.storyboard */,
+			);
+			path = KittenCard;
+			sourceTree = "<group>";
+		};
+		D5F0C71629A90DC4002A0F65 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D5F0C71729A90DD7002A0F65 /* Storyboard.storyboard */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D5F0C71B29A91B66002A0F65 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D5F0C71C29A91B6C002A0F65 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D5F0C71C29A91B6C002A0F65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5F0C71D29A91B86002A0F65 /* Kitten.swift */,
+				D57272A429ACB41100A9C72E /* Adopter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D5F0C71F29A91D15002A0F65 /* Litter */ = {
+			isa = PBXGroup;
+			children = (
+				D5F0C72129A91D2D002A0F65 /* LitterViewController.swift */,
+				D5F0C72229A91D2D002A0F65 /* LitterInteractor.swift */,
+				D5F0C72029A91D2D002A0F65 /* LitterPresenter.swift */,
+				D5F0C72329A91D2D002A0F65 /* LitterViewModel.swift */,
+				D5F0C72829A91D3C002A0F65 /* Litter.storyboard */,
+			);
+			path = Litter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5F0C6F229A90BEA002A0F65 /* FosterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5F0C70729A90BEF002A0F65 /* Build configuration list for PBXNativeTarget "FosterApp" */;
+			buildPhases = (
+				D5F0C6EF29A90BEA002A0F65 /* Sources */,
+				D5F0C6F029A90BEA002A0F65 /* Frameworks */,
+				D5F0C6F129A90BEA002A0F65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FosterApp;
+			productName = FosterApp;
+			productReference = D5F0C6F329A90BEA002A0F65 /* FosterApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5F0C6EB29A90BEA002A0F65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D5F0C6F229A90BEA002A0F65 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = D5F0C6EE29A90BEA002A0F65 /* Build configuration list for PBXProject "FosterApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5F0C6EA29A90BEA002A0F65;
+			productRefGroup = D5F0C6F429A90BEA002A0F65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5F0C6F229A90BEA002A0F65 /* FosterApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5F0C6F129A90BEA002A0F65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D57272B029ACBA2700A9C72E /* WeightHistory.storyboard in Resources */,
+				D57272BB29ACBF7E00A9C72E /* MedicalHistory.storyboard in Resources */,
+				D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */,
+				D57272CA29ACEAD700A9C72E /* LitterHistory.storyboard in Resources */,
+				D5F0C70329A90BEF002A0F65 /* LaunchScreen.storyboard in Resources */,
+				D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */,
+				D5F0C71829A90DD7002A0F65 /* Storyboard.storyboard in Resources */,
+				D5F0C70029A90BEF002A0F65 /* Assets.xcassets in Resources */,
+				D5F0C6FE29A90BEA002A0F65 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5F0C6EF29A90BEA002A0F65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D572729F29ACA79100A9C72E /* BaseViewController.swift in Sources */,
+				D5F0C6FB29A90BEA002A0F65 /* ViewController.swift in Sources */,
+				D57272A229ACA79100A9C72E /* Presenter.swift in Sources */,
+				D5F0C72629A91D2D002A0F65 /* LitterInteractor.swift in Sources */,
+				D5F0C71329A90D85002A0F65 /* KittenCardViewController.swift in Sources */,
+				D57272C629ACEAB900A9C72E /* LitterHistoryViewController.swift in Sources */,
+				D5F0C71229A90D85002A0F65 /* KittenCardPresenter.swift in Sources */,
+				D57272AD29ACB9F400A9C72E /* WeightHistoryInteractor.swift in Sources */,
+				D5F0C72429A91D2D002A0F65 /* LitterPresenter.swift in Sources */,
+				D57272A029ACA79100A9C72E /* ViewModel.swift in Sources */,
+				D57272C529ACEAB900A9C72E /* LitterHistoryPresenter.swift in Sources */,
+				D57272C729ACEAB900A9C72E /* LitterHistoryInteractor.swift in Sources */,
+				D57272C829ACEAB900A9C72E /* LitterHistoryViewModel.swift in Sources */,
+				D57272B829ACBF6C00A9C72E /* MedicalHistoryInteractor.swift in Sources */,
+				D57272B629ACBF6C00A9C72E /* MedicalHistoryPresenter.swift in Sources */,
+				D5F0C71429A90D85002A0F65 /* KittenCardInteractor.swift in Sources */,
+				D5F0C71529A90D85002A0F65 /* KittenCardViewModel.swift in Sources */,
+				D5F0C72529A91D2D002A0F65 /* LitterViewController.swift in Sources */,
+				D5F0C72729A91D2D002A0F65 /* LitterViewModel.swift in Sources */,
+				D5F0C6F729A90BEA002A0F65 /* AppDelegate.swift in Sources */,
+				D57272A529ACB41100A9C72E /* Adopter.swift in Sources */,
+				D57272AE29ACB9F400A9C72E /* WeightHistoryViewModel.swift in Sources */,
+				D57272B729ACBF6C00A9C72E /* MedicalHistoryViewController.swift in Sources */,
+				D57272B929ACBF6C00A9C72E /* MedicalHistoryViewModel.swift in Sources */,
+				D57272A129ACA79100A9C72E /* Interactor.swift in Sources */,
+				D57272BF29ACE6F600A9C72E /* AddButton.swift in Sources */,
+				D57272A329ACA79100A9C72E /* LoaderView.swift in Sources */,
+				D57272AB29ACB9F400A9C72E /* WeightHistoryPresenter.swift in Sources */,
+				D5F0C71E29A91B86002A0F65 /* Kitten.swift in Sources */,
+				D5F0C6F929A90BEA002A0F65 /* SceneDelegate.swift in Sources */,
+				D57272AC29ACB9F400A9C72E /* WeightHistoryViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D5F0C6FC29A90BEA002A0F65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5F0C6FD29A90BEA002A0F65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D5F0C70129A90BEF002A0F65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5F0C70229A90BEF002A0F65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D5F0C70529A90BEF002A0F65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D5F0C70629A90BEF002A0F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5F0C70829A90BEF002A0F65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5JMJ79UR6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FosterApp/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ExomindOpenclassrooms.FosterApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D5F0C70929A90BEF002A0F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5JMJ79UR6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FosterApp/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ExomindOpenclassrooms.FosterApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5F0C6EE29A90BEA002A0F65 /* Build configuration list for PBXProject "FosterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5F0C70529A90BEF002A0F65 /* Debug */,
+				D5F0C70629A90BEF002A0F65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5F0C70729A90BEF002A0F65 /* Build configuration list for PBXNativeTarget "FosterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5F0C70829A90BEF002A0F65 /* Debug */,
+				D5F0C70929A90BEF002A0F65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5F0C6EB29A90BEA002A0F65 /* Project object */;
+}
