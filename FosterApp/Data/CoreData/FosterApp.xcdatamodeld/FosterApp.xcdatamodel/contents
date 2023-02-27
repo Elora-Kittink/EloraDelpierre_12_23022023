@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Adopter" representedClassName="Adopter" syncable="YES" codeGenerationType="class">
+        <attribute name="a_adress" optional="YES" attributeType="String"/>
+        <attribute name="a_comment" optional="YES" attributeType="String"/>
+        <attribute name="a_firstName" optional="YES" attributeType="String"/>
+        <attribute name="a_lastName" optional="YES" attributeType="String"/>
+        <attribute name="a_numberPhone" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Kitten" representedClassName="Kitten" syncable="YES" codeGenerationType="class">
+        <attribute name="a_birthdate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="a_color" optional="YES" attributeType="String"/>
+        <attribute name="a_comment" optional="YES" attributeType="String"/>
+        <attribute name="a_id" optional="YES" attributeType="String"/>
+        <attribute name="a_isAdopted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="a_microship" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="a_name" optional="YES" attributeType="String"/>
+        <attribute name="a_name2" optional="YES" attributeType="String"/>
+        <attribute name="a_rescueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="a_sex" optional="YES" attributeType="String"/>
+        <attribute name="isTestsDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Vaccine" representedClassName="Vaccine" syncable="YES" codeGenerationType="class">
+        <attribute name="a_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="a_vaccineType" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Weight" representedClassName="Weight" syncable="YES" codeGenerationType="class">
+        <attribute name="a_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="a_weight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+</model>

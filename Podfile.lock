@@ -1,0 +1,42 @@
+PODS:
+  - CoreDataUtilsKit (1.1.1):
+    - CoreDataUtilsKit/Core (= 1.1.1)
+  - CoreDataUtilsKit/Core (1.1.1):
+    - UtilsKit (~> 2.0)
+  - netfox (1.21.0)
+  - NetworkUtilsKit (2.2):
+    - NetworkUtilsKit/Core (= 2.2)
+  - NetworkUtilsKit/Core (2.2):
+    - UtilsKit (~> 2.4)
+  - SDWebImage (5.14.2):
+    - SDWebImage/Core (= 5.14.2)
+  - SDWebImage/Core (5.14.2)
+  - UtilsKit (2.7):
+    - UtilsKit/Core (= 2.7)
+  - UtilsKit/Core (2.7)
+
+DEPENDENCIES:
+  - CoreDataUtilsKit (~> 1.1)
+  - netfox
+  - NetworkUtilsKit
+  - SDWebImage
+  - UtilsKit
+
+SPEC REPOS:
+  trunk:
+    - CoreDataUtilsKit
+    - netfox
+    - NetworkUtilsKit
+    - SDWebImage
+    - UtilsKit
+
+SPEC CHECKSUMS:
+  CoreDataUtilsKit: f934f23cb24a772bf8f7afc8c19722f3f6caf1d5
+  netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
+  NetworkUtilsKit: 683414341c4092ea137caae0952a60a4622439f6
+  SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
+  UtilsKit: ec424991b3dd84a916a9eff75598fa00d041fb92
+
+PODFILE CHECKSUM: dec885b1f565f05bc8c9aec0e0c672a269d72985
+
+COCOAPODS: 1.11.3

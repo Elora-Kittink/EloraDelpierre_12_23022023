@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CoreDataUtilsKit/CoreDataUtilsKit.framework
+${BUILT_PRODUCTS_DIR}/NetworkUtilsKit/NetworkUtilsKit.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/UtilsKit/UtilsKit.framework
+${BUILT_PRODUCTS_DIR}/netfox/netfox.framework

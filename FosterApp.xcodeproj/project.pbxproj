@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6794FC8A6FA8CE952A17437F /* Pods_FosterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81990801C67DE0C6FAAB50D /* Pods_FosterApp.framework */; };
 		D572729F29ACA79100A9C72E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729A29ACA79100A9C72E /* BaseViewController.swift */; };
 		D57272A029ACA79100A9C72E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729B29ACA79100A9C72E /* ViewModel.swift */; };
 		D57272A129ACA79100A9C72E /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729C29ACA79100A9C72E /* Interactor.swift */; };
@@ -34,6 +35,9 @@
 		D57272D229ACF4F200A9C72E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272CE29ACF4F200A9C72E /* HomeInteractor.swift */; };
 		D57272D329ACF4F200A9C72E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272CF29ACF4F200A9C72E /* HomeViewModel.swift */; };
 		D57272D529ACF50100A9C72E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57272D429ACF50100A9C72E /* Home.storyboard */; };
+		D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E9295029ACFAAC00ACDAEE /* TabBar.storyboard */; };
+		D5E9295329AD0D6F00ACDAEE /* Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9295229AD0D6F00ACDAEE /* Litter.swift */; };
+		D5E9295729AD16B700ACDAEE /* FosterApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5E9295529AD16B700ACDAEE /* FosterApp.xcdatamodeld */; };
 		D5F0C6F729A90BEA002A0F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C6F629A90BEA002A0F65 /* AppDelegate.swift */; };
 		D5F0C6F929A90BEA002A0F65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C6F829A90BEA002A0F65 /* SceneDelegate.swift */; };
 		D5F0C70029A90BEF002A0F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C6FF29A90BEF002A0F65 /* Assets.xcassets */; };
@@ -42,7 +46,6 @@
 		D5F0C71329A90D85002A0F65 /* KittenCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C70F29A90D85002A0F65 /* KittenCardViewController.swift */; };
 		D5F0C71429A90D85002A0F65 /* KittenCardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C71029A90D85002A0F65 /* KittenCardInteractor.swift */; };
 		D5F0C71529A90D85002A0F65 /* KittenCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C71129A90D85002A0F65 /* KittenCardViewModel.swift */; };
-		D5F0C71829A90DD7002A0F65 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C71729A90DD7002A0F65 /* Storyboard.storyboard */; };
 		D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C71929A90E48002A0F65 /* KittenCard.storyboard */; };
 		D5F0C71E29A91B86002A0F65 /* Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C71D29A91B86002A0F65 /* Kitten.swift */; };
 		D5F0C72429A91D2D002A0F65 /* LitterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C72029A91D2D002A0F65 /* LitterPresenter.swift */; };
@@ -53,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A4D04655A2C7EAB32D6B24A /* Pods-FosterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp.release.xcconfig"; path = "Target Support Files/Pods-FosterApp/Pods-FosterApp.release.xcconfig"; sourceTree = "<group>"; };
+		50A0D4DD42B6EDA0EDCC6221 /* Pods-FosterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp.debug.xcconfig"; path = "Target Support Files/Pods-FosterApp/Pods-FosterApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D572729A29ACA79100A9C72E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D572729B29ACA79100A9C72E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D572729C29ACA79100A9C72E /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -80,6 +85,9 @@
 		D57272CE29ACF4F200A9C72E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		D57272CF29ACF4F200A9C72E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D57272D429ACF50100A9C72E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D5E9295029ACFAAC00ACDAEE /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		D5E9295229AD0D6F00ACDAEE /* Litter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Litter.swift; sourceTree = "<group>"; };
+		D5E9295629AD16B700ACDAEE /* FosterApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FosterApp.xcdatamodel; sourceTree = "<group>"; };
 		D5F0C6F329A90BEA002A0F65 /* FosterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FosterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F0C6F629A90BEA002A0F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5F0C6F829A90BEA002A0F65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +98,6 @@
 		D5F0C70F29A90D85002A0F65 /* KittenCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardViewController.swift; sourceTree = "<group>"; };
 		D5F0C71029A90D85002A0F65 /* KittenCardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardInteractor.swift; sourceTree = "<group>"; };
 		D5F0C71129A90D85002A0F65 /* KittenCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardViewModel.swift; sourceTree = "<group>"; };
-		D5F0C71729A90DD7002A0F65 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		D5F0C71929A90E48002A0F65 /* KittenCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KittenCard.storyboard; sourceTree = "<group>"; };
 		D5F0C71D29A91B86002A0F65 /* Kitten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitten.swift; sourceTree = "<group>"; };
 		D5F0C72029A91D2D002A0F65 /* LitterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterPresenter.swift; sourceTree = "<group>"; };
@@ -98,6 +105,7 @@
 		D5F0C72229A91D2D002A0F65 /* LitterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterInteractor.swift; sourceTree = "<group>"; };
 		D5F0C72329A91D2D002A0F65 /* LitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterViewModel.swift; sourceTree = "<group>"; };
 		D5F0C72829A91D3C002A0F65 /* Litter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Litter.storyboard; sourceTree = "<group>"; };
+		D81990801C67DE0C6FAAB50D /* Pods_FosterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FosterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +113,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6794FC8A6FA8CE952A17437F /* Pods_FosterApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		800CD8B0F644CEEBC7276476 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50A0D4DD42B6EDA0EDCC6221 /* Pods-FosterApp.debug.xcconfig */,
+				4A4D04655A2C7EAB32D6B24A /* Pods-FosterApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D572729929ACA77500A9C72E /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,7 +141,7 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		D57272A629ACB97600A9C72E /* weighingHistory */ = {
+		D57272A629ACB97600A9C72E /* WeighingHistory */ = {
 			isa = PBXGroup;
 			children = (
 				D57272A829ACB9F400A9C72E /* WeightHistoryViewController.swift */,
@@ -132,7 +150,7 @@
 				D57272AA29ACB9F400A9C72E /* WeightHistoryViewModel.swift */,
 				D57272AF29ACBA2700A9C72E /* WeightHistory.storyboard */,
 			);
-			path = weighingHistory;
+			path = WeighingHistory;
 			sourceTree = "<group>";
 		};
 		D57272B129ACBF4300A9C72E /* MedicalHistory */ = {
@@ -187,11 +205,21 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		D5E9295429AD169400ACDAEE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D5E9295529AD16B700ACDAEE /* FosterApp.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		D5F0C6EA29A90BEA002A0F65 = {
 			isa = PBXGroup;
 			children = (
 				D5F0C6F529A90BEA002A0F65 /* FosterApp */,
 				D5F0C6F429A90BEA002A0F65 /* Products */,
+				800CD8B0F644CEEBC7276476 /* Pods */,
+				E485B780F421769D7DD67366 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,7 +248,7 @@
 				D57272CB29ACF4DB00A9C72E /* Home */,
 				D57272C029ACEA9B00A9C72E /* LitterHistory */,
 				D57272B129ACBF4300A9C72E /* MedicalHistory */,
-				D57272A629ACB97600A9C72E /* weighingHistory */,
+				D57272A629ACB97600A9C72E /* WeighingHistory */,
 				D5F0C71F29A91D15002A0F65 /* Litter */,
 				D5F0C71629A90DC4002A0F65 /* TabBar */,
 				D5F0C70D29A90D54002A0F65 /* KittenCard */,
@@ -264,7 +292,7 @@
 		D5F0C71629A90DC4002A0F65 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				D5F0C71729A90DD7002A0F65 /* Storyboard.storyboard */,
+				D5E9295029ACFAAC00ACDAEE /* TabBar.storyboard */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -272,6 +300,7 @@
 		D5F0C71B29A91B66002A0F65 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D5E9295429AD169400ACDAEE /* CoreData */,
 				D5F0C71C29A91B6C002A0F65 /* Models */,
 			);
 			path = Data;
@@ -282,6 +311,7 @@
 			children = (
 				D5F0C71D29A91B86002A0F65 /* Kitten.swift */,
 				D57272A429ACB41100A9C72E /* Adopter.swift */,
+				D5E9295229AD0D6F00ACDAEE /* Litter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,6 +328,14 @@
 			path = Litter;
 			sourceTree = "<group>";
 		};
+		E485B780F421769D7DD67366 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D81990801C67DE0C6FAAB50D /* Pods_FosterApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,9 +343,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5F0C70729A90BEF002A0F65 /* Build configuration list for PBXNativeTarget "FosterApp" */;
 			buildPhases = (
+				FE98689C5E00CC1C8D532041 /* [CP] Check Pods Manifest.lock */,
 				D5F0C6EF29A90BEA002A0F65 /* Sources */,
 				D5F0C6F029A90BEA002A0F65 /* Frameworks */,
 				D5F0C6F129A90BEA002A0F65 /* Resources */,
+				D667D0DCFDCBEF9C4FA69122 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,7 +374,7 @@
 				};
 			};
 			buildConfigurationList = D5F0C6EE29A90BEA002A0F65 /* Build configuration list for PBXProject "FosterApp" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -357,18 +397,60 @@
 			buildActionMask = 2147483647;
 			files = (
 				D57272B029ACBA2700A9C72E /* WeightHistory.storyboard in Resources */,
+				D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */,
 				D57272D529ACF50100A9C72E /* Home.storyboard in Resources */,
 				D57272BB29ACBF7E00A9C72E /* MedicalHistory.storyboard in Resources */,
 				D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */,
 				D57272CA29ACEAD700A9C72E /* LitterHistory.storyboard in Resources */,
 				D5F0C70329A90BEF002A0F65 /* LaunchScreen.storyboard in Resources */,
 				D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */,
-				D5F0C71829A90DD7002A0F65 /* Storyboard.storyboard in Resources */,
 				D5F0C70029A90BEF002A0F65 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D667D0DCFDCBEF9C4FA69122 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE98689C5E00CC1C8D532041 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FosterApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5F0C6EF29A90BEA002A0F65 /* Sources */ = {
@@ -385,6 +467,7 @@
 				D5F0C72429A91D2D002A0F65 /* LitterPresenter.swift in Sources */,
 				D57272A029ACA79100A9C72E /* ViewModel.swift in Sources */,
 				D57272C529ACEAB900A9C72E /* LitterHistoryPresenter.swift in Sources */,
+				D5E9295729AD16B700ACDAEE /* FosterApp.xcdatamodeld in Sources */,
 				D57272C729ACEAB900A9C72E /* LitterHistoryInteractor.swift in Sources */,
 				D57272C829ACEAB900A9C72E /* LitterHistoryViewModel.swift in Sources */,
 				D57272B829ACBF6C00A9C72E /* MedicalHistoryInteractor.swift in Sources */,
@@ -392,6 +475,7 @@
 				D57272D029ACF4F200A9C72E /* HomePresenter.swift in Sources */,
 				D5F0C71429A90D85002A0F65 /* KittenCardInteractor.swift in Sources */,
 				D5F0C71529A90D85002A0F65 /* KittenCardViewModel.swift in Sources */,
+				D5E9295329AD0D6F00ACDAEE /* Litter.swift in Sources */,
 				D5F0C72529A91D2D002A0F65 /* LitterViewController.swift in Sources */,
 				D5F0C72729A91D2D002A0F65 /* LitterViewModel.swift in Sources */,
 				D5F0C6F729A90BEA002A0F65 /* AppDelegate.swift in Sources */,
@@ -542,6 +626,7 @@
 		};
 		D5F0C70829A90BEF002A0F65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A0D4DD42B6EDA0EDCC6221 /* Pods-FosterApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -552,9 +637,10 @@
 				INFOPLIST_FILE = FosterApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -570,6 +656,7 @@
 		};
 		D5F0C70929A90BEF002A0F65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4D04655A2C7EAB32D6B24A /* Pods-FosterApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -580,9 +667,10 @@
 				INFOPLIST_FILE = FosterApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -618,6 +706,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D5E9295529AD16B700ACDAEE /* FosterApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D5E9295629AD16B700ACDAEE /* FosterApp.xcdatamodel */,
+			);
+			currentVersion = D5E9295629AD16B700ACDAEE /* FosterApp.xcdatamodel */;
+			path = FosterApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D5F0C6EB29A90BEA002A0F65 /* Project object */;
 }
