@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Litter View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="LitterViewController" customModule="FosterApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ti-SV-8cN">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lv1-zC-oea" userLabel="Content">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="peB-nY-pdX">
+                                                <rect key="frame" x="0.0" y="180" width="393" height="588"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </tableView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWx-qA-U90">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="TFi-Vf-gNa"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HVB-pG-ufS" customClass="AddButton" customModule="FosterApp">
+                                                <rect key="frame" x="0.0" y="776" width="393" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="peB-nY-pdX" firstAttribute="top" secondItem="hWx-qA-U90" secondAttribute="bottom" constant="30" id="2c9-NA-L1n"/>
+                                            <constraint firstAttribute="trailing" secondItem="hWx-qA-U90" secondAttribute="trailing" id="9g3-Sy-blr"/>
+                                            <constraint firstAttribute="bottom" secondItem="peB-nY-pdX" secondAttribute="bottom" constant="50" id="Edi-tC-OoX"/>
+                                            <constraint firstItem="peB-nY-pdX" firstAttribute="leading" secondItem="Lv1-zC-oea" secondAttribute="leading" id="JbA-0v-uKW"/>
+                                            <constraint firstItem="hWx-qA-U90" firstAttribute="leading" secondItem="Lv1-zC-oea" secondAttribute="leading" id="KSg-Ti-B27"/>
+                                            <constraint firstItem="hWx-qA-U90" firstAttribute="top" secondItem="Lv1-zC-oea" secondAttribute="top" id="UqX-bm-bvE"/>
+                                            <constraint firstAttribute="trailing" secondItem="peB-nY-pdX" secondAttribute="trailing" id="qmW-Gg-U0Q"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="trailing" secondItem="cOn-lo-5gF" secondAttribute="trailing" id="4WU-wq-2Os"/>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="width" secondItem="EN0-kM-l5n" secondAttribute="width" id="6IU-p6-GX0"/>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="bottom" secondItem="cOn-lo-5gF" secondAttribute="bottom" id="9Ay-Bp-xwb"/>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="top" secondItem="cOn-lo-5gF" secondAttribute="top" id="HwJ-NO-oWu"/>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="height" secondItem="EN0-kM-l5n" secondAttribute="height" priority="750" id="Oaw-K3-6Om"/>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="leading" secondItem="cOn-lo-5gF" secondAttribute="leading" id="l3B-BP-EvL"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="cOn-lo-5gF"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="EN0-kM-l5n"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9ti-SV-8cN" secondAttribute="bottom" id="K09-4r-5BD"/>
+                            <constraint firstItem="9ti-SV-8cN" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="S72-RJ-FwZ"/>
+                            <constraint firstItem="9ti-SV-8cN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Wqy-Yh-YWl"/>
+                            <constraint firstItem="9ti-SV-8cN" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="h50-nV-Fya"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="litterTable" destination="peB-nY-pdX" id="Ul2-wq-6eY"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="addKittenButton" destination="HVB-pG-ufS" id="eGt-cz-WpF"/>
+                        <outlet property="litterTable" destination="peB-nY-pdX" id="SI4-iG-qgy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.58778625954199" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
