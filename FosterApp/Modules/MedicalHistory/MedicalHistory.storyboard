@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Medical History View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="MedicalHistoryViewController" customModule="FosterApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGN-dH-y7c">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prq-Dg-gCR">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="890"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHi-HO-QAA" userLabel="VaccinesView">
+                                                <rect key="frame" x="0.0" y="30" width="393" height="250"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MMP-aw-v3P">
+                                                        <rect key="frame" x="4" y="0.0" width="385" height="220"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </tableView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zO-8k-5kX" userLabel="Add" customClass="AddButton" customModule="FosterApp" customModuleProvider="target">
+                                                        <rect key="frame" x="159" y="207" width="75" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="MMP-aw-v3P" secondAttribute="bottom" constant="30" id="2qR-U3-QDd"/>
+                                                    <constraint firstItem="MMP-aw-v3P" firstAttribute="top" secondItem="wHi-HO-QAA" secondAttribute="top" id="60c-yo-uFE"/>
+                                                    <constraint firstAttribute="height" constant="250" id="E48-We-eng"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MMP-aw-v3P" secondAttribute="trailing" constant="4" id="gqi-UB-Jlh"/>
+                                                    <constraint firstItem="MMP-aw-v3P" firstAttribute="leading" secondItem="wHi-HO-QAA" secondAttribute="leading" constant="4" id="qaf-Kp-FzY"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTd-5V-yta" userLabel="ReportsView">
+                                                <rect key="frame" x="0.0" y="300" width="393" height="250"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6lQ-8S-B0s">
+                                                        <rect key="frame" x="4" y="0.0" width="385" height="220"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </tableView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yu5-8Z-U52" userLabel="Add" customClass="AddButton" customModule="FosterApp" customModuleProvider="target">
+                                                        <rect key="frame" x="159" y="136" width="75" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="6lQ-8S-B0s" firstAttribute="leading" secondItem="LTd-5V-yta" secondAttribute="leading" constant="4" id="2ta-EN-SMC"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6lQ-8S-B0s" secondAttribute="bottom" constant="30" id="8Rg-Yd-1Vh"/>
+                                                    <constraint firstAttribute="height" constant="250" id="HmI-75-gPg"/>
+                                                    <constraint firstItem="6lQ-8S-B0s" firstAttribute="top" secondItem="LTd-5V-yta" secondAttribute="top" id="SCG-aw-Ik6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6lQ-8S-B0s" secondAttribute="trailing" constant="4" id="UlW-4z-br1"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40y-PU-OrU" userLabel="DocumentsView">
+                                                <rect key="frame" x="0.0" y="590" width="393" height="250"/>
+                                                <subviews>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4Bx-ub-jKo">
+                                                        <rect key="frame" x="4" y="0.0" width="385" height="220"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </tableView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F9-ju-NhJ" userLabel="Add">
+                                                        <rect key="frame" x="159" y="201" width="75" height="35"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="0Id-f0-dJs"/>
+                                                    <constraint firstItem="4Bx-ub-jKo" firstAttribute="leading" secondItem="40y-PU-OrU" secondAttribute="leading" constant="4" id="ElD-TJ-3NG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4Bx-ub-jKo" secondAttribute="trailing" constant="4" id="Fbv-m3-6zq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4Bx-ub-jKo" secondAttribute="bottom" constant="30" id="PL0-K9-ssP"/>
+                                                    <constraint firstItem="4Bx-ub-jKo" firstAttribute="top" secondItem="40y-PU-OrU" secondAttribute="top" id="quV-hd-InZ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="40y-PU-OrU" secondAttribute="trailing" id="7Qt-cT-9Jh"/>
+                                            <constraint firstAttribute="bottom" secondItem="40y-PU-OrU" secondAttribute="bottom" constant="50" id="9B5-x1-eM0"/>
+                                            <constraint firstAttribute="trailing" secondItem="wHi-HO-QAA" secondAttribute="trailing" id="FXX-9O-10Z"/>
+                                            <constraint firstItem="wHi-HO-QAA" firstAttribute="top" secondItem="prq-Dg-gCR" secondAttribute="top" constant="30" id="LN3-Hc-MM6"/>
+                                            <constraint firstItem="40y-PU-OrU" firstAttribute="top" secondItem="LTd-5V-yta" secondAttribute="bottom" constant="40" id="Mjo-Ka-P9v"/>
+                                            <constraint firstAttribute="trailing" secondItem="LTd-5V-yta" secondAttribute="trailing" id="VaB-Cw-deF"/>
+                                            <constraint firstItem="40y-PU-OrU" firstAttribute="leading" secondItem="prq-Dg-gCR" secondAttribute="leading" id="X67-m0-TG5"/>
+                                            <constraint firstItem="wHi-HO-QAA" firstAttribute="leading" secondItem="prq-Dg-gCR" secondAttribute="leading" id="mLL-BM-ena"/>
+                                            <constraint firstItem="LTd-5V-yta" firstAttribute="top" secondItem="wHi-HO-QAA" secondAttribute="bottom" constant="20" id="oK8-QQ-Mka"/>
+                                            <constraint firstItem="LTd-5V-yta" firstAttribute="leading" secondItem="prq-Dg-gCR" secondAttribute="leading" id="q7l-el-nqZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="prq-Dg-gCR" firstAttribute="top" secondItem="QQj-yU-MxC" secondAttribute="top" id="N0d-Tg-OzR"/>
+                                    <constraint firstItem="prq-Dg-gCR" firstAttribute="width" secondItem="oAL-RY-zxx" secondAttribute="width" id="NS9-Ka-S37"/>
+                                    <constraint firstItem="prq-Dg-gCR" firstAttribute="trailing" secondItem="QQj-yU-MxC" secondAttribute="trailing" id="Poo-1y-6Ye"/>
+                                    <constraint firstItem="prq-Dg-gCR" firstAttribute="leading" secondItem="QQj-yU-MxC" secondAttribute="leading" id="SQD-dc-Qqi"/>
+                                    <constraint firstItem="prq-Dg-gCR" firstAttribute="bottom" secondItem="QQj-yU-MxC" secondAttribute="bottom" id="U9F-nV-CSM"/>
+                                    <constraint firstItem="prq-Dg-gCR" firstAttribute="height" secondItem="oAL-RY-zxx" secondAttribute="height" priority="750" id="YKm-ag-h8n"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="QQj-yU-MxC"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="oAL-RY-zxx"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sGN-dH-y7c" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YKp-2d-Ae6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sGN-dH-y7c" secondAttribute="bottom" id="eyg-8L-A2V"/>
+                            <constraint firstItem="sGN-dH-y7c" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="lbw-Zw-HWr"/>
+                            <constraint firstItem="sGN-dH-y7c" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="zjB-Xp-VFd"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="documentsTable" destination="4Bx-ub-jKo" id="cOm-Z0-l1A"/>
+                            <outlet property="reportsTable" destination="6lQ-8S-B0s" id="dAn-9c-wnW"/>
+                            <outlet property="vaccinesTable" destination="MMP-aw-v3P" id="tJk-F9-aM4"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="documentsTable" destination="4Bx-ub-jKo" id="diP-sf-QYN"/>
+                        <outlet property="reportsTable" destination="6lQ-8S-B0s" id="TnL-v3-yan"/>
+                        <outlet property="vaccinesTable" destination="MMP-aw-v3P" id="7Pd-fB-HLB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
