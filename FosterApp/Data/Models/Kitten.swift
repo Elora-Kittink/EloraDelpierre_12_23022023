@@ -9,6 +9,7 @@ import Foundation
 
 
 struct Kitten {
+    var id: String
     var firstName: String
     var secondName: String?
     var birthdate: Date
