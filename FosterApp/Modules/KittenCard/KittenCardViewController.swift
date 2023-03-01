@@ -9,26 +9,26 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
 	
 	// MARK: - Outlets
     
-    @IBOutlet weak var nameField: UILabel!
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var name2Label: UILabel!
-    @IBOutlet weak var name2Field: UILabel!
+    @IBOutlet weak var secondNameLabel: UILabel!
+    @IBOutlet weak var secondNameField: UITextField!
     @IBOutlet weak var birthdateLabel: UILabel!
-    @IBOutlet weak var birthdateField: UILabel!
+    @IBOutlet weak var birthdateField: UITextField!
     @IBOutlet weak var sexLabel: UILabel!
-    @IBOutlet weak var sexField: UILabel!
+    @IBOutlet weak var sexField: UITextField!
     @IBOutlet weak var microshipLabel: UILabel!
-    @IBOutlet weak var microshipField: UILabel!
+    @IBOutlet weak var microshipField: UITextField!
     @IBOutlet weak var colorLabel: UILabel!
-    @IBOutlet weak var colorField: UILabel!
+    @IBOutlet weak var colorField: UITextField!
     @IBOutlet weak var adoptersLabel: UILabel!
-    @IBOutlet weak var adopterField: UILabel!
+    @IBOutlet weak var adopterField: UITextField!
     @IBOutlet weak var siblingsLabel: UILabel!
-    @IBOutlet weak var siblingsField: UILabel!
+    @IBOutlet weak var siblingsField: UITextField!
     @IBOutlet weak var rescueDateLabel: UILabel!
-    @IBOutlet weak var rescueDateField: UILabel!
+    @IBOutlet weak var rescueDateField: UITextField!
     @IBOutlet weak var commentsLabel: UILabel!
-    @IBOutlet weak var commentsField: UILabel!
+    @IBOutlet weak var commentsField: UITextField!
     @IBOutlet weak var weighingButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var weightHistory: UIView!
@@ -36,6 +36,9 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
 
     
     // MARK: - Variables
+    
+    var kittenId: String = ""
+    var newKittenCreation: Bool = false
 	
 	// MARK: - View life cycle
 	override func viewDidLoad() {
@@ -43,9 +46,28 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
         
 	}
 	
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.interactor.refresh(newKittenCreation: newKittenCreation, kittenId: kittenId)
+    }
+    
+    
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
+        self.nameField.text = self.viewModel.firstName
+        self.nameField.isEnabled = self.viewModel.isFieldsEnabled
+        self.secondNameField.text = self.viewModel.secondName
+        self.secondNameField.isEnabled = self.viewModel.isFieldsEnabled
+        self.birthdateField.text = self.viewModel.birthdate
+        self.sexField.text = self.viewModel.sex
+        self.microshipField.text = self.viewModel.microship
+        self.colorField.text = self.viewModel.color
+        self.adopterField.text = self.viewModel.adopters
+        self.siblingsField.text = self.viewModel.siblings
+        self.rescueDateField.text = self.viewModel.rescueDate
+        self.commentsField.text = self.viewModel.comment
 	}
 
 	// MARK: - Actions

@@ -16,7 +16,12 @@ extension DB_Kitten: CoreDataModel {
 extension DB_Kitten {
     
     func Update(kitten: Kitten) {
-        self.a_id = kitten.id
+        guard let birthdateString = kitten.birthdate?.toString(format: "ddMMyyyy"),
+              let firstname = kitten.firstName
+        else { return }
+        
+        self.a_isAlive = true
+        self.a_id = "\(firstname)\(birthdateString)"
         self.a_firstName = kitten.firstName
         self.a_sex = kitten.sex
         self.a_secondName = kitten.secondName

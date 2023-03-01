@@ -24,4 +24,6 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
 	}
 
 	// MARK: - Actions
+    @IBAction func addKitten() {
+    }
 }

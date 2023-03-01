@@ -3,9 +3,7 @@
 //  Created by Elora on 27/02/2023.
 //
 
-class LitterHistoryViewController: BaseViewController
-<
-	LitterHistoryViewModel,
+class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	LitterHistoryPresenter,LitterHistoryInteractor> {
 	
 	// MARK: - Outlets
@@ -23,4 +21,8 @@ class LitterHistoryViewController: BaseViewController
 	}
 
 	// MARK: - Actions
+    @IBAction func addLitter() {
+        
+    }
+    
 }

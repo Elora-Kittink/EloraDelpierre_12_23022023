@@ -9,6 +9,11 @@ import Foundation
 
 struct Vaccine {
     
-    var date: Date
-    var vaccine: String
+    var date: Date?
+    var vaccine: String?
+    
+    init?(from coreDataObject: DB_Vaccine){
+        self.date = coreDataObject.a_date
+        self.vaccine = coreDataObject.a_vaccine
+    }
 }

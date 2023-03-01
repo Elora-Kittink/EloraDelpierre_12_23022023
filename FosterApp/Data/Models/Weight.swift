@@ -9,6 +9,11 @@ import Foundation
 
 struct Weight {
     
-    var date: Date
-    var weight: Float
+    var date: Date?
+    var weight: Float?
+    
+    init?(from coreDataObject: DB_Weight){
+        self.date = coreDataObject.a_date
+        self.weight = coreDataObject.a_weight
+    }
 }
