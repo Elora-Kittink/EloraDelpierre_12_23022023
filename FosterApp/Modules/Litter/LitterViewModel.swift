@@ -10,7 +10,7 @@ class LitterViewModel: ViewModel {
     var id: String!
     var kittens: [Kitten]?
     var isOngoing: Bool = true
-    var rescueDate:  Date?
+    var rescueDate:  String?
     var isDisplaying: Bool = true
     var isEditing: Bool = false
     var isCreatingNew: Bool = false

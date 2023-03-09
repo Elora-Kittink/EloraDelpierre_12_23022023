@@ -8,7 +8,7 @@ import Foundation
 class LitterPresenter: Presenter<LitterViewModel> {
     
     
-    func displayMode(litter: Litter, isDisplaying: Bool, isEditing: Bool, isCreatingNew: Bool) {
+    func displayMode(litter: Litter, isEditing: Bool, isCreatingNew: Bool) {
 //        if isDisplaying {
 //
 //            self.viewModel?.id = litter.id
@@ -58,10 +58,18 @@ class LitterPresenter: Presenter<LitterViewModel> {
 //        }
         
     }
-//    
+    
+    func editMode() {
+        
+    }
+    
+    func displayDate(date: Date) {
+        self.viewModel?.rescueDate = date.toString(format: "ddMMyyyy")
+    }
+//
 //    enum LayoutStyle {
 //        case displaying, editing, creating
-//        
+//
 //        self.viewModel?.saveBtnHidden: Bool {
 //            switch self {
 //            case .displaying: return true

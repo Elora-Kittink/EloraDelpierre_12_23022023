@@ -16,14 +16,25 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var archiveButton: UIButton!
     @IBOutlet weak var favoriteButton: UIButton!
+    
     // MARK: - Variables
     
     let litterId: String = ""
+    
     
 	// MARK: - View life cycle
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.setOnDateChangeListener {
+            self.interactor.displayDate(date: datePicker.date)
+        }
+        datePicker.frame.size = CGSize(width: 0, height: 300)
+        datePicker.preferredDatePickerStyle = .wheels
+        rescueDateTextField.inputView = datePicker
+        
         self.interactor.refresh(litterId: litterId)
 	}
 	
@@ -43,6 +54,7 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
     @IBAction func makeItOngoing() {
         
     }
+    
     @IBAction func addKitten(litterId: String) {
         
         let vc = KittenCardViewController.fromStoryboard()
@@ -54,12 +66,18 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
     @IBAction func archiveLitter() {
         self.interactor.archiveLitter(litterId: self.viewModel.id)
     }
+    
     @IBAction func editLitter() {
-        
+        self.interactor.edit()
     }
+    
     @IBAction func save() {
+        self.interactor.createNewLitter()
     }
 }
+
+
+
 
 //   trois versions :
 //  une affichant la portée, bouton "save" caché, textField disable
