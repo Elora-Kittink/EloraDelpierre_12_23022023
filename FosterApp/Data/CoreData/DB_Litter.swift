@@ -16,7 +16,22 @@ extension DB_Litter: CoreDataModel {
 extension DB_Litter {
     
     func update(litter: Litter) {
-//        self.a_id = 
         
+        self.a_rescueDate = litter.rescueDate
+        self.a_isOngoing = litter.isOngoing
+    }
+    
+    func create(litter: Litter) {
+        self.a_id = UUID().uuidString
+        self.a_rescueDate = litter.rescueDate
+        self.a_isOngoing = true
+    }
+    
+    func addKitten(kitten: Kitten) {
+//        kitten.litter = self
+    }
+    
+    func archiveLitter() {
+        self.a_isOngoing = false
     }
 }

@@ -32,5 +32,6 @@ extension DB_Kitten {
         self.a_rescueDate = kitten.rescueDate
         self.a_comment = kitten.comment
 //        self.r_weight = NSSet(array: DB_Weight)
+//        self.r_litter = kitten.litter
     }
 }

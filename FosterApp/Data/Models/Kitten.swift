@@ -48,16 +48,16 @@ struct Kitten {
     init?(from coreDataObject: DB_Kitten){
         
         self.id = coreDataObject.a_id
-        self.litter = Litter(from: coreDataObject.r_litter)
+//        self.litter = Litter(from: coreDataObject.r_litter)
         self.firstName = coreDataObject.a_firstName
         self.secondName = coreDataObject.a_secondName
         self.birthdate = coreDataObject.a_birthdate
         self.sex = coreDataObject.a_sex
         self.color = coreDataObject.a_color
         self.rescueDate = coreDataObject.a_rescueDate
-        self.siblings =  self.litter?.kittens?.filter {
-            $0.id != self.id
-        }
+//        self.siblings =  self.litter?.kittens?.filter {
+//            $0.id != self.id
+//        }
         self.comment = coreDataObject.a_comment
         self.isAdopted = coreDataObject.a_isAdopted
         self.microship = Int(coreDataObject.a_microship)
@@ -68,7 +68,7 @@ struct Kitten {
         self.weightHistory = (coreDataObject.r_weight?.allObjects as? [DB_Weight])?.compactMap { weight in
             return Weight(from: weight)
         }
-        self.adopters = Adopter(from: coreDataObject.r_adopter)
+//        self.adopters = Adopter(from: coreDataObject.r_adopter)
         self.isAlive = coreDataObject.a_isAlive
     }
 }

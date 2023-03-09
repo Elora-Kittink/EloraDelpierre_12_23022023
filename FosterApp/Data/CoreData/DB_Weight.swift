@@ -17,7 +17,7 @@ extension DB_Weight {
     
     func update(weight: Weight) {
         self.a_date = weight.date
-        self.a_weight = weight.weight
+        self.a_weight = weight.weight ?? 0
     }
     
 }

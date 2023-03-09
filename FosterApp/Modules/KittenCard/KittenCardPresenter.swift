@@ -9,7 +9,8 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
         self.viewModel?.firstName = kitten.firstName ?? ""
         self.viewModel?.secondName = kitten.secondName ?? ""
         self.viewModel?.birthdate = kitten.birthdate?.toString(format: "dd/MM/yyyy") ?? ""
-        self.viewModel?.age =
+        // TODO: Calculate age of kitten
+        //self.viewModel?.age =
         self.viewModel?.sex = kitten.sex ?? ""
         self.viewModel?.color = kitten.color ?? ""
         self.viewModel?.rescueDate = kitten.rescueDate?.toString(format: "dd/MM/yyyy") ?? ""
@@ -23,6 +24,7 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
         self.viewModel?.vaccines = kitten.vaccines ?? []
         self.viewModel?.adopters = "\(kitten.adopters?.firstName) \(kitten.adopters?.lastName)"
         self.viewModel?.weightHistory = kitten.weightHistory ?? []
+        // TODO: A décider à quoi ça va me servir
 //        self.viewModel?.isFieldsEnabled =
         self.viewModel?.isAlive = kitten.isAlive
         guard let litter = kitten.litter else { return}

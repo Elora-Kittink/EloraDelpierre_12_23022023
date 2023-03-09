@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import UtilsKit
 
 class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCardPresenter,KittenCardInteractor> {
 	
@@ -37,6 +38,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     
     // MARK: - Variables
     
+    var litterId = ""
     var kittenId: String = ""
     var newKittenCreation: Bool = false
 	
@@ -49,7 +51,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.interactor.refresh(newKittenCreation: newKittenCreation, kittenId: kittenId)
+//        self.interactor.refresh(newKittenCreation: newKittenCreation, kittenId: self.viewModel.id)
     }
     
     
@@ -71,4 +73,14 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
 	}
 
 	// MARK: - Actions
+}
+
+extension KittenCardViewController: StoryboardProtocol {
+    static var storyboardName: String {
+        "KittenCard"
+    }
+    
+    static var identifier: String? {
+        "KittenCardViewController"
+    }
 }

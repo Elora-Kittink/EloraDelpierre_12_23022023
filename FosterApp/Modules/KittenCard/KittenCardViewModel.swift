@@ -6,7 +6,7 @@
 class KittenCardViewModel: ViewModel {
     
 
-    var litter: Litter = []
+    var litter: Litter!
     var firstName: String = ""
     var secondName: String = ""
     var birthdate: String = ""
