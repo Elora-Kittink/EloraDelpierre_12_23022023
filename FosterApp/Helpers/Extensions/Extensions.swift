@@ -9,11 +9,3 @@ import Foundation
 import UIKit
 
 
-extension UIDatePicker {
-    
-    func setOnDateChangeListener(onDateChanged :@escaping () -> Void){
-        self.addAction(UIAction(){ action in
-            onDateChanged()
-        }, for: .valueChanged)
-    }
-}

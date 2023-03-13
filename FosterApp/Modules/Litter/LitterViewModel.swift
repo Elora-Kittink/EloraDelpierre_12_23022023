@@ -20,6 +20,6 @@ class LitterViewModel: ViewModel {
     var archiveBtnHidden = false
     var favoriteBtnHidden = false
     var addKittenBtnHidden = false
-    var isTextFieldEnable = false
+    var isTextFieldEnable = true
     
 }

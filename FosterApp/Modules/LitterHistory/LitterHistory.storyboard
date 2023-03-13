@@ -12,27 +12,29 @@
         <!--Litter History View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="LitterHistoryViewController" customModule="FosterApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LitterHistoryViewController" id="Y6W-OH-hqX" customClass="LitterHistoryViewController" customModule="FosterApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nfu-C0-Wp6">
                                 <rect key="frame" x="0.0" y="59" width="393" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="AeZ-JH-4jC"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FCd-PZ-JJT">
-                                <rect key="frame" x="0.0" y="159" width="393" height="579"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="159" width="393" height="539"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.62235218290000005" blue="0.1203427091" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.97647058819999999" green="0.62235218290000005" blue="0.1203427091" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOB-mV-dSG" customClass="AddButton" customModule="FosterApp">
-                                <rect key="frame" x="159" y="758" width="75" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOB-mV-dSG" userLabel="Create Litter">
+                                <rect key="frame" x="137" y="706" width="119" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create Litter"/>
                                 <connections>
                                     <action selector="addLitter" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DQ6-tX-KPO"/>
                                 </connections>
@@ -44,12 +46,15 @@
                             <constraint firstItem="Nfu-C0-Wp6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="DTN-CT-vql"/>
                             <constraint firstItem="Nfu-C0-Wp6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="L9x-rG-kHe"/>
                             <constraint firstItem="FCd-PZ-JJT" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="PJ5-jA-PUt"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FCd-PZ-JJT" secondAttribute="bottom" constant="80" id="Q4U-vg-9VL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FCd-PZ-JJT" secondAttribute="bottom" constant="120" id="Q4U-vg-9VL"/>
                             <constraint firstItem="FCd-PZ-JJT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="R8D-5F-7v9"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Nfu-C0-Wp6" secondAttribute="trailing" id="XTP-Ga-3xO"/>
                             <constraint firstItem="FCd-PZ-JJT" firstAttribute="top" secondItem="Nfu-C0-Wp6" secondAttribute="bottom" id="ZD8-pv-Eoc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="litterHistoryTableView" destination="FCd-PZ-JJT" id="iNg-Yf-Mc9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,6 +64,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

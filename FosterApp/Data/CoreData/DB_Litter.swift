@@ -21,9 +21,9 @@ extension DB_Litter {
         self.a_isOngoing = litter.isOngoing
     }
     
-    func create(litter: Litter) {
+    func create(rescueDate: String) {
         self.a_id = UUID().uuidString
-        self.a_rescueDate = litter.rescueDate
+        self.a_rescueDate = rescueDate
         self.a_isOngoing = true
     }
     

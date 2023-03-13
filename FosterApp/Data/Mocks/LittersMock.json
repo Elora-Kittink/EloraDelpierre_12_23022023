@@ -1,0 +1,11 @@
+{
+    [
+        
+    ]
+}
+
+struct Litter {
+    var id: String?
+    var kittens: [Kitten]?
+    var isOngoing: Bool
+    var rescueDate:  String?

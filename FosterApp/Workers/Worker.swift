@@ -18,14 +18,14 @@ struct Worker {
     }
     
     func updateKittenDB(kitten: Kitten) {
-//        si le chaton existe déjà on veut une mise à jour
-        if let kitten = DB_Kitten.get(with: kitten.id) {
+        //        si le chaton existe déjà on veut une mise à jour
+//        if let kitten = DB_Kitten.get(with: kitten.id) {
             
-        }
-//        sinon on veut le créer
+//        }
+        //        sinon on veut le créer
     }
     
-
+    
     
     // MARK: - Litter
     
@@ -43,16 +43,18 @@ struct Worker {
         return allLitters
     }
     
-    func updateLitterDB(litter: Litter){
-//        si la portée existe déjà on veut une mise à jour
-        if let DBlitter = DB_Litter.get(with: litter.id) {
-            DBlitter.update(litter: litter)
+    func updateLitterDB(litterId: String, rescueDate: String) {
+        guard let DBlitter = DB_Litter.get(with: litterId) else {
+            return
         }
-        else {
-//       si elle n'existe pas on la créé
-            let DBLitter = DB_Litter()
-            DBLitter.create(litter: litter)
-        }
+        DBlitter.a_rescueDate = rescueDate
+        try? CoreDataManager.default.save()
+    }
+    
+    func createNewLitter(rescueDate: String) {
+        let DBLitter = DB_Litter()
+        DBLitter.create(rescueDate: rescueDate)
+        try? CoreDataManager.default.save()
     }
     
     func archiveLitter(litterId: String) {

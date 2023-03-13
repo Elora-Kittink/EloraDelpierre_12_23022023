@@ -44,6 +44,7 @@
 		D5A073CA29AE412500202F0A /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C929AE412500202F0A /* Weight.swift */; };
 		D5A073CC29AE45CE00202F0A /* DB_Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073CB29AE45CE00202F0A /* DB_Litter.swift */; };
 		D5A1460129BA45D700E2327B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1460029BA45D700E2327B /* Extensions.swift */; };
+		D5A1460629BB495000E2327B /* LittersMock.json in Resources */ = {isa = PBXBuildFile; fileRef = D5A1460529BB495000E2327B /* LittersMock.json */; };
 		D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E9295029ACFAAC00ACDAEE /* TabBar.storyboard */; };
 		D5E9295329AD0D6F00ACDAEE /* Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9295229AD0D6F00ACDAEE /* Litter.swift */; };
 		D5E9295729AD16B700ACDAEE /* FosterApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5E9295529AD16B700ACDAEE /* FosterApp.xcdatamodeld */; };
@@ -103,6 +104,7 @@
 		D5A073C929AE412500202F0A /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		D5A073CB29AE45CE00202F0A /* DB_Litter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Litter.swift; sourceTree = "<group>"; };
 		D5A1460029BA45D700E2327B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D5A1460529BB495000E2327B /* LittersMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LittersMock.json; sourceTree = "<group>"; };
 		D5E9295029ACFAAC00ACDAEE /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		D5E9295229AD0D6F00ACDAEE /* Litter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Litter.swift; sourceTree = "<group>"; };
 		D5E9295629AD16B700ACDAEE /* FosterApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FosterApp.xcdatamodel; sourceTree = "<group>"; };
@@ -240,6 +242,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D5A1460229BB490600E2327B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D5A1460529BB495000E2327B /* LittersMock.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		D5E9295429AD169400ACDAEE /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +351,7 @@
 		D5F0C71B29A91B66002A0F65 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D5A1460229BB490600E2327B /* Mocks */,
 				D5E9295429AD169400ACDAEE /* CoreData */,
 				D5F0C71C29A91B6C002A0F65 /* Models */,
 			);
@@ -448,6 +459,7 @@
 				D5F0C70329A90BEF002A0F65 /* LaunchScreen.storyboard in Resources */,
 				D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */,
 				D5F0C70029A90BEF002A0F65 /* Assets.xcassets in Resources */,
+				D5A1460629BB495000E2327B /* LittersMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
