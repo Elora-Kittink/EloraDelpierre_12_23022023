@@ -80,6 +80,7 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
 //    TODO: save sert à valider après edit mais aussi a valider la creation d'une nouvelle portée, faut changer la logique du coup 
     @IBAction func save() {
         self.interactor.createOrUpdateLitter(rescueDate: rescueDateTextField.text, editingMode: self.viewModel.isEditing, litterId: self.viewModel.id)
+        print("👹 \(self.viewModel.isEditing)")
     }
     
     @objc func validateAndDismiss(){

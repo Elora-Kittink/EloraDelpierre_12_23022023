@@ -7,6 +7,8 @@ import UIKit
 
 class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	LitterHistoryPresenter,LitterHistoryInteractor> {
+    
+    
 	
 	// MARK: - Outlets
     @IBOutlet weak var litterHistoryTableView: UITableView!
@@ -18,11 +20,19 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 		super.viewDidLoad()
         self.litterHistoryTableView.delegate = self
         self.litterHistoryTableView.dataSource = self
+        
 	}
 	
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.interactor.refresh()
+    }
+    
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
+        litterHistoryTableView.reloadData()
 	}
 
 	// MARK: - Actions
@@ -55,7 +65,7 @@ extension LitterHistoryViewController: UITableViewDataSource, UITableViewDelegat
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "litterCell", for: indexPath)
         
         cell.textLabel?.text = self.viewModel.litters?[indexPath.row].rescueDate
-        
+        print(self.viewModel.litters?[indexPath.row].rescueDate)
         return cell
         
 //        guard let cell = litterHistoryTableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as? RecipeCell

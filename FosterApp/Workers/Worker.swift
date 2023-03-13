@@ -35,9 +35,9 @@ struct Worker {
     }
     
     func fetchAllLitters() -> [Litter] {
-        let predicate = NSPredicate(format: "entityName == DB_Litter")
-        let fetchedLitters = DB_Litter.getAll(predicate: predicate)
-        let allLitters = fetchedLitters.map { litter in
+        let litters = DB_Litter.getAll()
+        
+        let allLitters = litters.map { litter in
             Litter(from: litter)
         }
         return allLitters
@@ -52,8 +52,7 @@ struct Worker {
     }
     
     func createNewLitter(rescueDate: String) {
-        let DBLitter = DB_Litter()
-        DBLitter.create(rescueDate: rescueDate)
+        DB_Litter.create(rescueDate: rescueDate)
         try? CoreDataManager.default.save()
     }
     

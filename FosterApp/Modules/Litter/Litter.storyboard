@@ -85,7 +85,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="plus.app" catalog="system"/>
                                                 <connections>
-                                                    <action selector="addKitten" destination="Y6W-OH-hqX" eventType="touchUpInside" id="i85-ps-zYx"/>
+                                                    <action selector="addKittenWithLitterId:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="853-qo-1rS"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BC-ZV-eW9">
@@ -96,7 +96,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down" catalog="system"/>
                                                 <connections>
-                                                    <action selector="saveNewLitter" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eMc-XL-VDI"/>
+                                                    <action selector="save" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wGA-w7-3MR"/>
                                                 </connections>
                                             </button>
                                         </subviews>

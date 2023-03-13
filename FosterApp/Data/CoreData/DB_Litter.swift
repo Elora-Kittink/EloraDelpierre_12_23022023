@@ -21,10 +21,10 @@ extension DB_Litter {
         self.a_isOngoing = litter.isOngoing
     }
     
-    func create(rescueDate: String) {
-        self.a_id = UUID().uuidString
-        self.a_rescueDate = rescueDate
-        self.a_isOngoing = true
+    static func create(rescueDate: String) {
+        let litter = DB_Litter.findOrCreate(with: UUID().uuidString)
+        litter?.a_rescueDate = rescueDate
+        litter?.a_isOngoing = true
     }
     
     func addKitten(kitten: Kitten) {

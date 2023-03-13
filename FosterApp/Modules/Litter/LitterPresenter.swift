@@ -42,8 +42,8 @@ class LitterPresenter: Presenter<LitterViewModel> {
         if isCreating {
             
             print("Creating Mode")
-            self.viewModel?.isEditing = true
-            self.viewModel?.isCreatingNew = false
+            self.viewModel?.isEditing = false
+            self.viewModel?.isCreatingNew = true
             self.viewModel?.isDisplaying = false
             self.viewModel?.saveBtnHidden = false
             self.viewModel?.editBtnHidden = true
@@ -63,7 +63,7 @@ class LitterPresenter: Presenter<LitterViewModel> {
     }
     
     func displayDate(date: Date) {
-        self.viewModel?.rescueDate = date.toString(format: "dd/MM/yyyy")
+        self.viewModel?.rescueDate = date.toString(format: "ddMMyyyy")
         self.viewModel?.send()
     }
     
