@@ -15,12 +15,6 @@ extension DB_Litter: CoreDataModel {
 
 extension DB_Litter {
     
-    func update(litter: Litter) {
-        
-        self.a_rescueDate = litter.rescueDate
-        self.a_isOngoing = litter.isOngoing
-    }
-    
     static func create(rescueDate: String) -> DB_Litter? {
         let litter = DB_Litter.findOrCreate(with: UUID().uuidString)
         litter?.a_rescueDate = rescueDate
@@ -42,6 +36,5 @@ extension DB_Litter {
             litter.a_isFavorite = false
         }
         newFavorite.a_isFavorite = true
-        print("\(newFavorite.a_id) est en favoris !")
     }
 }

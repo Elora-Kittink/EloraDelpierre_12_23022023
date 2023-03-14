@@ -11,7 +11,7 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
 	// MARK: - Outlets
 	
     @IBOutlet weak var litterTable: UITableView!
-    @IBOutlet weak var addKittenButton: AddButton!
+    @IBOutlet weak var addKittenButton: UIButton!
     @IBOutlet weak var rescueDateTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
@@ -65,7 +65,7 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
         self.interactor.makeFavorite(litterId: litterId)
     }
     
-    @IBAction func addKitten(litterId: String) {
+    @IBAction func addKitten() {
         
         let vc = KittenCardViewController.fromStoryboard()
         vc.litterId = self.viewModel.id
@@ -145,8 +145,3 @@ extension LitterViewController: StoryboardProtocol {
         "LitterViewController"
     }
 }
-
-//   trois versions :
-//  une affichant la portée, bouton "save" caché, textField disable
-//  une édition avec textField enable et bouton "save" visible, bouton éditer caché, bouton archivé caché, bouton ajout chaton caché
-//  une de création de nouvelle portée avec textField vide enable, bouton "save" visible, bouton archiver caché, bouton ajouter chaton caché, bouton éditer caché

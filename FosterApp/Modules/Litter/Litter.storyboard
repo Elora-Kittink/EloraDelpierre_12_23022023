@@ -42,8 +42,8 @@
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNA-gf-pzQ" userLabel="Edit Button">
                                                         <rect key="frame" x="325" y="33" width="46" height="35"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="pencil" catalog="system"/>
                                                         <connections>
                                                             <action selector="editLitter" destination="Y6W-OH-hqX" eventType="touchUpInside" id="riz-ha-jw7"/>
                                                         </connections>
@@ -51,8 +51,8 @@
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDD-pb-jhi" userLabel="Archive Button">
                                                         <rect key="frame" x="323" y="76" width="51" height="35"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="archivebox.fill" catalog="system"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="archivebox.fill" catalog="system"/>
                                                         <connections>
                                                             <action selector="archiveLitter" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C9j-BF-Fnk"/>
                                                         </connections>
@@ -60,8 +60,8 @@
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FZ-kj-SKr" userLabel="favorite Button">
                                                         <rect key="frame" x="324" y="119" width="52" height="35"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="star.fill" catalog="system"/>
                                                         <connections>
                                                             <action selector="makeItFavorite" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GRy-Ct-5Wq"/>
                                                         </connections>
@@ -79,22 +79,22 @@
                                                     <constraint firstAttribute="height" constant="500" id="rcE-zl-WNO"/>
                                                 </constraints>
                                             </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HVB-pG-ufS" customClass="AddButton" customModule="FosterApp">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HVB-pG-ufS">
                                                 <rect key="frame" x="0.0" y="669" width="393" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="plus.app" catalog="system"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="plus.app" catalog="system"/>
                                                 <connections>
-                                                    <action selector="addKittenWithLitterId:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="853-qo-1rS"/>
+                                                    <action selector="addKitten" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Wkr-eM-IHA"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BC-ZV-eW9">
-                                                <rect key="frame" x="172" y="669" width="49" height="35"/>
+                                                <rect key="frame" x="184.33333333333334" y="669" width="24.333333333333343" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="4Cm-uj-5fD"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down" catalog="system"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="square.and.arrow.down" catalog="system"/>
                                                 <connections>
                                                     <action selector="save" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wGA-w7-3MR"/>
                                                 </connections>
@@ -136,7 +136,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addKittenButton" destination="HVB-pG-ufS" id="eGt-cz-WpF"/>
+                        <outlet property="addKittenButton" destination="HVB-pG-ufS" id="AqQ-R1-tr3"/>
                         <outlet property="archiveButton" destination="cDD-pb-jhi" id="qAg-iS-OK0"/>
                         <outlet property="editButton" destination="mNA-gf-pzQ" id="N8S-BR-3jK"/>
                         <outlet property="favoriteButton" destination="3FZ-kj-SKr" id="iNd-7q-sgF"/>
