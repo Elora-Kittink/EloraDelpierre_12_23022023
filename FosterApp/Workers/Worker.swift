@@ -67,4 +67,14 @@ struct Worker {
         DBLitter.archiveLitter()
         try? CoreDataManager.default.save()
     }
+    
+    func makeFavorite(litterId: String) {
+        let predicate = NSPredicate(format: "a_isOngoing == TRUE")
+        let oldFavoriteLitter = DB_Litter.getAll(predicate: predicate)
+        
+        guard let newFavoriteLitter = DB_Litter.get(with: litterId) else {
+            return
+        }
+        newFavoriteLitter.makeFavorite(oldFavorite: oldFavoriteLitter, newFavorite: newFavoriteLitter)
+    }
 }

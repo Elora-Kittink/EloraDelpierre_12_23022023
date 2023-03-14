@@ -63,7 +63,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system"/>
                                                         <connections>
-                                                            <action selector="makeItOngoing" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ev3-NX-cGz"/>
+                                                            <action selector="makeItFavorite" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GRy-Ct-5Wq"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

@@ -60,8 +60,9 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
 	}
 
 	// MARK: - Actions
-    @IBAction func makeItOngoing() {
-        
+    @IBAction func makeItFavorite() {
+        guard let litterId = litterId else { return }
+        self.interactor.makeFavorite(litterId: litterId)
     }
     
     @IBAction func addKitten(litterId: String) {

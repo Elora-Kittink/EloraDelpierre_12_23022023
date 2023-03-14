@@ -25,6 +25,7 @@ extension DB_Litter {
         let litter = DB_Litter.findOrCreate(with: UUID().uuidString)
         litter?.a_rescueDate = rescueDate
         litter?.a_isOngoing = true
+        litter?.a_isFavorite = false
         return litter
     }
     
@@ -34,5 +35,13 @@ extension DB_Litter {
     
     func archiveLitter() {
         self.a_isOngoing = false
+    }
+    
+    func makeFavorite(oldFavorite: [DB_Litter], newFavorite: DB_Litter) {
+        oldFavorite.map { litter in
+            litter.a_isFavorite = false
+        }
+        newFavorite.a_isFavorite = true
+        print("\(newFavorite.a_id) est en favoris !")
     }
 }

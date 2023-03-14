@@ -29,6 +29,7 @@
     </entity>
     <entity name="DB_Litter" representedClassName="DB_Litter" syncable="YES" codeGenerationType="class">
         <attribute name="a_id" optional="YES" attributeType="String"/>
+        <attribute name="a_isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_isOngoing" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_rescueDate" optional="YES" attributeType="String"/>
         <relationship name="r_kittens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Kitten" inverseName="r_litter" inverseEntity="DB_Kitten"/>

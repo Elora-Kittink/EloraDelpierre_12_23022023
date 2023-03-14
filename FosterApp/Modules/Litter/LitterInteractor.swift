@@ -15,7 +15,6 @@ class LitterInteractor: Interactor
     let worker = Worker()
     
     func archiveLitter(litterId: String) {
-        self.presenter.display(loader: true)
         Task {
             worker.archiveLitter(litterId:litterId)
         }
@@ -25,6 +24,12 @@ class LitterInteractor: Interactor
         let dateToString = date.toString(format: "ddMMyyyy")
         self.presenter.displayDate(date: dateToString)
         
+    }
+    
+    func makeFavorite(litterId: String) {
+        Task {
+            worker.makeFavorite(litterId: litterId)
+        }
     }
     
     
