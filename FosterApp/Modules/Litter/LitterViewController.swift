@@ -20,11 +20,16 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
     
     // MARK: - Variables
     
-    var litterId: String = ""
+    var litterId: String? {
+        didSet {
+            self.interactor.refresh(isEditing: isEditMode, isCreating: isCreateMode, isDisplaying: isDisplayMode, litterId: litterId, rescueDate: nil)
+        }
+    }
     var isCreateMode: Bool = false
     var isDisplayMode: Bool = true
     var isEditMode: Bool = false
     private let datePicker = UIDatePicker()
+    
 	// MARK: - View life cycle
     
 	override func viewDidLoad() {
@@ -38,7 +43,7 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
         toolBar.sizeToFit()
         rescueDateTextField.inputAccessoryView = toolBar
         rescueDateTextField.inputView = datePicker
-        self.interactor.refresh(isEditing: isEditMode, isCreating: isCreateMode, isDisplaying: isDisplayMode, litterId: litterId, rescueDate: rescueDateTextField.text)
+        self.interactor.diplayMode(isEditing: isEditMode, isCreating: isCreateMode, isDisplaying: isDisplayMode, litterId: litterId)
 	}
 	
 	// MARK: - Refresh

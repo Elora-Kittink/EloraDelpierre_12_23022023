@@ -40,7 +40,7 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
         let vc = LitterViewController.fromStoryboard()
         vc.isCreateMode = true
         vc.isDisplayMode = false
-        vc.isEditing = false
+        vc.isEditMode = false
         navigationController?.pushViewController(vc, animated: true)
     }
     

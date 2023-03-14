@@ -28,7 +28,7 @@ class LitterInteractor: Interactor
     }
     
     
-    func diplayMode(isEditing: Bool, isCreating: Bool, isDisplaying: Bool, litterId: String) {
+    func diplayMode(isEditing: Bool, isCreating: Bool, isDisplaying: Bool, litterId: String?) {
         
         if isEditing && !isCreating && !isDisplaying {
             self.presenter.displayMode(type: LayoutStyle.editing, rescueDate: nil, litterId: litterId)
