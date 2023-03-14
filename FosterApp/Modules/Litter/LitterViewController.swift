@@ -38,8 +38,7 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
         toolBar.sizeToFit()
         rescueDateTextField.inputAccessoryView = toolBar
         rescueDateTextField.inputView = datePicker
-        self.interactor.fonctiondaffichage(isEditing: isEditing, isCreating: isCreateMode, isDisplaying: isDisplayMode, litterId: litterId)
-        self.interactor.refresh(litterId: litterId)
+        self.interactor.refresh(isEditing: isEditMode, isCreating: isCreateMode, isDisplaying: isDisplayMode, litterId: litterId, rescueDate: rescueDateTextField.text)
 	}
 	
 	// MARK: - Refresh
@@ -73,14 +72,13 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
     }
     
     @IBAction func editLitter() {
-        self.interactor.edit()
-
+        self.interactor.diplayMode(isEditing: true, isCreating: false, isDisplaying: false
+                                   , litterId: litterId)
     }
     
-//    TODO: save sert à valider après edit mais aussi a valider la creation d'une nouvelle portée, faut changer la logique du coup 
+
     @IBAction func save() {
-        self.interactor.createOrUpdateLitter(rescueDate: rescueDateTextField.text, editingMode: self.viewModel.isEditing, litterId: self.viewModel.id)
-        print("👹 \(self.viewModel.isEditing)")
+        self.interactor.refresh(isEditing: self.viewModel.isEditing, isCreating: self.viewModel.isCreatingNew, isDisplaying: self.viewModel.isDisplaying, litterId: self.viewModel.id, rescueDate: rescueDateTextField.text)
     }
     
     @objc func validateAndDismiss(){

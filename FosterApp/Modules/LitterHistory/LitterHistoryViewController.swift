@@ -65,7 +65,6 @@ extension LitterHistoryViewController: UITableViewDataSource, UITableViewDelegat
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "litterCell", for: indexPath)
         
         cell.textLabel?.text = self.viewModel.litters?[indexPath.row].rescueDate
-        print(self.viewModel.litters?[indexPath.row].rescueDate)
         return cell
         
 //        guard let cell = litterHistoryTableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as? RecipeCell
@@ -85,6 +84,9 @@ extension LitterHistoryViewController: UITableViewDataSource, UITableViewDelegat
         }
         let vc = LitterViewController.fromStoryboard()
         vc.litterId = litterId
+        vc.isDisplayMode = true
+        vc.isCreateMode = false
+        vc.isEditMode = false
         navigationController?.pushViewController(vc, animated: true)
     }
 }

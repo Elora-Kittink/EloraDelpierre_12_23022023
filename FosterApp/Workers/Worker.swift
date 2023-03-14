@@ -51,9 +51,13 @@ struct Worker {
         try? CoreDataManager.default.save()
     }
     
-    func createNewLitter(rescueDate: String) {
-        DB_Litter.create(rescueDate: rescueDate)
+    func createNewLitter(rescueDate: String) -> Litter? {
+        guard let newLitter = DB_Litter.create(rescueDate: rescueDate) else {
+            print("pas réussi à créer la portée")
+            return nil
+        }
         try? CoreDataManager.default.save()
+        return Litter(from: newLitter)
     }
     
     func archiveLitter(litterId: String) {
