@@ -15,7 +15,7 @@ extension DB_Litter: CoreDataModel {
 
 extension DB_Litter {
     
-    static func create(rescueDate: String) -> DB_Litter? {
+    static func create(rescueDate: Date) -> DB_Litter? {
         let litter = DB_Litter.findOrCreate(with: UUID().uuidString)
         litter?.a_rescueDate = rescueDate
         litter?.a_isOngoing = true

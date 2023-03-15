@@ -58,17 +58,27 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
+        self.nameLabel.text = self.viewModel.firtsNameLabel
         self.nameField.text = self.viewModel.firstName
         self.nameField.isEnabled = self.viewModel.isFieldsEnabled
+        self.secondNameLabel.text = self.viewModel.secondNameLabel
         self.secondNameField.text = self.viewModel.secondName
         self.secondNameField.isEnabled = self.viewModel.isFieldsEnabled
+        self.birthdateLabel.text = self.viewModel.birthdateLabel
         self.birthdateField.text = self.viewModel.birthdate
+        self.sexLabel.text = self.viewModel.sexLabel
         self.sexField.text = self.viewModel.sex
+        self.microshipLabel.text = self.viewModel.microshipLabel
         self.microshipField.text = self.viewModel.microship
+        self.colorLabel.text = self.viewModel.colorLabel
         self.colorField.text = self.viewModel.color
+        self.adoptersLabel.text = self.viewModel.adoptersLabel
         self.adopterField.text = self.viewModel.adopters
+        self.siblingsLabel.text = self.viewModel.siblingsLabel
         self.siblingsField.text = self.viewModel.siblings
+        self.rescueDateLabel.text = self.viewModel.rescueDateLabel
         self.rescueDateField.text = self.viewModel.rescueDate
+        self.commentsLabel.text = self.viewModel.commentLabel
         self.commentsField.text = self.viewModel.comment
 	}
 

@@ -43,7 +43,7 @@ struct Worker {
         return allLitters
     }
     
-    func updateLitterDB(litterId: String, rescueDate: String) {
+    func updateLitterDB(litterId: String, rescueDate: Date) {
         guard let DBlitter = DB_Litter.get(with: litterId) else {
             return
         }
@@ -51,7 +51,7 @@ struct Worker {
         try? CoreDataManager.default.save()
     }
     
-    func createNewLitter(rescueDate: String) -> Litter? {
+    func createNewLitter(rescueDate: Date) -> Litter? {
         guard let newLitter = DB_Litter.create(rescueDate: rescueDate) else {
             print("pas réussi à créer la portée")
             return nil

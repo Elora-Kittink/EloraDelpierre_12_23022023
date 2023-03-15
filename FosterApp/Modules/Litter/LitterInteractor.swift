@@ -21,8 +21,7 @@ class LitterInteractor: Interactor
     }
     
     func displayDate(date: Date) {
-        let dateToString = date.toString(format: "ddMMyyyy")
-        self.presenter.displayDate(date: dateToString)
+        self.presenter.displayDate(date: date)
         
     }
     
@@ -47,15 +46,15 @@ class LitterInteractor: Interactor
     }
     
     
-    func refresh(isEditing: Bool, isCreating: Bool, isDisplaying: Bool, litterId: String?, rescueDate: String?) {
+    func refresh(isEditing: Bool, isCreating: Bool, isDisplaying: Bool, litterId: String?, rescueDate: Date?) {
         
         if isDisplaying {
             Task {
                 guard let litter = worker.fetchLitterFromId(litterId: litterId ?? "") else {
                     return
                 }
-                self.presenter.displayMode(type: LayoutStyle.displaying, rescueDate: litter.rescueDate, litterId: litterId)
-                self.presenter.displayDate(date: litter.rescueDate)
+                self.presenter.displayMode(type: LayoutStyle.displaying, rescueDate: litter.rescueDate?.toDate(format: "dd/MM/yyyy"), litterId: litterId)
+                self.presenter.displayDate(date: litter.rescueDate?.toDate(format: "dd/MM/yyyy"))
                 self.presenter.display(loader: false)
             }
         }

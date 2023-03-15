@@ -18,7 +18,7 @@ struct Litter {
 //            return Kitten(from: kitten)
 //        }
         self.isOngoing = coreDataObject.a_isOngoing
-        self.rescueDate = coreDataObject.a_rescueDate
+        self.rescueDate = coreDataObject.a_rescueDate?.toString(format: "dd/MM/yyyy")
         self.id = coreDataObject.a_id
     }
 //    faire un init from les données entrées dans le forulaire?

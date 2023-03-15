@@ -5,6 +5,7 @@
 
 class KittenCardViewModel: ViewModel {
     
+//    MARK: kitten datas
 
     var litter: Litter!
     var firstName: String = ""
@@ -24,4 +25,17 @@ class KittenCardViewModel: ViewModel {
     var weightHistory: [Weight] = []
     var isFieldsEnabled: Bool = false
     var isAlive: Bool = true
+    
+//    MARK: labels names
+    
+    var firtsNameLabel = "Premier nom"
+    var secondNameLabel = "Deuxième nom"
+    var birthdateLabel = "Date de naissance / age"
+    var sexLabel = "Sexe"
+    var colorLabel = "Couleur"
+    var rescueDateLabel = "Date de sauvetage"
+    var siblingsLabel = "Fratrie"
+    var commentLabel = "Commentaires"
+    var microshipLabel = "Numéro puce électronique"
+    var adoptersLabel = "Adoptants"
 }

@@ -84,7 +84,7 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
     
 
     @IBAction func save() {
-        self.interactor.refresh(isEditing: self.viewModel.isEditing, isCreating: self.viewModel.isCreatingNew, isDisplaying: self.viewModel.isDisplaying, litterId: self.viewModel.id, rescueDate: rescueDateTextField.text)
+        self.interactor.refresh(isEditing: self.viewModel.isEditing, isCreating: self.viewModel.isCreatingNew, isDisplaying: self.viewModel.isDisplaying, litterId: self.viewModel.id, rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"))
     }
     
     @objc func validateAndDismiss(){

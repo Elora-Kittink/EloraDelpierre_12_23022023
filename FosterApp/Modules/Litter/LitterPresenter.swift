@@ -7,13 +7,19 @@ import Foundation
 
 class LitterPresenter: Presenter<LitterViewModel> {
     
-    func displayDate(date: String?) {
-        self.viewModel?.rescueDate = date
+    func displayDate(date: Date?) {
+        guard let dateToString = date?.toString(format: "dd/MM/yyyy") else { return }
+        self.viewModel?.rescueDate = dateToString
         self.viewModel?.send()
     }
     
     
-    func displayMode(type: LayoutStyle, rescueDate: String?, litterId: String?) {
+    func displayMode(type: LayoutStyle, rescueDate: Date?, litterId: String?) {
+        
+        if rescueDate != nil {
+           let dateToString = rescueDate?.toString(format: "dd/MM/yyyy")
+            self.viewModel?.rescueDate = dateToString
+        }
         
         self.viewModel?.isEditing = type.isEditing
         self.viewModel?.isCreatingNew = type.isCreating
@@ -25,7 +31,7 @@ class LitterPresenter: Presenter<LitterViewModel> {
         self.viewModel?.addKittenBtnHidden = type.addKittenBtnHidden
         self.viewModel?.isTextFieldEnable = type.isTextFieldEnable
         
-        self.viewModel?.rescueDate = rescueDate
+        
         self.viewModel?.id = litterId
         
         self.viewModel?.send()
