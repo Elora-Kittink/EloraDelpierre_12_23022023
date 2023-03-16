@@ -17,6 +17,11 @@ struct Worker {
         return Kitten(from: DBKitten)
     }
     
+    func createKitten(kitten: Kitten) -> Kitten? {
+        guard let DBKitten = DB_Kitten.create(kitten: kitten) else {return nil}
+        return Kitten(from: DBKitten)
+    }
+    
     func updateKittenDB(kitten: Kitten) {
         //        si le chaton existe déjà on veut une mise à jour
 //        if let kitten = DB_Kitten.get(with: kitten.id) {

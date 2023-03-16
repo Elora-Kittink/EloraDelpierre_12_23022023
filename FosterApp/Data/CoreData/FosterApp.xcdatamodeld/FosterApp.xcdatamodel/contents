@@ -19,7 +19,7 @@
         <attribute name="a_isAlive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_isTestsDone" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_microship" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="a_rescueDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="a_rescueDate" attributeType="Date" defaultDateTimeInterval="-31586749821" usesScalarValueType="NO"/>
         <attribute name="a_secondName" optional="YES" attributeType="String"/>
         <attribute name="a_sex" attributeType="String"/>
         <relationship name="r_adopter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_Adopter" inverseName="r_kitten" inverseEntity="DB_Adopter"/>

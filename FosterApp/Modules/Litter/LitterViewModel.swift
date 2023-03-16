@@ -7,6 +7,8 @@ import Foundation
 
 class LitterViewModel: ViewModel {
     
+    var litter: Litter!
+    
     var id: String!
     var kittens: [Kitten]?
     var isOngoing: Bool = true

@@ -69,7 +69,8 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
         
         let vc = KittenCardViewController.fromStoryboard()
         vc.litterId = self.viewModel.id
-        vc.newKittenCreation = true
+        vc.litter = self.viewModel.litter
+        vc.isCreatingMode = true
         
         navigationController?.pushViewController(vc, animated: true)
     }

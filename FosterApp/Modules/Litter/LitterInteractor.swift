@@ -32,28 +32,35 @@ class LitterInteractor: Interactor
     }
     
     
-    func diplayMode(isEditing: Bool, isCreating: Bool, isDisplaying: Bool, litterId: String?) {
+    func diplayMode(isEditing: Bool,
+                    isCreating: Bool,
+                    isDisplaying: Bool,
+                    litterId: String?) {
         
         if isEditing && !isCreating && !isDisplaying {
-            self.presenter.displayMode(type: LayoutStyle.editing, rescueDate: nil, litterId: litterId)
+            self.presenter.displayMode(type: LitterLayoutStyle.editing, rescueDate: nil, litterId: litterId, litter: nil)
         }
         if !isEditing && isCreating && !isDisplaying {
-            self.presenter.displayMode(type: LayoutStyle.creating, rescueDate: nil, litterId: nil)
+            self.presenter.displayMode(type: LitterLayoutStyle.creating, rescueDate: nil, litterId: nil, litter: nil)
         }
         if !isEditing && !isCreating && isDisplaying {
-            self.presenter.displayMode(type: LayoutStyle.displaying, rescueDate: nil, litterId: litterId)
+            self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: nil, litterId: litterId, litter: nil)
         }
     }
     
     
-    func refresh(isEditing: Bool, isCreating: Bool, isDisplaying: Bool, litterId: String?, rescueDate: Date?) {
+    func refresh(isEditing: Bool,
+                 isCreating: Bool,
+                 isDisplaying: Bool,
+                 litterId: String?,
+                 rescueDate: Date?) {
         
         if isDisplaying {
             Task {
                 guard let litter = worker.fetchLitterFromId(litterId: litterId ?? "") else {
                     return
                 }
-                self.presenter.displayMode(type: LayoutStyle.displaying, rescueDate: litter.rescueDate?.toDate(format: "dd/MM/yyyy"), litterId: litterId)
+                self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: litter.rescueDate?.toDate(format: "dd/MM/yyyy"), litterId: litterId, litter: litter)
                 self.presenter.displayDate(date: litter.rescueDate?.toDate(format: "dd/MM/yyyy"))
                 self.presenter.display(loader: false)
             }
@@ -69,7 +76,7 @@ class LitterInteractor: Interactor
             }
             Task {
                 worker.updateLitterDB(litterId: id, rescueDate: date)
-                self.presenter.displayMode(type: LayoutStyle.displaying, rescueDate: date, litterId: id)
+                self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: date, litterId: id, litter: nil)
             }
             
             self.presenter.display(loader: false)
@@ -84,7 +91,7 @@ class LitterInteractor: Interactor
                 guard let newLitter = worker.createNewLitter(rescueDate: date) else {
                     return
                 }
-                self.presenter.displayMode(type: LayoutStyle.displaying, rescueDate: date, litterId: newLitter.id)
+                self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: date, litterId: newLitter.id, litter: newLitter)
             }
             
             self.presenter.display(loader: false)

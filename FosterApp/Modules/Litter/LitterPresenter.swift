@@ -14,7 +14,7 @@ class LitterPresenter: Presenter<LitterViewModel> {
     }
     
     
-    func displayMode(type: LayoutStyle, rescueDate: Date?, litterId: String?) {
+    func displayMode(type: LitterLayoutStyle, rescueDate: Date?, litterId: String?, litter: Litter?) {
         
         if rescueDate != nil {
            let dateToString = rescueDate?.toString(format: "dd/MM/yyyy")
@@ -30,7 +30,7 @@ class LitterPresenter: Presenter<LitterViewModel> {
         self.viewModel?.favoriteBtnHidden = type.favoriteBtnHidden
         self.viewModel?.addKittenBtnHidden = type.addKittenBtnHidden
         self.viewModel?.isTextFieldEnable = type.isTextFieldEnable
-        
+        self.viewModel?.litter = litter
         
         self.viewModel?.id = litterId
         
@@ -38,7 +38,7 @@ class LitterPresenter: Presenter<LitterViewModel> {
     }
 }
 
-enum LayoutStyle {
+enum LitterLayoutStyle {
     case displaying, editing, creating
     
    var saveBtnHidden: Bool {
