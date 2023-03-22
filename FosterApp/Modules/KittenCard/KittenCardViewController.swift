@@ -46,26 +46,11 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     var isEditingMode: Bool = false
     var isDisplayingMode: Bool = true
     var isCreatingMode: Bool = false
-    private let datePicker = UIDatePicker()
 
     
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-//     MARK: date picker
-//        TODO: probleme avec le double datepicker, marche pas pour la date de sauvetage
-//        let toolBar = UIToolbar()
-//        let validate = UIBarButtonItem(title: "Valider", style: .plain, target: self, action: #selector(self.validateAndDismiss))
-//        datePicker.datePickerMode = .date
-//        datePicker.frame.size = CGSize(width: 0, height: 300)
-//        datePicker.preferredDatePickerStyle = .wheels
-//        toolBar.items = [validate]
-//        toolBar.sizeToFit()
-//        birthdateField.inputAccessoryView = toolBar
-//        rescueDateField.inputAccessoryView = toolBar
-//        birthdateField.inputView = datePicker
-//        rescueDateField.inputView = datePicker
-        
 //        MARK: labels
         
         self.nameLabel.text = self.viewModel.firtsNameLabel
@@ -148,19 +133,6 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     
     @IBAction func adopte() {
     }
-    
-//    @objc func validateAndDismiss() {
-//
-////     TODO:   mettre en place un sender pour savoir de quel textefield ça vient?
-//
-//        if self.birthdateField.isFirstResponder {
-//            self.interactor.displayDate(date: self.datePicker.date, sender: birthdateField)
-//        }
-//        if self.rescueDateField.isFirstResponder {
-//            self.interactor.displayDate(date: self.datePicker.date, sender: rescueDateField)
-//        }
-//        view.endEditing(true)
-//    }
 
     
 }

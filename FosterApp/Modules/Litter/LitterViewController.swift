@@ -12,7 +12,7 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
 	
     @IBOutlet weak var litterTable: UITableView!
     @IBOutlet weak var addKittenButton: UIButton!
-    @IBOutlet weak var rescueDateTextField: UITextField!
+    @IBOutlet weak var rescueDateTextField: DatePickerField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var archiveButton: UIButton!
@@ -28,7 +28,6 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
     var isCreateMode: Bool = false
     var isDisplayMode: Bool = true
     var isEditMode: Bool = false
-    private let datePicker = UIDatePicker()
     
 	// MARK: - View life cycle
     
@@ -36,15 +35,6 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
 		super.viewDidLoad()
         self.litterTable.delegate = self
         self.litterTable.dataSource = self
-        let toolBar = UIToolbar()
-        let validate = UIBarButtonItem(title: "Valider", style: .plain, target: self, action: #selector(self.validateAndDismiss))
-        datePicker.datePickerMode = .date
-        datePicker.frame.size = CGSize(width: 0, height: 300)
-        datePicker.preferredDatePickerStyle = .wheels
-        toolBar.items = [validate]
-        toolBar.sizeToFit()
-        rescueDateTextField.inputAccessoryView = toolBar
-        rescueDateTextField.inputView = datePicker
         self.interactor.diplayMode(isEditing: isEditMode, isCreating: isCreateMode, isDisplaying: isDisplayMode, litterId: litterId)
 	}
 	
@@ -96,7 +86,7 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
     @objc func validateAndDismiss(){
         view.endEditing(true)
         
-        self.interactor.displayDate(date: self.datePicker.date)
+        self.interactor.displayDate(date: self.rescueDateTextField.text?.toDate(format: "dd/MM/yyyy") ?? Date())
     }
 }
 
@@ -120,16 +110,6 @@ extension LitterViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = self.viewModel.kittens?[indexPath.row].firstName
         
         return cell
-        
-//        guard let cell = litterHistoryTableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as? RecipeCell
-//            else { return UITableViewCell() }
-////      donne la bonne recette pour remplir les outlets
-////      le "=" notifie et active le didSet de outletFilling dans RecipeCell
-//        guard let recipes = self.viewModel.recipes else {
-//            return UITableViewCell()
-//        }
-//        cell.outletFilling = recipes[indexPath.row]
-//        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
