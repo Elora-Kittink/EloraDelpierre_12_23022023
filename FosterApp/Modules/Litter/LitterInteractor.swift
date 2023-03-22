@@ -38,13 +38,13 @@ class LitterInteractor: Interactor
                     litterId: String?) {
         
         if isEditing && !isCreating && !isDisplaying {
-            self.presenter.displayMode(type: LitterLayoutStyle.editing, rescueDate: nil, litterId: litterId, litter: nil)
+            self.presenter.displayMode(type: LitterLayoutStyle.editing, rescueDate: nil, litterId: litterId, litter: nil, kittens: nil)
         }
         if !isEditing && isCreating && !isDisplaying {
-            self.presenter.displayMode(type: LitterLayoutStyle.creating, rescueDate: nil, litterId: nil, litter: nil)
+            self.presenter.displayMode(type: LitterLayoutStyle.creating, rescueDate: nil, litterId: nil, litter: nil, kittens: nil)
         }
         if !isEditing && !isCreating && isDisplaying {
-            self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: nil, litterId: litterId, litter: nil)
+            self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: nil, litterId: litterId, litter: nil, kittens: nil)
         }
     }
     
@@ -60,7 +60,8 @@ class LitterInteractor: Interactor
                 guard let litter = worker.fetchLitterFromId(litterId: litterId ?? "") else {
                     return
                 }
-                self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: litter.rescueDate?.toDate(format: "dd/MM/yyyy"), litterId: litterId, litter: litter)
+               let kittens = worker.fetchAllKittensLitter(litterId: litterId ?? "")
+                self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: litter.rescueDate?.toDate(format: "dd/MM/yyyy"), litterId: litterId, litter: litter, kittens: kittens)
                 self.presenter.displayDate(date: litter.rescueDate?.toDate(format: "dd/MM/yyyy"))
                 self.presenter.display(loader: false)
             }
@@ -76,7 +77,7 @@ class LitterInteractor: Interactor
             }
             Task {
                 worker.updateLitterDB(litterId: id, rescueDate: date)
-                self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: date, litterId: id, litter: nil)
+                self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: date, litterId: id, litter: nil, kittens: nil)
             }
             
             self.presenter.display(loader: false)
@@ -91,7 +92,7 @@ class LitterInteractor: Interactor
                 guard let newLitter = worker.createNewLitter(rescueDate: date) else {
                     return
                 }
-                self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: date, litterId: newLitter.id, litter: newLitter)
+                self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: date, litterId: newLitter.id, litter: newLitter, kittens: nil)
             }
             
             self.presenter.display(loader: false)

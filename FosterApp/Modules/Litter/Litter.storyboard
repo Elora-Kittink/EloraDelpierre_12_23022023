@@ -78,6 +78,16 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="500" id="rcE-zl-WNO"/>
                                                 </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="litterCell" id="oWB-UD-Goh">
+                                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oWB-UD-Goh" id="qlL-T1-xX7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
                                             </tableView>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HVB-pG-ufS">
                                                 <rect key="frame" x="0.0" y="669" width="393" height="44"/>

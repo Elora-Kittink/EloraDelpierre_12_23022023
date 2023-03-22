@@ -16,13 +16,14 @@ struct Adopter {
     var comment: String?
     var kittens: [Kitten]?
     
-    init?(from coreDataObject: DB_Adopter){
-        self.firstName = coreDataObject.a_firstName
-        self.lastName = coreDataObject.a_lastName
-        self.adress = coreDataObject.a_adress
-        self.numberPhone = coreDataObject.a_numberPhone
-        self.comment = coreDataObject.a_comment
-        self.kittens = (coreDataObject.r_kitten?.allObjects as? [DB_Kitten])?.compactMap { kitten in
+    init?(from coreDataObject: DB_Adopter?) {
+        guard let adopter = coreDataObject else { return nil }
+        self.firstName = adopter.a_firstName
+        self.lastName = adopter.a_lastName
+        self.adress = adopter.a_adress
+        self.numberPhone = adopter.a_numberPhone
+        self.comment = adopter.a_comment
+        self.kittens = (adopter.r_kitten?.allObjects as? [DB_Kitten])?.compactMap { kitten in
             return Kitten(from: kitten)
         }
     }

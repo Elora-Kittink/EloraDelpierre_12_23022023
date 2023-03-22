@@ -10,18 +10,18 @@
         <relationship name="r_kitten" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Kitten" inverseName="r_adopter" inverseEntity="DB_Kitten"/>
     </entity>
     <entity name="DB_Kitten" representedClassName="DB_Kitten" syncable="YES" codeGenerationType="class">
-        <attribute name="a_birthdate" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="a_color" attributeType="String"/>
+        <attribute name="a_birthdate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="a_color" optional="YES" attributeType="String"/>
         <attribute name="a_comment" optional="YES" attributeType="String"/>
-        <attribute name="a_firstName" attributeType="String"/>
+        <attribute name="a_firstName" optional="YES" attributeType="String"/>
         <attribute name="a_id" attributeType="String"/>
-        <attribute name="a_isAdopted" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="a_isAdopted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_isAlive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="a_isTestsDone" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="a_isTestsDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_microship" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="a_rescueDate" attributeType="Date" defaultDateTimeInterval="-31586749821" usesScalarValueType="NO"/>
+        <attribute name="a_rescueDate" optional="YES" attributeType="Date" defaultDateTimeInterval="-31586749821" usesScalarValueType="NO"/>
         <attribute name="a_secondName" optional="YES" attributeType="String"/>
-        <attribute name="a_sex" attributeType="String"/>
+        <attribute name="a_sex" optional="YES" attributeType="String"/>
         <relationship name="r_adopter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_Adopter" inverseName="r_kitten" inverseEntity="DB_Adopter"/>
         <relationship name="r_litter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_Litter" inverseName="r_kittens" inverseEntity="DB_Litter"/>
         <relationship name="r_vaccine" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Vaccine" inverseName="kitten" inverseEntity="DB_Vaccine"/>

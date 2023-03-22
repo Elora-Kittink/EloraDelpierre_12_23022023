@@ -17,18 +17,34 @@ struct Worker {
         return Kitten(from: DBKitten)
     }
     
-    func createKitten(kitten: Kitten) -> Kitten? {
-        guard let DBKitten = DB_Kitten.create(kitten: kitten) else {return nil}
+    func fetchAllKittensLitter(litterId: String) -> [Kitten]? {
+        let predicate = NSPredicate(format: "r_litter.a_id = %@", litterId)
+        let DBKittens = DB_Kitten.getAll(predicate: predicate)
+        
+        let Kittens = DBKittens.compactMap { dbkitten in
+//            guard let kitten = Kitten(from: dbkitten) else {
+//                return
+//            }
+//            return kitten
+            Kitten(from: dbkitten)
+        }
+        return Kittens
+    }
+    
+    func createKitten(kitten: Kitten, litter: Litter) -> Kitten? {
+        guard let DBKitten = DB_Kitten.create(kitten: kitten, litter: litter) else {return nil}
+        try? CoreDataManager.default.save()
         return Kitten(from: DBKitten)
     }
     
     func updateKittenDB(kitten: Kitten) {
         //        si le chaton existe déjà on veut une mise à jour
-//        if let kitten = DB_Kitten.get(with: kitten.id) {
-            
-//        }
+        //        if let kitten = DB_Kitten.get(with: kitten.id) {
+        
+        //        }
         //        sinon on veut le créer
     }
+    
     
     
     

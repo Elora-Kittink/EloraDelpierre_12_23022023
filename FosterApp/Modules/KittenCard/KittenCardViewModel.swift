@@ -22,7 +22,6 @@ class KittenCardViewModel: ViewModel {
     var vaccines: [Vaccine]? = []
     var adopters: String? = ""
     var weightHistory: [Weight]? = []
-    var isFieldsEnabled: Bool = false
     var isAlive: Bool = true
 
     

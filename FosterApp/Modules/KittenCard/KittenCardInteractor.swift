@@ -75,7 +75,7 @@ class KittenCardInteractor: Interactor
                             isAlive: true)
         
         Task {
-            guard let newKitten = worker.createKitten(kitten: kitten) else {return}
+            guard let newKitten = worker.createKitten(kitten: kitten, litter: litter) else {return}
             self.presenter.display(kitten: newKitten)
             self.presenter.displayMode(type: KittenCardLayoutStyle.displaying)
         }
@@ -102,12 +102,13 @@ class KittenCardInteractor: Interactor
             }
         }
         if isEditingMode {
-            
+            guard let kitten else {return}
+            self.presenter.displayMode(type: KittenCardLayoutStyle.editing)
+            self.presenter.display(kitten: kitten)
         }
         
         if isCreatingMode {
-            
-            
+            self.presenter.displayMode(type: KittenCardLayoutStyle.creating)
         }
     }
 }

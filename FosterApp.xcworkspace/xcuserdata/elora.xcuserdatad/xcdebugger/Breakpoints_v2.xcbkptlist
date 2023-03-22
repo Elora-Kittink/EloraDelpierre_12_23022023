@@ -3,4 +3,22 @@
    uuid = "ABEF5507-464D-42CC-AE62-4B14CC15709B"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FCFA19FE-0E7A-4F28-8E49-C56E93446EA5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FosterApp/Modules/KittenCard/KittenCardInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "createKitten(litter:firstName:secondName:birthdate:sex:color:rescueDate:comment:isAdopted:microship:vaccines:adopters:weightHistory:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

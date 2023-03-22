@@ -34,6 +34,8 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        self.litterTable.delegate = self
+        self.litterTable.dataSource = self
         let toolBar = UIToolbar()
         let validate = UIBarButtonItem(title: "Valider", style: .plain, target: self, action: #selector(self.validateAndDismiss))
         datePicker.datePickerMode = .date
@@ -57,6 +59,7 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
         self.favoriteButton.isHidden = self.viewModel.favoriteBtnHidden
         self.addKittenButton.isHidden = self.viewModel.addKittenBtnHidden
         self.rescueDateTextField.text = self.viewModel.rescueDate
+        litterTable.reloadData()
 	}
 
 	// MARK: - Actions
@@ -71,6 +74,8 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
         vc.litterId = self.viewModel.id
         vc.litter = self.viewModel.litter
         vc.isCreatingMode = true
+        vc.isEditingMode = false
+        vc.isDisplayingMode = false
         
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -102,10 +107,10 @@ extension LitterViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let litters = self.viewModel.kittens else {
+        guard let kittens = self.viewModel.kittens else {
             return 0
         }
-       return litters.count
+       return kittens.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -128,11 +133,16 @@ extension LitterViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let litterId = self.viewModel.kittens?[indexPath.row].id else {
+        guard let kittenId = self.viewModel.kittens?[indexPath.row].id else {
             return
         }
-        let vc = LitterViewController.fromStoryboard()
-        vc.litterId = litterId
+        let vc = KittenCardViewController.fromStoryboard()
+        vc.litterId = self.viewModel.id
+        vc.kittenId = kittenId
+        vc.litter = self.viewModel.litter
+        vc.isDisplayingMode = true
+        vc.isEditingMode = false
+        vc.isCreatingMode = false
         navigationController?.pushViewController(vc, animated: true)
     }
 }

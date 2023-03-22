@@ -8,7 +8,7 @@ import UIKit
 
 class KittenCardPresenter: Presenter<KittenCardViewModel> {
     
-    func displayDate(date:  Date, textField: UITextField) {
+    func displayDate(date: Date, textField: UITextField) {
         let dateToString = date.toString(format: "dd/MM/yyyy") 
         
         if textField.tag == 1 {

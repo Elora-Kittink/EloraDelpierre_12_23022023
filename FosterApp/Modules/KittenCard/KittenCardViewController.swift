@@ -15,7 +15,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     @IBOutlet weak var secondNameLabel: UILabel!
     @IBOutlet weak var secondNameField: UITextField!
     @IBOutlet weak var birthdateLabel: UILabel!
-    @IBOutlet weak var birthdateField: UITextField!
+    @IBOutlet weak var birthdateField: DatePickerField!
     @IBOutlet weak var sexLabel: UILabel!
     @IBOutlet weak var sexField: UITextField!
     @IBOutlet weak var microshipLabel: UILabel!
@@ -29,7 +29,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     @IBOutlet weak var siblingsLabel: UILabel!
     @IBOutlet weak var siblingsField: UITextField!
     @IBOutlet weak var rescueDateLabel: UILabel!
-    @IBOutlet weak var rescueDateField: UITextField!
+    @IBOutlet weak var rescueDateField: DatePickerField!
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var commentsField: UITextField!
     @IBOutlet weak var weighingButton: UIButton!
@@ -54,17 +54,17 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
 		super.viewDidLoad()
 //     MARK: date picker
 //        TODO: probleme avec le double datepicker, marche pas pour la date de sauvetage
-        let toolBar = UIToolbar()
-        let validate = UIBarButtonItem(title: "Valider", style: .plain, target: self, action: #selector(self.validateAndDismiss))
-        datePicker.datePickerMode = .date
-        datePicker.frame.size = CGSize(width: 0, height: 300)
-        datePicker.preferredDatePickerStyle = .wheels
-        toolBar.items = [validate]
-        toolBar.sizeToFit()
-        birthdateField.inputAccessoryView = toolBar
-        rescueDateField.inputAccessoryView = toolBar
-        birthdateField.inputView = datePicker
-        rescueDateField.inputView = datePicker
+//        let toolBar = UIToolbar()
+//        let validate = UIBarButtonItem(title: "Valider", style: .plain, target: self, action: #selector(self.validateAndDismiss))
+//        datePicker.datePickerMode = .date
+//        datePicker.frame.size = CGSize(width: 0, height: 300)
+//        datePicker.preferredDatePickerStyle = .wheels
+//        toolBar.items = [validate]
+//        toolBar.sizeToFit()
+//        birthdateField.inputAccessoryView = toolBar
+//        rescueDateField.inputAccessoryView = toolBar
+//        birthdateField.inputView = datePicker
+//        rescueDateField.inputView = datePicker
         
 //        MARK: labels
         
@@ -92,17 +92,25 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
 		super.refreshUI()
 
         self.nameField.text = self.viewModel.firstName
-        self.nameField.isEnabled = self.viewModel.isFieldsEnabled
+        self.nameField.isEnabled = self.viewModel.textFieldsEnable
         self.secondNameField.text = self.viewModel.secondName
-        self.secondNameField.isEnabled = self.viewModel.isFieldsEnabled
+        self.secondNameField.isEnabled = self.viewModel.textFieldsEnable
         self.birthdateField.text = self.viewModel.birthdate
+        self.birthdateField.isEnabled = self.viewModel.textFieldsEnable
         self.sexField.text = self.viewModel.sex
+        self.sexField.isEnabled = self.viewModel.textFieldsEnable
         self.microshipField.text = self.viewModel.microship
+        self.microshipField.isEnabled = self.viewModel.textFieldsEnable
         self.colorField.text = self.viewModel.color
+        self.colorField.isEnabled = self.viewModel.textFieldsEnable
         self.adopterField.text = self.viewModel.adopters
+        self.adopterField.isEnabled = false
         self.siblingsField.text = self.viewModel.siblings
+        self.siblingsField.isEnabled = false
         self.rescueDateField.text = self.viewModel.rescueDate
+        self.rescueDateField.isEnabled = self.viewModel.textFieldsEnable
         self.commentsField.text = self.viewModel.comment
+        self.commentsField.isEnabled = self.viewModel.textFieldsEnable
 	}
 
 	// MARK: - Actions
@@ -141,18 +149,18 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     @IBAction func adopte() {
     }
     
-    @objc func validateAndDismiss() {
-
-//     TODO:   mettre en place un sender pour savoir de quel textefield ça vient?
-
-        if self.birthdateField.isFirstResponder {
-            self.interactor.displayDate(date: self.datePicker.date, sender: birthdateField)
-        }
-        if self.rescueDateField.isFirstResponder {
-            self.interactor.displayDate(date: self.datePicker.date, sender: rescueDateField)
-        }
-        view.endEditing(true)
-    }
+//    @objc func validateAndDismiss() {
+//
+////     TODO:   mettre en place un sender pour savoir de quel textefield ça vient?
+//
+//        if self.birthdateField.isFirstResponder {
+//            self.interactor.displayDate(date: self.datePicker.date, sender: birthdateField)
+//        }
+//        if self.rescueDateField.isFirstResponder {
+//            self.interactor.displayDate(date: self.datePicker.date, sender: rescueDateField)
+//        }
+//        view.endEditing(true)
+//    }
 
     
 }

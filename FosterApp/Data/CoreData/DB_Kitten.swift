@@ -15,7 +15,10 @@ extension DB_Kitten: CoreDataModel {
 
 extension DB_Kitten {
     
-    static func create(kitten: Kitten) -> DB_Kitten? {
+    static func create(kitten: Kitten, litter: Litter) -> DB_Kitten? {
+        guard let dbLitter = DB_Litter.get(with: litter.id)
+        else { return nil}
+        
         let DBkitten = DB_Kitten.findOrCreate(with: kitten.id)
         DBkitten?.a_sex = kitten.sex
         DBkitten?.a_rescueDate = kitten.rescueDate
@@ -28,7 +31,7 @@ extension DB_Kitten {
         DBkitten?.a_isAlive = true
         DBkitten?.a_isAdopted = false
         //        self.r_weight = NSSet(array: DB_Weight)
-        //        self.r_litter = kitten.litter
+        DBkitten?.r_litter = dbLitter
         
         return DBkitten
     }

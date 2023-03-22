@@ -14,7 +14,7 @@ class LitterPresenter: Presenter<LitterViewModel> {
     }
     
     
-    func displayMode(type: LitterLayoutStyle, rescueDate: Date?, litterId: String?, litter: Litter?) {
+    func displayMode(type: LitterLayoutStyle, rescueDate: Date?, litterId: String?, litter: Litter?, kittens: [Kitten]?) {
         
         if rescueDate != nil {
            let dateToString = rescueDate?.toString(format: "dd/MM/yyyy")
@@ -33,7 +33,7 @@ class LitterPresenter: Presenter<LitterViewModel> {
         self.viewModel?.litter = litter
         
         self.viewModel?.id = litterId
-        
+        if let kittens { self.viewModel?.kittens = kittens } 
         self.viewModel?.send()
     }
 }
