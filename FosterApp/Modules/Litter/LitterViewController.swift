@@ -82,12 +82,6 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
     @IBAction func save() {
         self.interactor.refresh(isEditing: self.viewModel.isEditing, isCreating: self.viewModel.isCreatingNew, isDisplaying: self.viewModel.isDisplaying, litterId: self.viewModel.id, rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"))
     }
-    
-    @objc func validateAndDismiss(){
-        view.endEditing(true)
-        
-        self.interactor.displayDate(date: self.rescueDateTextField.text?.toDate(format: "dd/MM/yyyy") ?? Date())
-    }
 }
 
 extension LitterViewController: UITableViewDataSource, UITableViewDelegate {

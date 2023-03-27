@@ -14,7 +14,6 @@ struct Litter {
     var rescueDate:  String?
     
     init(from coreDataObject: DB_Litter){
-//    TODO: boucle infinie
         self.kittens = (coreDataObject.r_kittens?.allObjects as? [DB_Kitten])?.compactMap { kitten in
             return Kitten(from: kitten)
         }

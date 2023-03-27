@@ -22,10 +22,9 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     @IBOutlet weak var microshipField: UITextField!
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var colorField: UITextField!
-//    TODO: le champs adopter n'a pas besoin d'être modifié directement dans le champs
+
     @IBOutlet weak var adoptersLabel: UILabel!
     @IBOutlet weak var adopterField: UITextField!
-    //    TODO: le champs siblings n'a pas besoin d'être modifié directement dans le champs
     @IBOutlet weak var siblingsLabel: UILabel!
     @IBOutlet weak var siblingsField: UITextField!
     @IBOutlet weak var rescueDateLabel: UILabel!

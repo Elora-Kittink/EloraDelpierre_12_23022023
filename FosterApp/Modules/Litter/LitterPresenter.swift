@@ -6,14 +6,7 @@
 import Foundation
 
 class LitterPresenter: Presenter<LitterViewModel> {
-    
-    func displayDate(date: Date?) {
-        guard let dateToString = date?.toString(format: "dd/MM/yyyy") else { return }
-        self.viewModel?.rescueDate = dateToString
-        self.viewModel?.send()
-    }
-    
-    
+  
     func displayMode(type: LitterLayoutStyle, rescueDate: Date?, litterId: String?, litter: Litter?, kittens: [Kitten]?) {
         
         if rescueDate != nil {

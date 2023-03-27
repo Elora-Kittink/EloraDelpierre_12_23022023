@@ -8,18 +8,6 @@ import UIKit
 
 class KittenCardPresenter: Presenter<KittenCardViewModel> {
     
-    func displayDate(date: Date, textField: UITextField) {
-        let dateToString = date.toString(format: "dd/MM/yyyy") 
-        
-        if textField.tag == 1 {
-            self.viewModel?.birthdate = dateToString
-        }
-        if textField.tag == 2 {
-            self.viewModel?.rescueDate = dateToString  
-        }
-        self.viewModel?.send()
-    }
-    
     func displayMode(type: KittenCardLayoutStyle) {
                 
         self.viewModel?.isEditingMode = type.isEditingMode

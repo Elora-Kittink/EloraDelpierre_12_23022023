@@ -12,12 +12,6 @@ class KittenCardInteractor: Interactor
 	KittenCardPresenter
 > {
     let worker = Worker()
-    
-    func displayDate(date: Date,
-                     sender: UITextField) {
-        self.presenter.displayDate(date: date, textField: sender)
-        
-    }
 
     
 //    func displayMode(isEditing: Bool,

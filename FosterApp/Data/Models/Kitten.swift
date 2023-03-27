@@ -16,7 +16,7 @@ struct Kitten {
     var birthdate: Date?
     var sex: String?
     var color: String?
-//   TODO: n'est pas à choisir puisqu'elle corresponds à la date de sauvetage de la portée?
+//   TODO: n'est pas à choisir puisqu'elle corresponds à la date de sauvetage de la portée?  -> si parce qu'on peut créer une portée avec des chatons de differentes provenance? 
     var rescueDate: Date?
     //    var siblings: [Kitten]?
     var comment: String?
@@ -31,7 +31,6 @@ struct Kitten {
         guard let id = coreDataObject.a_id else { return nil }
         guard let dblitter = coreDataObject.r_litter else { return nil }
         self.id = id
-//        self.litter = Litter(from: dblitter)
         self.litterId = coreDataObject.r_litter?.a_id ?? ""
         self.firstName = coreDataObject.a_firstName ?? "A compléter !"
         self.secondName = coreDataObject.a_secondName

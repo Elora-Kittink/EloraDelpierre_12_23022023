@@ -20,11 +20,6 @@ class LitterInteractor: Interactor
         }
     }
     
-    func displayDate(date: Date) {
-        self.presenter.displayDate(date: date)
-        
-    }
-    
     func makeFavorite(litterId: String) {
         Task {
             worker.makeFavorite(litterId: litterId)
@@ -62,7 +57,7 @@ class LitterInteractor: Interactor
                 }
                let kittens = worker.fetchAllKittensLitter(litterId: litterId ?? "")
                 self.presenter.displayMode(type: LitterLayoutStyle.displaying, rescueDate: litter.rescueDate?.toDate(format: "dd/MM/yyyy"), litterId: litterId, litter: litter, kittens: kittens)
-                self.presenter.displayDate(date: litter.rescueDate?.toDate(format: "dd/MM/yyyy"))
+//                self.presenter.displayDate(date: litter.rescueDate?.toDate(format: "dd/MM/yyyy"))
                 self.presenter.display(loader: false)
             }
         }
