@@ -34,11 +34,8 @@ struct Worker {
     }
     
     func updateKittenDB(kitten: Kitten) {
-        //        si le chaton existe déjà on veut une mise à jour
-        //        if let kitten = DB_Kitten.get(with: kitten.id) {
-        
-        //        }
-        //        sinon on veut le créer
+        guard let DBKitten = DB_Kitten.get(with: kitten.id) else {return}
+        DBKitten.update(kitten: kitten, litterId: kitten.litterId)
     }
     
     

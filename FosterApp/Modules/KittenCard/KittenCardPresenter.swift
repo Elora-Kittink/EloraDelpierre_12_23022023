@@ -50,6 +50,7 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
         self.viewModel?.isAlive = kitten.isAlive
 //        guard let litter = kitten.litter else { return}
 //        self.viewModel?.litter = litter
+        self.viewModel?.kitten = kitten
     }
 }
 

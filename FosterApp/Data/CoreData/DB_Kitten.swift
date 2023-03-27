@@ -36,19 +36,22 @@ extension DB_Kitten {
         return DBkitten
     }
     
-//    func Update(kitten: Kitten) {
-//        guard let birthdateString = kitten.birthdate?.toString(format: "ddMMyyyy") else { return }
-//        self.a_isAlive = true
-//        self.a_firstName = kitten.firstName
-//        self.a_sex = kitten.sex
-//        self.a_secondName = kitten.secondName
-//        self.a_color = kitten.color
-//        self.a_birthdate = kitten.birthdate
-//        self.a_microship = Int64(kitten.microship ?? 0)
-//        self.a_isAdopted = kitten.isAdopted
-//        self.a_rescueDate = kitten.rescueDate
-//        self.a_comment = kitten.comment
-////        self.r_weight = NSSet(array: DB_Weight)
-////        self.r_litter = kitten.litter
-//    }
+    func update(kitten: Kitten, litterId: String) {
+        
+        guard let dbLitter = DB_Litter.get(with: litterId)
+        else { return }
+        guard let birthdateString = kitten.birthdate?.toString(format: "ddMMyyyy") else { return }
+        self.a_isAlive = kitten.isAlive
+        self.a_firstName = kitten.firstName
+        self.a_sex = kitten.sex
+        self.a_secondName = kitten.secondName
+        self.a_color = kitten.color
+        self.a_birthdate = kitten.birthdate
+        self.a_microship = Int64(kitten.microship ?? 0)
+        self.a_isAdopted = kitten.isAdopted
+        self.a_rescueDate = kitten.rescueDate
+        self.a_comment = kitten.comment
+//        self.r_weight = NSSet(array: DB_Weight)
+        self.r_litter = dbLitter
+    }
 }

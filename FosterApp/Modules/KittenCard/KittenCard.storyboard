@@ -220,6 +220,9 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="pencil" catalog="system"/>
+                                                <connections>
+                                                    <action selector="edit" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5gJ-EP-g7c"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbw-g5-sz2">
                                                 <rect key="frame" x="318" y="32" width="75" height="35"/>
@@ -240,12 +243,21 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRs-WT-Z4t">
-                                                <rect key="frame" x="318" y="95" width="75" height="35"/>
+                                                <rect key="frame" x="42" y="457" width="126" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Save"/>
+                                                <state key="normal" title="Créer chaton"/>
                                                 <connections>
                                                     <action selector="save" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hoh-To-Ki5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSv-4M-H2g">
+                                                <rect key="frame" x="230" y="457" width="136" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Valider modification"/>
+                                                <connections>
+                                                    <action selector="saveModifications" destination="Y6W-OH-hqX" eventType="touchUpInside" id="psB-Sc-qga"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -292,7 +304,6 @@
                         <outlet property="commentsLabel" destination="baa-8I-BsY" id="11s-Dc-snQ"/>
                         <outlet property="deadBtn" destination="Bbw-g5-sz2" id="6u3-xb-qhI"/>
                         <outlet property="editBtn" destination="4Wy-7u-n1R" id="lwh-tM-tAK"/>
-                        <outlet property="editButton" destination="4Wy-7u-n1R" id="wug-ov-QMT"/>
                         <outlet property="medicalHistory" destination="FLC-Q6-ZcO" id="TzD-v0-bVW"/>
                         <outlet property="microshipField" destination="gqA-s4-OH6" id="YsU-YW-Tqv"/>
                         <outlet property="microshipLabel" destination="7nR-PK-wFv" id="GJT-8e-3jN"/>

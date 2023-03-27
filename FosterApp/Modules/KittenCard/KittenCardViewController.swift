@@ -32,7 +32,6 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var commentsField: UITextField!
     @IBOutlet weak var weighingButton: UIButton!
-    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var weightHistory: UIView!
     @IBOutlet weak var medicalHistory: UIView!
     @IBOutlet weak var editBtn: UIButton!
@@ -109,7 +108,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
 	// MARK: - Actions
     @IBAction func save() {
 
-     let kitten = self.interactor.createKitten(litter: self.litter,
+     let kitten = self.interactor.composeKitten(litter: self.litter,
                                      firstName: self.nameField.text ?? "",
                                      secondName: self.secondNameField.text,
                                      birthdate:  self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
@@ -121,7 +120,8 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
                                      microship: Int(self.microshipField.text ?? ""),
                                      vaccines: nil,
                                      adopters: nil,
-                                     weightHistory: nil)
+                                     weightHistory: nil,
+                                               isEdited: false, kittenId: nil)
         
         self.interactor.refresh(isEditingMode: self.isEditing,
                                 isCreatingMode: self.isCreatingMode,
@@ -131,11 +131,38 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
                                 kitten: kitten)
     }
     
+//    TODO: quand je valide après édition ça me créé un nouveau chaton avec nouvel id
+
     @IBAction func edit() {
-        
+        self.interactor.refresh(isEditingMode: true, isCreatingMode: false, isDisplayingMode: false, litter: self.litter, kittenId: self.kittenId, kitten: self.viewModel.kitten)
     }
     
-
+    @IBAction func saveModifications() {
+      let kittenModified = self.interactor.composeKitten(litter: self.litter,
+                                     firstName: self.nameField.text ?? "",
+                                     secondName: self.secondNameField.text,
+                                     birthdate:  self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
+                                     sex: self.sexField.text,
+                                     color: self.colorField.text,
+                                     rescueDate: self.rescueDateField.text?.toDate(format: "dd/MM/yyyy") ?? Date(),
+                                     comment: self.commentsField.text,
+                                     isAdopted: false,
+                                     microship: Int(self.microshipField.text ?? ""),
+                                     vaccines: nil,
+                                     adopters: nil,
+                                     weightHistory: nil,
+                                     isEdited: true, kittenId: self.viewModel.kitten?.id)
+        
+        self.interactor.worker.updateKittenDB(kitten: kittenModified)
+        
+        self.interactor.refresh(isEditingMode: self.isEditing,
+                                isCreatingMode: self.isCreatingMode,
+                                isDisplayingMode: self.isDisplayingMode,
+                                litter: self.litter,
+                                kittenId: kittenModified.id,
+                                kitten: kittenModified)
+    }
+    
     @IBAction func dead() {
     }
     

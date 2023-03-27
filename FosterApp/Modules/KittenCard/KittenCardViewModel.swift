@@ -23,7 +23,7 @@ class KittenCardViewModel: ViewModel {
     var adopters: String? = ""
     var weightHistory: [Weight] = []
     var isAlive: Bool = true
-
+    var kitten: Kitten? 
     
 //    MARK: labels names
     
