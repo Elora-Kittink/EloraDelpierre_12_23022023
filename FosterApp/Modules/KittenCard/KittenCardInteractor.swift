@@ -18,37 +18,32 @@ class KittenCardInteractor: Interactor
         self.presenter.displayDate(date: date, textField: sender)
         
     }
+
     
-//    func refresh(newKittenCreation: Bool,
-//                 kittenId: String,
-//                 litterId: String) {
-//
+//    func displayMode(isEditing: Bool,
+//                     isCreating: Bool,
+//                     isDisplaying: Bool,
+//                     litterId: String?,
+//                     kittenId: String?) {
+//        
+//        if isEditing && !isCreating && !isDisplaying {
+//            self.presenter.displayMode(type: KittenCardLayoutStyle.editing)
+//        }
+//        if !isEditing && isCreating && !isDisplaying {
+//            self.presenter.displayMode(type: KittenCardLayoutStyle.creating)
+//        }
+//        if !isEditing && !isCreating && isDisplaying {
+//            self.presenter.displayMode(type: KittenCardLayoutStyle.displaying)
+//        }
 //    }
     
-    func displayMode(isEditing: Bool,
-                     isCreating: Bool,
-                     isDisplaying: Bool,
-                     litterId: String?,
-                     kittenId: String?) {
-        
-        if isEditing && !isCreating && !isDisplaying {
-            self.presenter.displayMode(type: KittenCardLayoutStyle.editing)
-        }
-        if !isEditing && isCreating && !isDisplaying {
-            self.presenter.displayMode(type: KittenCardLayoutStyle.creating)
-        }
-        if !isEditing && !isCreating && isDisplaying {
-            self.presenter.displayMode(type: KittenCardLayoutStyle.displaying)
-        }
-    }
-    
     func createKitten(litter: Litter,
-                      firstName: String,
+                      firstName: String?,
                       secondName: String?,
                       birthdate: Date?,
                       sex: String?,
                       color: String?,
-                      rescueDate: Date,
+                      rescueDate: Date?,
                       comment: String?,
                       isAdopted: Bool,
                       microship: Int?,
@@ -76,7 +71,7 @@ class KittenCardInteractor: Interactor
         
         Task {
             guard let newKitten = worker.createKitten(kitten: kitten, litter: litter) else {return}
-            self.presenter.display(kitten: newKitten)
+            self.presenter.display(kitten: newKitten, litter: litter)
             self.presenter.displayMode(type: KittenCardLayoutStyle.displaying)
         }
 
@@ -98,13 +93,13 @@ class KittenCardInteractor: Interactor
             Task {
                 guard let kitten = worker.fetchKittenFromId(kittenId: kittenId) else {return}
                 self.presenter.displayMode(type: KittenCardLayoutStyle.displaying)
-                self.presenter.display(kitten: kitten)
+                self.presenter.display(kitten: kitten, litter: litter)
             }
         }
         if isEditingMode {
             guard let kitten else {return}
             self.presenter.displayMode(type: KittenCardLayoutStyle.editing)
-            self.presenter.display(kitten: kitten)
+            self.presenter.display(kitten: kitten, litter: litter)
         }
         
         if isCreatingMode {

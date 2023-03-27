@@ -7,17 +7,127 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FCFA19FE-0E7A-4F28-8E49-C56E93446EA5"
+            uuid = "F91282F8-24A4-4561-AF69-BC661D7FF62F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FosterApp/Modules/KittenCard/KittenCardInteractor.swift"
+            filePath = "FosterApp/Modules/KittenCard/KittenCardPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "createKitten(litter:firstName:secondName:birthdate:sex:color:rescueDate:comment:isAdopted:microship:vaccines:adopters:weightHistory:)"
-            landmarkType = "9">
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "display(kitten:litter:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F91282F8-24A4-4561-AF69-BC661D7FF62F - 6d1ae73db3d40130"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FosterApp.KittenCardPresenter.display(kitten: FosterApp.Kitten, litter: FosterApp.Litter) -&gt; ()"
+                  moduleName = "FosterApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elora/Documents/OC/Projets/P12/FosterApp/FosterApp/Modules/KittenCard/KittenCardPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "3911">
+               </Location>
+               <Location
+                  uuid = "F91282F8-24A4-4561-AF69-BC661D7FF62F - 6d1ae73db3d40130"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FosterApp.KittenCardPresenter.display(kitten: FosterApp.Kitten, litter: FosterApp.Litter) -&gt; ()"
+                  moduleName = "FosterApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elora/Documents/OC/Projets/P12/FosterApp/FosterApp/Modules/KittenCard/KittenCardPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "3964">
+               </Location>
+               <Location
+                  uuid = "F91282F8-24A4-4561-AF69-BC661D7FF62F - 9f84134860a80358"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (FosterApp.Kitten) -&gt; Swift.Bool in FosterApp.KittenCardPresenter.display(kitten: FosterApp.Kitten, litter: FosterApp.Litter) -&gt; ()"
+                  moduleName = "FosterApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elora/Documents/OC/Projets/P12/FosterApp/FosterApp/Modules/KittenCard/KittenCardPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "869A0BD5-16E0-4003-88BA-AA8403C3518D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FosterApp/Modules/KittenCard/KittenCardPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "display(kitten:litter:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "869A0BD5-16E0-4003-88BA-AA8403C3518D - 6d1ae73db3d401b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FosterApp.KittenCardPresenter.display(kitten: FosterApp.Kitten, litter: FosterApp.Litter) -&gt; ()"
+                  moduleName = "FosterApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elora/Documents/OC/Projets/P12/FosterApp/FosterApp/Modules/KittenCard/KittenCardPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "4134">
+               </Location>
+               <Location
+                  uuid = "869A0BD5-16E0-4003-88BA-AA8403C3518D - 6d1ae73db3d401b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FosterApp.KittenCardPresenter.display(kitten: FosterApp.Kitten, litter: FosterApp.Litter) -&gt; ()"
+                  moduleName = "FosterApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elora/Documents/OC/Projets/P12/FosterApp/FosterApp/Modules/KittenCard/KittenCardPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "4294">
+               </Location>
+               <Location
+                  uuid = "869A0BD5-16E0-4003-88BA-AA8403C3518D - 9a5fef31b02a6052"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (FosterApp.Kitten) -&gt; Swift.Optional&lt;Swift.String&gt; in FosterApp.KittenCardPresenter.display(kitten: FosterApp.Kitten, litter: FosterApp.Litter) -&gt; ()"
+                  moduleName = "FosterApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elora/Documents/OC/Projets/P12/FosterApp/FosterApp/Modules/KittenCard/KittenCardPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

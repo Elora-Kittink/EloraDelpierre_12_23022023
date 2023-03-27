@@ -33,21 +33,26 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
         self.viewModel?.send()
     }
     
-    func display(kitten: Kitten) {
+    func display(kitten: Kitten, litter: Litter) {
         
-        self.viewModel?.firstName = kitten.firstName ?? ""
+        self.viewModel?.firstName = kitten.firstName ?? "A compléter"
         self.viewModel?.secondName = kitten.secondName ?? ""
-        self.viewModel?.birthdate = kitten.birthdate?.toString(format: "dd/MM/yyyy") ?? ""
+        self.viewModel?.birthdate = kitten.birthdate?.toString(format: "dd/MM/yyyy") ?? "A compléter"
         // TODO: Calculate age of kitten
         let age = kitten.birthdate?.timeIntervalSinceNow
-        self.viewModel?.age = "\(abs(Int(age! / 31556926.0)))"
-        self.viewModel?.sex = kitten.sex ?? ""
-        self.viewModel?.color = kitten.color ?? ""
-        self.viewModel?.rescueDate = kitten.rescueDate.toString(format: "dd/MM/yyyy") ?? ""
-//        self.viewModel?.siblings = kitten.siblings?.compactMap { sibling in
-//            return sibling.firstName
-//        }.joined(separator: ",") ?? ""
-        self.viewModel?.comment = kitten.comment ?? ""
+        self.viewModel?.age = "\(abs(Int((age ?? 0) / 31556926.0)))"
+        self.viewModel?.sex = kitten.sex ?? "A compléter"
+        self.viewModel?.color = kitten.color ?? "A compléter"
+        self.viewModel?.rescueDate = kitten.rescueDate?.toString(format: "dd/MM/yyyy") ?? "A compléter"
+        let siblings = litter.kittens?.filter { kitten in
+            kitten.id != kitten.id
+        }
+
+        self.viewModel?.siblings = siblings?.compactMap { sibling in
+            return sibling.firstName
+        }.joined(separator: ",") ?? ""
+
+        self.viewModel?.comment = kitten.comment ?? "A compléter"
         self.viewModel?.isAdopted = kitten.isAdopted
         self.viewModel?.microship = String(kitten.microship ?? 0)
         self.viewModel?.vaccines = kitten.vaccines ?? []

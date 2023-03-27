@@ -22,10 +22,6 @@ struct Worker {
         let DBKittens = DB_Kitten.getAll(predicate: predicate)
         
         let Kittens = DBKittens.compactMap { dbkitten in
-//            guard let kitten = Kitten(from: dbkitten) else {
-//                return
-//            }
-//            return kitten
             Kitten(from: dbkitten)
         }
         return Kittens

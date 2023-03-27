@@ -9,13 +9,14 @@ import Foundation
 
 struct Kitten {
     var id: String?
-    var litter: Litter
-    var firstName: String
+//    var litter: Litter
+    var litterId: String
+    var firstName: String?
     var secondName: String?
     var birthdate: Date?
     var sex: String?
     var color: String?
-    var rescueDate: Date
+    var rescueDate: Date?
     //    var siblings: [Kitten]?
     var comment: String?
     var isAdopted: Bool
@@ -29,7 +30,8 @@ struct Kitten {
         guard let id = coreDataObject.a_id else { return nil }
         guard let dblitter = coreDataObject.r_litter else { return nil }
         self.id = id
-        self.litter = Litter(from: dblitter)
+//        self.litter = Litter(from: dblitter)
+        self.litterId = coreDataObject.r_litter?.a_id ?? ""
         self.firstName = coreDataObject.a_firstName ?? "A compléter !"
         self.secondName = coreDataObject.a_secondName
         self.birthdate = coreDataObject.a_birthdate
@@ -52,9 +54,10 @@ struct Kitten {
         self.isAlive = coreDataObject.a_isAlive
     }
     
-    init(from id: String, litter: Litter, firstName: String, secondName: String?, birthdate: Date?, sex: String?, color: String?, rescueDate: Date, siblings: [Kitten]?, comment: String?, isAdopted: Bool, microship: Int?, vaccines: [Vaccine]?, adopters: Adopter?, weightHistory: [Weight]?, isAlive: Bool) {
+    init(from id: String?, litter: Litter, firstName: String?, secondName: String?, birthdate: Date?, sex: String?, color: String?, rescueDate: Date?, siblings: [Kitten]?, comment: String?, isAdopted: Bool, microship: Int?, vaccines: [Vaccine]?, adopters: Adopter?, weightHistory: [Weight]?, isAlive: Bool) {
         self.id = id
-        self.litter = litter
+//        self.litter = litter
+        self.litterId = litter.id ?? ""
         self.firstName = firstName
         self.secondName = secondName
         self.birthdate = birthdate

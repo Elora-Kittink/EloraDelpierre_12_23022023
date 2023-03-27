@@ -4,7 +4,7 @@
         <attribute name="a_adress" optional="YES" attributeType="String"/>
         <attribute name="a_comment" optional="YES" attributeType="String"/>
         <attribute name="a_firstName" optional="YES" attributeType="String"/>
-        <attribute name="a_id" optional="YES" attributeType="String"/>
+        <attribute name="a_id" attributeType="String"/>
         <attribute name="a_lastName" optional="YES" attributeType="String"/>
         <attribute name="a_numberPhone" optional="YES" attributeType="String"/>
         <relationship name="r_kitten" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Kitten" inverseName="r_adopter" inverseEntity="DB_Kitten"/>
@@ -28,7 +28,7 @@
         <relationship name="r_weight" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Weight" inverseName="kitten" inverseEntity="DB_Weight"/>
     </entity>
     <entity name="DB_Litter" representedClassName="DB_Litter" syncable="YES" codeGenerationType="class">
-        <attribute name="a_id" optional="YES" attributeType="String"/>
+        <attribute name="a_id" attributeType="String"/>
         <attribute name="a_isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_isOngoing" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_rescueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -36,13 +36,13 @@
     </entity>
     <entity name="DB_Vaccine" representedClassName="DB_Vaccine" syncable="YES" codeGenerationType="class">
         <attribute name="a_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="a_id" optional="YES" attributeType="String"/>
+        <attribute name="a_id" attributeType="String"/>
         <attribute name="a_vaccine" optional="YES" attributeType="String"/>
         <relationship name="kitten" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_Kitten" inverseName="r_vaccine" inverseEntity="DB_Kitten"/>
     </entity>
     <entity name="DB_Weight" representedClassName="DB_Weight" syncable="YES" codeGenerationType="class">
         <attribute name="a_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="a_id" optional="YES" attributeType="String"/>
+        <attribute name="a_id" attributeType="String"/>
         <attribute name="a_weight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="kitten" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_Kitten" inverseName="r_weight" inverseEntity="DB_Kitten"/>
     </entity>

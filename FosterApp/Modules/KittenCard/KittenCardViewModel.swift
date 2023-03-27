@@ -19,9 +19,9 @@ class KittenCardViewModel: ViewModel {
     var comment: String = ""
     var isAdopted: Bool = false
     var microship: String? = ""
-    var vaccines: [Vaccine]? = []
+    var vaccines: [Vaccine] = []
     var adopters: String? = ""
-    var weightHistory: [Weight]? = []
+    var weightHistory: [Weight] = []
     var isAlive: Bool = true
 
     
