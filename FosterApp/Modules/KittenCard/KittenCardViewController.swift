@@ -36,8 +36,10 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var weightHistory: UIView!
     @IBOutlet weak var medicalHistory: UIView!
-
-    
+    @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var saveBtn: UIButton!
+    @IBOutlet weak var adoptedBtn: UIButton!
+    @IBOutlet weak var deadBtn: UIButton!
     // MARK: - Variables
     
     var litterId = ""
@@ -68,7 +70,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.interactor.refresh(isEditingMode: self.isEditingMode, isCreatingMode: self.isCreatingMode, isDisplayingMode: isDisplayingMode, litter: litter, kittenId: kittenId, kitten: nil)
+        self.interactor.refresh(isEditingMode: self.isEditingMode, isCreatingMode: self.isCreatingMode, isDisplayingMode: self.isDisplayingMode, litter: litter, kittenId: kittenId, kitten: nil)
     }
     
     
@@ -76,6 +78,8 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
 	override func refreshUI() {
 		super.refreshUI()
 
+        
+        
         self.nameField.text = self.viewModel.firstName
         self.nameField.isEnabled = self.viewModel.textFieldsEnable
         self.secondNameField.text = self.viewModel.secondName
@@ -96,6 +100,11 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
         self.rescueDateField.isEnabled = self.viewModel.textFieldsEnable
         self.commentsField.text = self.viewModel.comment
         self.commentsField.isEnabled = self.viewModel.textFieldsEnable
+        
+        self.saveBtn.isHidden = self.viewModel.saveBtnHidden
+        self.editBtn.isHidden = self.viewModel.editBtnHidden
+        self.deadBtn.isHidden = self.viewModel.deadBtnHidden
+        self.adoptedBtn.isHidden = self.viewModel.adopteBtnHidden
 	}
 
 	// MARK: - Actions

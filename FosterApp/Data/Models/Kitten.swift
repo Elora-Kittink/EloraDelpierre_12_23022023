@@ -16,6 +16,7 @@ struct Kitten {
     var birthdate: Date?
     var sex: String?
     var color: String?
+//   TODO: n'est pas à choisir puisqu'elle corresponds à la date de sauvetage de la portée?
     var rescueDate: Date?
     //    var siblings: [Kitten]?
     var comment: String?

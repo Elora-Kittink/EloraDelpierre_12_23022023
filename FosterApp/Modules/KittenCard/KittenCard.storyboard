@@ -281,6 +281,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adoptedBtn" destination="Uif-iP-shX" id="bp5-6I-QAe"/>
                         <outlet property="adopterField" destination="Efp-77-wPg" id="oKT-Bh-d0p"/>
                         <outlet property="adoptersLabel" destination="08a-8p-MVY" id="GYT-iP-Ufj"/>
                         <outlet property="birthdateField" destination="dHA-wb-vVv" id="Mkq-qx-OOX"/>
@@ -289,6 +290,8 @@
                         <outlet property="colorLabel" destination="Y4L-tJ-Qpk" id="2m2-Az-5bk"/>
                         <outlet property="commentsField" destination="q7o-oO-hXJ" id="4HR-Bq-C7O"/>
                         <outlet property="commentsLabel" destination="baa-8I-BsY" id="11s-Dc-snQ"/>
+                        <outlet property="deadBtn" destination="Bbw-g5-sz2" id="6u3-xb-qhI"/>
+                        <outlet property="editBtn" destination="4Wy-7u-n1R" id="lwh-tM-tAK"/>
                         <outlet property="editButton" destination="4Wy-7u-n1R" id="wug-ov-QMT"/>
                         <outlet property="medicalHistory" destination="FLC-Q6-ZcO" id="TzD-v0-bVW"/>
                         <outlet property="microshipField" destination="gqA-s4-OH6" id="YsU-YW-Tqv"/>
@@ -297,6 +300,7 @@
                         <outlet property="nameLabel" destination="SDO-6M-ika" id="frf-ef-apH"/>
                         <outlet property="rescueDateField" destination="HJU-6r-UT6" id="OcE-E7-fvg"/>
                         <outlet property="rescueDateLabel" destination="TrS-g9-vFo" id="eQ0-Gh-QYW"/>
+                        <outlet property="saveBtn" destination="aRs-WT-Z4t" id="amc-hR-G3X"/>
                         <outlet property="secondNameField" destination="2xU-nV-8Mb" id="JGD-ta-pTy"/>
                         <outlet property="secondNameLabel" destination="TPP-Ia-PBq" id="mhK-ky-CjD"/>
                         <outlet property="sexField" destination="ODi-bW-sZM" id="aIQ-ac-JMG"/>

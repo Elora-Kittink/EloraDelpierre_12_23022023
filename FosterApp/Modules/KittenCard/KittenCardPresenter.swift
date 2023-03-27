@@ -15,7 +15,7 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
             self.viewModel?.birthdate = dateToString
         }
         if textField.tag == 2 {
-            self.viewModel?.rescueDate = dateToString
+            self.viewModel?.rescueDate = dateToString  
         }
         self.viewModel?.send()
     }
@@ -44,13 +44,13 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
         self.viewModel?.sex = kitten.sex ?? "A compléter"
         self.viewModel?.color = kitten.color ?? "A compléter"
         self.viewModel?.rescueDate = kitten.rescueDate?.toString(format: "dd/MM/yyyy") ?? "A compléter"
-        let siblings = litter.kittens?.filter { kitten in
-            kitten.id != kitten.id
+        let siblings = litter.kittens?.filter { kitty in
+            kitten.id != kitty.id
         }
 
         self.viewModel?.siblings = siblings?.compactMap { sibling in
             return sibling.firstName
-        }.joined(separator: ",") ?? ""
+        }.joined(separator: ", ") ?? ""
 
         self.viewModel?.comment = kitten.comment ?? "A compléter"
         self.viewModel?.isAdopted = kitten.isAdopted
