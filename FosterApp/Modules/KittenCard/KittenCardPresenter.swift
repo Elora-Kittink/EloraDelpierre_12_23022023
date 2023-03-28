@@ -13,7 +13,8 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
         self.viewModel?.isEditingMode = type.isEditingMode
         self.viewModel?.isCreatingMode = type.isCreatingMode
         self.viewModel?.isDisplayingMode = type.isDisplayingMode
-        self.viewModel?.saveBtnHidden = type.saveBtnHidden
+        self.viewModel?.validateCreationBtnHidden = type.validateCreationBtnHidden
+        self.viewModel?.validateModifBtnHidden = type.validateModifBtnHidden
         self.viewModel?.editBtnHidden = type.editBtnHidden
         self.viewModel?.deadBtnHidden = type.deadBtnHidden
         self.viewModel?.textFieldsEnable = type.textFieldsEnable
@@ -57,10 +58,10 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
 enum KittenCardLayoutStyle {
     case displaying, editing, creating
     
-   var saveBtnHidden: Bool {
+   var validateCreationBtnHidden: Bool {
         switch self {
         case .displaying: return true
-        case .editing: return false
+        case .editing: return true
         case .creating: return false
         }
     }
@@ -75,6 +76,13 @@ enum KittenCardLayoutStyle {
         switch self {
         case .displaying: return false
         case .editing: return true
+        case .creating: return true
+        }
+    }
+    var validateModifBtnHidden: Bool {
+        switch self {
+        case .displaying: return true
+        case .editing: return false
         case .creating: return true
         }
     }

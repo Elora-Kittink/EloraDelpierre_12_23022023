@@ -46,10 +46,11 @@ class KittenCardViewModel: ViewModel {
     
 //    MARK: button hidden
     
-    var saveBtnHidden = false
     var editBtnHidden = false
     var adopteBtnHidden = false
     var deadBtnHidden = false
+    var validateCreationBtnHidden = false
+    var validateModifBtnHidden = false
     
 //    MARK: text fields enabled
     

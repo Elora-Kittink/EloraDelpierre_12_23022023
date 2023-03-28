@@ -38,6 +38,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var adoptedBtn: UIButton!
     @IBOutlet weak var deadBtn: UIButton!
+    @IBOutlet weak var validateModifiBtn: UIButton!
     // MARK: - Variables
     
     var litterId = ""
@@ -99,10 +100,12 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
         self.commentsField.text = self.viewModel.comment
         self.commentsField.isEnabled = self.viewModel.textFieldsEnable
         
-        self.saveBtn.isHidden = self.viewModel.saveBtnHidden
+        self.saveBtn.isHidden = self.viewModel.validateCreationBtnHidden
+        
         self.editBtn.isHidden = self.viewModel.editBtnHidden
         self.deadBtn.isHidden = self.viewModel.deadBtnHidden
         self.adoptedBtn.isHidden = self.viewModel.adopteBtnHidden
+        self.validateModifiBtn.isHidden = self.viewModel.validateModifBtnHidden
     }
     
     // MARK: - Actions

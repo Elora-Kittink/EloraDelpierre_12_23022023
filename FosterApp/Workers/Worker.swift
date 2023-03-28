@@ -36,6 +36,7 @@ struct Worker {
     func updateKittenDB(kitten: Kitten) {
         guard let DBKitten = DB_Kitten.get(with: kitten.id) else {return}
         DBKitten.update(kitten: kitten, litterId: kitten.litterId)
+        try? CoreDataManager.default.save()
     }
     
     

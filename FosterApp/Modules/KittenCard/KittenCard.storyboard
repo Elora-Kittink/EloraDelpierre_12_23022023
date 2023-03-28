@@ -246,7 +246,7 @@
                                                 <rect key="frame" x="42" y="457" width="126" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Créer chaton"/>
+                                                <state key="normal" title="Valider création"/>
                                                 <connections>
                                                     <action selector="save" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hoh-To-Ki5"/>
                                                 </connections>
@@ -318,6 +318,7 @@
                         <outlet property="sexLabel" destination="0uZ-tS-cU9" id="46O-1d-mK0"/>
                         <outlet property="siblingsField" destination="ZT3-7f-KKT" id="M6q-5f-idD"/>
                         <outlet property="siblingsLabel" destination="yQF-VY-RMY" id="S83-5Y-v2V"/>
+                        <outlet property="validateModifiBtn" destination="qSv-4M-H2g" id="mGE-ah-D1o"/>
                         <outlet property="weighingButton" destination="JgE-ct-n1I" id="rXD-hf-Dg9"/>
                         <outlet property="weightHistory" destination="kUz-sO-mLw" id="PVt-cH-LUn"/>
                     </connections>
