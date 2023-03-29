@@ -253,6 +253,13 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		D5B5E24029D4627E00A84476 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		D5E9295429AD169400ACDAEE /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +306,7 @@
 		D5F0C70A29A90C17002A0F65 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D5B5E24029D4627E00A84476 /* Login */,
 				D57272CB29ACF4DB00A9C72E /* Home */,
 				D57272C029ACEA9B00A9C72E /* LitterHistory */,
 				D57272B129ACBF4300A9C72E /* MedicalHistory */,
@@ -401,6 +409,7 @@
 			buildConfigurationList = D5F0C70729A90BEF002A0F65 /* Build configuration list for PBXNativeTarget "FosterApp" */;
 			buildPhases = (
 				FE98689C5E00CC1C8D532041 /* [CP] Check Pods Manifest.lock */,
+				D5B5E24129D465BB00A84476 /* Swiftlint */,
 				D5F0C6EF29A90BEA002A0F65 /* Sources */,
 				D5F0C6F029A90BEA002A0F65 /* Frameworks */,
 				D5F0C6F129A90BEA002A0F65 /* Resources */,
@@ -469,6 +478,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		D5B5E24129D465BB00A84476 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		D667D0DCFDCBEF9C4FA69122 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
