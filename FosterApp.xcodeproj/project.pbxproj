@@ -35,6 +35,12 @@
 		D57272D229ACF4F200A9C72E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272CE29ACF4F200A9C72E /* HomeInteractor.swift */; };
 		D57272D329ACF4F200A9C72E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272CF29ACF4F200A9C72E /* HomeViewModel.swift */; };
 		D57272D529ACF50100A9C72E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57272D429ACF50100A9C72E /* Home.storyboard */; };
+		D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D585E62329D5DC7300D3ED9C /* Colors.xcassets */; };
+		D585E62A29D5DF9C00D3ED9C /* KittenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585E62629D5DF9C00D3ED9C /* KittenPresenter.swift */; };
+		D585E62B29D5DF9C00D3ED9C /* KittenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585E62729D5DF9C00D3ED9C /* KittenViewController.swift */; };
+		D585E62C29D5DF9C00D3ED9C /* KittenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585E62829D5DF9C00D3ED9C /* KittenInteractor.swift */; };
+		D585E62D29D5DF9C00D3ED9C /* KittenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585E62929D5DF9C00D3ED9C /* KittenViewModel.swift */; };
+		D585E62F29D5DFCD00D3ED9C /* Kitten.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D585E62E29D5DFCD00D3ED9C /* Kitten.storyboard */; };
 		D595EC5729D5857C00200B46 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D595EC5629D5857C00200B46 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		D595EC5929D5857C00200B46 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D595EC5829D5857C00200B46 /* FirebaseAuth */; };
 		D595EC5B29D5857C00200B46 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D595EC5A29D5857C00200B46 /* FirebaseDatabase */; };
@@ -116,6 +122,12 @@
 		D57272CE29ACF4F200A9C72E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		D57272CF29ACF4F200A9C72E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D57272D429ACF50100A9C72E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D585E62329D5DC7300D3ED9C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D585E62629D5DF9C00D3ED9C /* KittenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenPresenter.swift; sourceTree = "<group>"; };
+		D585E62729D5DF9C00D3ED9C /* KittenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenViewController.swift; sourceTree = "<group>"; };
+		D585E62829D5DF9C00D3ED9C /* KittenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenInteractor.swift; sourceTree = "<group>"; };
+		D585E62929D5DF9C00D3ED9C /* KittenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenViewModel.swift; sourceTree = "<group>"; };
+		D585E62E29D5DFCD00D3ED9C /* Kitten.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Kitten.storyboard; sourceTree = "<group>"; };
 		D595EC5F29D58E1500200B46 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		D595EC6029D58E1500200B46 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D595EC6129D58E1500200B46 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
@@ -269,6 +281,18 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		D585E62529D5DF6E00D3ED9C /* Kitten */ = {
+			isa = PBXGroup;
+			children = (
+				D585E62729D5DF9C00D3ED9C /* KittenViewController.swift */,
+				D585E62829D5DF9C00D3ED9C /* KittenInteractor.swift */,
+				D585E62629D5DF9C00D3ED9C /* KittenPresenter.swift */,
+				D585E62929D5DF9C00D3ED9C /* KittenViewModel.swift */,
+				D585E62E29D5DFCD00D3ED9C /* Kitten.storyboard */,
+			);
+			path = Kitten;
+			sourceTree = "<group>";
+		};
 		D595EC5E29D58DEC00200B46 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +400,7 @@
 		D5F0C70A29A90C17002A0F65 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D585E62529D5DF6E00D3ED9C /* Kitten */,
 				D595EC5E29D58DEC00200B46 /* SignUp */,
 				D5B5E24329D4694D00A84476 /* Login  */,
 				D585E62529D5DF6E00D3ED9C /* Kitten */,
@@ -407,6 +432,7 @@
 				D572729929ACA77500A9C72E /* Base */,
 				D5F0C6FF29A90BEF002A0F65 /* Assets.xcassets */,
 				D5F0C70429A90BEF002A0F65 /* Info.plist */,
+				D585E62329D5DC7300D3ED9C /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -545,6 +571,7 @@
 				D57272B029ACBA2700A9C72E /* WeightHistory.storyboard in Resources */,
 				D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */,
 				D57272D529ACF50100A9C72E /* Home.storyboard in Resources */,
+				D585E62F29D5DFCD00D3ED9C /* Kitten.storyboard in Resources */,
 				D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */,
 				D57272BB29ACBF7E00A9C72E /* MedicalHistory.storyboard in Resources */,
 				D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */,
@@ -556,6 +583,7 @@
 				D5F0C70029A90BEF002A0F65 /* Assets.xcassets in Resources */,
 				D5A1460629BB495000E2327B /* LittersMock.json in Resources */,
 				D5B5E24D29D4698B00A84476 /* Login.storyboard in Resources */,
+				D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,14 +660,17 @@
 				D5E9295729AD16B700ACDAEE /* FosterApp.xcdatamodeld in Sources */,
 				D57272C729ACEAB900A9C72E /* LitterHistoryInteractor.swift in Sources */,
 				D57272C829ACEAB900A9C72E /* LitterHistoryViewModel.swift in Sources */,
+				D585E62D29D5DF9C00D3ED9C /* KittenViewModel.swift in Sources */,
 				D57272B829ACBF6C00A9C72E /* MedicalHistoryInteractor.swift in Sources */,
 				D57272B629ACBF6C00A9C72E /* MedicalHistoryPresenter.swift in Sources */,
 				D57272D029ACF4F200A9C72E /* HomePresenter.swift in Sources */,
+				D585E62C29D5DF9C00D3ED9C /* KittenInteractor.swift in Sources */,
 				D595EC6529D58E1500200B46 /* SignUpInteractor.swift in Sources */,
 				D59DB7EF29DAC53B00306F0C /* KittenCardModalViewController.swift in Sources */,
 				D5F0C71429A90D85002A0F65 /* KittenCardInteractor.swift in Sources */,
 				D5F0C71529A90D85002A0F65 /* KittenCardViewModel.swift in Sources */,
 				D5E9295329AD0D6F00ACDAEE /* Litter.swift in Sources */,
+				D585E62A29D5DF9C00D3ED9C /* KittenPresenter.swift in Sources */,
 				D5F0C72529A91D2D002A0F65 /* LitterViewController.swift in Sources */,
 				D5F0C72729A91D2D002A0F65 /* LitterViewModel.swift in Sources */,
 				D5F0C6F729A90BEA002A0F65 /* AppDelegate.swift in Sources */,
@@ -654,6 +685,7 @@
 				D57272A129ACA79100A9C72E /* Interactor.swift in Sources */,
 				D595EC6629D58E1500200B46 /* SignUpViewModel.swift in Sources */,
 				D5B5E24B29D4697C00A84476 /* LoginViewModel.swift in Sources */,
+				D585E62B29D5DF9C00D3ED9C /* KittenViewController.swift in Sources */,
 				D5B5E24829D4697C00A84476 /* LoginPresenter.swift in Sources */,
 				D5A073C229AE10C000202F0A /* DB_Adopter.swift in Sources */,
 				D57272BF29ACE6F600A9C72E /* AddButton.swift in Sources */,

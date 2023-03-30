@@ -39,7 +39,20 @@ class LoginViewController: BaseViewController<LoginViewModel,
     }
     
     @IBAction func logInAction() {
-//        gérer la connexion 
+//        gérer la connexion
+        guard let email = emailTF.text, let password = passwordTF.text else {
+            
+            print("Les champs ne sont pas remplis")
+            return
+        }
+        Auth.auth().signIn(withEmail: email, password: password) {(authResult, error) in
+            if error != nil {
+                print(error.debugDescription)
+            } else {
+                
+            }
+            
+        }
     }
 }
 
