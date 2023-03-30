@@ -51,7 +51,8 @@ class SignUpViewController: BaseViewController
     
     @IBAction func logInAction() {
 //        rediriger vers la page login
-
+        let loginVC = LoginViewController.fromStoryboard()
+        navigationController?.pushViewController(loginVC, animated: true)
     }
 }
 
