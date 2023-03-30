@@ -10,13 +10,13 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
 	
 	// MARK: - Outlets
 	
-    @IBOutlet weak var litterTable: UITableView!
-    @IBOutlet weak var addKittenButton: UIButton!
-    @IBOutlet weak var rescueDateTextField: DatePickerField!
-    @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var editButton: UIButton!
-    @IBOutlet weak var archiveButton: UIButton!
-    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet private weak var litterTable: UITableView!
+    @IBOutlet private weak var addKittenButton: UIButton!
+    @IBOutlet private weak var rescueDateTextField: DatePickerField!
+    @IBOutlet private weak var saveButton: UIButton!
+    @IBOutlet private weak var editButton: UIButton!
+    @IBOutlet private weak var archiveButton: UIButton!
+    @IBOutlet private weak var favoriteButton: UIButton!
     
     // MARK: - Variables
     

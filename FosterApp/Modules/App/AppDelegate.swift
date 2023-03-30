@@ -8,6 +8,7 @@
 import UIKit
 import CoreDataUtilsKit
 import UtilsKit
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
        
+//        MARK: CoreData
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
                 let documentsDirectory = paths.first
             log(.data, "Documents directory: \(documentsDirectory?.absoluteString ?? ":danger: No documents directory file !")")
@@ -26,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             log(.data, "fail core data init", error: error)
         }
         
+//        MARK: FireBase
+        FirebaseApp.configure()
         return true
     }
 
@@ -42,7 +46,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 

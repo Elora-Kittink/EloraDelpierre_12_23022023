@@ -39,7 +39,7 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
         }
 
         self.viewModel?.siblings = siblings?.compactMap { sibling in
-            return sibling.firstName
+             sibling.firstName
         }.joined(separator: ", ") ?? ""
 
         self.viewModel?.comment = kitten.comment ?? "A compléter"

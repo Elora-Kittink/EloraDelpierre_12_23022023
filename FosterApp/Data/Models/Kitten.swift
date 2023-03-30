@@ -54,7 +54,22 @@ struct Kitten {
         self.isAlive = coreDataObject.a_isAlive
     }
     
-    init(from id: String?, litter: Litter, firstName: String?, secondName: String?, birthdate: Date?, sex: String?, color: String?, rescueDate: Date?, siblings: [Kitten]?, comment: String?, isAdopted: Bool, microship: Int?, vaccines: [Vaccine]?, adopters: Adopter?, weightHistory: [Weight]?, isAlive: Bool) {
+    init(from id: String?,
+         litter: Litter,
+         firstName: String?,
+         secondName: String?,
+         birthdate: Date?,
+         sex: String?,
+         color: String?,
+         rescueDate: Date?,
+         siblings: [Kitten]?,
+         comment: String?,
+         isAdopted: Bool,
+         microship: Int?,
+         vaccines: [Vaccine]?,
+         adopters: Adopter?,
+         weightHistory: [Weight]?,
+         isAlive: Bool) {
         self.id = id
 //        self.litter = litter
         self.litterId = litter.id ?? ""

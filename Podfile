@@ -7,6 +7,9 @@ target 'FosterApp' do
     pod 'NetworkUtilsKit'
     pod 'UtilsKit'
     pod 'SDWebImage'
-    pod 'CoreDataUtilsKit', '~> 1.1'
+    pod 'CoreDataUtilsKit'
     pod 'netfox'
+    pod 'FirebaseCore'
+    pod 'FirebaseDatabase'
+    pod 'FirebaseAuth'
 end
