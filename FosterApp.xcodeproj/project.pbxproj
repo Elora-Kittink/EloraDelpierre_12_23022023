@@ -35,7 +35,12 @@
 		D57272D229ACF4F200A9C72E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272CE29ACF4F200A9C72E /* HomeInteractor.swift */; };
 		D57272D329ACF4F200A9C72E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272CF29ACF4F200A9C72E /* HomeViewModel.swift */; };
 		D57272D529ACF50100A9C72E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57272D429ACF50100A9C72E /* Home.storyboard */; };
+		D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */; };
 		D599CE2329AFB0C500542F9E /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599CE2229AFB0C500542F9E /* Worker.swift */; };
+		D59DB7EE29DAC53B00306F0C /* KittenCardModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EA29DAC53B00306F0C /* KittenCardModalPresenter.swift */; };
+		D59DB7EF29DAC53B00306F0C /* KittenCardModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */; };
+		D59DB7F029DAC53B00306F0C /* KittenCardModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */; };
+		D59DB7F129DAC53B00306F0C /* KittenCardModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7ED29DAC53B00306F0C /* KittenCardModalViewModel.swift */; };
 		D5A073C029AE10B000202F0A /* DB_Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073BF29AE10B000202F0A /* DB_Kitten.swift */; };
 		D5A073C229AE10C000202F0A /* DB_Adopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C129AE10C000202F0A /* DB_Adopter.swift */; };
 		D5A073C429AE10CD00202F0A /* DB_Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C329AE10CD00202F0A /* DB_Weight.swift */; };
@@ -96,7 +101,12 @@
 		D57272CE29ACF4F200A9C72E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		D57272CF29ACF4F200A9C72E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D57272D429ACF50100A9C72E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KittenCardModal.storyboard; sourceTree = "<group>"; };
 		D599CE2229AFB0C500542F9E /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		D59DB7EA29DAC53B00306F0C /* KittenCardModalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalPresenter.swift; sourceTree = "<group>"; };
+		D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalViewController.swift; sourceTree = "<group>"; };
+		D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalInteractor.swift; sourceTree = "<group>"; };
+		D59DB7ED29DAC53B00306F0C /* KittenCardModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalViewModel.swift; sourceTree = "<group>"; };
 		D5A073BF29AE10B000202F0A /* DB_Kitten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Kitten.swift; sourceTree = "<group>"; };
 		D5A073C129AE10C000202F0A /* DB_Adopter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Adopter.swift; sourceTree = "<group>"; };
 		D5A073C329AE10CD00202F0A /* DB_Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Weight.swift; sourceTree = "<group>"; };
@@ -229,6 +239,18 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		D585E62529D5DF6E00D3ED9C /* Kitten */ = {
+			isa = PBXGroup;
+			children = (
+				D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */,
+				D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */,
+				D59DB7EA29DAC53B00306F0C /* KittenCardModalPresenter.swift */,
+				D59DB7ED29DAC53B00306F0C /* KittenCardModalViewModel.swift */,
+				D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */,
+			);
+			path = Kitten;
+			sourceTree = "<group>";
+		};
 		D5A073CD29AE5A2700202F0A /* Workers */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,13 +273,6 @@
 				D5A1460529BB495000E2327B /* LittersMock.json */,
 			);
 			path = Mocks;
-			sourceTree = "<group>";
-		};
-		D5B5E24029D4627E00A84476 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		D5E9295429AD169400ACDAEE /* CoreData */ = {
@@ -306,7 +321,7 @@
 		D5F0C70A29A90C17002A0F65 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				D5B5E24029D4627E00A84476 /* Login */,
+				D585E62529D5DF6E00D3ED9C /* Kitten */,
 				D57272CB29ACF4DB00A9C72E /* Home */,
 				D57272C029ACEA9B00A9C72E /* LitterHistory */,
 				D57272B129ACBF4300A9C72E /* MedicalHistory */,
@@ -409,7 +424,6 @@
 			buildConfigurationList = D5F0C70729A90BEF002A0F65 /* Build configuration list for PBXNativeTarget "FosterApp" */;
 			buildPhases = (
 				FE98689C5E00CC1C8D532041 /* [CP] Check Pods Manifest.lock */,
-				D5B5E24129D465BB00A84476 /* Swiftlint */,
 				D5F0C6EF29A90BEA002A0F65 /* Sources */,
 				D5F0C6F029A90BEA002A0F65 /* Frameworks */,
 				D5F0C6F129A90BEA002A0F65 /* Resources */,
@@ -420,6 +434,8 @@
 			dependencies = (
 			);
 			name = FosterApp;
+			packageProductDependencies = (
+			);
 			productName = FosterApp;
 			productReference = D5F0C6F329A90BEA002A0F65 /* FosterApp.app */;
 			productType = "com.apple.product-type.application";
@@ -448,6 +464,8 @@
 				Base,
 			);
 			mainGroup = D5F0C6EA29A90BEA002A0F65;
+			packageReferences = (
+			);
 			productRefGroup = D5F0C6F429A90BEA002A0F65 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -465,6 +483,7 @@
 				D57272B029ACBA2700A9C72E /* WeightHistory.storyboard in Resources */,
 				D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */,
 				D57272D529ACF50100A9C72E /* Home.storyboard in Resources */,
+				D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */,
 				D57272BB29ACBF7E00A9C72E /* MedicalHistory.storyboard in Resources */,
 				D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */,
 				D57272CA29ACEAD700A9C72E /* LitterHistory.storyboard in Resources */,
@@ -478,24 +497,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D5B5E24129D465BB00A84476 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
 		D667D0DCFDCBEF9C4FA69122 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -542,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D59DB7EE29DAC53B00306F0C /* KittenCardModalPresenter.swift in Sources */,
 				D572729F29ACA79100A9C72E /* BaseViewController.swift in Sources */,
 				D5A073C629AE113A00202F0A /* DB_Vaccine.swift in Sources */,
 				D57272A229ACA79100A9C72E /* Presenter.swift in Sources */,
@@ -565,6 +567,7 @@
 				D57272B829ACBF6C00A9C72E /* MedicalHistoryInteractor.swift in Sources */,
 				D57272B629ACBF6C00A9C72E /* MedicalHistoryPresenter.swift in Sources */,
 				D57272D029ACF4F200A9C72E /* HomePresenter.swift in Sources */,
+				D59DB7EF29DAC53B00306F0C /* KittenCardModalViewController.swift in Sources */,
 				D5F0C71429A90D85002A0F65 /* KittenCardInteractor.swift in Sources */,
 				D5F0C71529A90D85002A0F65 /* KittenCardViewModel.swift in Sources */,
 				D5E9295329AD0D6F00ACDAEE /* Litter.swift in Sources */,
@@ -576,6 +579,8 @@
 				D57272AE29ACB9F400A9C72E /* WeightHistoryViewModel.swift in Sources */,
 				D57272D329ACF4F200A9C72E /* HomeViewModel.swift in Sources */,
 				D57272B729ACBF6C00A9C72E /* MedicalHistoryViewController.swift in Sources */,
+				D59DB7F029DAC53B00306F0C /* KittenCardModalInteractor.swift in Sources */,
+				D59DB7F129DAC53B00306F0C /* KittenCardModalViewModel.swift in Sources */,
 				D57272B929ACBF6C00A9C72E /* MedicalHistoryViewModel.swift in Sources */,
 				D57272A129ACA79100A9C72E /* Interactor.swift in Sources */,
 				D5A073C229AE10C000202F0A /* DB_Adopter.swift in Sources */,
