@@ -9,7 +9,11 @@ target 'FosterApp' do
     pod 'SDWebImage'
     pod 'CoreDataUtilsKit'
     pod 'netfox'
+    
+    # Firebase
     pod 'FirebaseCore'
     pod 'FirebaseDatabase'
     pod 'FirebaseAuth'
+    pod 'FirebaseAnalytics'
+    pod 'FirebaseCrashlytics'
 end

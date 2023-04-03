@@ -21,10 +21,10 @@ struct Worker {
         let predicate = NSPredicate(format: "r_litter.a_id = %@", litterId)
         let DBKittens = DB_Kitten.getAll(predicate: predicate)
         
-        let Kittens = DBKittens.compactMap { dbkitten in
+        let kittens = DBKittens.compactMap { dbkitten in
             Kitten(from: dbkitten)
         }
-        return Kittens
+        return kittens
     }
     
     func createKitten(kitten: Kitten, litter: Litter) -> Kitten? {
