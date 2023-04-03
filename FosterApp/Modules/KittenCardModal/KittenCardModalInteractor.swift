@@ -54,8 +54,7 @@ class KittenCardModalInteractor: Interactor
                             sex: sex,
                             color: color,
                             rescueDate: rescueDate,
-                            siblings: litter.kittens?.filter {
-                $0.firstName != firstName },
+                            siblings: litter.kittens?.filter { $0.firstName != firstName },
                             comment: comment,
                             isAdopted: isAdopted,
                             microship: microship,
@@ -64,7 +63,7 @@ class KittenCardModalInteractor: Interactor
                             weightHistory: weightHistory,
                             isAlive: isAlive)
         } else {
-            kitten = Kitten(from: UUID().uuidString,
+            kitten = Kitten(from: isEdited ? kittenId : UUID().uuidString,
                             litter: litter,
                             firstName: firstName,
                             secondName: secondName,
@@ -72,8 +71,7 @@ class KittenCardModalInteractor: Interactor
                             sex: sex,
                             color: color,
                             rescueDate: rescueDate,
-                            siblings: litter.kittens?.filter {
-                $0.firstName != firstName },
+                            siblings: litter.kittens?.filter { $0.firstName != firstName },
                             comment: comment,
                             isAdopted: isAdopted,
                             microship: microship,

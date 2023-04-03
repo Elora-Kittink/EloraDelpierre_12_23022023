@@ -5,9 +5,9 @@
 
 class KittenCardViewModel: ViewModel {
     
-//    MARK: kitten datas
-
-//    var litter: Litter!
+    // MARK: - kitten datas
+    
+    //    var litter: Litter!
     var firstName: String = ""
     var secondName: String = ""
     var birthdate: String = ""
@@ -23,9 +23,9 @@ class KittenCardViewModel: ViewModel {
     var adopters: String? = ""
     var weightHistory: [Weight] = []
     var isAlive = true
-    var kitten: Kitten? 
+    var kitten: Kitten?
     
-//    MARK: labels names
+    // MARK: - labels names
     
     var firtsNameLabel = "Premier nom"
     var secondNameLabel = "Deuxième nom"
@@ -38,13 +38,13 @@ class KittenCardViewModel: ViewModel {
     var microshipLabel = "Puce électronique"
     var adoptersLabel = "Adoptants"
     
-//    MARK: display modes
+    // MARK: - display modes
     
     var isEditingMode = false
     var isDisplayingMode = false
     var isCreatingMode = false
     
-//    MARK: button hidden
+    // MARK: - button hidden
     
     var editBtnHidden = false
     var adopteBtnHidden = false
@@ -52,7 +52,7 @@ class KittenCardViewModel: ViewModel {
     var validateCreationBtnHidden = false
     var validateModifBtnHidden = false
     
-//    MARK: text fields enabled
+    // MARK: - text fields enabled
     
     var textFieldsEnable = false
 }

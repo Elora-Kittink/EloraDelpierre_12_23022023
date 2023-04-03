@@ -59,8 +59,7 @@ class KittenCardInteractor: Interactor
                             sex: sex,
                             color: color,
                             rescueDate: rescueDate,
-                            siblings: litter.kittens?.filter {
-                $0.firstName != firstName                   },
+                            siblings: litter.kittens?.filter { $0.firstName != firstName },
                             comment: comment,
                             isAdopted: isAdopted,
                             microship: microship,
@@ -77,8 +76,7 @@ class KittenCardInteractor: Interactor
                             sex: sex,
                             color: color,
                             rescueDate: rescueDate,
-                            siblings: litter.kittens?.filter {
-                $0.firstName != firstName },
+                            siblings: litter.kittens?.filter { $0.firstName != firstName },
                             comment: comment,
                             isAdopted: isAdopted,
                             microship: microship,

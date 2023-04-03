@@ -12,7 +12,7 @@ class KittenCardModalPresenter: Presenter<KittenCardModalViewModel> {
         self.viewModel?.secondName = kitten?.secondName ?? ""
         self.viewModel?.birthdate = kitten?.birthdate?.toString(format: "dd/MM/yyyy") ?? ""
         let age = kitten?.birthdate?.timeIntervalSinceNow
-        self.viewModel?.age = "\(abs(Int((age ?? 0) / 31556926.0)))"
+        self.viewModel?.age = "\(abs(Int((age ?? 0) / 31_556_926.0)))"
         self.viewModel?.color = kitten?.color ?? ""
         self.viewModel?.rescueDate = kitten?.rescueDate?.toString(format: "dd/MM/yyyy") ?? ""
         self.viewModel?.comment = kitten?.comment ?? ""

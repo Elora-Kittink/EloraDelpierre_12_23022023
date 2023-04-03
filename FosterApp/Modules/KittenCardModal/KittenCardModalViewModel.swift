@@ -5,7 +5,7 @@
 
 class KittenCardModalViewModel: ViewModel {
     
-    //    MARK: labels names
+    // MARK: - labels names
     
     var firtsNameLabel = "Premier nom"
     var secondNameLabel = "Deuxième nom"
@@ -18,7 +18,7 @@ class KittenCardModalViewModel: ViewModel {
     var microshipLabel = "Puce électronique"
     var adoptersLabel = "Adoptants"
     
-    //    MARK: kitten datas
+    // MARK: - kitten datas
 
     //    var litter: Litter!
         var firstName: String = ""

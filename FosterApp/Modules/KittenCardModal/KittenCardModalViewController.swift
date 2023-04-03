@@ -82,7 +82,7 @@ class KittenCardModalViewController: BaseViewController
         let kitten = self.interactor.composeKitten(litter: self.litter,
                                                    firstName: self.nameField.text ?? "",
                                                    secondName: self.secondNameField.text,
-                                                   birthdate:  self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
+                                                   birthdate: self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
                                                    sex: self.sexField.titleForSegment(at: self.sexField.selectedSegmentIndex),
                                                    color: self.colorField.text,
                                                    rescueDate: self.rescueDateField.text?.toDate(format: "dd/MM/yyyy") ?? Date(),

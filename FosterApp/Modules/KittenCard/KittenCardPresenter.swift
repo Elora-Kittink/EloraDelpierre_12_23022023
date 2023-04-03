@@ -30,7 +30,7 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
         self.viewModel?.birthdate = kitten.birthdate?.toString(format: "dd/MM/yyyy") ?? "A compléter"
         // TODO: Calculate age of kitten
         let age = kitten.birthdate?.timeIntervalSinceNow
-        self.viewModel?.age = "\(abs(Int((age ?? 0) / 31556926.0)))"
+        self.viewModel?.age = "\(abs(Int((age ?? 0) / 31_556_926.0)))"
         self.viewModel?.sex = kitten.sex ?? "A compléter"
         self.viewModel?.color = kitten.color ?? "A compléter"
         self.viewModel?.rescueDate = kitten.rescueDate?.toString(format: "dd/MM/yyyy") ?? "A compléter"
@@ -40,7 +40,8 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
 
         self.viewModel?.siblings = siblings?.compactMap { sibling in
              sibling.firstName
-        }.joined(separator: ", ") ?? ""
+        }
+        .joined(separator: ", ") ?? ""
 
         self.viewModel?.comment = kitten.comment ?? "A compléter"
         self.viewModel?.isAdopted = kitten.isAdopted
