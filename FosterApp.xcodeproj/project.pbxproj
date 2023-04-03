@@ -500,6 +500,7 @@
 			buildConfigurationList = D5F0C70729A90BEF002A0F65 /* Build configuration list for PBXNativeTarget "FosterApp" */;
 			buildPhases = (
 				FE98689C5E00CC1C8D532041 /* [CP] Check Pods Manifest.lock */,
+				D56087F829DB145B00F47783 /* Swiftlint */,
 				D5F0C6EF29A90BEA002A0F65 /* Sources */,
 				D5F0C6F029A90BEA002A0F65 /* Frameworks */,
 				D5F0C6F129A90BEA002A0F65 /* Resources */,
@@ -583,6 +584,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		D56087F829DB145B00F47783 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		D667D0DCFDCBEF9C4FA69122 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
