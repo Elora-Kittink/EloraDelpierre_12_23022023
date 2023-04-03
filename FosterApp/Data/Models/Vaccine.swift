@@ -12,7 +12,7 @@ struct Vaccine {
     var date: Date?
     var vaccine: String?
     
-    init?(from coreDataObject: DB_Vaccine){
+    init?(from coreDataObject: DB_Vaccine) {
         self.date = coreDataObject.a_date
         self.vaccine = coreDataObject.a_vaccine
     }

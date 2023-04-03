@@ -278,7 +278,7 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		D585E62529D5DF6E00D3ED9C /* Kitten */ = {
+		D585E62529D5DF6E00D3ED9C /* KittenCardModal */ = {
 			isa = PBXGroup;
 			children = (
 				D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */,
@@ -287,7 +287,7 @@
 				D59DB7ED29DAC53B00306F0C /* KittenCardModalViewModel.swift */,
 				D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */,
 			);
-			path = Kitten;
+			path = KittenCardModal;
 			sourceTree = "<group>";
 		};
 		D595EC5E29D58DEC00200B46 /* SignUp */ = {
@@ -388,7 +388,7 @@
 			children = (
 				D595EC5E29D58DEC00200B46 /* SignUp */,
 				D5B5E24329D4694D00A84476 /* Login  */,
-				D585E62529D5DF6E00D3ED9C /* Kitten */,
+				D585E62529D5DF6E00D3ED9C /* KittenCardModal */,
 				D57272CB29ACF4DB00A9C72E /* Home */,
 				D57272C029ACEA9B00A9C72E /* LitterHistory */,
 				D57272B129ACBF4300A9C72E /* MedicalHistory */,

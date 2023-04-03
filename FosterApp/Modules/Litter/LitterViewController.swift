@@ -6,7 +6,7 @@
 import UIKit
 import UtilsKit
 
-class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,LitterInteractor> {
+class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter, LitterInteractor> {
 	
 	// MARK: - Outlets
 	
@@ -22,12 +22,16 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
     
     var litterId: String? {
         didSet {
-            self.interactor.refresh(isEditing: isEditMode, isCreating: isCreateMode, isDisplaying: isDisplayMode, litterId: litterId, rescueDate: nil)
+            self.interactor.refresh(isEditing: isEditMode,
+                                    isCreating: isCreateMode,
+                                    isDisplaying: isDisplayMode,
+                                    litterId: litterId,
+                                    rescueDate: nil)
         }
     }
-    var isCreateMode: Bool = false
-    var isDisplayMode: Bool = true
-    var isEditMode: Bool = false
+    var isCreateMode = false
+    var isDisplayMode = true
+    var isEditMode = false
     
 	// MARK: - View life cycle
     
@@ -35,7 +39,10 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
 		super.viewDidLoad()
         self.litterTable.delegate = self
         self.litterTable.dataSource = self
-        self.interactor.diplayMode(isEditing: isEditMode, isCreating: isCreateMode, isDisplaying: isDisplayMode, litterId: litterId)
+        self.interactor.diplayMode(isEditing: isEditMode,
+                                   isCreating: isCreateMode,
+                                   isDisplaying: isDisplayMode,
+                                   litterId: litterId)
 	}
 	
 	// MARK: - Refresh
@@ -53,12 +60,12 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
 	}
 
 	// MARK: - Actions
-    @IBAction func makeItFavorite() {
+    @IBAction private func makeItFavorite() {
         guard let litterId = litterId else { return }
         self.interactor.makeFavorite(litterId: litterId)
     }
     
-    @IBAction func addKitten() {
+    @IBAction private func addKitten() {
         
         let vc = KittenCardViewController.fromStoryboard()
         vc.litterId = self.viewModel.id
@@ -69,17 +76,19 @@ class LitterViewController: BaseViewController<LitterViewModel,LitterPresenter,L
         
         navigationController?.pushViewController(vc, animated: true)
     }
-    @IBAction func archiveLitter() {
+    @IBAction private func archiveLitter() {
         self.interactor.archiveLitter(litterId: self.viewModel.id)
     }
     
-    @IBAction func editLitter() {
-        self.interactor.diplayMode(isEditing: true, isCreating: false, isDisplaying: false
-                                   , litterId: litterId)
+    @IBAction private func editLitter() {
+        self.interactor.diplayMode(isEditing: true,
+                                   isCreating: false,
+                                   isDisplaying: false,
+                                   litterId: litterId)
     }
     
 
-    @IBAction func save() {
+    @IBAction private func save() {
         self.interactor.refresh(isEditing: self.viewModel.isEditing,
                                 isCreating: self.viewModel.isCreatingNew,
                                 isDisplaying: self.viewModel.isDisplaying,

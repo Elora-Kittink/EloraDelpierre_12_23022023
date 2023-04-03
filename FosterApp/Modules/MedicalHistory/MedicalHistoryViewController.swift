@@ -6,12 +6,12 @@
 import UIKit
 
 class MedicalHistoryViewController:
-    BaseViewController<MedicalHistoryViewModel,MedicalHistoryPresenter,MedicalHistoryInteractor> {
+    BaseViewController<MedicalHistoryViewModel, MedicalHistoryPresenter, MedicalHistoryInteractor> {
 	
 	// MARK: - Outlets
-    @IBOutlet weak var vaccinesTable: UITableView!
-    @IBOutlet weak var reportsTable: UITableView!
-    @IBOutlet weak var documentsTable: UITableView!
+    @IBOutlet private weak var vaccinesTable: UITableView!
+    @IBOutlet private weak var reportsTable: UITableView!
+    @IBOutlet private weak var documentsTable: UITableView!
     
     // MARK: - Variables
 	

@@ -21,8 +21,6 @@ class LoginViewController: BaseViewController<LoginViewModel,
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     // MARK: - Refresh
@@ -32,20 +30,21 @@ class LoginViewController: BaseViewController<LoginViewModel,
     
     // MARK: - Actions
     
-    @IBAction func signUpAction() {
+    @IBAction private func signUpAction() {
 // renvoyer vers la page d'inscription
         let signupVC = SignUpViewController.fromStoryboard()
         navigationController?.pushViewController(signupVC, animated: true)
     }
     
-    @IBAction func logInAction() {
+    @IBAction private func logInAction() {
 //        gérer la connexion
         guard let email = emailTF.text, let password = passwordTF.text else {
             
             print("Les champs ne sont pas remplis")
             return
         }
-        Auth.auth().signIn(withEmail: email, password: password) {(authResult, error) in
+        Auth.auth().signIn(withEmail: email,
+                           password: password) { (authResult, error) in
             if error != nil {
                 print(error.debugDescription)
             } else {

@@ -36,7 +36,10 @@ class KittenCardModalInteractor: Interactor
                        microship: Int?,
                        vaccines: [Vaccine]?,
                        adopters: Adopter?,
-                       weightHistory: [Weight]?, isEdited: Bool, kittenId: String?, isAlive: Bool) -> Kitten  {
+                       weightHistory: [Weight]?,
+                       isEdited: Bool,
+                       kittenId: String?,
+                       isAlive: Bool) -> Kitten {
         
         var kitten: Kitten
         

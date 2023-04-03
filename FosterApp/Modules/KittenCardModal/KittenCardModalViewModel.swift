@@ -30,12 +30,11 @@ class KittenCardModalViewModel: ViewModel {
         var rescueDate: String = ""
         var siblings: String = ""
         var comment: String = ""
-        var isAdopted: Bool = false
+        var isAdopted = false
         var microship: String? = ""
 //        var vaccines: [Vaccine] = []
         var adopters: String? = ""
 //        var weightHistory: [Weight] = []
         var isAlive: Int = 0
         var kitten: Kitten?
-    
 }

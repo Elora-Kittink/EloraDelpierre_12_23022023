@@ -33,23 +33,22 @@ class SignUpViewController: BaseViewController
     
     // MARK: - Actions
     
-    @IBAction func signUpAction() {
+    @IBAction private func signUpAction() {
         guard let email = emailTF.text, let password = passwordTF.text else {
             
             print("Les champs ne sont pas remplis")
             return
         }
         
-        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if error != nil {
                 print(error.debugDescription)
             } else {
-                
             }
         }
     }
     
-    @IBAction func logInAction() {
+    @IBAction private func logInAction() {
 //        rediriger vers la page login
         let loginVC = LoginViewController.fromStoryboard()
         navigationController?.pushViewController(loginVC, animated: true)

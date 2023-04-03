@@ -13,7 +13,7 @@ class HomeViewController: BaseViewController
 > {
 	
 	// MARK: - Outlets
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet private weak var button: UIButton!
 	// MARK: - Variables
 	
 	// MARK: - View life cycle

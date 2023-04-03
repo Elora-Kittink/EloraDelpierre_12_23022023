@@ -6,53 +6,53 @@
 import UIKit
 import UtilsKit
 
-class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCardPresenter,KittenCardInteractor> {
+class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCardPresenter, KittenCardInteractor> {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var secondNameLabel: UILabel!
-    @IBOutlet weak var secondNameField: UITextField!
-    @IBOutlet weak var birthdateLabel: UILabel!
-    @IBOutlet weak var birthdateField: DatePickerField!
-    @IBOutlet weak var sexLabel: UILabel!
-    @IBOutlet weak var sexField: UITextField!
-    @IBOutlet weak var microshipLabel: UILabel!
-    @IBOutlet weak var microshipField: UITextField!
-    @IBOutlet weak var colorLabel: UILabel!
-    @IBOutlet weak var colorField: UITextField!
+    @IBOutlet private weak var nameField: UITextField!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var secondNameLabel: UILabel!
+    @IBOutlet private weak var secondNameField: UITextField!
+    @IBOutlet private weak var birthdateLabel: UILabel!
+    @IBOutlet private weak var birthdateField: DatePickerField!
+    @IBOutlet private weak var sexLabel: UILabel!
+    @IBOutlet private weak var sexField: UITextField!
+    @IBOutlet private weak var microshipLabel: UILabel!
+    @IBOutlet private weak var microshipField: UITextField!
+    @IBOutlet private weak var colorLabel: UILabel!
+    @IBOutlet private weak var colorField: UITextField!
     
-    @IBOutlet weak var adoptersLabel: UILabel!
-    @IBOutlet weak var adopterField: UITextField!
-    @IBOutlet weak var siblingsLabel: UILabel!
-    @IBOutlet weak var siblingsField: UITextField!
-    @IBOutlet weak var rescueDateLabel: UILabel!
-    @IBOutlet weak var rescueDateField: DatePickerField!
-    @IBOutlet weak var commentsLabel: UILabel!
-    @IBOutlet weak var commentsField: UITextField!
-    @IBOutlet weak var weighingButton: UIButton!
-    @IBOutlet weak var weightHistory: UIView!
-    @IBOutlet weak var medicalHistory: UIView!
-    @IBOutlet weak var editBtn: UIButton!
-    @IBOutlet weak var saveBtn: UIButton!
-    @IBOutlet weak var adoptedBtn: UIButton!
-    @IBOutlet weak var deadBtn: UIButton!
-    @IBOutlet weak var validateModifiBtn: UIButton!
+    @IBOutlet private weak var adoptersLabel: UILabel!
+    @IBOutlet private weak var adopterField: UITextField!
+    @IBOutlet private weak var siblingsLabel: UILabel!
+    @IBOutlet private weak var siblingsField: UITextField!
+    @IBOutlet private weak var rescueDateLabel: UILabel!
+    @IBOutlet private weak var rescueDateField: DatePickerField!
+    @IBOutlet private weak var commentsLabel: UILabel!
+    @IBOutlet private weak var commentsField: UITextField!
+    @IBOutlet private weak var weighingButton: UIButton!
+    @IBOutlet private weak var weightHistory: UIView!
+    @IBOutlet private weak var medicalHistory: UIView!
+    @IBOutlet private weak var editBtn: UIButton!
+    @IBOutlet private weak var saveBtn: UIButton!
+    @IBOutlet private weak var adoptedBtn: UIButton!
+    @IBOutlet private weak var deadBtn: UIButton!
+    @IBOutlet private weak var validateModifiBtn: UIButton!
     // MARK: - Variables
     
     var litterId = ""
     var litter: Litter!
     var kittenId: String = ""
-    var isEditingMode: Bool = false
-    var isDisplayingMode: Bool = true
-    var isCreatingMode: Bool = false
+    var isEditingMode = false
+    var isDisplayingMode = true
+    var isCreatingMode = false
     
     
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        MARK: labels
+// MARK: labels
         
         self.nameLabel.text = self.viewModel.firtsNameLabel
         self.secondNameLabel.text = self.viewModel.secondNameLabel
@@ -69,7 +69,12 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.interactor.refresh(isEditingMode: self.isEditingMode, isCreatingMode: self.isCreatingMode, isDisplayingMode: self.isDisplayingMode, litter: litter, kittenId: kittenId, kitten: nil)
+        self.interactor.refresh(isEditingMode: self.isEditingMode,
+                                isCreatingMode: self.isCreatingMode,
+                                isDisplayingMode: self.isDisplayingMode,
+                                litter: litter,
+                                kittenId: kittenId,
+                                kitten: nil)
     }
     
     
@@ -109,12 +114,12 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     }
     
     // MARK: - Actions
-    @IBAction func save() {
+    @IBAction private func save() {
         
         let kitten = self.interactor.composeKitten(litter: self.litter,
                                                    firstName: self.nameField.text ?? "",
                                                    secondName: self.secondNameField.text,
-                                                   birthdate:  self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
+                                                   birthdate: self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
                                                    sex: self.sexField.text,
                                                    color: self.colorField.text,
                                                    rescueDate: self.rescueDateField.text?.toDate(format: "dd/MM/yyyy") ?? Date(),
@@ -124,7 +129,9 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
                                                    vaccines: nil,
                                                    adopters: nil,
                                                    weightHistory: nil,
-                                                   isEdited: false, kittenId: nil, isAlive: true)
+                                                   isEdited: false,
+                                                   kittenId: nil,
+                                                   isAlive: true)
         
         self.interactor.refresh(isEditingMode: self.isEditing,
                                 isCreatingMode: self.isCreatingMode,
@@ -135,15 +142,20 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
     }
     
     
-    @IBAction func edit() {
-        self.interactor.refresh(isEditingMode: true, isCreatingMode: false, isDisplayingMode: false, litter: self.litter, kittenId: self.kittenId, kitten: self.viewModel.kitten)
+    @IBAction private func edit() {
+        self.interactor.refresh(isEditingMode: true,
+                                isCreatingMode: false,
+                                isDisplayingMode: false,
+                                litter: self.litter,
+                                kittenId: self.kittenId,
+                                kitten: self.viewModel.kitten)
     }
     
-    @IBAction func saveModifications() {
+    @IBAction private func saveModifications() {
         let kittenModified = self.interactor.composeKitten(litter: self.litter,
                                                            firstName: self.nameField.text ?? "",
                                                            secondName: self.secondNameField.text,
-                                                           birthdate:  self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
+                                                           birthdate: self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
                                                            sex: self.sexField.text,
                                                            color: self.colorField.text,
                                                            rescueDate: self.rescueDateField.text?.toDate(format: "dd/MM/yyyy") ?? Date(),
@@ -153,7 +165,9 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
                                                            vaccines: nil,
                                                            adopters: nil,
                                                            weightHistory: nil,
-                                                           isEdited: true, kittenId: self.viewModel.kitten?.id, isAlive: true)
+                                                           isEdited: true,
+                                                           kittenId: self.viewModel.kitten?.id,
+                                                           isAlive: true)
         
         self.interactor.worker.updateKittenDB(kitten: kittenModified)
         
@@ -165,11 +179,11 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
                                 kitten: kittenModified)
     }
     
-    @IBAction func dead() {
+    @IBAction private func dead() {
         let kittenKilled = self.interactor.composeKitten(litter: self.litter,
                                                            firstName: self.nameField.text ?? "",
                                                            secondName: self.secondNameField.text,
-                                                           birthdate:  self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
+                                                           birthdate: self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
                                                            sex: self.sexField.text,
                                                            color: self.colorField.text,
                                                            rescueDate: self.rescueDateField.text?.toDate(format: "dd/MM/yyyy") ?? Date(),
@@ -179,7 +193,9 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
                                                            vaccines: nil,
                                                            adopters: nil,
                                                            weightHistory: nil,
-                                                         isEdited: true, kittenId: self.viewModel.kitten?.id, isAlive: false)
+                                                           isEdited: true,
+                                                           kittenId: self.viewModel.kitten?.id,
+                                                           isAlive: false)
         
         self.interactor.worker.updateKittenDB(kitten: kittenKilled)
         
@@ -189,13 +205,10 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel,KittenCar
                                 litter: self.litter,
                                 kittenId: kittenKilled.id,
                                 kitten: kittenKilled)
-        
     }
     
-    @IBAction func adopte() {
+    @IBAction private func adopte() {
     }
-    
-    
 }
 
 extension KittenCardViewController: StoryboardProtocol {

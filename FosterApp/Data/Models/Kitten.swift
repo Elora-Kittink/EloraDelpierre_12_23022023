@@ -16,7 +16,8 @@ struct Kitten {
     var birthdate: Date?
     var sex: String?
     var color: String?
-//   TODO: n'est pas à choisir puisqu'elle corresponds à la date de sauvetage de la portée?  -> si parce qu'on peut créer une portée avec des chatons de differentes provenance? 
+//   TODO: n'est pas à choisir puisqu'elle corresponds à la date de sauvetage de la portée?
+//    -> si parce qu'on peut créer une portée avec des chatons de differentes provenance? 
     var rescueDate: Date?
     //    var siblings: [Kitten]?
     var comment: String?
@@ -45,10 +46,10 @@ struct Kitten {
         self.isAdopted = coreDataObject.a_isAdopted
         self.microship = Int(coreDataObject.a_microship)
         self.vaccines = (coreDataObject.r_vaccine?.allObjects as? [DB_Vaccine])?.compactMap { vaccine in
-            return Vaccine(from: vaccine)
+             Vaccine(from: vaccine)
         }
         self.weightHistory = (coreDataObject.r_weight?.allObjects as? [DB_Weight])?.compactMap { weight in
-            return Weight(from: weight)
+            Weight(from: weight)
         }
         self.adopters = Adopter(from: coreDataObject.r_adopter)
         self.isAlive = coreDataObject.a_isAlive

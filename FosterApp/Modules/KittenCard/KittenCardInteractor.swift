@@ -43,7 +43,10 @@ class KittenCardInteractor: Interactor
                        microship: Int?,
                        vaccines: [Vaccine]?,
                        adopters: Adopter?,
-                       weightHistory: [Weight]?, isEdited: Bool, kittenId: String?, isAlive: Bool) -> Kitten  {
+                       weightHistory: [Weight]?,
+                       isEdited: Bool,
+                       kittenId: String?,
+                       isAlive: Bool) -> Kitten {
         
         var kitten: Kitten
         
@@ -57,7 +60,7 @@ class KittenCardInteractor: Interactor
                             color: color,
                             rescueDate: rescueDate,
                             siblings: litter.kittens?.filter {
-                $0.firstName != firstName },
+                $0.firstName != firstName                   },
                             comment: comment,
                             isAdopted: isAdopted,
                             microship: microship,
@@ -87,7 +90,9 @@ class KittenCardInteractor: Interactor
         return kitten
     }
     
-    func saveKittenInDB(isNewKitten: Bool, kitten: Kitten, litter: Litter) {
+    func saveKittenInDB(isNewKitten: Bool,
+                        kitten: Kitten,
+                        litter: Litter) {
         
         if isNewKitten {
             Task {
@@ -95,15 +100,13 @@ class KittenCardInteractor: Interactor
                 self.presenter.display(kitten: newKitten, litter: litter)
                 self.presenter.displayMode(type: KittenCardLayoutStyle.displaying)
             }
-        }
-        else {
+        } else {
             Task {
                 worker.updateKittenDB(kitten: kitten)
                 self.presenter.display(kitten: kitten, litter: litter)
                 self.presenter.displayMode(type: KittenCardLayoutStyle.displaying)
             }
-        }
-        
+        }        
     }
     
     func refresh(isEditingMode: Bool,

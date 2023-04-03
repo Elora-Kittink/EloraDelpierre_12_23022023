@@ -19,5 +19,4 @@ extension DB_Weight {
         self.a_date = weight.date
         self.a_weight = weight.weight ?? 0
     }
-    
 }

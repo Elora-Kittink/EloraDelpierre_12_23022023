@@ -26,14 +26,14 @@ class KittenCardModalViewController: BaseViewController
     @IBOutlet private weak var microshipLabel: UILabel!
     @IBOutlet private weak var microshipField: UITextField!
     @IBOutlet private weak var colorLabel: UILabel!
-    @IBOutlet weak var colorField: UITextField!
+    @IBOutlet private weak var colorField: UITextField!
     
-    @IBOutlet weak var adoptersLabel: UILabel!
-    @IBOutlet weak var adopterField: UITextField!
-    @IBOutlet weak var rescueDateLabel: UILabel!
-    @IBOutlet weak var rescueDateField: DatePickerField!
-    @IBOutlet weak var commentsLabel: UILabel!
-    @IBOutlet weak var commentsField: UITextField!
+    @IBOutlet private weak var adoptersLabel: UILabel!
+    @IBOutlet private weak var adopterField: UITextField!
+    @IBOutlet private weak var rescueDateLabel: UILabel!
+    @IBOutlet private weak var rescueDateField: DatePickerField!
+    @IBOutlet private weak var commentsLabel: UILabel!
+    @IBOutlet private weak var commentsField: UITextField!
     
     
 	// MARK: - Variables
@@ -41,8 +41,8 @@ class KittenCardModalViewController: BaseViewController
     var litterId = ""
     var litter: Litter!
     var kittenId: String = ""
-    var isEditingMode: Bool = false
-    var isCreatingMode: Bool = false
+    var isEditingMode = false
+    var isCreatingMode = false
     var kitten: Kitten!
     
 	// MARK: - View life cycle
@@ -73,12 +73,11 @@ class KittenCardModalViewController: BaseViewController
         self.adopterField.text = self.viewModel.adopters
         self.rescueDateField.text = self.viewModel.rescueDate
         self.commentsField.text = self.viewModel.comment
-        
 	}
 
 	// MARK: - Actions
     
-    @IBAction func save() {
+    @IBAction private func save() {
         
         let kitten = self.interactor.composeKitten(litter: self.litter,
                                                    firstName: self.nameField.text ?? "",
@@ -93,7 +92,9 @@ class KittenCardModalViewController: BaseViewController
                                                    vaccines: nil,
                                                    adopters: nil,
                                                    weightHistory: nil,
-                                                   isEdited: false, kittenId: nil, isAlive: true)
+                                                   isEdited: false,
+                                                   kittenId: nil,
+                                                   isAlive: true)
         
         self.interactor.refresh(isEdititngMode: self.isEditing,
                                 isCreatingMode: self.isCreatingMode,

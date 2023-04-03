@@ -11,11 +11,11 @@ struct Litter {
     var id: String?
     var kittens: [Kitten]?
     var isOngoing: Bool
-    var rescueDate:  String?
+    var rescueDate: String?
     
-    init(from coreDataObject: DB_Litter){
+    init(from coreDataObject: DB_Litter) {
         self.kittens = (coreDataObject.r_kittens?.allObjects as? [DB_Kitten])?.compactMap { kitten in
-            return Kitten(from: kitten)
+            Kitten(from: kitten)
         }
         self.isOngoing = coreDataObject.a_isOngoing
         self.rescueDate = coreDataObject.a_rescueDate?.toString(format: "dd/MM/yyyy")

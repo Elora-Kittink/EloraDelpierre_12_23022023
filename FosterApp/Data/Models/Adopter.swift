@@ -24,7 +24,7 @@ struct Adopter {
         self.numberPhone = adopter.a_numberPhone
         self.comment = adopter.a_comment
         self.kittens = (adopter.r_kitten?.allObjects as? [DB_Kitten])?.compactMap { kitten in
-            return Kitten(from: kitten)
+            Kitten(from: kitten)
         }
     }
 }

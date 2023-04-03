@@ -18,6 +18,5 @@ extension DB_Vaccine {
     func update(vaccine: Vaccine) {
         self.a_date = vaccine.date
         self.a_vaccine = vaccine.vaccine
-        
     }
 }

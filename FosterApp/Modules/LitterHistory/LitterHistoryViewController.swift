@@ -6,12 +6,12 @@ import UtilsKit
 import UIKit
 
 class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
-	LitterHistoryPresenter,LitterHistoryInteractor> {
+	 LitterHistoryPresenter, LitterHistoryInteractor> {
     
     
 	
 	// MARK: - Outlets
-    @IBOutlet weak var litterHistoryTableView: UITableView!
+    @IBOutlet private weak var litterHistoryTableView: UITableView!
     
 	// MARK: - Variables
 	
@@ -20,7 +20,6 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 		super.viewDidLoad()
         self.litterHistoryTableView.delegate = self
         self.litterHistoryTableView.dataSource = self
-        
 	}
 	
     override func viewWillAppear(_ animated: Bool) {
@@ -36,14 +35,13 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	}
 
 	// MARK: - Actions
-    @IBAction func addLitter() {
+    @IBAction private func addLitter() {
         let vc = LitterViewController.fromStoryboard()
         vc.isCreateMode = true
         vc.isDisplayMode = false
         vc.isEditMode = false
         navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
 
 

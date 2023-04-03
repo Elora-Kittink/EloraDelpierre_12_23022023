@@ -7,6 +7,5 @@ import Foundation
 
 class WeightHistoryViewModel: ViewModel {
     
-    var weights: [Date : Float] = [:]
-    
+    var weights: [Date:Float] = [:]
 }

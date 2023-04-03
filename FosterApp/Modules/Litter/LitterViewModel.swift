@@ -11,11 +11,11 @@ class LitterViewModel: ViewModel {
     
     var id: String!
     var kittens: [Kitten]?
-    var isOngoing: Bool = true
-    var rescueDate:  String?
-    var isDisplaying: Bool = true
-    var isEditing: Bool = false
-    var isCreatingNew: Bool = false
+    var isOngoing = true
+    var rescueDate: String?
+    var isDisplaying = true
+    var isEditing = false
+    var isCreatingNew = false
     
     var saveBtnHidden = true
     var editBtnHidden = false
@@ -23,5 +23,4 @@ class LitterViewModel: ViewModel {
     var favoriteBtnHidden = false
     var addKittenBtnHidden = false
     var isTextFieldEnable = true
-    
 }
