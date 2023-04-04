@@ -13,12 +13,12 @@ class KittenCardModalInteractor: Interactor
     
     let worker = Worker()
     
-    func refresh(isEdititngMode: Bool, isCreatingMode: Bool, kitten: Kitten) {
+    func refresh(isEdititngMode: Bool, isCreatingMode: Bool, kitten: Kitten?) {
         
         if isEdititngMode {
             self.presenter.display(kitten: kitten)
         }
-        if isEdititngMode {
+        if isCreatingMode {
             self.presenter.display(kitten: nil)
         }
     }
@@ -41,12 +41,9 @@ class KittenCardModalInteractor: Interactor
                        kittenId: String?,
                        isAlive: Bool) -> Kitten {
         
-        var kitten: Kitten
-        
-        
-        
-        if isEdited {
-            kitten = Kitten(from: kittenId,
+     
+     
+        var kitten = Kitten(from: isEdited ? kittenId : UUID().uuidString,
                             litter: litter,
                             firstName: firstName,
                             secondName: secondName,
@@ -62,24 +59,24 @@ class KittenCardModalInteractor: Interactor
                             adopters: adopters,
                             weightHistory: weightHistory,
                             isAlive: isAlive)
-        } else {
-            kitten = Kitten(from: isEdited ? kittenId : UUID().uuidString,
-                            litter: litter,
-                            firstName: firstName,
-                            secondName: secondName,
-                            birthdate: birthdate,
-                            sex: sex,
-                            color: color,
-                            rescueDate: rescueDate,
-                            siblings: litter.kittens?.filter { $0.firstName != firstName },
-                            comment: comment,
-                            isAdopted: isAdopted,
-                            microship: microship,
-                            vaccines: vaccines,
-                            adopters: adopters,
-                            weightHistory: weightHistory,
-                            isAlive: isAlive)
-        }
+        
         return kitten
+    }
+    
+   func saveKitten(isNewKitten: Bool,
+                   kitten: Kitten,
+                   litter: Litter) {
+       
+       if isNewKitten {
+           Task {
+               guard let newKitten = worker.createKitten(kitten: kitten, litter: litter) else {return}
+               self.presenter.close()
+           }
+       } else {
+           Task {
+               worker.updateKittenDB(kitten: kitten)
+               self.presenter.display(kitten: kitten)
+           }
+       }
     }
 }

@@ -43,6 +43,11 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     
     var litterId = ""
     var litter: Litter!
+    var kitten: Kitten? {
+        didSet {
+            self.interactor.refresh(isEditingMode: false, isCreatingMode: false, isDisplayingMode: true, litter: self.litter, kittenId: self.kitten?.id, kitten: self.kitten)
+        }
+    }
     var kittenId: String = ""
     var isEditingMode = false
     var isDisplayingMode = true
@@ -85,25 +90,25 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
         
         
         self.nameField.text = self.viewModel.firstName
-        self.nameField.isEnabled = self.viewModel.textFieldsEnable
+        self.nameField.isEnabled = false
         self.secondNameField.text = self.viewModel.secondName
-        self.secondNameField.isEnabled = self.viewModel.textFieldsEnable
+        self.secondNameField.isEnabled = false
         self.birthdateField.text = self.viewModel.birthdate
-        self.birthdateField.isEnabled = self.viewModel.textFieldsEnable
+        self.birthdateField.isEnabled = false
         self.sexField.text = self.viewModel.sex
-        self.sexField.isEnabled = self.viewModel.textFieldsEnable
+        self.sexField.isEnabled = false
         self.microshipField.text = self.viewModel.microship
-        self.microshipField.isEnabled = self.viewModel.textFieldsEnable
+        self.microshipField.isEnabled = false
         self.colorField.text = self.viewModel.color
-        self.colorField.isEnabled = self.viewModel.textFieldsEnable
+        self.colorField.isEnabled = false
         self.adopterField.text = self.viewModel.adopters
         self.adopterField.isEnabled = false
         self.siblingsField.text = self.viewModel.siblings
         self.siblingsField.isEnabled = false
         self.rescueDateField.text = self.viewModel.rescueDate
-        self.rescueDateField.isEnabled = self.viewModel.textFieldsEnable
+        self.rescueDateField.isEnabled = false
         self.commentsField.text = self.viewModel.comment
-        self.commentsField.isEnabled = self.viewModel.textFieldsEnable
+        self.commentsField.isEnabled = false
         
         self.saveBtn.isHidden = self.viewModel.validateCreationBtnHidden
         
@@ -116,10 +121,10 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     // MARK: - Actions
     
     
-    @IBAction func updateKitten() {
+    @IBAction private func updateKitten() {
         let vc = KittenCardModalViewController.fromStoryboard()
         vc.kittenId = self.kittenId
-        vc.litterId = self.litterId
+//        vc.litterId = self.litterId
         vc.litter = self.litter
         vc.isEditingMode = true
         vc.isCreatingMode = false

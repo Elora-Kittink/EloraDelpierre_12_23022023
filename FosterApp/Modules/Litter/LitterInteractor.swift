@@ -56,64 +56,19 @@ class LitterInteractor: Interactor
     }
     
     
-    func refresh(isEditing: Bool,
-                 isCreating: Bool,
-                 isDisplaying: Bool,
-                 litterId: String?,
+    func refresh(litterId: String?,
                  rescueDate: Date?) {
         
-        if isDisplaying {
-            Task {
-                guard let litter = worker.fetchLitterFromId(litterId: litterId ?? "") else {
-                    return
-                }
-               let kittens = worker.fetchAllKittensLitter(litterId: litterId ?? "")
-                self.presenter.displayMode(type: LitterLayoutStyle.displaying,
-                                           rescueDate: litter.rescueDate?.toDate(format: "dd/MM/yyyy"),
-                                           litterId: litterId,
-                                           litter: litter,
-                                           kittens: kittens)
-//                self.presenter.displayDate(date: litter.rescueDate?.toDate(format: "dd/MM/yyyy"))
-                self.presenter.display(loader: false)
-            }
-        }
-        
-        if isEditing {
-            
-            guard let date = rescueDate else {
+        Task {
+            guard let litter = worker.fetchLitterFromId(litterId: litterId ?? "") else {
                 return
             }
-            guard let id = litterId else {
-                return
-            }
-            Task {
-                worker.updateLitterDB(litterId: id, rescueDate: date)
-                self.presenter.displayMode(type: LitterLayoutStyle.displaying,
-                                           rescueDate: date,
-                                           litterId: id,
-                                           litter: nil,
-                                           kittens: nil)
-            }
-            
-            self.presenter.display(loader: false)
-        }
-        
-        if isCreating {
-            guard let date = rescueDate else {
-                return
-            }
-            
-            Task {
-                guard let newLitter = worker.createNewLitter(rescueDate: date) else {
-                    return
-                }
-                self.presenter.displayMode(type: LitterLayoutStyle.displaying,
-                                           rescueDate: date,
-                                           litterId: newLitter.id,
-                                           litter: newLitter,
-                                           kittens: nil)
-            }
-            
+            let kittens = worker.fetchAllKittensLitter(litterId: litterId ?? "")
+            self.presenter.displayMode(type: LitterLayoutStyle.displaying,
+                                       rescueDate: litter.rescueDate?.toDate(format: "dd/MM/yyyy"),
+                                       litterId: litterId,
+                                       litter: litter,
+                                       kittens: kittens)
             self.presenter.display(loader: false)
         }
     }

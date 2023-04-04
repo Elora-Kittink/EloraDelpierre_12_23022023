@@ -107,6 +107,10 @@ class KittenCardInteractor: Interactor
         }        
     }
     
+    func refreshNew(kitten: Kitten, litter: Litter) {
+        self.presenter.display(kitten: kitten, litter: litter)
+    }
+    
     func refresh(isEditingMode: Bool,
                  isCreatingMode: Bool,
                  isDisplayingMode: Bool,

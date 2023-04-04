@@ -27,7 +27,6 @@ class KittenCardModalViewController: BaseViewController
     @IBOutlet private weak var microshipField: UITextField!
     @IBOutlet private weak var colorLabel: UILabel!
     @IBOutlet private weak var colorField: UITextField!
-    
     @IBOutlet private weak var adoptersLabel: UILabel!
     @IBOutlet private weak var adopterField: UITextField!
     @IBOutlet private weak var rescueDateLabel: UILabel!
@@ -38,16 +37,18 @@ class KittenCardModalViewController: BaseViewController
     
 	// MARK: - Variables
 	
-    var litterId = ""
+//    var litterId = ""
     var litter: Litter!
     var kittenId: String = ""
     var isEditingMode = false
     var isCreatingMode = false
-    var kitten: Kitten!
+    var kitten: Kitten?
     
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
+    
+        self.interactor.refresh(isEdititngMode: isEditingMode, isCreatingMode: isCreatingMode, kitten: kitten)
         
         self.nameLabel.text = self.viewModel.firtsNameLabel
         self.secondNameLabel.text = self.viewModel.secondNameLabel
@@ -62,6 +63,11 @@ class KittenCardModalViewController: BaseViewController
 	
 	// MARK: - Refresh
 	override func refreshUI() {
+        if self.viewModel.needToClose {
+            self.dismiss(animated: true) {
+                NotificationCenter.default.post(name: NSNotification.Name("newKittenCreated"), object: nil)
+            }
+        }
 		super.refreshUI()
         
         self.nameField.text = self.viewModel.firstName
@@ -73,6 +79,8 @@ class KittenCardModalViewController: BaseViewController
         self.adopterField.text = self.viewModel.adopters
         self.rescueDateField.text = self.viewModel.rescueDate
         self.commentsField.text = self.viewModel.comment
+        
+        
 	}
 
 	// MARK: - Actions
@@ -96,6 +104,7 @@ class KittenCardModalViewController: BaseViewController
                                                    kittenId: nil,
                                                    isAlive: true)
         
+        self.interactor.saveKitten(isNewKitten: isCreatingMode, kitten: kitten, litter: litter)
         self.interactor.refresh(isEdititngMode: self.isEditing,
                                 isCreatingMode: self.isCreatingMode,
                                 kitten: kitten)

@@ -29,6 +29,9 @@
                                                 <color key="tintColor" red="0.99215686319999996" green="0.97254908080000002" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Valider"/>
+                                                <connections>
+                                                    <action selector="save" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3l5-nC-w1k"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="RVZ-8A-6fO">
                                                 <rect key="frame" x="14" y="24" width="365" height="397"/>

@@ -22,10 +22,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     
     var litterId: String? {
         didSet {
-            self.interactor.refresh(isEditing: isEditMode,
-                                    isCreating: isCreateMode,
-                                    isDisplaying: isDisplayMode,
-                                    litterId: litterId,
+            self.interactor.refresh(litterId: litterId,
                                     rescueDate: nil)
         }
     }
@@ -37,6 +34,9 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("newKittenCreated"), object: nil, queue: nil) { [interactor] _ in
+            interactor.refresh(litterId: self.litterId, rescueDate: self.rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"))
+        }
         self.litterTable.delegate = self
         self.litterTable.dataSource = self
         self.interactor.diplayMode(isEditing: isEditMode,
@@ -67,14 +67,14 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     
     @IBAction private func addKitten() {
         
-        let vc = KittenCardViewController.fromStoryboard()
-        vc.litterId = self.viewModel.id
+        let vc = KittenCardModalViewController.fromStoryboard()
+//        vc.litterId = self.viewModel.id
         vc.litter = self.viewModel.litter
         vc.isCreatingMode = true
         vc.isEditingMode = false
-        vc.isDisplayingMode = false
         
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.present(vc, animated: true)
+//        navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction private func archiveLitter() {
         self.interactor.archiveLitter(litterId: self.viewModel.id)
@@ -89,10 +89,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     
 
     @IBAction private func save() {
-        self.interactor.refresh(isEditing: self.viewModel.isEditing,
-                                isCreating: self.viewModel.isCreatingNew,
-                                isDisplaying: self.viewModel.isDisplaying,
-                                litterId: self.viewModel.id,
+        self.interactor.refresh(litterId: self.viewModel.id,
                                 rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"))
     }
 }
@@ -130,6 +127,7 @@ extension LitterViewController: UITableViewDataSource, UITableViewDelegate {
         vc.isDisplayingMode = true
         vc.isEditingMode = false
         vc.isCreatingMode = false
+        vc.kitten = self.viewModel.kittens?[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 }
