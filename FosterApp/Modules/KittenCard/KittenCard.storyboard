@@ -248,7 +248,7 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Valider modification"/>
                                                 <connections>
-                                                    <action selector="saveModifications" destination="Y6W-OH-hqX" eventType="touchUpInside" id="psB-Sc-qga"/>
+                                                    <action selector="updateKitten" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yRE-nH-LrM"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Sauge" translatesAutoresizingMaskIntoConstraints="NO" id="3eK-db-H3v">
@@ -317,7 +317,6 @@
                         <outlet property="sexLabel" destination="0uZ-tS-cU9" id="46O-1d-mK0"/>
                         <outlet property="siblingsField" destination="ZT3-7f-KKT" id="M6q-5f-idD"/>
                         <outlet property="siblingsLabel" destination="yQF-VY-RMY" id="S83-5Y-v2V"/>
-                        <outlet property="validateModifiBtn" destination="qSv-4M-H2g" id="mGE-ah-D1o"/>
                         <outlet property="weighingButton" destination="JgE-ct-n1I" id="rXD-hf-Dg9"/>
                         <outlet property="weightHistory" destination="kUz-sO-mLw" id="PVt-cH-LUn"/>
                     </connections>

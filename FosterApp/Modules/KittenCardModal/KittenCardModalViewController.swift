@@ -101,3 +101,13 @@ class KittenCardModalViewController: BaseViewController
                                 kitten: kitten)
     }
 }
+
+extension KittenCardModalViewController: StoryboardProtocol {
+    static var storyboardName: String {
+        "KittenCardModal"
+    }
+    
+    static var identifier: String? {
+        "KittenCardModalViewController"
+    }
+}

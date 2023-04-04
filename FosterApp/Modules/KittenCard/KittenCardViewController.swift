@@ -110,10 +110,23 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
         self.editBtn.isHidden = self.viewModel.editBtnHidden
         self.deadBtn.isHidden = self.viewModel.deadBtnHidden
         self.adoptedBtn.isHidden = self.viewModel.adopteBtnHidden
-        self.validateModifiBtn.isHidden = self.viewModel.validateModifBtnHidden
+//        self.validateModifiBtn.isHidden = self.viewModel.validateModifBtnHidden
     }
     
     // MARK: - Actions
+    
+    
+    @IBAction func updateKitten() {
+        let vc = KittenCardModalViewController.fromStoryboard()
+        vc.kittenId = self.kittenId
+        vc.litterId = self.litterId
+        vc.litter = self.litter
+        vc.isEditingMode = true
+        vc.isCreatingMode = false
+        
+        navigationController?.present(vc, animated: true)
+    }
+    
     @IBAction private func save() {
         
         let kitten = self.interactor.composeKitten(litter: self.litter,
