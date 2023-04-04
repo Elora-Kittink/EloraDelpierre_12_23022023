@@ -43,20 +43,15 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     
     var litterId = ""
     var litter: Litter!
-    var kitten: Kitten? {
-        didSet {
-            self.interactor.refresh(isEditingMode: false, isCreatingMode: false, isDisplayingMode: true, litter: self.litter, kittenId: self.kitten?.id, kitten: self.kitten)
-        }
-    }
-    var kittenId: String = ""
-    var isEditingMode = false
-    var isDisplayingMode = true
-    var isCreatingMode = false
-    
+    var kitten: Kitten!
+//    var kittenId: String = ""
     
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.interactor.refresh(kitten: self.kitten, litter: self.litter)
+        
 // MARK: labels
         
         self.nameLabel.text = self.viewModel.firtsNameLabel
@@ -71,23 +66,10 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
         self.commentsLabel.text = self.viewModel.commentLabel
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.interactor.refresh(isEditingMode: self.isEditingMode,
-                                isCreatingMode: self.isCreatingMode,
-                                isDisplayingMode: self.isDisplayingMode,
-                                litter: litter,
-                                kittenId: kittenId,
-                                kitten: nil)
-    }
-    
     
     // MARK: - Refresh
     override func refreshUI() {
         super.refreshUI()
-        
-        
         
         self.nameField.text = self.viewModel.firstName
         self.nameField.isEnabled = false
@@ -115,7 +97,6 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
         self.editBtn.isHidden = self.viewModel.editBtnHidden
         self.deadBtn.isHidden = self.viewModel.deadBtnHidden
         self.adoptedBtn.isHidden = self.viewModel.adopteBtnHidden
-//        self.validateModifiBtn.isHidden = self.viewModel.validateModifBtnHidden
     }
     
     // MARK: - Actions
@@ -123,106 +104,20 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     
     @IBAction private func updateKitten() {
         let vc = KittenCardModalViewController.fromStoryboard()
-        vc.kittenId = self.kittenId
-//        vc.litterId = self.litterId
         vc.litter = self.litter
         vc.isEditingMode = true
         vc.isCreatingMode = false
         
         navigationController?.present(vc, animated: true)
     }
-    
-    @IBAction private func save() {
-        
-        let kitten = self.interactor.composeKitten(litter: self.litter,
-                                                   firstName: self.nameField.text ?? "",
-                                                   secondName: self.secondNameField.text,
-                                                   birthdate: self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
-                                                   sex: self.sexField.text,
-                                                   color: self.colorField.text,
-                                                   rescueDate: self.rescueDateField.text?.toDate(format: "dd/MM/yyyy") ?? Date(),
-                                                   comment: self.commentsField.text,
-                                                   isAdopted: false,
-                                                   microship: Int(self.microshipField.text ?? ""),
-                                                   vaccines: nil,
-                                                   adopters: nil,
-                                                   weightHistory: nil,
-                                                   isEdited: false,
-                                                   kittenId: nil,
-                                                   isAlive: true)
-        
-        self.interactor.refresh(isEditingMode: self.isEditing,
-                                isCreatingMode: self.isCreatingMode,
-                                isDisplayingMode: self.isDisplayingMode,
-                                litter: self.litter,
-                                kittenId: kitten.id,
-                                kitten: kitten)
-    }
-    
-    
+
     @IBAction private func edit() {
-        self.interactor.refresh(isEditingMode: true,
-                                isCreatingMode: false,
-                                isDisplayingMode: false,
-                                litter: self.litter,
-                                kittenId: self.kittenId,
-                                kitten: self.viewModel.kitten)
-    }
-    
-    @IBAction private func saveModifications() {
-        let kittenModified = self.interactor.composeKitten(litter: self.litter,
-                                                           firstName: self.nameField.text ?? "",
-                                                           secondName: self.secondNameField.text,
-                                                           birthdate: self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
-                                                           sex: self.sexField.text,
-                                                           color: self.colorField.text,
-                                                           rescueDate: self.rescueDateField.text?.toDate(format: "dd/MM/yyyy") ?? Date(),
-                                                           comment: self.commentsField.text,
-                                                           isAdopted: false,
-                                                           microship: Int(self.microshipField.text ?? ""),
-                                                           vaccines: nil,
-                                                           adopters: nil,
-                                                           weightHistory: nil,
-                                                           isEdited: true,
-                                                           kittenId: self.viewModel.kitten?.id,
-                                                           isAlive: true)
-        
-        self.interactor.worker.updateKittenDB(kitten: kittenModified)
-        
-        self.interactor.refresh(isEditingMode: self.isEditing,
-                                isCreatingMode: self.isCreatingMode,
-                                isDisplayingMode: self.isDisplayingMode,
-                                litter: self.litter,
-                                kittenId: kittenModified.id,
-                                kitten: kittenModified)
-    }
-    
-    @IBAction private func dead() {
-        let kittenKilled = self.interactor.composeKitten(litter: self.litter,
-                                                           firstName: self.nameField.text ?? "",
-                                                           secondName: self.secondNameField.text,
-                                                           birthdate: self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
-                                                           sex: self.sexField.text,
-                                                           color: self.colorField.text,
-                                                           rescueDate: self.rescueDateField.text?.toDate(format: "dd/MM/yyyy") ?? Date(),
-                                                           comment: self.commentsField.text,
-                                                           isAdopted: false,
-                                                           microship: Int(self.microshipField.text ?? ""),
-                                                           vaccines: nil,
-                                                           adopters: nil,
-                                                           weightHistory: nil,
-                                                           isEdited: true,
-                                                           kittenId: self.viewModel.kitten?.id,
-                                                           isAlive: false)
-        
-        self.interactor.worker.updateKittenDB(kitten: kittenKilled)
-        
-        self.interactor.refresh(isEditingMode: self.isEditing,
-                                isCreatingMode: self.isCreatingMode,
-                                isDisplayingMode: self.isDisplayingMode,
-                                litter: self.litter,
-                                kittenId: kittenKilled.id,
-                                kitten: kittenKilled)
+        let vc = KittenCardModalViewController.fromStoryboard()
+        vc.litter = self.litter
+        vc.kitten = self.kitten
+        vc.isCreatingMode = false
+        vc.isEditingMode = true
+        navigationController?.present(vc, animated: true)
     }
     
     @IBAction private func adopte() {

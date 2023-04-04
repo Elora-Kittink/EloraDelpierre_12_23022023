@@ -45,9 +45,9 @@ class KittenCardModalPresenter: Presenter<KittenCardModalViewModel> {
     
     func displayKittenCard(kitten: Kitten, litter: Litter) {
         let vc = KittenCardViewController.fromStoryboard()
-        vc.isCreatingMode = false
-        vc.isEditingMode = false
-        vc.isDisplayingMode = true
+//        vc.isCreatingMode = false
+//        vc.isEditingMode = false
+//        vc.isDisplayingMode = true
         vc.kitten = kitten
     }
 }

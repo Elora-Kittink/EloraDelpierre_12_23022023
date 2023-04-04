@@ -68,13 +68,10 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     @IBAction private func addKitten() {
         
         let vc = KittenCardModalViewController.fromStoryboard()
-//        vc.litterId = self.viewModel.id
         vc.litter = self.viewModel.litter
         vc.isCreatingMode = true
         vc.isEditingMode = false
-        
         navigationController?.present(vc, animated: true)
-//        navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction private func archiveLitter() {
         self.interactor.archiveLitter(litterId: self.viewModel.id)
@@ -122,11 +119,8 @@ extension LitterViewController: UITableViewDataSource, UITableViewDelegate {
         }
         let vc = KittenCardViewController.fromStoryboard()
         vc.litterId = self.viewModel.id
-        vc.kittenId = kittenId
+//        vc.kittenId = kittenId
         vc.litter = self.viewModel.litter
-        vc.isDisplayingMode = true
-        vc.isEditingMode = false
-        vc.isCreatingMode = false
         vc.kitten = self.viewModel.kittens?[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }

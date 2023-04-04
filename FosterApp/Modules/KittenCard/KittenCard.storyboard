@@ -215,15 +215,6 @@
                                                     <action selector="edit" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5gJ-EP-g7c"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbw-g5-sz2">
-                                                <rect key="frame" x="318" y="32" width="75" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Mort"/>
-                                                <connections>
-                                                    <action selector="dead" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hml-f7-Fkr"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uif-iP-shX">
                                                 <rect key="frame" x="318" y="64" width="75" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -231,15 +222,6 @@
                                                 <state key="normal" title="Adopté"/>
                                                 <connections>
                                                     <action selector="adopte" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jfb-Dt-kaG"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRs-WT-Z4t">
-                                                <rect key="frame" x="42" y="457" width="126" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Valider création"/>
-                                                <connections>
-                                                    <action selector="save" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hoh-To-Ki5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSv-4M-H2g">
@@ -301,7 +283,6 @@
                         <outlet property="colorLabel" destination="Y4L-tJ-Qpk" id="2m2-Az-5bk"/>
                         <outlet property="commentsField" destination="q7o-oO-hXJ" id="4HR-Bq-C7O"/>
                         <outlet property="commentsLabel" destination="baa-8I-BsY" id="11s-Dc-snQ"/>
-                        <outlet property="deadBtn" destination="Bbw-g5-sz2" id="6u3-xb-qhI"/>
                         <outlet property="editBtn" destination="4Wy-7u-n1R" id="lwh-tM-tAK"/>
                         <outlet property="medicalHistory" destination="FLC-Q6-ZcO" id="TzD-v0-bVW"/>
                         <outlet property="microshipField" destination="gqA-s4-OH6" id="YsU-YW-Tqv"/>
@@ -310,7 +291,6 @@
                         <outlet property="nameLabel" destination="SDO-6M-ika" id="frf-ef-apH"/>
                         <outlet property="rescueDateField" destination="HJU-6r-UT6" id="OcE-E7-fvg"/>
                         <outlet property="rescueDateLabel" destination="TrS-g9-vFo" id="eQ0-Gh-QYW"/>
-                        <outlet property="saveBtn" destination="aRs-WT-Z4t" id="amc-hR-G3X"/>
                         <outlet property="secondNameField" destination="2xU-nV-8Mb" id="JGD-ta-pTy"/>
                         <outlet property="secondNameLabel" destination="TPP-Ia-PBq" id="mhK-ky-CjD"/>
                         <outlet property="sexField" destination="ODi-bW-sZM" id="aIQ-ac-JMG"/>

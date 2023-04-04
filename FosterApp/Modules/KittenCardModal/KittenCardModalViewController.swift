@@ -39,7 +39,7 @@ class KittenCardModalViewController: BaseViewController
 	
 //    var litterId = ""
     var litter: Litter!
-    var kittenId: String = ""
+//    var kittenId: String = ""
     var isEditingMode = false
     var isCreatingMode = false
     var kitten: Kitten?
