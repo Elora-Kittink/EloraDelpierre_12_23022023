@@ -10,23 +10,35 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
     
     func display(kitten: Kitten, litter: Litter) {
         
-        self.viewModel?.firstName = kitten.firstName ?? "A compléter"
-        self.viewModel?.secondName = kitten.secondName ?? ""
-        self.viewModel?.birthdate = kitten.birthdate?.toString(format: "dd/MM/yyyy") ?? "A compléter"
+        self.viewModel?.infoCardViewModel = [
+            InfoCardViewModel(label: kitten.birthdate?.toString(format: "dd/MM/yyyy"),
+                              imageContent: UIImage(named: "birthdate")),
+                                             
+            InfoCardViewModel(label: kitten.rescueDate?.toString(format: "dd/MM/yyyy"),
+                              imageContent: UIImage(named: "rescueDate")),
+                                             
+            InfoCardViewModel( label: kitten.color,
+                               imageContent: UIImage(named: "color")),
+                                             
+            InfoCardViewModel(label: kitten.adopters?.lastName,
+                              imageContent: UIImage(named: "adopters"))]
+        self.viewModel?.firstName = kitten.firstName ?? "?"
+        self.viewModel?.secondName = kitten.secondName ?? "?"
+        self.viewModel?.birthdate = kitten.birthdate?.toString(format: "dd/MM/yyyy") ?? "?"
         let age = kitten.birthdate?.timeIntervalSinceNow
         self.viewModel?.age = "\(abs(Int((age ?? 0) / 31_556_926.0)))"
-        self.viewModel?.sex = kitten.sex ?? "A compléter"
-        self.viewModel?.color = kitten.color ?? "A compléter"
-        self.viewModel?.rescueDate = kitten.rescueDate?.toString(format: "dd/MM/yyyy") ?? "A compléter"
+        self.viewModel?.sex = kitten.sex ?? "?"
+        self.viewModel?.color = kitten.color ?? "?"
+        self.viewModel?.rescueDate = kitten.rescueDate?.toString(format: "dd/MM/yyyy") ?? "?"
         let siblings = litter.kittens?.filter { kitty in
             kitten.id != kitty.id
         }
         self.viewModel?.siblings = siblings?.compactMap { sibling in
              sibling.firstName
         }
-        .joined(separator: ", ") ?? ""
+        .joined(separator: ", ") ?? "?"
 
-        self.viewModel?.comment = kitten.comment ?? "A compléter"
+        self.viewModel?.comment = kitten.comment ?? "?"
         self.viewModel?.isAdopted = kitten.isAdopted
         self.viewModel?.microship = String(kitten.microship ?? 0)
         self.viewModel?.vaccines = kitten.vaccines ?? []

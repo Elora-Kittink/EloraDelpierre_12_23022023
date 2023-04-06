@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,12 +31,12 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Peser"/>
                                             </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLC-Q6-ZcO" userLabel="Medical history">
-                                                <rect key="frame" x="32" y="518" width="136" height="128"/>
+                                                <rect key="frame" x="32" y="393" width="136" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.97647058819999999" green="0.62352941179999999" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kUz-sO-mLw" userLabel="Weight history">
-                                                <rect key="frame" x="230" y="518" width="136" height="128"/>
+                                                <rect key="frame" x="230" y="393" width="136" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.71341250099999998" green="0.40962786750000002" blue="0.39762009199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
@@ -56,44 +57,31 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wy-7u-n1R" userLabel="Edit">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wy-7u-n1R" userLabel="Edit">
                                                 <rect key="frame" x="199" y="94" width="39" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="pencil" catalog="system"/>
                                                 <connections>
                                                     <action selector="edit" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5gJ-EP-g7c"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Sy-ap-Rcr">
-                                                <rect key="frame" x="5" y="154" width="90" height="61"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zA-Is-Pt3">
-                                                <rect key="frame" x="103" y="154" width="90" height="61"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWJ-Iw-vcU">
-                                                <rect key="frame" x="199" y="154" width="90" height="61"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Q1-0O-aHD">
-                                                <rect key="frame" x="295" y="154" width="90" height="61"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LcT-8C-L0g">
-                                                <rect key="frame" x="17" y="231" width="361" height="75"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKQ-la-hVE">
-                                                <rect key="frame" x="172" y="314" width="50" height="52"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LcT-8C-L0g" userLabel="CommentsView">
+                                                <rect key="frame" x="14" y="231" width="365" height="75"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRb-eS-96h">
+                                                        <rect key="frame" x="0.0" y="0.0" width="365" height="80"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" name="beigeClear"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="ZRb-eS-96h" secondAttribute="bottom" id="3nT-U6-bjY"/>
+                                                    <constraint firstItem="ZRb-eS-96h" firstAttribute="leading" secondItem="LcT-8C-L0g" secondAttribute="leading" id="fXR-Yg-qEq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZRb-eS-96h" secondAttribute="trailing" id="fpr-am-rUt"/>
+                                                    <constraint firstAttribute="height" constant="80" id="goH-3r-mIe"/>
+                                                    <constraint firstItem="ZRb-eS-96h" firstAttribute="top" secondItem="LcT-8C-L0g" secondAttribute="top" id="jf9-de-wRO"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i15-QH-pNQ">
                                                 <rect key="frame" x="261" y="8" width="117" height="113"/>
@@ -110,8 +98,22 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rQ8-eu-UrD">
+                                                <rect key="frame" x="8" y="146" width="377" height="86"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </stackView>
+                                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESj-5M-MLb">
+                                                <rect key="frame" x="163" y="314" width="76" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="0.99215686319999996" green="0.97254908080000002" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="LcT-8C-L0g" firstAttribute="top" secondItem="4Wy-7u-n1R" secondAttribute="bottom" constant="14" id="21t-Z6-9dK"/>
+                                            <constraint firstItem="LcT-8C-L0g" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="14" id="bOJ-tn-AVp"/>
+                                            <constraint firstAttribute="trailing" secondItem="LcT-8C-L0g" secondAttribute="trailing" constant="14" id="dNl-BS-JWf"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -136,16 +138,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="birthdateView" destination="6Sy-ap-Rcr" id="4Kx-20-OVw"/>
-                        <outlet property="colorView" destination="kWJ-Iw-vcU" id="oRw-Dn-1FW"/>
                         <outlet property="editBtn" destination="4Wy-7u-n1R" id="lwh-tM-tAK"/>
                         <outlet property="image" destination="3eK-db-H3v" id="ErZ-F3-rnu"/>
                         <outlet property="imageView" destination="i15-QH-pNQ" id="59e-Ka-2Jr"/>
                         <outlet property="medicalHistory" destination="FLC-Q6-ZcO" id="TzD-v0-bVW"/>
                         <outlet property="microshipLabel" destination="NX2-HB-w9p" id="lSA-SR-6XP"/>
                         <outlet property="nameLabel" destination="mCZ-NU-7MW" id="fof-OI-GkN"/>
-                        <outlet property="rescueDateView" destination="1zA-Is-Pt3" id="QBE-60-4YV"/>
-                        <outlet property="weighingButton" destination="JgE-ct-n1I" id="rXD-hf-Dg9"/>
+                        <outlet property="stackInfoCards" destination="rQ8-eu-UrD" id="RBx-eE-HV7"/>
                         <outlet property="weightHistory" destination="kUz-sO-mLw" id="PVt-cH-LUn"/>
                     </connections>
                 </viewController>
@@ -157,6 +156,9 @@
     <resources>
         <image name="Sauge" width="768" height="1024"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <namedColor name="beigeClear">
+            <color red="0.99599999189376831" green="0.98000001907348633" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

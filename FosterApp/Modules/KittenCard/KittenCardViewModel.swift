@@ -38,21 +38,5 @@ class KittenCardViewModel: ViewModel {
     var microshipLabel = "Puce électronique"
     var adoptersLabel = "Adoptants"
     
-    // MARK: - display modes
-    
-    var isEditingMode = false
-    var isDisplayingMode = false
-    var isCreatingMode = false
-    
-    // MARK: - button hidden
-    
-    var editBtnHidden = false
-    var adopteBtnHidden = false
-    var deadBtnHidden = false
-    var validateCreationBtnHidden = false
-    var validateModifBtnHidden = false
-    
-    // MARK: - text fields enabled
-    
-    var textFieldsEnable = false
+    var infoCardViewModel: [InfoCardViewModel] = []
 }

@@ -37,6 +37,7 @@
 		D57272D529ACF50100A9C72E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57272D429ACF50100A9C72E /* Home.storyboard */; };
 		D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D585E62329D5DC7300D3ED9C /* Colors.xcassets */; };
 		D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */; };
+		D593BD9B29DF0617005D8673 /* InfoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59D09BE29DD6CD100813B35 /* InfoCardView.xib */; };
 		D595EC6329D58E1500200B46 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC5F29D58E1500200B46 /* SignUpPresenter.swift */; };
 		D595EC6429D58E1500200B46 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6029D58E1500200B46 /* SignUpViewController.swift */; };
 		D595EC6529D58E1500200B46 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6129D58E1500200B46 /* SignUpInteractor.swift */; };
@@ -44,6 +45,8 @@
 		D599CE2329AFB0C500542F9E /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599CE2229AFB0C500542F9E /* Worker.swift */; };
 		D59A680429E8525F0016F123 /* DB_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680329E8525F0016F123 /* DB_User.swift */; };
 		D59A680629E856000016F123 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680529E856000016F123 /* User.swift */; };
+		D59D09B729DD6B6300813B35 /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D09B329DD6B6300813B35 /* InfoCardView.swift */; };
+		D59D09B929DD6B6300813B35 /* InfoCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D09B529DD6B6300813B35 /* InfoCardViewModel.swift */; };
 		D59DB7EE29DAC53B00306F0C /* KittenCardModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EA29DAC53B00306F0C /* KittenCardModalPresenter.swift */; };
 		D59DB7EF29DAC53B00306F0C /* KittenCardModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */; };
 		D59DB7F029DAC53B00306F0C /* KittenCardModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */; };
@@ -126,6 +129,9 @@
 		D599CE2229AFB0C500542F9E /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		D59A680329E8525F0016F123 /* DB_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_User.swift; sourceTree = "<group>"; };
 		D59A680529E856000016F123 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D59D09B329DD6B6300813B35 /* InfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
+		D59D09B529DD6B6300813B35 /* InfoCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardViewModel.swift; sourceTree = "<group>"; };
+		D59D09BE29DD6CD100813B35 /* InfoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCardView.xib; sourceTree = "<group>"; };
 		D59DB7EA29DAC53B00306F0C /* KittenCardModalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalPresenter.swift; sourceTree = "<group>"; };
 		D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalViewController.swift; sourceTree = "<group>"; };
 		D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalInteractor.swift; sourceTree = "<group>"; };
@@ -301,6 +307,24 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		D59D09AE29DD6A6F00813B35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D59D09AF29DD6B1300813B35 /* InfoCards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D59D09AF29DD6B1300813B35 /* InfoCards */ = {
+			isa = PBXGroup;
+			children = (
+				D59D09B329DD6B6300813B35 /* InfoCardView.swift */,
+				D59D09B529DD6B6300813B35 /* InfoCardViewModel.swift */,
+				D59D09BE29DD6CD100813B35 /* InfoCardView.xib */,
+			);
+			path = InfoCards;
+			sourceTree = "<group>";
+		};
 		D5A073CD29AE5A2700202F0A /* Workers */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +448,7 @@
 		D5F0C70D29A90D54002A0F65 /* KittenCard */ = {
 			isa = PBXGroup;
 			children = (
+				D59D09AE29DD6A6F00813B35 /* Views */,
 				D5F0C70F29A90D85002A0F65 /* KittenCardViewController.swift */,
 				D5F0C71029A90D85002A0F65 /* KittenCardInteractor.swift */,
 				D5F0C70E29A90D85002A0F65 /* KittenCardPresenter.swift */,
@@ -549,6 +574,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D593BD9B29DF0617005D8673 /* InfoCardView.xib in Resources */,
 				D57272B029ACBA2700A9C72E /* WeightHistory.storyboard in Resources */,
 				D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */,
 				D57272D529ACF50100A9C72E /* Home.storyboard in Resources */,
@@ -646,6 +672,8 @@
 				D5A073C829AE3CD100202F0A /* Vaccine.swift in Sources */,
 				D5B5E24A29D4697C00A84476 /* LoginInteractor.swift in Sources */,
 				D599CE2329AFB0C500542F9E /* Worker.swift in Sources */,
+				D59D09B929DD6B6300813B35 /* InfoCardViewModel.swift in Sources */,
+				D59D09B729DD6B6300813B35 /* InfoCardView.swift in Sources */,
 				D5A1460129BA45D700E2327B /* Extensions.swift in Sources */,
 				D5F0C71229A90D85002A0F65 /* KittenCardPresenter.swift in Sources */,
 				D5B5E24929D4697C00A84476 /* LoginViewController.swift in Sources */,

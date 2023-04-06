@@ -11,15 +11,15 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     // MARK: - Outlets
     
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var microshipLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var microshipLabel: UILabel!
     @IBOutlet private weak var weightHistory: UIView!
     @IBOutlet private weak var medicalHistory: UIView!
     @IBOutlet private weak var editBtn: UIButton!
-    @IBOutlet weak var imageView: UIView!
-    @IBOutlet weak var image: UIImageView!
-    
-//    TODO: faire un xib pour les brithdate/rescueDate/Color/Adopters
+    @IBOutlet private weak var imageView: UIView!
+    @IBOutlet private weak var image: UIImageView!
+    @IBOutlet private weak var stackInfoCards: UIStackView!
+
     
     // MARK: - Variables
     
@@ -39,7 +39,13 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     override func refreshUI() {
         super.refreshUI()
             
-        self.editBtn.isHidden = self.viewModel.editBtnHidden
+        self.nameLabel.text = self.viewModel.firstName
+        self.microshipLabel.text = self.viewModel.microship
+        self.viewModel.infoCardViewModel.forEach { info in
+            let view = InfoCardView.fromNib()
+            view.viewModel = info
+            stackInfoCards.addArrangedSubview(view)
+        }
     }
     
     // MARK: - Actions
