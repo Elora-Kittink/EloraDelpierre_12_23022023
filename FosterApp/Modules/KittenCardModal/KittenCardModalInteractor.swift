@@ -43,7 +43,7 @@ class KittenCardModalInteractor: Interactor
         
      
      
-        var kitten = Kitten(from: isEdited ? kittenId : UUID().uuidString,
+        let kitten = Kitten(from: isEdited ? kittenId : UUID().uuidString,
                             litter: litter,
                             firstName: firstName,
                             secondName: secondName,

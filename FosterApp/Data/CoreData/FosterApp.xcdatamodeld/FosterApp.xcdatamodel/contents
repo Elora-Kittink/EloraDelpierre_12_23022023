@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DB_Adopter" representedClassName="DB_Adopter" syncable="YES" codeGenerationType="class">
         <attribute name="a_adress" optional="YES" attributeType="String"/>
         <attribute name="a_comment" optional="YES" attributeType="String"/>
@@ -33,6 +33,13 @@
         <attribute name="a_isOngoing" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_rescueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="r_kittens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Kitten" inverseName="r_litter" inverseEntity="DB_Kitten"/>
+        <relationship name="r_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_User" inverseName="r_litters" inverseEntity="DB_User"/>
+    </entity>
+    <entity name="DB_User" representedClassName="DB_User" syncable="YES" codeGenerationType="class">
+        <attribute name="a_id" optional="YES" attributeType="String"/>
+        <attribute name="a_mail" optional="YES" attributeType="String"/>
+        <attribute name="a_name" optional="YES" attributeType="String"/>
+        <relationship name="r_litters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Litter" inverseName="r_user" inverseEntity="DB_Litter"/>
     </entity>
     <entity name="DB_Vaccine" representedClassName="DB_Vaccine" syncable="YES" codeGenerationType="class">
         <attribute name="a_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>

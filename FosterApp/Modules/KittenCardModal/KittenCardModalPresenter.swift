@@ -41,13 +41,15 @@ class KittenCardModalPresenter: Presenter<KittenCardModalViewModel> {
         } else {
             self.viewModel?.isAlive = 1
         }
+        
+        self.viewModel?.send()
     }
     
-    func displayKittenCard(kitten: Kitten, litter: Litter) {
-        let vc = KittenCardViewController.fromStoryboard()
-//        vc.isCreatingMode = false
-//        vc.isEditingMode = false
-//        vc.isDisplayingMode = true
-        vc.kitten = kitten
-    }
+//    func displayKittenCard(kitten: Kitten, litter: Litter) {
+//        let vc = KittenCardViewController.fromStoryboard()
+////        vc.isCreatingMode = false
+////        vc.isEditingMode = false
+////        vc.isDisplayingMode = true
+//        vc.kitten = kitten
+//    }
 }

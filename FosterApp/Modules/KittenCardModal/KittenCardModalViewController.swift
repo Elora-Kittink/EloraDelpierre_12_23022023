@@ -37,9 +37,7 @@ class KittenCardModalViewController: BaseViewController
     
 	// MARK: - Variables
 	
-//    var litterId = ""
     var litter: Litter!
-//    var kittenId: String = ""
     var isEditingMode = false
     var isCreatingMode = false
     var kitten: Kitten?
@@ -79,8 +77,6 @@ class KittenCardModalViewController: BaseViewController
         self.adopterField.text = self.viewModel.adopters
         self.rescueDateField.text = self.viewModel.rescueDate
         self.commentsField.text = self.viewModel.comment
-        
-        
 	}
 
 	// MARK: - Actions
