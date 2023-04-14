@@ -9,4 +9,7 @@ class LoginInteractor: Interactor
 <
 	LoginViewModel,
 	LoginPresenter
-> { }
+> {
+    
+
+}

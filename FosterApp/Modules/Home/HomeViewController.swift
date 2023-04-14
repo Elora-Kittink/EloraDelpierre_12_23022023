@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import UtilsKit
 
 class HomeViewController: BaseViewController
 <
@@ -11,7 +12,8 @@ class HomeViewController: BaseViewController
 	HomePresenter,
 	HomeInteractor
 > {
-	
+    var user: User!
+    
 	// MARK: - Outlets
     @IBOutlet private weak var button: UIButton!
 	// MARK: - Variables
@@ -35,5 +37,15 @@ class HomeViewController: BaseViewController
      
         navigationController?.pushViewController(vc, animated: true)
         print("ça passe")
+    }
+}
+
+extension HomeViewController: StoryboardProtocol {
+    static var storyboardName: String {
+        "Home"
+    }
+    
+    static var identifier: String? {
+        "HomeViewController"
     }
 }

@@ -86,6 +86,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     
 
     @IBAction private func save() {
+        
         self.interactor.refresh(litterId: self.viewModel.id,
                                 rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"))
     }

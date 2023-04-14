@@ -7,8 +7,21 @@
 
 import Foundation
 import CoreDataUtilsKit
+import UtilsKit
+import UIKit
+import FirebaseCore
+import FirebaseAuth
 
 struct Worker {
+    
+    
+//    MARK: - User
+    
+    func createUser(name: String, mail: String, id: String) -> User? {
+        let user = User(mail: mail, name: name, id: id)
+        guard let dbUser = DB_User.create(user: user) else { return nil }
+        return user
+    }
     
     
     // MARK: - Kitten
@@ -66,8 +79,8 @@ struct Worker {
         try? CoreDataManager.default.save()
     }
     
-    func createNewLitter(rescueDate: Date) -> Litter? {
-        guard let newLitter = DB_Litter.create(rescueDate: rescueDate) else {
+    func createNewLitter(rescueDate: Date, user: User) -> Litter? {
+        guard let newLitter = DB_Litter.create(rescueDate: rescueDate, user: user) else {
             print("pas réussi à créer la portée")
             return nil
         }

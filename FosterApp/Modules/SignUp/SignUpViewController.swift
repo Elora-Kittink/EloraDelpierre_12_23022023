@@ -17,7 +17,7 @@ class SignUpViewController: BaseViewController
     
     // MARK: - Outlets
     @IBOutlet private weak var emailTF: UITextField!
-    
+    @IBOutlet private weak var nameTF: UITextField!
     @IBOutlet private weak var passwordTF: UITextField!
     // MARK: - Variables
     
@@ -34,18 +34,14 @@ class SignUpViewController: BaseViewController
     // MARK: - Actions
     
     @IBAction private func signUpAction() {
-        guard let email = emailTF.text, let password = passwordTF.text else {
-            
-            print("Les champs ne sont pas remplis")
+        guard let userCreated = self.interactor.signUp(mail: emailTF.text, name: nameTF.text, password: passwordTF.text) else {
+//            TODO: message d'aletre utilisateur non créé
             return
         }
-        
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            if error != nil {
-                print(error.debugDescription)
-            } else {
-            }
-        }
+//        TODO: Faire de ce storyboard l'initial, changer dans AppDelegate car pour l'instant ça marche pas 
+        let homeVC = HomeViewController.fromStoryboard()
+        homeVC.user = userCreated
+            navigationController?.pushViewController(homeVC, animated: true)
     }
     
     @IBAction private func logInAction() {

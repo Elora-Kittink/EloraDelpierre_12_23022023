@@ -5,6 +5,9 @@
 
 import Foundation
 import UIKit
+import UtilsKit
+import FirebaseCore
+import FirebaseAuth
 
 class LitterInteractor: Interactor
 <
@@ -55,6 +58,12 @@ class LitterInteractor: Interactor
         }
     }
     
+    func createNewLitter(rescueDate: String){
+                
+        Task {
+//            worker.createNewLitter(rescueDate: rescueDate, user: user)
+        }
+    }
     
     func refresh(litterId: String?,
                  rescueDate: Date?) {

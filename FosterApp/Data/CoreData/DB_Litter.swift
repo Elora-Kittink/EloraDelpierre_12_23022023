@@ -15,12 +15,14 @@ extension DB_Litter: CoreDataModel {
 
 extension DB_Litter {
     
-    static func create(rescueDate: Date) -> DB_Litter? {
+    static func create(rescueDate: Date, user: User) -> DB_Litter? {
+        guard let user = DB_User.get(with: user.id) else {return nil}
         let litter = DB_Litter.findOrCreate(with: UUID().uuidString)
         litter?.a_rescueDate = rescueDate
         litter?.a_isOngoing = true
         litter?.a_isFavorite = false
-        return litter
+        litter?.r_user = user
+                return litter
     }
     
     func addKitten(kitten: Kitten) {
