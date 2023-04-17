@@ -3,8 +3,10 @@
 //  Created by Elora on 27/02/2023.
 //
 
-import UIKit
 import UtilsKit
+import UIKit
+import FirebaseCore
+import FirebaseAuth
 
 class HomeViewController: BaseViewController
 <
@@ -16,11 +18,14 @@ class HomeViewController: BaseViewController
     
 	// MARK: - Outlets
     @IBOutlet private weak var button: UIButton!
+    @IBOutlet private weak var helloTF: UITextField!
 	// MARK: - Variables
 	
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        helloTF.text = Auth.auth().currentUser?.email
 	}
 	
 	// MARK: - Refresh

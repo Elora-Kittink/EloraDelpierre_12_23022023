@@ -32,8 +32,9 @@ class LoginViewController: BaseViewController<LoginViewModel,
     
     @IBAction private func signUpAction() {
 // renvoyer vers la page d'inscription
-        let signupVC = SignUpViewController.fromStoryboard()
-        navigationController?.pushViewController(signupVC, animated: true)
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+            let signupViewController = storyboard.instantiateViewController(identifier: "SignUpViewController")
+        navigationController?.pushViewController(signupViewController, animated: true)
     }
     
     @IBAction private func logInAction() {
@@ -44,13 +45,16 @@ class LoginViewController: BaseViewController<LoginViewModel,
             return
         }
         Auth.auth().signIn(withEmail: email,
-                           password: password) { (authResult, error) in
+                           password: password) { authResult, error in
             if error != nil {
                 print(error.debugDescription)
             } else {
-                
+                let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+                    let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBarController")
+                    // This is to get the SceneDelegate object from your view controller
+                    // then call the change root view controller function to change to main tab bar
+                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
             }
-            
         }
     }
 }

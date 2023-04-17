@@ -38,7 +38,7 @@ class SignUpViewController: BaseViewController
 //            TODO: message d'aletre utilisateur non créé
             return
         }
-//        TODO: Faire de ce storyboard l'initial, changer dans AppDelegate car pour l'instant ça marche pas 
+//        TODO: Faire de ce storyboard l'initial, changer dans AppDelegate car pour l'instant ça marche pas
         let homeVC = HomeViewController.fromStoryboard()
         homeVC.user = userCreated
             navigationController?.pushViewController(homeVC, animated: true)
@@ -46,8 +46,9 @@ class SignUpViewController: BaseViewController
     
     @IBAction private func logInAction() {
 //        rediriger vers la page login
-        let loginVC = LoginViewController.fromStoryboard()
-        navigationController?.pushViewController(loginVC, animated: true)
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+            let loginViewController = storyboard.instantiateViewController(identifier: "LoginViewController")
+        navigationController?.pushViewController(loginViewController, animated: true)
     }
 }
 
