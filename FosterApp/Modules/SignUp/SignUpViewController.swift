@@ -38,10 +38,9 @@ class SignUpViewController: BaseViewController
 //            TODO: message d'aletre utilisateur non créé
             return
         }
-//        TODO: Faire de ce storyboard l'initial, changer dans AppDelegate car pour l'instant ça marche pas
-        let homeVC = HomeViewController.fromStoryboard()
-        homeVC.user = userCreated
-            navigationController?.pushViewController(homeVC, animated: true)
+
+        let loginVC = LoginViewController.fromStoryboard()
+        navigationController?.pushViewController(loginVC, animated: true)
     }
     
     @IBAction private func logInAction() {
@@ -54,7 +53,7 @@ class SignUpViewController: BaseViewController
 
 extension SignUpViewController: StoryboardProtocol {
     static var storyboardName: String {
-        "SignUp"
+        "TabBar"
     }
     
     static var identifier: String? {

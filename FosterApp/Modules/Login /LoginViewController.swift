@@ -13,9 +13,9 @@ class LoginViewController: BaseViewController<LoginViewModel,
                            LoginInteractor> {
     
     // MARK: - Outlets
-    @IBOutlet private weak var emailTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
     
-    @IBOutlet private weak var passwordTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
     // MARK: - Variables
     
     // MARK: - View life cycle
@@ -37,7 +37,7 @@ class LoginViewController: BaseViewController<LoginViewModel,
         navigationController?.pushViewController(signupViewController, animated: true)
     }
     
-    @IBAction private func logInAction() {
+    @IBAction func logInAction() {
 //        gérer la connexion
         guard let email = emailTF.text, let password = passwordTF.text else {
             
@@ -62,7 +62,7 @@ class LoginViewController: BaseViewController<LoginViewModel,
 
 extension LoginViewController: StoryboardProtocol {
     static var storyboardName: String {
-        "SignUp"
+        "TabBar"
     }
     
     static var identifier: String? {

@@ -41,12 +41,9 @@
 		D595EC6429D58E1500200B46 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6029D58E1500200B46 /* SignUpViewController.swift */; };
 		D595EC6529D58E1500200B46 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6129D58E1500200B46 /* SignUpInteractor.swift */; };
 		D595EC6629D58E1500200B46 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6229D58E1500200B46 /* SignUpViewModel.swift */; };
-		D595EC6829D58E3100200B46 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D595EC6729D58E3100200B46 /* SignUp.storyboard */; };
 		D599CE2329AFB0C500542F9E /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599CE2229AFB0C500542F9E /* Worker.swift */; };
 		D59A680429E8525F0016F123 /* DB_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680329E8525F0016F123 /* DB_User.swift */; };
 		D59A680629E856000016F123 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680529E856000016F123 /* User.swift */; };
-		D59D09B729DD6B6300813B35 /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D09B329DD6B6300813B35 /* InfoCardView.swift */; };
-		D59D09B929DD6B6300813B35 /* InfoCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D09B529DD6B6300813B35 /* InfoCardViewModel.swift */; };
 		D59DB7EE29DAC53B00306F0C /* KittenCardModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EA29DAC53B00306F0C /* KittenCardModalPresenter.swift */; };
 		D59DB7EF29DAC53B00306F0C /* KittenCardModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */; };
 		D59DB7F029DAC53B00306F0C /* KittenCardModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */; };
@@ -64,7 +61,6 @@
 		D5B5E24929D4697C00A84476 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24529D4697C00A84476 /* LoginViewController.swift */; };
 		D5B5E24A29D4697C00A84476 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24629D4697C00A84476 /* LoginInteractor.swift */; };
 		D5B5E24B29D4697C00A84476 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24729D4697C00A84476 /* LoginViewModel.swift */; };
-		D5B5E24D29D4698B00A84476 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B5E24C29D4698B00A84476 /* Login.storyboard */; };
 		D5B5E24F29D46E3C00A84476 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5B5E24E29D46E3C00A84476 /* GoogleService-Info.plist */; };
 		D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E9295029ACFAAC00ACDAEE /* TabBar.storyboard */; };
 		D5E9295329AD0D6F00ACDAEE /* Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9295229AD0D6F00ACDAEE /* Litter.swift */; };
@@ -127,13 +123,9 @@
 		D595EC6029D58E1500200B46 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D595EC6129D58E1500200B46 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		D595EC6229D58E1500200B46 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		D595EC6729D58E3100200B46 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		D599CE2229AFB0C500542F9E /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		D59A680329E8525F0016F123 /* DB_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_User.swift; sourceTree = "<group>"; };
 		D59A680529E856000016F123 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D59D09B329DD6B6300813B35 /* InfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
-		D59D09B529DD6B6300813B35 /* InfoCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardViewModel.swift; sourceTree = "<group>"; };
-		D59D09BE29DD6CD100813B35 /* InfoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCardView.xib; sourceTree = "<group>"; };
 		D59DB7EA29DAC53B00306F0C /* KittenCardModalPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalPresenter.swift; sourceTree = "<group>"; };
 		D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalViewController.swift; sourceTree = "<group>"; };
 		D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalInteractor.swift; sourceTree = "<group>"; };
@@ -151,7 +143,6 @@
 		D5B5E24529D4697C00A84476 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D5B5E24629D4697C00A84476 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		D5B5E24729D4697C00A84476 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		D5B5E24C29D4698B00A84476 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D5B5E24E29D46E3C00A84476 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5E9295029ACFAAC00ACDAEE /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		D5E9295229AD0D6F00ACDAEE /* Litter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Litter.swift; sourceTree = "<group>"; };
@@ -306,7 +297,6 @@
 				D595EC6129D58E1500200B46 /* SignUpInteractor.swift */,
 				D595EC5F29D58E1500200B46 /* SignUpPresenter.swift */,
 				D595EC6229D58E1500200B46 /* SignUpViewModel.swift */,
-				D595EC6729D58E3100200B46 /* SignUp.storyboard */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -342,7 +332,6 @@
 				D5B5E24629D4697C00A84476 /* LoginInteractor.swift */,
 				D5B5E24429D4697C00A84476 /* LoginPresenter.swift */,
 				D5B5E24729D4697C00A84476 /* LoginViewModel.swift */,
-				D5B5E24C29D4698B00A84476 /* Login.storyboard */,
 			);
 			path = "Login ";
 			sourceTree = "<group>";
@@ -569,12 +558,10 @@
 				D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */,
 				D5B5E24F29D46E3C00A84476 /* GoogleService-Info.plist in Resources */,
 				D57272CA29ACEAD700A9C72E /* LitterHistory.storyboard in Resources */,
-				D595EC6829D58E3100200B46 /* SignUp.storyboard in Resources */,
 				D5F0C70329A90BEF002A0F65 /* LaunchScreen.storyboard in Resources */,
 				D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */,
 				D5F0C70029A90BEF002A0F65 /* Assets.xcassets in Resources */,
 				D5A1460629BB495000E2327B /* LittersMock.json in Resources */,
-				D5B5E24D29D4698B00A84476 /* Login.storyboard in Resources */,
 				D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
