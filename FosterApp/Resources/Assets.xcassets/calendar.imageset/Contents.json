@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "girl.png",
+      "filename" : "appointments.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "girl 1.png",
+      "filename" : "appointments 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "girl 2.png",
+      "filename" : "appointments 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

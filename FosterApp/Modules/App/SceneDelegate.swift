@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         // change the root view controller to your specific view controller
-        window.rootViewController = vc
+        window.rootViewController = UINavigationController(rootViewController: vc)
     }
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

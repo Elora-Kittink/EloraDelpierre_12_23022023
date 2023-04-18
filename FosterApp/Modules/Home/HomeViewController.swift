@@ -14,7 +14,7 @@ class HomeViewController: BaseViewController
 	HomePresenter,
 	HomeInteractor
 > {
-    var user: User!
+//    var user: User!
     
 	// MARK: - Outlets
     @IBOutlet private weak var button: UIButton!
@@ -35,11 +35,9 @@ class HomeViewController: BaseViewController
 
 	// MARK: - Actions
     @IBAction private func buttonAction() {
-//        guard let recipeId = self.viewModel.recipesFullInfo[indexPath.row].id else {
-//            return
-//        }
+
         let vc = LitterHistoryViewController.fromStoryboard()
-     
+        
         navigationController?.pushViewController(vc, animated: true)
         print("ça passe")
     }
