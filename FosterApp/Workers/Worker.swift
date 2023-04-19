@@ -18,12 +18,16 @@ struct Worker {
 //    MARK: - User
     
     func createUser(name: String, mail: String, id: String) -> User? {
-        let user = User(mail: mail, name: name, id: id)
+        let user = User(from: mail, id: name, name: id)
         guard let dbUser = DB_User.create(user: user) else { return nil }
         return user
     }
     
-    
+    func fetchUser(id: String) -> User? {
+        guard let DBUser = DB_User.get(with: id) else { return nil }
+        return User(from: DBUser)
+    }
+
     // MARK: - Kitten
     func fetchKittenFromId(kittenId: String) -> Kitten? {
         guard let DBKitten = DB_Kitten.get(with: kittenId) else { return nil }

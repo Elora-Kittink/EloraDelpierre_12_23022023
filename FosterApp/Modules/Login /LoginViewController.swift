@@ -49,11 +49,12 @@ class LoginViewController: BaseViewController<LoginViewModel,
             if error != nil {
                 print(error.debugDescription)
             } else {
-                let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-                    let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBarController")
-                    // This is to get the SceneDelegate object from your view controller
-                    // then call the change root view controller function to change to main tab bar
-                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+                HomeViewController.fromStoryboard().push()
+//                let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+//                    let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBarController")
+//                    // This is to get the SceneDelegate object from your view controller
+//                    // then call the change root view controller function to change to main tab bar
+//                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
             }
         }
     }

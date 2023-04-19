@@ -65,6 +65,8 @@
 		D5B5E24A29D4697C00A84476 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24629D4697C00A84476 /* LoginInteractor.swift */; };
 		D5B5E24B29D4697C00A84476 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24729D4697C00A84476 /* LoginViewModel.swift */; };
 		D5B5E24F29D46E3C00A84476 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5B5E24E29D46E3C00A84476 /* GoogleService-Info.plist */; };
+		D5C7D9B129F0195900885C48 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7D9B029F0195900885C48 /* Login.storyboard */; };
+		D5C7D9B329F0196C00885C48 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7D9B229F0196C00885C48 /* SignUp.storyboard */; };
 		D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E9295029ACFAAC00ACDAEE /* TabBar.storyboard */; };
 		D5E9295329AD0D6F00ACDAEE /* Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E9295229AD0D6F00ACDAEE /* Litter.swift */; };
 		D5E9295729AD16B700ACDAEE /* FosterApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5E9295529AD16B700ACDAEE /* FosterApp.xcdatamodeld */; };
@@ -150,6 +152,8 @@
 		D5B5E24629D4697C00A84476 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		D5B5E24729D4697C00A84476 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D5B5E24E29D46E3C00A84476 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D5C7D9B029F0195900885C48 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D5C7D9B229F0196C00885C48 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		D5E9295029ACFAAC00ACDAEE /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		D5E9295229AD0D6F00ACDAEE /* Litter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Litter.swift; sourceTree = "<group>"; };
 		D5E9295629AD16B700ACDAEE /* FosterApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FosterApp.xcdatamodel; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 				D595EC6129D58E1500200B46 /* SignUpInteractor.swift */,
 				D595EC5F29D58E1500200B46 /* SignUpPresenter.swift */,
 				D595EC6229D58E1500200B46 /* SignUpViewModel.swift */,
+				D5C7D9B229F0196C00885C48 /* SignUp.storyboard */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 				D5B5E24629D4697C00A84476 /* LoginInteractor.swift */,
 				D5B5E24429D4697C00A84476 /* LoginPresenter.swift */,
 				D5B5E24729D4697C00A84476 /* LoginViewModel.swift */,
+				D5C7D9B029F0195900885C48 /* Login.storyboard */,
 			);
 			path = "Login ";
 			sourceTree = "<group>";
@@ -574,6 +580,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C7D9B129F0195900885C48 /* Login.storyboard in Resources */,
 				D593BD9B29DF0617005D8673 /* InfoCardView.xib in Resources */,
 				D57272B029ACBA2700A9C72E /* WeightHistory.storyboard in Resources */,
 				D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */,
@@ -581,6 +588,7 @@
 				D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */,
 				D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */,
 				D57272BB29ACBF7E00A9C72E /* MedicalHistory.storyboard in Resources */,
+				D5C7D9B329F0196C00885C48 /* SignUp.storyboard in Resources */,
 				D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */,
 				D5B5E24F29D46E3C00A84476 /* GoogleService-Info.plist in Resources */,
 				D57272CA29ACEAD700A9C72E /* LitterHistory.storyboard in Resources */,

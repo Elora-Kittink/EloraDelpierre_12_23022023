@@ -19,18 +19,20 @@ class HomeViewController: BaseViewController
 	// MARK: - Outlets
     @IBOutlet private weak var button: UIButton!
     @IBOutlet private weak var helloTF: UITextField!
+    @IBOutlet private weak var logOutbutton: UIButton!
 	// MARK: - Variables
 	
 	// MARK: - View life cycle
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        
-        helloTF.text = Auth.auth().currentUser?.email
+        self.interactor.userIsConnected()
 	}
 	
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
+        helloTF.text = self.viewModel.userName
 	}
 
 	// MARK: - Actions
@@ -41,7 +43,14 @@ class HomeViewController: BaseViewController
         navigationController?.pushViewController(vc, animated: true)
         print("ça passe")
     }
+    
+    @IBAction private func logOut() {
+        self.interactor.logOut()
+    }
 }
+
+
+
 
 extension HomeViewController: StoryboardProtocol {
     static var storyboardName: String {

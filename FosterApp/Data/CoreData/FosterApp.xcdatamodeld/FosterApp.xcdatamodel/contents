@@ -36,9 +36,9 @@
         <relationship name="r_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_User" inverseName="r_litters" inverseEntity="DB_User"/>
     </entity>
     <entity name="DB_User" representedClassName="DB_User" syncable="YES" codeGenerationType="class">
-        <attribute name="a_id" optional="YES" attributeType="String"/>
-        <attribute name="a_mail" optional="YES" attributeType="String"/>
-        <attribute name="a_name" optional="YES" attributeType="String"/>
+        <attribute name="a_id" attributeType="String"/>
+        <attribute name="a_mail" attributeType="String"/>
+        <attribute name="a_name" attributeType="String"/>
         <relationship name="r_litters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Litter" inverseName="r_user" inverseEntity="DB_Litter"/>
     </entity>
     <entity name="DB_Vaccine" representedClassName="DB_Vaccine" syncable="YES" codeGenerationType="class">

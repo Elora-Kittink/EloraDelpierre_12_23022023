@@ -46,6 +46,17 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhF-my-ZZV">
+                                                <rect key="frame" x="159" y="98" width="75" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.88627451660000001" green="0.81960785390000002" blue="0.69019609689999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Log Out"/>
+                                                <connections>
+                                                    <action selector="logOut" destination="Y6W-OH-hqX" eventType="touchUpInside" id="juX-9f-GwR"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" name="beigeClear"/>
                                         <constraints>
@@ -76,6 +87,7 @@
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="uCj-ro-QT8"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="LogOutbutton" destination="yhF-my-ZZV" id="Cbr-rg-F8R"/>
                         <outlet property="button" destination="aIB-is-cNQ" id="DEo-AD-arA"/>
                         <outlet property="helloTF" destination="XQf-sT-4e5" id="wIg-IX-sMd"/>
                     </connections>
