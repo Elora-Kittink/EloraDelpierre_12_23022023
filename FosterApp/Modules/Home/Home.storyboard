@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,74 +17,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbX-wt-9Im">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbX-wt-9Im">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8p-Dh-x12" userLabel="Content">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="710"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIB-is-cNQ">
-                                                <rect key="frame" x="32" y="160" width="151" height="219"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIB-is-cNQ">
+                                                <rect key="frame" x="96.666666666666686" y="255" width="200" height="200"/>
                                                 <color key="backgroundColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="litter"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="2Eq-LB-QEN"/>
+                                                    <constraint firstAttribute="width" constant="200" id="azW-59-beO"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
                                                     <action selector="buttonAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="542-0F-iGW"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYU-k7-ST8">
-                                                <rect key="frame" x="211" y="160" width="151" height="219"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" name="beige"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="advicesBook"/>
-                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="litter" translatesAutoresizingMaskIntoConstraints="NO" id="nex-64-lsX">
+                                                <rect key="frame" x="126.66666666666669" y="285" width="140" height="140"/>
+                                            </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XQf-sT-4e5" userLabel="HelloTF">
                                                 <rect key="frame" x="92" y="26" width="224" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2e-6f-YAU">
-                                                <rect key="frame" x="32" y="413" width="151" height="219"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" name="beige"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="calendar"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68w-7H-kIj">
-                                                <rect key="frame" x="211" y="413" width="151" height="219"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="directory"/>
-                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="beigeClear"/>
+                                        <constraints>
+                                            <constraint firstItem="aIB-is-cNQ" firstAttribute="centerY" secondItem="f8p-Dh-x12" secondAttribute="centerY" id="25c-GT-Zx9"/>
+                                            <constraint firstItem="nex-64-lsX" firstAttribute="centerY" secondItem="f8p-Dh-x12" secondAttribute="centerY" id="bcX-pF-3uG"/>
+                                            <constraint firstItem="nex-64-lsX" firstAttribute="centerX" secondItem="f8p-Dh-x12" secondAttribute="centerX" id="ejA-J9-y4W"/>
+                                            <constraint firstItem="nex-64-lsX" firstAttribute="width" secondItem="aIB-is-cNQ" secondAttribute="width" multiplier="0.7" id="fZz-bL-Wwo"/>
+                                            <constraint firstItem="aIB-is-cNQ" firstAttribute="centerX" secondItem="f8p-Dh-x12" secondAttribute="centerX" id="gty-Ba-uM0"/>
+                                            <constraint firstItem="nex-64-lsX" firstAttribute="height" secondItem="aIB-is-cNQ" secondAttribute="height" multiplier="0.7" id="lgY-LG-5Cd"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="top" secondItem="BXa-Zs-fom" secondAttribute="top" id="EtF-SR-RWS"/>
-                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="trailing" secondItem="BXa-Zs-fom" secondAttribute="trailing" id="MQx-7m-mZn"/>
-                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="bottom" secondItem="BXa-Zs-fom" secondAttribute="bottom" id="NhL-e7-hLl"/>
-                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="leading" secondItem="BXa-Zs-fom" secondAttribute="leading" id="QKB-zW-kRh"/>
-                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="height" secondItem="SO9-fx-MmI" secondAttribute="height" priority="750" id="lWj-hs-lP5"/>
-                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="width" secondItem="SO9-fx-MmI" secondAttribute="width" id="vbz-42-kUR"/>
+                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="width" secondItem="SO9-fx-MmI" secondAttribute="width" id="4OY-hY-NCl"/>
+                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="trailing" secondItem="BXa-Zs-fom" secondAttribute="trailing" constant="393" id="HfI-56-NQo"/>
+                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="height" secondItem="SO9-fx-MmI" secondAttribute="height" id="Nv2-7s-QPb"/>
+                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="leading" secondItem="BXa-Zs-fom" secondAttribute="leading" id="SKl-Cb-tAh"/>
+                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="bottom" secondItem="BXa-Zs-fom" secondAttribute="bottom" constant="710" id="g1g-OW-teX"/>
+                                    <constraint firstItem="f8p-Dh-x12" firstAttribute="top" secondItem="BXa-Zs-fom" secondAttribute="top" id="tx3-ZA-KRw"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="BXa-Zs-fom"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="SO9-fx-MmI"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="rbX-wt-9Im" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6Mg-tq-jWB"/>
-                            <constraint firstItem="rbX-wt-9Im" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="C1c-eT-eLk"/>
-                            <constraint firstItem="rbX-wt-9Im" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="OXd-4V-PrB"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="rbX-wt-9Im" secondAttribute="bottom" id="evW-BT-iBA"/>
-                        </constraints>
+                        <color key="backgroundColor" name="beigeClear"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="uCj-ro-QT8"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="button" destination="aIB-is-cNQ" id="DEo-AD-arA"/>
                         <outlet property="helloTF" destination="XQf-sT-4e5" id="wIg-IX-sMd"/>
@@ -97,15 +86,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="advicesBook" width="81.666664123535156" height="62.333332061767578"/>
-        <image name="calendar" width="95" height="90.333335876464844"/>
-        <image name="directory" width="108.66666412353516" height="109.33333587646484"/>
-        <image name="litter" width="85.333335876464844" height="76.333335876464844"/>
-        <namedColor name="beige">
-            <color red="0.88599997758865356" green="0.81999999284744263" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="litter" width="256" height="229"/>
+        <namedColor name="beigeClear">
+            <color red="0.99599999189376831" green="0.98000001907348633" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
