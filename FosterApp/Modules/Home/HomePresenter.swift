@@ -7,10 +7,14 @@ class HomePresenter: Presenter<HomeViewModel> {
     
     func noUserConnected() {
         self.viewModel?.isUserConnected = false
+        LoginViewController.fromStoryboard().push()
+//        self.viewModel?.send()
     }
     
     func presentUserConnected(user: User) {
         self.viewModel?.user = user
+        
+        self.viewModel?.send()
     }
     
     func display() {
@@ -19,7 +23,7 @@ class HomePresenter: Presenter<HomeViewModel> {
         self.viewModel?.send()
     }
     
-    func displayLoginPage() {
-        LoginViewController.fromStoryboard().push()
-    }
+//    func displayLoginPage() {
+//        
+//    }
 }

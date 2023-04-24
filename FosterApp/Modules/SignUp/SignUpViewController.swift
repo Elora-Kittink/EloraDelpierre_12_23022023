@@ -34,11 +34,12 @@ class SignUpViewController: BaseViewController
     // MARK: - Actions
     
     @IBAction private func signUpAction() {
-        guard let userCreated = self.interactor.signUp(mail: emailTF.text, name: nameTF.text, password: passwordTF.text) else {
-//            TODO: message d'aletre utilisateur non créé
-            return
+        
+        Task {
+          await self.interactor.signUp(mail: emailTF.text ?? "",
+                                   name: nameTF.text ?? "",
+                                   password: passwordTF.text ?? "")
         }
-
         let loginVC = LoginViewController.fromStoryboard()
         navigationController?.pushViewController(loginVC, animated: true)
     }

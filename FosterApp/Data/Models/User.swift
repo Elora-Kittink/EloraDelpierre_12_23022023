@@ -24,7 +24,7 @@ struct User {
         self.mail = mail
     }
     
-    init(from mail: String,
+    init(mail: String,
          id: String,
          name: String) {
         self.name = name

@@ -18,7 +18,7 @@ struct Worker {
 //    MARK: - User
     
     func createUser(name: String, mail: String, id: String) -> User? {
-        let user = User(from: mail, id: name, name: id)
+        let user = User(mail: mail, id: id, name: name)
         guard let dbUser = DB_User.create(user: user) else { return nil }
         return user
     }

@@ -17,19 +17,20 @@ class HomeInteractor: Interactor
             self.presenter.noUserConnected()
             return
         }
+        print("👻 \(userConnected.uid)")
         guard let user = worker.fetchUser(id: userConnected.uid) else {
             return
         }
         self.presenter.presentUserConnected(user: user)
     }
     
-    func refresh(isUserConnected: Bool) {
-        if isUserConnected {
-            self.presenter.display()
-        } else {
-            self.presenter.displayLoginPage()
-        }
-    }
+//    func refresh(isUserConnected: Bool) {
+//        if isUserConnected {
+//            self.presenter.display()
+//        } else {
+//            self.presenter.displayLoginPage()
+//        }
+//    }
     
     func logOut() {
         do {

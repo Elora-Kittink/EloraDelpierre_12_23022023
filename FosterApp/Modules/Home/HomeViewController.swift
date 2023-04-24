@@ -26,13 +26,15 @@ class HomeViewController: BaseViewController
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        print(Auth.auth().currentUser?.email)
         self.interactor.userIsConnected()
+//        self.interactor.refresh(isUserConnected: self.viewModel.isUserConnected)
 	}
 	
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
-        helloTF.text = self.viewModel.userName
+        self.helloTF.text = self.viewModel.user?.name
 	}
 
 	// MARK: - Actions

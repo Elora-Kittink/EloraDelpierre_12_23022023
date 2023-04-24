@@ -25,7 +25,7 @@ extension DB_User {
     }
     
      func update(user: User) {
-        self.a_mail = user.name
+        self.a_mail = user.mail
         self.a_name = user.name
     }
 }
