@@ -17,7 +17,7 @@ class HomeInteractor: Interactor
             self.presenter.noUserConnected()
             return
         }
-        print("👻 \(userConnected.uid)")
+        print("🙋🏼‍♀️ User \(userConnected.uid) is connected")
         guard let user = worker.fetchUser(id: userConnected.uid) else {
             return
         }
