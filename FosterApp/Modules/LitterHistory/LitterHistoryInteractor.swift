@@ -18,4 +18,9 @@ class LitterHistoryInteractor: Interactor
             self.presenter.display(loader: false)
         }
     }
+    
+    func refreshCell(litter: Litter?) {
+        guard let litter else { return }
+        self.presenter.displayCell(litter: litter)
+    }
 }

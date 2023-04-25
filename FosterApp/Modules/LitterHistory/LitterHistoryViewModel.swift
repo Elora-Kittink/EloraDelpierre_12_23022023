@@ -6,4 +6,6 @@
 class LitterHistoryViewModel: ViewModel {
     
     var litters: [Litter]?
+    var headerText = "Toutes les portées"
+    var kittenList = ""
 }

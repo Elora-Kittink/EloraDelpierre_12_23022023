@@ -12,6 +12,7 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	
 	// MARK: - Outlets
     @IBOutlet private weak var litterHistoryTableView: UITableView!
+    @IBOutlet weak var headerLabel: UILabel!
     
 	// MARK: - Variables
     var user: User!
@@ -33,6 +34,7 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	override func refreshUI() {
 		super.refreshUI()
         litterHistoryTableView.reloadData()
+        self.headerLabel.text = self.viewModel.headerText
 	}
 
 	// MARK: - Actions
@@ -63,8 +65,8 @@ extension LitterHistoryViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "litterCell", for: indexPath)
-        
-        cell.textLabel?.text = self.viewModel.litters?[indexPath.row].rescueDate
+        self.interactor.refreshCell(litter: self.viewModel.litters?[indexPath.row])
+        cell.textLabel?.text = self.viewModel.kittenList
         return cell
     }
     
