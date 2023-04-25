@@ -58,27 +58,36 @@ class LitterInteractor: Interactor
         }
     }
     
-    func createNewLitter(rescueDate: String){
-                
-        Task {
-//            worker.createNewLitter(rescueDate: rescueDate, user: user)
-        }
-    }
     
     func refresh(litterId: String?,
-                 rescueDate: Date?) {
-        
-        Task {
-            guard let litter = worker.fetchLitterFromId(litterId: litterId ?? "") else {
+                 rescueDate: Date?,
+                 isCreating: Bool,
+                 user: User?) {
+        if isCreating {
+            guard let date = rescueDate else {
+                //                TODO: gérer l'absence de date
                 return
             }
-            let kittens = worker.fetchAllKittensLitter(litterId: litterId ?? "")
-            self.presenter.displayMode(type: LitterLayoutStyle.displaying,
-                                       rescueDate: litter.rescueDate?.toDate(format: "dd/MM/yyyy"),
-                                       litterId: litterId,
-                                       litter: litter,
-                                       kittens: kittens)
-            self.presenter.display(loader: false)
+            guard let user else {
+                //                TODO: gérer l'absence de User
+                return
+            }
+            Task {
+                worker.createNewLitter(rescueDate: date, user: user)
+            }
+        } else {
+            Task {
+                guard let litter = worker.fetchLitterFromId(litterId: litterId ?? "") else {
+                    return
+                }
+                let kittens = worker.fetchAllKittensLitter(litterId: litterId ?? "")
+                self.presenter.displayMode(type: LitterLayoutStyle.displaying,
+                                           rescueDate: litter.rescueDate?.toDate(format: "dd/MM/yyyy"),
+                                           litterId: litterId,
+                                           litter: litter,
+                                           kittens: kittens)
+                self.presenter.display(loader: false)
+            }
         }
     }
 }

@@ -40,8 +40,6 @@ class SignUpViewController: BaseViewController
                                    name: nameTF.text ?? "",
                                    password: passwordTF.text ?? "")
         }
-        let loginVC = LoginViewController.fromStoryboard()
-        navigationController?.pushViewController(loginVC, animated: true)
     }
     
     @IBAction private func logInAction() {

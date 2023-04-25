@@ -22,7 +22,8 @@ struct Worker {
         guard let dbUser = DB_User.create(user: user) else {
             print("👹 Worker fail create DB User")
             return nil }
-        print("💃🏼 Worker succeed create \(dbUser.a_id) user")
+        print("💃🏼 Worker succeed create \(String(describing: dbUser.a_id)) user")
+        try? CoreDataManager.default.save()
         return user
     }
     
@@ -30,16 +31,17 @@ struct Worker {
         guard let DBUser = DB_User.get(with: id) else {
             print("👹 Worker fail get DB User")
             return nil }
-        print("💃🏼 Worker succeed get \(DBUser.a_id) user")
+        print("💃🏼 Worker succeed get \(String(describing: DBUser.a_id)) user")
         return User(from: DBUser)
     }
     
     // MARK: - Kitten
+    
     func fetchKittenFromId(kittenId: String) -> Kitten? {
         guard let DBKitten = DB_Kitten.get(with: kittenId) else {
             print("👹 Worker fail get DB Kitten")
             return nil }
-        print("💃🏼 Worker succeed get \(DBKitten.a_id) kitten")
+        print("💃🏼 Worker succeed get \(String(describing: DBKitten.a_id)) kitten")
         return Kitten(from: DBKitten)
     }
     
@@ -58,16 +60,16 @@ struct Worker {
             print("👹 Worker fail create DB Kitten")
             return nil}
         try? CoreDataManager.default.save()
-        print("💃🏼 Worker succeed create \(DBKitten.a_id) kitten")
+        print("💃🏼 Worker succeed create \(String(describing: DBKitten.a_id)) kitten")
         return Kitten(from: DBKitten)
     }
     
     func updateKittenDB(kitten: Kitten) {
         guard let DBKitten = DB_Kitten.get(with: kitten.id) else {
-            print("👹 Worker fail get DB Kitten")
+            print("👹 Worker fail get DB Kitten to update")
             return}
         DBKitten.update(kitten: kitten, litterId: kitten.litterId)
-        print("💃🏼 Worker succeed update \(DBKitten.a_id) kitten to update")
+        print("💃🏼 Worker succeed update \(String(describing: DBKitten.a_id)) kitten to update")
         try? CoreDataManager.default.save()
     }
     
@@ -80,7 +82,7 @@ struct Worker {
         guard let DBLitter = DB_Litter.get(with: litterId) else {
             print("👹 Worker fail get DB Litter")
             return nil}
-        print("💃🏼 Worker succeed get \(DBLitter.a_id) litter")
+        print("💃🏼 Worker succeed get \(String(describing: DBLitter.a_id)) litter")
         return Litter(from: DBLitter)
     }
     
@@ -98,10 +100,10 @@ struct Worker {
     
     func updateLitterDB(litterId: String, rescueDate: Date) {
         guard let DBlitter = DB_Litter.get(with: litterId) else {
-            print("👹 Worker fail get DB Litter")
+            print("👹 Worker fail get DB Litter to update")
             return
         }
-        print("💃🏼 Worker succeed get \(DBlitter.a_id) litter to update")
+        print("💃🏼 Worker succeed get \(String(describing: DBlitter.a_id)) litter to update")
         DBlitter.a_rescueDate = rescueDate
         try? CoreDataManager.default.save()
     }
@@ -112,17 +114,17 @@ struct Worker {
             return nil
         }
         try? CoreDataManager.default.save()
-        print("💃🏼 Worker succeed create \(newLitter.a_id) litter")
+        print("💃🏼 Worker succeed create \(String(describing: newLitter.a_id)) litter")
         return Litter(from: newLitter)
     }
     
     func archiveLitter(litterId: String) {
         guard let DBLitter = DB_Litter.get(with: litterId) else {
-            print("👹 Worker fail get DB Litter")
+            print("👹 Worker fail get DB Litter to archive")
             return
         }
         DBLitter.archiveLitter()
-        print("💃🏼 Worker succeed get \(DBLitter.a_id) litter to archive")
+        print("💃🏼 Worker succeed get \(String(describing: DBLitter.a_id)) litter to archive")
         try? CoreDataManager.default.save()
     }
     
@@ -134,7 +136,7 @@ struct Worker {
             print("👹 Worker fail get DB Litter")
             return
         }
-        print("💃🏼 Worker succeed get \(newFavoriteLitter.a_id) litter to make favorite")
+        print("💃🏼 Worker succeed get \(String(describing: newFavoriteLitter.a_id)) litter to make favorite")
         newFavoriteLitter.makeFavorite(oldFavorite: oldFavoriteLitter, newFavorite: newFavoriteLitter)
     }
 }

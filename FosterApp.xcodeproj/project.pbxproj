@@ -42,6 +42,7 @@
 		D595EC6429D58E1500200B46 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6029D58E1500200B46 /* SignUpViewController.swift */; };
 		D595EC6529D58E1500200B46 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6129D58E1500200B46 /* SignUpInteractor.swift */; };
 		D595EC6629D58E1500200B46 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6229D58E1500200B46 /* SignUpViewModel.swift */; };
+		D59900CD29F6B62500F0F36D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59900CC29F6B62500F0F36D /* Alerts.swift */; };
 		D599CE2329AFB0C500542F9E /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599CE2229AFB0C500542F9E /* Worker.swift */; };
 		D59A680429E8525F0016F123 /* DB_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680329E8525F0016F123 /* DB_User.swift */; };
 		D59A680629E856000016F123 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680529E856000016F123 /* User.swift */; };
@@ -128,6 +129,7 @@
 		D595EC6029D58E1500200B46 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D595EC6129D58E1500200B46 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		D595EC6229D58E1500200B46 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		D59900CC29F6B62500F0F36D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		D599CE2229AFB0C500542F9E /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		D59A680329E8525F0016F123 /* DB_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_User.swift; sourceTree = "<group>"; };
 		D59A680529E856000016F123 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			children = (
 				D57272BE29ACE6F600A9C72E /* AddButton.swift */,
 				D5FCBA3129CA09D3008985C9 /* DatePickerField.swift */,
+				D59900CC29F6B62500F0F36D /* Alerts.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 				D5F0C6F929A90BEA002A0F65 /* SceneDelegate.swift in Sources */,
 				D57272AC29ACB9F400A9C72E /* WeightHistoryViewController.swift in Sources */,
 				D595EC6429D58E1500200B46 /* SignUpViewController.swift in Sources */,
+				D59900CD29F6B62500F0F36D /* Alerts.swift in Sources */,
 				D57272D229ACF4F200A9C72E /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

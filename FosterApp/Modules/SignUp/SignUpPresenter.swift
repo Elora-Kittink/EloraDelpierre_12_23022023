@@ -5,5 +5,7 @@
 
 class SignUpPresenter: Presenter<SignUpViewModel> {
     
-    
+    func display() {
+        
+    }
 }

@@ -22,8 +22,4 @@ class HomePresenter: Presenter<HomeViewModel> {
         
         self.viewModel?.send()
     }
-    
-//    func displayLoginPage() {
-//        
-//    }
 }

@@ -11,9 +11,9 @@ class LitterHistoryInteractor: Interactor
     
     let worker = Worker()
     
-    func refresh() {
+    func refresh(user: User) {
         Task {
-            let litters = worker.fetchAllLitters()
+            let litters = worker.fetchAllLitters(userId: user.id)
             self.presenter.display(litters: litters)
             self.presenter.display(loader: false)
         }

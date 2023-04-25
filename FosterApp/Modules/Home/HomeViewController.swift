@@ -14,7 +14,6 @@ class HomeViewController: BaseViewController
 	HomePresenter,
 	HomeInteractor
 > {
-//    var user: User!
     
 	// MARK: - Outlets
     @IBOutlet private weak var button: UIButton!
@@ -26,7 +25,6 @@ class HomeViewController: BaseViewController
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        print(Auth.auth().currentUser?.email)
         self.interactor.userIsConnected()
 //        self.interactor.refresh(isUserConnected: self.viewModel.isUserConnected)
 	}
@@ -34,16 +32,15 @@ class HomeViewController: BaseViewController
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
-        self.helloTF.text = self.viewModel.user?.name
+        self.helloTF.text = "Hello \(String(describing: self.viewModel.user?.name))"
 	}
 
 	// MARK: - Actions
     @IBAction private func buttonAction() {
 
         let vc = LitterHistoryViewController.fromStoryboard()
-        
+        vc.user = self.viewModel.user
         navigationController?.pushViewController(vc, animated: true)
-        print("ça passe")
     }
     
     @IBAction private func logOut() {

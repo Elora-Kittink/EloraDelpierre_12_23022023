@@ -23,19 +23,26 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     var litterId: String? {
         didSet {
             self.interactor.refresh(litterId: litterId,
-                                    rescueDate: nil)
+                                    rescueDate: nil,
+                                    isCreating: self.viewModel.isCreatingNew,
+                                    user: self.user)
         }
     }
     var isCreateMode = false
     var isDisplayMode = true
     var isEditMode = false
-    
+    var user: User!
 	// MARK: - View life cycle
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        NotificationCenter.default.addObserver(forName: NSNotification.Name("newKittenCreated"), object: nil, queue: nil) { [interactor] _ in
-            interactor.refresh(litterId: self.litterId, rescueDate: self.rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"))
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("newKittenCreated"),
+                                               object: nil,
+                                               queue: nil) { [interactor] _ in
+            interactor.refresh(litterId: self.litterId,
+                               rescueDate: self.rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"),
+                               isCreating: self.viewModel.isCreatingNew,
+                               user: self.user)
         }
         self.litterTable.delegate = self
         self.litterTable.dataSource = self
@@ -88,7 +95,9 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     @IBAction private func save() {
         
         self.interactor.refresh(litterId: self.viewModel.id,
-                                rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"))
+                                rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"),
+                                isCreating: self.viewModel.isCreatingNew,
+                                user: self.user)
     }
 }
 

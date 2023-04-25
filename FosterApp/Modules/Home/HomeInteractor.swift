@@ -35,6 +35,7 @@ class HomeInteractor: Interactor
     func logOut() {
         do {
              try Auth.auth().signOut()
+            LoginViewController.fromStoryboard().push()
             print("User logged out")
          } catch let error {
              // handle error here

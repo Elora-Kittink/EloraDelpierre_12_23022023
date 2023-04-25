@@ -14,7 +14,8 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
     @IBOutlet private weak var litterHistoryTableView: UITableView!
     
 	// MARK: - Variables
-	
+    var user: User!
+    
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -25,7 +26,7 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.interactor.refresh()
+        self.interactor.refresh(user: user)
     }
     
 	// MARK: - Refresh
@@ -40,6 +41,7 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
         vc.isCreateMode = true
         vc.isDisplayMode = false
         vc.isEditMode = false
+        vc.user = self.user
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -64,16 +66,6 @@ extension LitterHistoryViewController: UITableViewDataSource, UITableViewDelegat
         
         cell.textLabel?.text = self.viewModel.litters?[indexPath.row].rescueDate
         return cell
-        
-//        guard let cell = litterHistoryTableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as? RecipeCell
-//            else { return UITableViewCell() }
-////      donne la bonne recette pour remplir les outlets
-////      le "=" notifie et active le didSet de outletFilling dans RecipeCell
-//        guard let recipes = self.viewModel.recipes else {
-//            return UITableViewCell()
-//        }
-//        cell.outletFilling = recipes[indexPath.row]
-//        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
