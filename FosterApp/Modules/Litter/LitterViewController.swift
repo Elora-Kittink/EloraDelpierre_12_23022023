@@ -22,10 +22,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     
     var litterId: String? {
         didSet {
-            self.interactor.refresh(litterId: litterId,
-                                    rescueDate: nil,
-                                    isCreating: self.viewModel.isCreatingNew,
-                                    user: self.user)
+            self.interactor.refresh(litterId: litterId)
         }
     }
     var isCreateMode = false
@@ -39,10 +36,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
         NotificationCenter.default.addObserver(forName: NSNotification.Name("newKittenCreated"),
                                                object: nil,
                                                queue: nil) { [interactor] _ in
-            interactor.refresh(litterId: self.litterId,
-                               rescueDate: self.rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"),
-                               isCreating: self.viewModel.isCreatingNew,
-                               user: self.user)
+            interactor.refresh(litterId: self.litterId)
         }
         self.litterTable.delegate = self
         self.litterTable.dataSource = self
@@ -93,11 +87,11 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     
 
     @IBAction private func save() {
-        
-        self.interactor.refresh(litterId: self.viewModel.id,
-                                rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"),
-                                isCreating: self.viewModel.isCreatingNew,
-                                user: self.user)
+        self.interactor.createLitter(user: self.user, rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"))
+//        self.interactor.refresh(litterId: self.viewModel.id,
+//                                rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"),
+//                                isCreating: self.viewModel.isCreatingNew,
+//                                user: self.user)
     }
 }
 

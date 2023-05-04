@@ -88,10 +88,10 @@ struct Worker {
     
     func fetchAllLitters(userId: String) -> [Litter] {
         
-        let predicate = NSPredicate(format: "r_user == \(userId)")
+        let predicate = NSPredicate(format: "r_user.a_id == %@", userId)
         
-        let litters = DB_Litter.getAll()
-        
+        let litters = DB_Litter.getAll(predicate: predicate)
+
         let allLitters = litters.map { litter in
             Litter(from: litter)
         }
