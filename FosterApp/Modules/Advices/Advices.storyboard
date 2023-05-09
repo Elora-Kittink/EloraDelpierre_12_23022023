@@ -9,43 +9,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Advices View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdvicesViewController" id="Y6W-OH-hqX" customClass="AdvicesViewController" customModule="FosterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBq-dG-sMc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sOc-PU-1T0">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4C-Jm-zv8">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="L4C-Jm-zv8" firstAttribute="width" secondItem="5Ms-Rz-yQt" secondAttribute="width" id="B7Y-Rc-pcd"/>
-                                    <constraint firstItem="L4C-Jm-zv8" firstAttribute="bottom" secondItem="vNh-aI-Fgh" secondAttribute="bottom" id="cUg-ec-6ga"/>
-                                    <constraint firstItem="L4C-Jm-zv8" firstAttribute="leading" secondItem="vNh-aI-Fgh" secondAttribute="leading" id="jaa-PY-a57"/>
-                                    <constraint firstItem="L4C-Jm-zv8" firstAttribute="trailing" secondItem="vNh-aI-Fgh" secondAttribute="trailing" id="lkM-TH-lJK"/>
-                                    <constraint firstItem="L4C-Jm-zv8" firstAttribute="height" secondItem="5Ms-Rz-yQt" secondAttribute="height" priority="750" id="p7o-Xl-Ie8"/>
-                                    <constraint firstItem="L4C-Jm-zv8" firstAttribute="top" secondItem="vNh-aI-Fgh" secondAttribute="top" id="xKk-xI-zzw"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="vNh-aI-Fgh"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="5Ms-Rz-yQt"/>
-                            </scrollView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="ZzL-dT-sDh" userLabel="Header">
+                                    <rect key="frame" x="0.0" y="121.66666793823242" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="adviceCell" id="jNb-l1-RXH">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jNb-l1-RXH" id="Ypc-0f-pJi">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FBq-dG-sMc" secondAttribute="bottom" id="XG6-fl-1DT"/>
-                            <constraint firstItem="FBq-dG-sMc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YD6-V1-P5F"/>
-                            <constraint firstItem="FBq-dG-sMc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ezm-D8-Rxv"/>
-                            <constraint firstItem="FBq-dG-sMc" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="wWQ-Em-5Fq"/>
+                            <constraint firstItem="sOc-PU-1T0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="D2h-NM-USj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sOc-PU-1T0" secondAttribute="trailing" id="DnD-aX-FW9"/>
+                            <constraint firstItem="sOc-PU-1T0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fjz-G4-dIz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sOc-PU-1T0" secondAttribute="bottom" id="zCc-AW-BeX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="header" destination="ZzL-dT-sDh" id="cHi-7e-8TT"/>
+                        <outlet property="tableView" destination="sOc-PU-1T0" id="DhH-cv-QYE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -19,6 +19,7 @@ class HomeViewController: BaseViewController
     @IBOutlet private weak var button: UIButton!
     @IBOutlet private weak var helloTF: UITextField!
     @IBOutlet private weak var logOutbutton: UIButton!
+    @IBOutlet private weak var advicesButton: UIButton!
 	// MARK: - Variables
 	
 	// MARK: - View life cycle
@@ -36,10 +37,15 @@ class HomeViewController: BaseViewController
 	}
 
 	// MARK: - Actions
-    @IBAction private func buttonAction() {
+    @IBAction private func litterButtonAction() {
 
         let vc = LitterHistoryViewController.fromStoryboard()
         vc.user = self.viewModel.user
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction private func advicesButtonAction() {
+        let vc = AdvicesViewController.fromStoryboard()
         navigationController?.pushViewController(vc, animated: true)
     }
     

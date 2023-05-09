@@ -51,12 +51,19 @@
 		D59AA7CF2A03B205008AF45F /* AdvicesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AA7CB2A03B205008AF45F /* AdvicesInteractor.swift */; };
 		D59AA7D02A03B205008AF45F /* AdvicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AA7CC2A03B205008AF45F /* AdvicesViewModel.swift */; };
 		D59AA7D22A03B221008AF45F /* Advices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59AA7D12A03B221008AF45F /* Advices.storyboard */; };
+		D59AA7D52A03DA29008AF45F /* Advices.json in Resources */ = {isa = PBXBuildFile; fileRef = D59AA7D42A03DA29008AF45F /* Advices.json */; };
+		D59AA7D72A03F7AE008AF45F /* AdvicesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AA7D62A03F7AE008AF45F /* AdvicesStruct.swift */; };
 		D59D09B729DD6B6300813B35 /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D09B329DD6B6300813B35 /* InfoCardView.swift */; };
 		D59D09B929DD6B6300813B35 /* InfoCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D09B529DD6B6300813B35 /* InfoCardViewModel.swift */; };
 		D59DB7EE29DAC53B00306F0C /* KittenCardModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EA29DAC53B00306F0C /* KittenCardModalPresenter.swift */; };
 		D59DB7EF29DAC53B00306F0C /* KittenCardModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */; };
 		D59DB7F029DAC53B00306F0C /* KittenCardModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */; };
 		D59DB7F129DAC53B00306F0C /* KittenCardModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7ED29DAC53B00306F0C /* KittenCardModalViewModel.swift */; };
+		D59FF70F2A0A6F5E00147783 /* AdvicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59FF70B2A0A6F5E00147783 /* AdvicePresenter.swift */; };
+		D59FF7102A0A6F5E00147783 /* AdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59FF70C2A0A6F5E00147783 /* AdviceViewController.swift */; };
+		D59FF7112A0A6F5E00147783 /* AdviceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59FF70D2A0A6F5E00147783 /* AdviceInteractor.swift */; };
+		D59FF7122A0A6F5E00147783 /* AdviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59FF70E2A0A6F5E00147783 /* AdviceViewModel.swift */; };
+		D59FF7142A0A6F6900147783 /* Advice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59FF7132A0A6F6900147783 /* Advice.storyboard */; };
 		D5A073C029AE10B000202F0A /* DB_Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073BF29AE10B000202F0A /* DB_Kitten.swift */; };
 		D5A073C229AE10C000202F0A /* DB_Adopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C129AE10C000202F0A /* DB_Adopter.swift */; };
 		D5A073C429AE10CD00202F0A /* DB_Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C329AE10CD00202F0A /* DB_Weight.swift */; };
@@ -143,6 +150,8 @@
 		D59AA7CB2A03B205008AF45F /* AdvicesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesInteractor.swift; sourceTree = "<group>"; };
 		D59AA7CC2A03B205008AF45F /* AdvicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesViewModel.swift; sourceTree = "<group>"; };
 		D59AA7D12A03B221008AF45F /* Advices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Advices.storyboard; sourceTree = "<group>"; };
+		D59AA7D42A03DA29008AF45F /* Advices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Advices.json; sourceTree = "<group>"; };
+		D59AA7D62A03F7AE008AF45F /* AdvicesStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesStruct.swift; sourceTree = "<group>"; };
 		D59D09B329DD6B6300813B35 /* InfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
 		D59D09B529DD6B6300813B35 /* InfoCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardViewModel.swift; sourceTree = "<group>"; };
 		D59D09BE29DD6CD100813B35 /* InfoCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCardView.xib; sourceTree = "<group>"; };
@@ -150,6 +159,11 @@
 		D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalViewController.swift; sourceTree = "<group>"; };
 		D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalInteractor.swift; sourceTree = "<group>"; };
 		D59DB7ED29DAC53B00306F0C /* KittenCardModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalViewModel.swift; sourceTree = "<group>"; };
+		D59FF70B2A0A6F5E00147783 /* AdvicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicePresenter.swift; sourceTree = "<group>"; };
+		D59FF70C2A0A6F5E00147783 /* AdviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceViewController.swift; sourceTree = "<group>"; };
+		D59FF70D2A0A6F5E00147783 /* AdviceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceInteractor.swift; sourceTree = "<group>"; };
+		D59FF70E2A0A6F5E00147783 /* AdviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceViewModel.swift; sourceTree = "<group>"; };
+		D59FF7132A0A6F6900147783 /* Advice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Advice.storyboard; sourceTree = "<group>"; };
 		D5A073BF29AE10B000202F0A /* DB_Kitten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Kitten.swift; sourceTree = "<group>"; };
 		D5A073C129AE10C000202F0A /* DB_Adopter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Adopter.swift; sourceTree = "<group>"; };
 		D5A073C329AE10CD00202F0A /* DB_Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Weight.swift; sourceTree = "<group>"; };
@@ -328,11 +342,21 @@
 		D59AA7C82A03B1DC008AF45F /* Advices */ = {
 			isa = PBXGroup;
 			children = (
+				D59FF70A2A0A6F2A00147783 /* Advice */,
 				D59AA7CA2A03B205008AF45F /* AdvicesViewController.swift */,
 				D59AA7CB2A03B205008AF45F /* AdvicesInteractor.swift */,
 				D59AA7C92A03B205008AF45F /* AdvicesPresenter.swift */,
 				D59AA7CC2A03B205008AF45F /* AdvicesViewModel.swift */,
 				D59AA7D12A03B221008AF45F /* Advices.storyboard */,
+			);
+			path = Advices;
+			sourceTree = "<group>";
+		};
+		D59AA7D32A03DA0D008AF45F /* Advices */ = {
+			isa = PBXGroup;
+			children = (
+				D59AA7D42A03DA29008AF45F /* Advices.json */,
+				D59AA7D62A03F7AE008AF45F /* AdvicesStruct.swift */,
 			);
 			path = Advices;
 			sourceTree = "<group>";
@@ -353,6 +377,18 @@
 				D59D09BE29DD6CD100813B35 /* InfoCardView.xib */,
 			);
 			path = InfoCards;
+			sourceTree = "<group>";
+		};
+		D59FF70A2A0A6F2A00147783 /* Advice */ = {
+			isa = PBXGroup;
+			children = (
+				D59FF70C2A0A6F5E00147783 /* AdviceViewController.swift */,
+				D59FF70B2A0A6F5E00147783 /* AdvicePresenter.swift */,
+				D59FF70D2A0A6F5E00147783 /* AdviceInteractor.swift */,
+				D59FF70E2A0A6F5E00147783 /* AdviceViewModel.swift */,
+				D59FF7132A0A6F6900147783 /* Advice.storyboard */,
+			);
+			path = Advice;
 			sourceTree = "<group>";
 		};
 		D5A073CD29AE5A2700202F0A /* Workers */ = {
@@ -501,6 +537,7 @@
 		D5F0C71B29A91B66002A0F65 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D59AA7D32A03DA0D008AF45F /* Advices */,
 				D5A1460229BB490600E2327B /* Mocks */,
 				D5E9295429AD169400ACDAEE /* CoreData */,
 				D5F0C71C29A91B6C002A0F65 /* Models */,
@@ -606,6 +643,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D59FF7142A0A6F6900147783 /* Advice.storyboard in Resources */,
 				D5C7D9B129F0195900885C48 /* Login.storyboard in Resources */,
 				D593BD9B29DF0617005D8673 /* InfoCardView.xib in Resources */,
 				D57272B029ACBA2700A9C72E /* WeightHistory.storyboard in Resources */,
@@ -621,6 +659,7 @@
 				D5F0C70329A90BEF002A0F65 /* LaunchScreen.storyboard in Resources */,
 				D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */,
 				D59AA7D22A03B221008AF45F /* Advices.storyboard in Resources */,
+				D59AA7D52A03DA29008AF45F /* Advices.json in Resources */,
 				D5F0C70029A90BEF002A0F65 /* Assets.xcassets in Resources */,
 				D5A1460629BB495000E2327B /* LittersMock.json in Resources */,
 				D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */,
@@ -702,11 +741,13 @@
 				D5F0C72629A91D2D002A0F65 /* LitterInteractor.swift in Sources */,
 				D5F0C71329A90D85002A0F65 /* KittenCardViewController.swift in Sources */,
 				D5A073CC29AE45CE00202F0A /* DB_Litter.swift in Sources */,
+				D59FF7122A0A6F5E00147783 /* AdviceViewModel.swift in Sources */,
 				D5A073CA29AE412500202F0A /* Weight.swift in Sources */,
 				D57272C629ACEAB900A9C72E /* LitterHistoryViewController.swift in Sources */,
 				D5A073C829AE3CD100202F0A /* Vaccine.swift in Sources */,
 				D5B5E24A29D4697C00A84476 /* LoginInteractor.swift in Sources */,
 				D599CE2329AFB0C500542F9E /* Worker.swift in Sources */,
+				D59FF70F2A0A6F5E00147783 /* AdvicePresenter.swift in Sources */,
 				D59D09B929DD6B6300813B35 /* InfoCardViewModel.swift in Sources */,
 				D59D09B729DD6B6300813B35 /* InfoCardView.swift in Sources */,
 				D5A1460129BA45D700E2327B /* Extensions.swift in Sources */,
@@ -731,11 +772,13 @@
 				D5F0C71429A90D85002A0F65 /* KittenCardInteractor.swift in Sources */,
 				D5F0C71529A90D85002A0F65 /* KittenCardViewModel.swift in Sources */,
 				D59AA7CF2A03B205008AF45F /* AdvicesInteractor.swift in Sources */,
+				D59FF7102A0A6F5E00147783 /* AdviceViewController.swift in Sources */,
 				D5E9295329AD0D6F00ACDAEE /* Litter.swift in Sources */,
 				D5F0C72529A91D2D002A0F65 /* LitterViewController.swift in Sources */,
 				D5F0C72729A91D2D002A0F65 /* LitterViewModel.swift in Sources */,
 				D5F0C6F729A90BEA002A0F65 /* AppDelegate.swift in Sources */,
 				D5A073C029AE10B000202F0A /* DB_Kitten.swift in Sources */,
+				D59AA7D72A03F7AE008AF45F /* AdvicesStruct.swift in Sources */,
 				D59AA7CD2A03B205008AF45F /* AdvicesPresenter.swift in Sources */,
 				D57272A529ACB41100A9C72E /* Adopter.swift in Sources */,
 				D57272AE29ACB9F400A9C72E /* WeightHistoryViewModel.swift in Sources */,
@@ -754,6 +797,7 @@
 				D57272AB29ACB9F400A9C72E /* WeightHistoryPresenter.swift in Sources */,
 				D57272D129ACF4F200A9C72E /* HomeViewController.swift in Sources */,
 				D5FCBA3229CA09D3008985C9 /* DatePickerField.swift in Sources */,
+				D59FF7112A0A6F5E00147783 /* AdviceInteractor.swift in Sources */,
 				D5F0C71E29A91B86002A0F65 /* Kitten.swift in Sources */,
 				D5F0C6F929A90BEA002A0F65 /* SceneDelegate.swift in Sources */,
 				D59AA7D02A03B205008AF45F /* AdvicesViewModel.swift in Sources */,
