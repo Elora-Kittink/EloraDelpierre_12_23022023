@@ -17,16 +17,15 @@ class AdvicesInteractor: Interactor
         }
         do {
             let datas = try Data(contentsOf: path)
-            let result = try JSONDecoder().decode(AdvicesResponse.self, from: datas)
-            let sections = result.getSections()
-            self.presenter.display(advices: result, sections: sections)
+            let sectionsAdvices = try JSONDecoder().decode(AdvicesResponse.self, from: datas)
+            self.presenter.display(sections: sectionsAdvices)
         } catch {
             print(error)
             print("👹 Fail to decode Advices datas")
         }
     }
     
-//    func loadSections() {
-//
-//    }
+    func loadSections() {
+
+    }
 }

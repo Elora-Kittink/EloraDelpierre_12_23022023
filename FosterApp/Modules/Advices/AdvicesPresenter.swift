@@ -5,8 +5,8 @@
 
 class AdvicesPresenter: Presenter<AdvicesViewModel> {
     
-    func display(advices: AdvicesResponse, sections: [AdvicesSectionType]) {
-        self.viewModel?.advices = advices
+    func display(sections: AdvicesResponse) {
+
         self.viewModel?.sections = sections
         self.viewModel?.send()
     }

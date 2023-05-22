@@ -34,31 +34,50 @@ class AdvicesViewController: BaseViewController< AdvicesViewModel, AdvicesPresen
 extension AdvicesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.viewModel.advices?.getSections().count ?? 0
+        self.viewModel.sections?.sections.count ?? 0
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let section = self.viewModel.sections?.sections[section]
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
+           view.backgroundColor =  UIColor(named: "beige")
+             
+           let lbl = UILabel(frame: CGRect(x: 15, y: 0, width: view.frame.width - 15, height: 40))
+           lbl.font = UIFont.systemFont(ofSize: 20)
+        lbl.text = section?.sectionTitle
+           view.addSubview(lbl)
+           return view
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let section = self.viewModel.advices?.getSections()[section] else { return 0 }
-        return self.viewModel.advices?.getAdvices(forSection: section).count ?? 0
+        guard let rows = self.viewModel.sections?.sections[section].advices.count else {
+            return 0
+        }
+        
+        return rows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let section = self.viewModel.advices?.getSections()[indexPath.section] else { return UITableViewCell() }
-        let advice = self.viewModel.advices?.getAdvices(forSection: section)
-        
-//        faire la cell à partir de ces données
+
+        guard let advice = self.viewModel.sections?.sections[safe: indexPath.section]?.advices[safe: indexPath.row] else {
+            return UITableViewCell()
+        }
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "adviceCell", for: indexPath)
-        cell.textLabel?.text = section.title
-        
+        cell.textLabel?.text = advice.title
+
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let section = self.viewModel.advices?.getSections()[indexPath.section] else { return }
-        let advice = self.viewModel.advices?.getAdvices(forSection: section)[indexPath.row]
+        
+        guard let advice = self.viewModel.sections?.sections[safe: indexPath.section]?.advices[safe: indexPath.row] else {
+            return
+        }
+                
         let vc = AdviceViewController.fromStoryboard()
-        vc.html = advice?.advice
+                vc.html = advice.advice
         navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
 
 extension AdvicesViewController: StoryboardProtocol {
@@ -68,5 +87,4 @@ extension AdvicesViewController: StoryboardProtocol {
     static var identifier: String? {
         "AdvicesViewController"
     }
-    
 }
