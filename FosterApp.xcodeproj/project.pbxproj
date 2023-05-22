@@ -43,7 +43,7 @@
 		D595EC6529D58E1500200B46 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6129D58E1500200B46 /* SignUpInteractor.swift */; };
 		D595EC6629D58E1500200B46 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6229D58E1500200B46 /* SignUpViewModel.swift */; };
 		D59900CD29F6B62500F0F36D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59900CC29F6B62500F0F36D /* Alerts.swift */; };
-		D599CE2329AFB0C500542F9E /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599CE2229AFB0C500542F9E /* Worker.swift */; };
+		D599CE2329AFB0C500542F9E /* DBWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599CE2229AFB0C500542F9E /* DBWorker.swift */; };
 		D599DE0A2A151A100004C165 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599DE092A151A100004C165 /* BaseTest.swift */; };
 		D59A680429E8525F0016F123 /* DB_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680329E8525F0016F123 /* DB_User.swift */; };
 		D59A680629E856000016F123 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680529E856000016F123 /* User.swift */; };
@@ -73,7 +73,10 @@
 		D5A073CA29AE412500202F0A /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C929AE412500202F0A /* Weight.swift */; };
 		D5A073CC29AE45CE00202F0A /* DB_Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073CB29AE45CE00202F0A /* DB_Litter.swift */; };
 		D5A1460129BA45D700E2327B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1460029BA45D700E2327B /* Extensions.swift */; };
-		D5A1460629BB495000E2327B /* LittersMock.json in Resources */ = {isa = PBXBuildFile; fileRef = D5A1460529BB495000E2327B /* LittersMock.json */; };
+		D5B143662A1B5D9C00FA5418 /* FosterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B143652A1B5D9C00FA5418 /* FosterAppTests.swift */; };
+		D5B1436E2A1B5E7A00FA5418 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1436D2A1B5E7A00FA5418 /* BaseTest.swift */; };
+		D5B143702A1B67AC00FA5418 /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1436F2A1B67AC00FA5418 /* APIWorker.swift */; };
+		D5B143722A1B693A00FA5418 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B143712A1B693A00FA5418 /* APIRequest.swift */; };
 		D5B5E24829D4697C00A84476 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24429D4697C00A84476 /* LoginPresenter.swift */; };
 		D5B5E24929D4697C00A84476 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24529D4697C00A84476 /* LoginViewController.swift */; };
 		D5B5E24A29D4697C00A84476 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24629D4697C00A84476 /* LoginInteractor.swift */; };
@@ -101,6 +104,16 @@
 		D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C72829A91D3C002A0F65 /* Litter.storyboard */; };
 		D5FCBA3229CA09D3008985C9 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FCBA3129CA09D3008985C9 /* DatePickerField.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5B143672A1B5D9C00FA5418 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5F0C6EB29A90BEA002A0F65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5F0C6F229A90BEA002A0F65;
+			remoteInfo = FosterApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4A4D04655A2C7EAB32D6B24A /* Pods-FosterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp.release.xcconfig"; path = "Target Support Files/Pods-FosterApp/Pods-FosterApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,7 +156,7 @@
 		D595EC6129D58E1500200B46 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		D595EC6229D58E1500200B46 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		D59900CC29F6B62500F0F36D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		D599CE2229AFB0C500542F9E /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		D599CE2229AFB0C500542F9E /* DBWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBWorker.swift; sourceTree = "<group>"; };
 		D599DE092A151A100004C165 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		D59A680329E8525F0016F123 /* DB_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_User.swift; sourceTree = "<group>"; };
 		D59A680529E856000016F123 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -174,7 +187,11 @@
 		D5A073C929AE412500202F0A /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		D5A073CB29AE45CE00202F0A /* DB_Litter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Litter.swift; sourceTree = "<group>"; };
 		D5A1460029BA45D700E2327B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		D5A1460529BB495000E2327B /* LittersMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LittersMock.json; sourceTree = "<group>"; };
+		D5B143632A1B5D9C00FA5418 /* FosterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FosterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B143652A1B5D9C00FA5418 /* FosterAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FosterAppTests.swift; sourceTree = "<group>"; };
+		D5B1436D2A1B5E7A00FA5418 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		D5B1436F2A1B67AC00FA5418 /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
+		D5B143712A1B693A00FA5418 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		D5B5E24429D4697C00A84476 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		D5B5E24529D4697C00A84476 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D5B5E24629D4697C00A84476 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -207,6 +224,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D5B143602A1B5D9C00FA5418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5F0C6F029A90BEA002A0F65 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -412,7 +436,9 @@
 		D5A073CD29AE5A2700202F0A /* Workers */ = {
 			isa = PBXGroup;
 			children = (
-				D599CE2229AFB0C500542F9E /* Worker.swift */,
+				D599CE2229AFB0C500542F9E /* DBWorker.swift */,
+				D5B1436F2A1B67AC00FA5418 /* APIWorker.swift */,
+				D5B143712A1B693A00FA5418 /* APIRequest.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -428,9 +454,25 @@
 		D5A1460229BB490600E2327B /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				D5A1460529BB495000E2327B /* LittersMock.json */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D5B143642A1B5D9C00FA5418 /* FosterAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5B1436C2A1B5E6800FA5418 /* BaseTest */,
+				D5B143652A1B5D9C00FA5418 /* FosterAppTests.swift */,
+			);
+			path = FosterAppTests;
+			sourceTree = "<group>";
+		};
+		D5B1436C2A1B5E6800FA5418 /* BaseTest */ = {
+			isa = PBXGroup;
+			children = (
+				D5B1436D2A1B5E7A00FA5418 /* BaseTest.swift */,
+			);
+			path = BaseTest;
 			sourceTree = "<group>";
 		};
 		D5B5E24329D4694D00A84476 /* Login  */ = {
@@ -465,6 +507,7 @@
 				D599DE072A1518B90004C165 /* FosterAppTests */,
 				D5F0C6F529A90BEA002A0F65 /* FosterApp */,
 				D5B5E24E29D46E3C00A84476 /* GoogleService-Info.plist */,
+				D5B143642A1B5D9C00FA5418 /* FosterAppTests */,
 				D5F0C6F429A90BEA002A0F65 /* Products */,
 				800CD8B0F644CEEBC7276476 /* Pods */,
 				E485B780F421769D7DD67366 /* Frameworks */,
@@ -476,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F0C6F329A90BEA002A0F65 /* FosterApp.app */,
+				D5B143632A1B5D9C00FA5418 /* FosterAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -600,6 +644,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D5B143622A1B5D9C00FA5418 /* FosterAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5B1436B2A1B5D9C00FA5418 /* Build configuration list for PBXNativeTarget "FosterAppTests" */;
+			buildPhases = (
+				D5B1435F2A1B5D9C00FA5418 /* Sources */,
+				D5B143602A1B5D9C00FA5418 /* Frameworks */,
+				D5B143612A1B5D9C00FA5418 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5B143682A1B5D9C00FA5418 /* PBXTargetDependency */,
+			);
+			name = FosterAppTests;
+			productName = FosterAppTests;
+			productReference = D5B143632A1B5D9C00FA5418 /* FosterAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D5F0C6F229A90BEA002A0F65 /* FosterApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5F0C70729A90BEF002A0F65 /* Build configuration list for PBXNativeTarget "FosterApp" */;
@@ -632,6 +694,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					D5B143622A1B5D9C00FA5418 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = D5F0C6F229A90BEA002A0F65;
+					};
 					D5F0C6F229A90BEA002A0F65 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -653,11 +719,19 @@
 			projectRoot = "";
 			targets = (
 				D5F0C6F229A90BEA002A0F65 /* FosterApp */,
+				D5B143622A1B5D9C00FA5418 /* FosterAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D5B143612A1B5D9C00FA5418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5F0C6F129A90BEA002A0F65 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -680,7 +754,6 @@
 				D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */,
 				D59AA7D22A03B221008AF45F /* Advices.storyboard in Resources */,
 				D5F0C70029A90BEF002A0F65 /* Assets.xcassets in Resources */,
-				D5A1460629BB495000E2327B /* LittersMock.json in Resources */,
 				D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,6 +821,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D5B1435F2A1B5D9C00FA5418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5B1436E2A1B5E7A00FA5418 /* BaseTest.swift in Sources */,
+				D5B143662A1B5D9C00FA5418 /* FosterAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5F0C6EF29A90BEA002A0F65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -765,7 +847,7 @@
 				D57272C629ACEAB900A9C72E /* LitterHistoryViewController.swift in Sources */,
 				D5A073C829AE3CD100202F0A /* Vaccine.swift in Sources */,
 				D5B5E24A29D4697C00A84476 /* LoginInteractor.swift in Sources */,
-				D599CE2329AFB0C500542F9E /* Worker.swift in Sources */,
+				D599CE2329AFB0C500542F9E /* DBWorker.swift in Sources */,
 				D59FF70F2A0A6F5E00147783 /* AdvicePresenter.swift in Sources */,
 				D59D09B929DD6B6300813B35 /* InfoCardViewModel.swift in Sources */,
 				D59D09B729DD6B6300813B35 /* InfoCardView.swift in Sources */,
@@ -780,6 +862,7 @@
 				D595EC6329D58E1500200B46 /* SignUpPresenter.swift in Sources */,
 				D5A073C429AE10CD00202F0A /* DB_Weight.swift in Sources */,
 				D599DE0A2A151A100004C165 /* BaseTest.swift in Sources */,
+				D5B143722A1B693A00FA5418 /* APIRequest.swift in Sources */,
 				D5E9295729AD16B700ACDAEE /* FosterApp.xcdatamodeld in Sources */,
 				D57272C729ACEAB900A9C72E /* LitterHistoryInteractor.swift in Sources */,
 				D57272C829ACEAB900A9C72E /* LitterHistoryViewModel.swift in Sources */,
@@ -804,6 +887,7 @@
 				D57272AE29ACB9F400A9C72E /* WeightHistoryViewModel.swift in Sources */,
 				D57272D329ACF4F200A9C72E /* HomeViewModel.swift in Sources */,
 				D57272B729ACBF6C00A9C72E /* MedicalHistoryViewController.swift in Sources */,
+				D5B143702A1B67AC00FA5418 /* APIWorker.swift in Sources */,
 				D59DB7F029DAC53B00306F0C /* KittenCardModalInteractor.swift in Sources */,
 				D59DB7F129DAC53B00306F0C /* KittenCardModalViewModel.swift in Sources */,
 				D57272B929ACBF6C00A9C72E /* MedicalHistoryViewModel.swift in Sources */,
@@ -830,6 +914,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D5B143682A1B5D9C00FA5418 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5F0C6F229A90BEA002A0F65 /* FosterApp */;
+			targetProxy = D5B143672A1B5D9C00FA5418 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		D5F0C70129A90BEF002A0F65 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -842,6 +934,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D5B143692A1B5D9C00FA5418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N99GL92MJ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ExomindOpenClassrooms.FosterAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FosterApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FosterApp";
+			};
+			name = Debug;
+		};
+		D5B1436A2A1B5D9C00FA5418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N99GL92MJ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ExomindOpenClassrooms.FosterAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FosterApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FosterApp";
+			};
+			name = Release;
+		};
 		D5F0C70529A90BEF002A0F65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1019,6 +1147,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D5B1436B2A1B5D9C00FA5418 /* Build configuration list for PBXNativeTarget "FosterAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5B143692A1B5D9C00FA5418 /* Debug */,
+				D5B1436A2A1B5D9C00FA5418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D5F0C6EE29A90BEA002A0F65 /* Build configuration list for PBXProject "FosterApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

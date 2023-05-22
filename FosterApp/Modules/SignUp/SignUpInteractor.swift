@@ -10,7 +10,7 @@ class SignUpInteractor: Interactor
     SignUpViewModel,
     SignUpPresenter
 > {
-    let worker = Worker()
+    let worker = DBWorker()
     private var userId = ""
     
     

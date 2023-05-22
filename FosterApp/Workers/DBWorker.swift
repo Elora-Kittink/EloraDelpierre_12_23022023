@@ -12,7 +12,7 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 
-struct Worker {
+struct DBWorker {
     
     
     // MARK: - User

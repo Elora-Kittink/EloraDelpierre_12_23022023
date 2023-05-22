@@ -11,7 +11,7 @@ class KittenCardModalInteractor: Interactor
 	KittenCardModalPresenter
 > {
     
-    let worker = Worker()
+    let worker = DBWorker()
     
     func refresh(isEdititngMode: Bool, isCreatingMode: Bool, kitten: Kitten?) {
         

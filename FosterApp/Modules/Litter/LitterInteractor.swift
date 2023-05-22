@@ -15,7 +15,7 @@ class LitterInteractor: Interactor
     LitterPresenter
 > {
     
-    let worker = Worker()
+    let worker = DBWorker()
     
     func archiveLitter(litterId: String) {
         Task {

@@ -11,7 +11,7 @@ class KittenCardInteractor: Interactor
     KittenCardViewModel,
     KittenCardPresenter
 > {
-    let worker = Worker()
+    let worker = DBWorker()
 
     func refresh(kitten: Kitten, litter: Litter) {
         self.presenter.display(kitten: kitten, litter: litter)

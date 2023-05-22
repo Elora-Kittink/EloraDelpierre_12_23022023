@@ -17,7 +17,7 @@ class AdvicesViewController: BaseViewController< AdvicesViewModel, AdvicesPresen
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        self.interactor.loadAdvices()
+        self.interactor.refresh()
         self.tableView.delegate = self
         self.tableView.dataSource = self
 	}

@@ -10,7 +10,7 @@ class HomeInteractor: Interactor
 	HomeViewModel,
 	HomePresenter
 > {
-    let worker = Worker()
+    let worker = DBWorker()
     
     func userIsConnected() {
         guard let userConnected = Auth.auth().currentUser else {

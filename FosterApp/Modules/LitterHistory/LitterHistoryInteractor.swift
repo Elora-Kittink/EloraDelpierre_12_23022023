@@ -9,7 +9,7 @@ class LitterHistoryInteractor: Interactor
     LitterHistoryPresenter
 > {
     
-    let worker = Worker()
+    let worker = DBWorker()
     
     func refresh(user: User) {
         Task {

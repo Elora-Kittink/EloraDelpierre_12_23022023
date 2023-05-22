@@ -4,28 +4,23 @@
 //
 
 import Foundation
+import UtilsKit
 
 class AdvicesInteractor: Interactor
 <
 	AdvicesViewModel,
 	AdvicesPresenter
 > {
+    private let adviceWorker = APIWorker()
     
-    func loadAdvices() {
-        guard let path = Bundle.main.url(forResource: "Advices", withExtension: "json") else {
-            return
+    func refresh() {
+        Task {
+            do {
+                let data = try await adviceWorker.fetchAllAdvices()
+                self.presenter.display(sections: data)
+            } catch {
+                log(.data, "AdvicesInteractor", error: error)
+            }
         }
-        do {
-            let datas = try Data(contentsOf: path)
-            let sectionsAdvices = try JSONDecoder().decode(AdvicesResponse.self, from: datas)
-            self.presenter.display(sections: sectionsAdvices)
-        } catch {
-            print(error)
-            print("👹 Fail to decode Advices datas")
-        }
-    }
-    
-    func loadSections() {
-
     }
 }
