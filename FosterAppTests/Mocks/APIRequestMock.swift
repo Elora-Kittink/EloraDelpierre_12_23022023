@@ -6,3 +6,21 @@
 //
 
 import Foundation
+
+enum AdvicesMocks: String, Codable {
+    
+    case mockFail = "mock_fail"
+    case mockSucces = "mock_success"
+    
+    var url: URL? {
+        switch self {
+        case .mockFail:
+            return Bundle.main.url(forResource: "AdvicesResponseFail",
+                            withExtension: "json")
+            
+        case .mockSucces:
+            return Bundle.main.url(forResource: "Advices",
+                            withExtension: "json")
+        }
+    }
+}
