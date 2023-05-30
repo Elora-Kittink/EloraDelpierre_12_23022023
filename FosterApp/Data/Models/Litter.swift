@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Litter {
+struct Litter: Equatable {
     var id: String?
     var kittens: [Kitten]?
     var isOngoing: Bool

@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-struct Adopter {
+struct Adopter: Equatable {
+    
     var firstName: String?
     var lastName: String?
     var adress: String?

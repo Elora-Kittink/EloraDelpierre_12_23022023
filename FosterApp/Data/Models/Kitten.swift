@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Kitten {
+struct Kitten: Equatable {
+    static func == (lhs: Kitten, rhs: Kitten) -> Bool {
+        lhs.id == rhs.id
+    }
+    
     var id: String?
 //    var litter: Litter
     var litterId: String
@@ -29,10 +33,13 @@ struct Kitten {
     var isAlive: Bool
     
     init?(from coreDataObject: DB_Kitten) {
-        guard let id = coreDataObject.a_id else { return nil }
-        guard let dblitter = coreDataObject.r_litter else { return nil }
+        guard let id = coreDataObject.a_id,
+              let dblitter = coreDataObject.r_litter,
+              let litterId = coreDataObject.r_litter?.a_id
+        else { return nil }
+        
         self.id = id
-        self.litterId = coreDataObject.r_litter?.a_id ?? ""
+        self.litterId = litterId
         self.firstName = coreDataObject.a_firstName ?? "A compléter !"
         self.secondName = coreDataObject.a_secondName
         self.birthdate = coreDataObject.a_birthdate

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Weight {
+struct Weight: Equatable {
     
     var date: Date?
     var weight: Float?

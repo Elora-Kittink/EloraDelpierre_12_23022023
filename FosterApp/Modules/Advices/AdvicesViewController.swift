@@ -12,14 +12,15 @@ class AdvicesViewController: BaseViewController< AdvicesViewModel, AdvicesPresen
 	
     @IBOutlet weak var header: UIView!
     @IBOutlet weak var tableView: UITableView!
-    // MARK: - Variables
 	
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        self.interactor.refresh()
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.interactor.refresh(url: self.viewModel.advicesUrl)
 	}
 	
 	// MARK: - Refresh
@@ -27,8 +28,6 @@ class AdvicesViewController: BaseViewController< AdvicesViewModel, AdvicesPresen
 		super.refreshUI()
         tableView.reloadData()
 	}
-
-	// MARK: - Actions
 }
 
 extension AdvicesViewController: UITableViewDataSource, UITableViewDelegate {

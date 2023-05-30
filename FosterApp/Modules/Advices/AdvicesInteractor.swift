@@ -13,14 +13,15 @@ class AdvicesInteractor: Interactor
 > {
     private let adviceWorker = APIWorker()
     
-    func refresh() {
+    func refresh(url: URL?) {
+        guard let url else {
+            self.presenter.display(loader: false)
+            return
+        }
         Task {
-            do {
-                let data = try await adviceWorker.fetchAllAdvices()
+                let data = await adviceWorker.fetchAllAdvices(url: url)
                 self.presenter.display(sections: data)
-            } catch {
-                log(.data, "AdvicesInteractor", error: error)
-            }
+                self.presenter.display(loader: false)
         }
     }
 }

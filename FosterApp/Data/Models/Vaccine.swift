@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Vaccine {
+struct Vaccine: Equatable {
     
     var date: Date?
     var vaccine: String?
