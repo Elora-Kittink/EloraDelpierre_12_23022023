@@ -12,6 +12,7 @@ struct Litter: Equatable {
     var kittens: [Kitten]?
     var isOngoing: Bool
     var rescueDate: String?
+	var isFavorite: Bool
     
     init(from coreDataObject: DB_Litter) {
         self.kittens = (coreDataObject.r_kittens?.allObjects as? [DB_Kitten])?.compactMap { kitten in
@@ -20,16 +21,18 @@ struct Litter: Equatable {
         self.isOngoing = coreDataObject.a_isOngoing
         self.rescueDate = coreDataObject.a_rescueDate?.toString(format: "dd/MM/yyyy")
         self.id = coreDataObject.a_id
+		self.isFavorite = coreDataObject.a_isFavorite
     }
 
     init(id: String? = nil,
          kittens: [Kitten]? = nil,
          isOngoing: Bool,
-         rescueDate: String? ) {
+		 rescueDate: String?, isFavorite: Bool = false) {
         
         self.id = id
         self.kittens = kittens
         self.isOngoing = isOngoing
         self.rescueDate = rescueDate
+		self.isFavorite = isFavorite
     }
 }
