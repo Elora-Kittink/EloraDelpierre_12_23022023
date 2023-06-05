@@ -7,7 +7,7 @@ class HomePresenter: Presenter<HomeViewModel> {
     
     func noUserConnected() {
         self.viewModel?.isUserConnected = false
-        LoginViewController.fromStoryboard().push()
+        LoginViewController.fromStoryboard().modal(withNavigationController: true)
 //        self.viewModel?.send()
     }
     

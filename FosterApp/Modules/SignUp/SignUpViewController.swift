@@ -24,6 +24,7 @@ class SignUpViewController: BaseViewController
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.navigationItem.hidesBackButton = true
     }
     
     // MARK: - Refresh
@@ -44,9 +45,7 @@ class SignUpViewController: BaseViewController
     
     @IBAction private func logInAction() {
 //        rediriger vers la page login
-        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-            let loginViewController = storyboard.instantiateViewController(identifier: "LoginViewController")
-        navigationController?.pushViewController(loginViewController, animated: true)
+		self.navigationController?.popViewController(animated: true)
     }
 }
 

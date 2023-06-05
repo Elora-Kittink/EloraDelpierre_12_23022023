@@ -21,6 +21,7 @@ class LoginViewController: BaseViewController<LoginViewModel,
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.isModalInPresentation = true
     }
     
     // MARK: - Refresh
@@ -45,16 +46,11 @@ class LoginViewController: BaseViewController<LoginViewModel,
             return
         }
         Auth.auth().signIn(withEmail: email,
-                           password: password) { authResult, error in
+                           password: password) { _, error in
             if error != nil {
                 print(error.debugDescription)
             } else {
-                HomeViewController.fromStoryboard().push()
-//                let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-//                    let mainTabBarController = storyboard.instantiateViewController(identifier: "TabBarController")
-//                    // This is to get the SceneDelegate object from your view controller
-//                    // then call the change root view controller function to change to main tab bar
-//                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+				self.dismiss(animated: true)
             }
         }
     }
