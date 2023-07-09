@@ -13,9 +13,8 @@ class LoginViewController: BaseViewController<LoginViewModel,
                            LoginInteractor> {
     
     // MARK: - Outlets
-    @IBOutlet weak var emailTF: UITextField!
-    
-    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet private weak var emailTF: UITextField!
+    @IBOutlet private weak var passwordTF: UITextField!
     // MARK: - Variables
     
     // MARK: - View life cycle
@@ -26,7 +25,11 @@ class LoginViewController: BaseViewController<LoginViewModel,
     
     // MARK: - Refresh
     override func refreshUI() {
-        super.refreshUI()
+		if self.viewModel.needToClose {
+			self.dismiss(animated: true) {
+				NotificationCenter.default.post(name: NSNotification.Name("userLogged"), object: nil)
+			}
+		}
     }
     
     // MARK: - Actions
@@ -38,21 +41,11 @@ class LoginViewController: BaseViewController<LoginViewModel,
         navigationController?.pushViewController(signupViewController, animated: true)
     }
     
-    @IBAction func logInAction() {
-//        gérer la connexion
-        guard let email = emailTF.text, let password = passwordTF.text else {
-            
-            print("Les champs ne sont pas remplis")
-            return
-        }
-        Auth.auth().signIn(withEmail: email,
-                           password: password) { _, error in
-            if error != nil {
-                print(error.debugDescription)
-            } else {
-				self.dismiss(animated: true)
-            }
-        }
+    @IBAction private func logInAction() {
+		let email = emailTF.text
+		let password = passwordTF.text
+        
+		self.interactor.logIn(email: email, password: password)
     }
 }
 

@@ -5,7 +5,8 @@
 
 class SignUpPresenter: Presenter<SignUpViewModel> {
     
-    func display() {
-        
+	func display(user: User) {
+		
+		self.viewModel?.userSignedIn = user
     }
 }

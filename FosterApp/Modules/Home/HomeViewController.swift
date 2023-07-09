@@ -17,30 +17,34 @@ class HomeViewController: BaseViewController
     
 	// MARK: - Outlets
     @IBOutlet private weak var button: UIButton!
-    @IBOutlet private weak var helloTF: UITextField!
     @IBOutlet private weak var logOutbutton: UIButton!
     @IBOutlet private weak var advicesButton: UIButton!
-	// MARK: - Variables
+    @IBOutlet private weak var welcomeLabel: UILabel!
 	
 	// MARK: - View life cycle
-    
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        self.interactor.userIsConnected()
-//        self.interactor.refresh(isUserConnected: self.viewModel.isUserConnected)
+		NotificationCenter.default.addObserver(forName: NSNotification.Name("userLogged"),
+											   object: nil,
+											   queue: nil) { [interactor] _ in
+			self.interactor.userIsConnected()
+		}
 	}
-	
+//	TODO: quand LoginInteractor ou SignUpInteractor close() ça revient sur HomeViewCo,troller mais ça ne refresh pas donc on reste à l'état vide, il faudrait repasser dans le viewdidload
+//	essayer de passer une nottification dans la completion du close() 
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
-        self.helloTF.text = "Hello \(String(describing: self.viewModel.user?.name))"
+        self.welcomeLabel.text = "Welcome \(self.viewModel.user?.name ?? "")"
 	}
 
 	// MARK: - Actions
     @IBAction private func litterButtonAction() {
 
-        let vc = LitterHistoryViewController.fromStoryboard()
-        vc.user = self.viewModel.user
+		let vc = LitterHistoryViewController.fromStoryboard { vc in
+			vc.user = self.viewModel.user
+		}
         navigationController?.pushViewController(vc, animated: true)
     }
     

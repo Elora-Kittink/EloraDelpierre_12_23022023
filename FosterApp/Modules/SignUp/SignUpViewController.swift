@@ -29,13 +29,16 @@ class SignUpViewController: BaseViewController
     
     // MARK: - Refresh
     override func refreshUI() {
-        super.refreshUI()
+		if self.viewModel.needToClose {
+			self.dismiss(animated: true) {
+				NotificationCenter.default.post(name: NSNotification.Name("userLogged"), object: nil)
+			}
+		}
     }
     
     // MARK: - Actions
     
     @IBAction private func signUpAction() {
-        
         Task {
           await self.interactor.signUp(mail: emailTF.text ?? "",
                                    name: nameTF.text ?? "",

@@ -7,5 +7,5 @@ class HomeViewModel: ViewModel {
     
     var user: User?
     var isUserConnected = false
-    var userName: String?
+//    var userName: String?
 }

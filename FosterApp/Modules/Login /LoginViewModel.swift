@@ -5,4 +5,7 @@
 import Foundation
 import UIKit
  
-class LoginViewModel: ViewModel { }
+class LoginViewModel: ViewModel {
+	
+	var userConnected: User?
+}
