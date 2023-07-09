@@ -9,10 +9,16 @@ import Foundation
 
 struct APIWorker {
     
-    func fetchAllAdvices() async throws -> AdvicesResponse {
+    func fetchAllAdvices(url: URL) async -> AdvicesResponse {
         
-        let data = try await APIRequest().response(AdvicesResponse.self)
-        
-        return data
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let _data = try JSONDecoder().decode(AdvicesResponse.self, from: data)
+            
+            return _data
+        } catch {
+            print(error)
+            return AdvicesResponse(sections: [])
+        }
     }
 }

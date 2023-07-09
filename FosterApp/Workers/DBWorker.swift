@@ -24,7 +24,7 @@ struct DBWorker {
             return nil }
         print("💃🏼 Worker succeed create \(String(describing: dbUser.a_id)) user")
         try? CoreDataManager.default.save()
-        return user
+        return User(from: dbUser)
     }
     
     func fetchUser(id: String) -> User? {
