@@ -11,8 +11,6 @@ import XCTest
 final class AdvicesTests: XCTestCase {
     
     func testAdviceFetchSucces() async throws {
-        
-
         let test = await BaseTest<AdvicesViewModel, AdvicesPresenter, AdvicesInteractor>()
         
         

@@ -34,7 +34,7 @@ final class LitterHistoryTests: XCTestCase {
         try CoreDataManager.default.dropDatabase()
         
         let DBUser = worker.createUser(name: "UT", mail: "UT", id: "UT")
-        let DBLitter = worker.createOrUpdate(rescueDate: date, user: user)
+        let DBLitter = worker.createNewLitter(rescueDate: date, user: user)
 
         try CoreDataManager.default.save()
 
@@ -56,9 +56,9 @@ final class LitterHistoryTests: XCTestCase {
         
         let DBUser = worker.createUser(name: "UT", mail: "UT", id: "UT")
         
-        let DBLitter = try XCTUnwrap(worker.createOrUpdate(rescueDate: date, user: user))
+        let DBLitter = try XCTUnwrap(worker.createNewLitter(rescueDate: date, user: user))
         
-        let kitten = Kitten(from: "UT",
+		let kitten = Kitten(id: "UT",
                             litter: DBLitter,
                             firstName: "Test",
                             secondName: nil,
