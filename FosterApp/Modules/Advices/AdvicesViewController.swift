@@ -73,8 +73,9 @@ extension AdvicesViewController: UITableViewDataSource, UITableViewDelegate {
             return
         }
                 
-        let vc = AdviceViewController.fromStoryboard()
-                vc.html = advice.advice
+		let vc = AdviceViewController.fromStoryboard { vc in
+			vc.html = advice.advice
+		}
         navigationController?.pushViewController(vc, animated: true)
     }
 }

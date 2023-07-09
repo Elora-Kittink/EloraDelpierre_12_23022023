@@ -51,11 +51,12 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     // MARK: - Actions
     
     @IBAction private func edit() {
-        let vc = KittenCardModalViewController.fromStoryboard()
-        vc.litter = self.litter
-        vc.kitten = self.kitten
-        vc.isCreatingMode = false
-        vc.isEditingMode = true
+		let vc = KittenCardModalViewController.fromStoryboard { vc in
+			vc.litter = self.litter
+			vc.kitten = self.kitten
+			vc.isCreatingMode = false
+			vc.isEditingMode = true
+		}
         navigationController?.present(vc, animated: true)
     }
     

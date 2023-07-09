@@ -39,11 +39,12 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 
 	// MARK: - Actions
     @IBAction private func addLitter() {
-        let vc = LitterViewController.fromStoryboard()
-        vc.isCreateMode = true
-        vc.isDisplayMode = false
-        vc.isEditMode = false
-        vc.user = self.user
+		let vc = LitterViewController.fromStoryboard { vc in
+			vc.isCreateMode = true
+			vc.isDisplayMode = false
+			vc.isEditMode = false
+			vc.user = self.user
+		}
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -74,11 +75,13 @@ extension LitterHistoryViewController: UITableViewDataSource, UITableViewDelegat
         guard let litterId = self.viewModel.litters?[indexPath.row].id else {
             return
         }
-        let vc = LitterViewController.fromStoryboard()
-        vc.litterId = litterId
-        vc.isDisplayMode = true
-        vc.isCreateMode = false
-        vc.isEditMode = false
+		let vc = LitterViewController.fromStoryboard { vc in
+			vc.user = self.user
+			vc.litterId = litterId
+			vc.isDisplayMode = true
+			vc.isCreateMode = false
+			vc.isEditMode = false
+		}
         navigationController?.pushViewController(vc, animated: true)
     }
 }

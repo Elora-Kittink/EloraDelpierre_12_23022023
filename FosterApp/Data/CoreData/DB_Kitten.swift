@@ -30,7 +30,6 @@ extension DB_Kitten {
         DBkitten?.a_microship = Int64(kitten.microship ?? 0)
         DBkitten?.a_isAlive = true
         DBkitten?.a_isAdopted = false
-        //        self.r_weight = NSSet(array: DB_Weight)
         DBkitten?.r_litter = dbLitter
         
         return DBkitten
@@ -51,7 +50,6 @@ extension DB_Kitten {
         self.a_isAdopted = kitten.isAdopted
         self.a_rescueDate = kitten.rescueDate
         self.a_comment = kitten.comment
-//        self.r_weight = NSSet(array: DB_Weight)
         self.r_litter = dbLitter
     }
 }

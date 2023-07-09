@@ -15,5 +15,6 @@ class KittenCardInteractor: Interactor
 
     func refresh(kitten: Kitten, litter: Litter) {
         self.presenter.display(kitten: kitten, litter: litter)
+		self.presenter.display(loader: false)
     }
 }

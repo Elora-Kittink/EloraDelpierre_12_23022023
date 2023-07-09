@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 struct User: Equatable {
     
@@ -31,4 +32,10 @@ struct User: Equatable {
         self.id = id
         self.mail = mail
     }
+	
+	init(from response: FirebaseAuth.User) {
+		self.name = response.displayName ?? ""
+		self.id = response.uid
+		self.mail = response.email ?? ""
+	}
 }

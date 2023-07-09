@@ -17,17 +17,15 @@ class LitterInteractor: Interactor
     
     let worker = DBWorker()
     
-    func archiveLitter(litterId: String) {
-        Task {
-            worker.archiveLitter(litterId: litterId)
-        }
-    }
-    
-    func makeFavorite(litterId: String) {
-        Task {
-            worker.makeFavorite(litterId: litterId)
-        }
-    }
+	func archiveLitter(litterId: String) {
+		worker.archiveLitter(litterId: litterId)
+		self.presenter.display(loader: false)
+	}
+	
+	func makeFavorite(litterId: String) {
+		worker.makeFavorite(litterId: litterId)
+		self.presenter.display(loader: false)
+	}
     
     
     func diplayMode(isEditing: Bool,
@@ -56,19 +54,30 @@ class LitterInteractor: Interactor
                                        litter: nil,
                                        kittens: nil)
         }
+		self.presenter.display(loader: false)
     }
     
-    func createLitter(user: User, rescueDate: Date?) {
-        guard let rescueDate else {
-            //                TODO: gérer l'absence de date
-            return
-        }
-        Task {
-            worker.createNewLitter(rescueDate: rescueDate, user: user)
-        }
-    }
-    
-    func refresh(litterId: String?) {
+	func saveLitter(user: User, rescueDate: Date?, isEditing: Bool, litterId: String?) {
+		if isEditing {
+			guard let rescueDate, let litterId else {
+				AlertManager.shared.show(actions: [AlertAction(title: "Erreur", style: .default)], message: "Vous devez saisir une date")
+				self.presenter.display(loader: false)
+				return
+			}
+			worker.updateLitterDB(litterId: litterId, rescueDate: rescueDate)
+		} else {
+			guard let rescueDate else {
+				AlertManager.shared.show(actions: [AlertAction(title: "Erreur", style: .default)], message: "Vous devez saisir une date")
+				self.presenter.display(loader: false)
+				return
+			}
+			
+			worker.createNewLitter(rescueDate: rescueDate, user: user)
+			self.presenter.display(loader: false)
+		}
+	}
+	
+	func refresh(litterId: String?) {
         Task {
             guard let litter = worker.fetchLitterFromId(litterId: litterId ?? "") else {
                 return

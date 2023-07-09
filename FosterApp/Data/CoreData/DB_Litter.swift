@@ -30,10 +30,6 @@ extension DB_Litter {
                 return litter
     }
     
-    func addKitten(kitten: Kitten) {
-//        kitten.litter = self
-    }
-    
     func archiveLitter() {
         self.a_isOngoing = false
     }

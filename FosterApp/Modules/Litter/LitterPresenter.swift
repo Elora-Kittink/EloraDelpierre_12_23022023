@@ -24,7 +24,6 @@ class LitterPresenter: Presenter<LitterViewModel> {
         self.viewModel?.addKittenBtnHidden = type.addKittenBtnHidden
         self.viewModel?.isTextFieldEnable = type.isTextFieldEnable
         self.viewModel?.litter = litter
-        
         self.viewModel?.id = litterId
         if let kittens { self.viewModel?.kittens = kittens } 
         self.viewModel?.send()

@@ -10,9 +10,10 @@ class LitterHistoryPresenter: Presenter<LitterHistoryViewModel> {
     }
     
     func displayCell(litter: Litter) {
+ 
         self.viewModel?.kittenList = litter.kittens?.compactMap { kitten in
             kitten.firstName
-        }.joined(separator: ", ") ?? "Pas encore de chaton"
-    
+        }
+        .joined(separator: ", ") ?? "Pas encore de chaton"    
     }
 }

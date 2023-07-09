@@ -62,7 +62,7 @@ struct Kitten: Equatable {
         self.isAlive = coreDataObject.a_isAlive
     }
     
-    init(from id: String?,
+    init(id: String?,
          litter: Litter,
          firstName: String?,
          secondName: String?,

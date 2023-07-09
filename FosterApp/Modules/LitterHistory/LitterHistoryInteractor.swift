@@ -20,7 +20,11 @@ class LitterHistoryInteractor: Interactor
     }
     
     func refreshCell(litter: Litter?) {
-        guard let litter else { return }
+        guard let litter else {
+            self.presenter.display(loader: false)
+            return
+        }
         self.presenter.displayCell(litter: litter)
+        self.presenter.display(loader: false)
     }
 }

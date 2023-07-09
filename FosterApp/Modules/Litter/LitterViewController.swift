@@ -68,10 +68,11 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     
     @IBAction private func addKitten() {
         
-        let vc = KittenCardModalViewController.fromStoryboard()
-        vc.litter = self.viewModel.litter
-        vc.isCreatingMode = true
-        vc.isEditingMode = false
+		let vc = KittenCardModalViewController.fromStoryboard { vc in
+			vc.litter = self.viewModel.litter
+			vc.isCreatingMode = true
+			vc.isEditingMode = false
+		}
         navigationController?.present(vc, animated: true)
     }
     @IBAction private func archiveLitter() {
@@ -87,7 +88,10 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     
 
     @IBAction private func save() {
-        self.interactor.createLitter(user: self.user, rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"))
+        self.interactor.saveLitter(user: self.user,
+								   rescueDate: rescueDateTextField.text?.toDate(format: self.viewModel.dateFormat),
+								   isEditing: self.viewModel.isEditing,
+								   litterId: self.viewModel.id)
 //        self.interactor.refresh(litterId: self.viewModel.id,
 //                                rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"),
 //                                isCreating: self.viewModel.isCreatingNew,
@@ -121,11 +125,12 @@ extension LitterViewController: UITableViewDataSource, UITableViewDelegate {
         guard let kittenId = self.viewModel.kittens?[indexPath.row].id else {
             return
         }
-        let vc = KittenCardViewController.fromStoryboard()
-        vc.litterId = self.viewModel.id
-//        vc.kittenId = kittenId
-        vc.litter = self.viewModel.litter
-        vc.kitten = self.viewModel.kittens?[indexPath.row]
+		let vc = KittenCardViewController.fromStoryboard { vc in
+			vc.litterId = self.viewModel.id
+	//        vc.kittenId = kittenId
+			vc.litter = self.viewModel.litter
+			vc.kitten = self.viewModel.kittens?[indexPath.row]
+		}
         navigationController?.pushViewController(vc, animated: true)
     }
 }
