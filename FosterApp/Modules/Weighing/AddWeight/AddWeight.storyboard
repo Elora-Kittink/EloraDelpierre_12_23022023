@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Weight View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="AddWeightViewController" customModule="FosterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QX0-PV-pbM" userLabel="kittenWeightTextField">
                                                 <rect key="frame" x="151.66666666666663" y="0.0" width="151.33333333333337" height="66"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -48,7 +48,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bhl-le-870">
                                                 <rect key="frame" x="151.66666666666663" y="0.0" width="151.33333333333337" height="66"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -62,6 +62,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Valider"/>
+                                <connections>
+                                    <action selector="didTapValidateButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ufi-nd-BE3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -71,6 +74,12 @@
                             <constraint firstItem="ara-HI-bU7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="DHJ-fq-HYL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="kittenWeightLabel" destination="mn7-i0-0O0" id="C0U-uZ-XTy"/>
+                        <outlet property="kittenWeightTF" destination="QX0-PV-pbM" id="DeA-NT-h8q"/>
+                        <outlet property="mealWeightLabel" destination="JYl-cf-tUi" id="vbW-mZ-nLq"/>
+                        <outlet property="mealWeightTF" destination="bhl-le-870" id="tIc-2j-aRb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
