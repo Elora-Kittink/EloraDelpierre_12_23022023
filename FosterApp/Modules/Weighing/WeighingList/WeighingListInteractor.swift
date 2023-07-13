@@ -7,4 +7,10 @@ class WeighingListInteractor: Interactor
 <
 	WeighingListViewModel,
 	WeighingListPresenter
-> { }
+> {
+	let worker = DBWorker()
+	
+	func refresh(kitten: Kitten) {
+		
+	}
+}

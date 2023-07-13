@@ -25,7 +25,7 @@
         <relationship name="r_adopter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_Adopter" inverseName="r_kitten" inverseEntity="DB_Adopter"/>
         <relationship name="r_litter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_Litter" inverseName="r_kittens" inverseEntity="DB_Litter"/>
         <relationship name="r_vaccine" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Vaccine" inverseName="kitten" inverseEntity="DB_Vaccine"/>
-        <relationship name="r_weight" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Weight" inverseName="kitten" inverseEntity="DB_Weight"/>
+        <relationship name="r_weighing" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Weighing" inverseName="r_kitten" inverseEntity="DB_Weighing"/>
     </entity>
     <entity name="DB_Litter" representedClassName="DB_Litter" syncable="YES" codeGenerationType="class">
         <attribute name="a_id" attributeType="String"/>
@@ -47,10 +47,11 @@
         <attribute name="a_vaccine" optional="YES" attributeType="String"/>
         <relationship name="kitten" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_Kitten" inverseName="r_vaccine" inverseEntity="DB_Kitten"/>
     </entity>
-    <entity name="DB_Weight" representedClassName="DB_Weight" syncable="YES" codeGenerationType="class">
+    <entity name="DB_Weighing" representedClassName="DB_Weighing" syncable="YES" codeGenerationType="class">
         <attribute name="a_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="a_id" attributeType="String"/>
-        <attribute name="a_weight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="kitten" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_Kitten" inverseName="r_weight" inverseEntity="DB_Kitten"/>
+        <attribute name="a_kittenWeight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="a_mealWeight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="r_kitten" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_Kitten" inverseName="r_weighing" inverseEntity="DB_Kitten"/>
     </entity>
 </model>

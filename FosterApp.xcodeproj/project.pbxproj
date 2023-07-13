@@ -26,6 +26,16 @@
 		D57272D229ACF4F200A9C72E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272CE29ACF4F200A9C72E /* HomeInteractor.swift */; };
 		D57272D329ACF4F200A9C72E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57272CF29ACF4F200A9C72E /* HomeViewModel.swift */; };
 		D57272D529ACF50100A9C72E /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57272D429ACF50100A9C72E /* Home.storyboard */; };
+		D576F5682A5B1B6B0004AF60 /* WeighingListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576F5642A5B1B6B0004AF60 /* WeighingListPresenter.swift */; };
+		D576F5692A5B1B6B0004AF60 /* WeighingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576F5652A5B1B6B0004AF60 /* WeighingListViewController.swift */; };
+		D576F56A2A5B1B6B0004AF60 /* WeighingListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576F5662A5B1B6B0004AF60 /* WeighingListInteractor.swift */; };
+		D576F56B2A5B1B6B0004AF60 /* WeighingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576F5672A5B1B6B0004AF60 /* WeighingListViewModel.swift */; };
+		D576F5702A5B1B7F0004AF60 /* AddWeightPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576F56C2A5B1B7F0004AF60 /* AddWeightPresenter.swift */; };
+		D576F5712A5B1B7F0004AF60 /* AddWeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576F56D2A5B1B7F0004AF60 /* AddWeightViewController.swift */; };
+		D576F5722A5B1B7F0004AF60 /* AddWeightInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576F56E2A5B1B7F0004AF60 /* AddWeightInteractor.swift */; };
+		D576F5732A5B1B7F0004AF60 /* AddWeightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576F56F2A5B1B7F0004AF60 /* AddWeightViewModel.swift */; };
+		D576F5752A5B1B8E0004AF60 /* WeighingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D576F5742A5B1B8E0004AF60 /* WeighingList.storyboard */; };
+		D576F5772A5B1BA00004AF60 /* AddWeight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D576F5762A5B1BA00004AF60 /* AddWeight.storyboard */; };
 		D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D585E62329D5DC7300D3ED9C /* Colors.xcassets */; };
 		D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */; };
 		D593BD9B29DF0617005D8673 /* InfoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59D09BE29DD6CD100813B35 /* InfoCardView.xib */; };
@@ -59,10 +69,10 @@
 		D59FF7142A0A6F6900147783 /* Advice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59FF7132A0A6F6900147783 /* Advice.storyboard */; };
 		D5A073C029AE10B000202F0A /* DB_Kitten.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073BF29AE10B000202F0A /* DB_Kitten.swift */; };
 		D5A073C229AE10C000202F0A /* DB_Adopter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C129AE10C000202F0A /* DB_Adopter.swift */; };
-		D5A073C429AE10CD00202F0A /* DB_Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C329AE10CD00202F0A /* DB_Weight.swift */; };
+		D5A073C429AE10CD00202F0A /* DB_Weighing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C329AE10CD00202F0A /* DB_Weighing.swift */; };
 		D5A073C629AE113A00202F0A /* DB_Vaccine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C529AE113A00202F0A /* DB_Vaccine.swift */; };
 		D5A073C829AE3CD100202F0A /* Vaccine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C729AE3CD100202F0A /* Vaccine.swift */; };
-		D5A073CA29AE412500202F0A /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C929AE412500202F0A /* Weight.swift */; };
+		D5A073CA29AE412500202F0A /* Weighing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073C929AE412500202F0A /* Weighing.swift */; };
 		D5A073CC29AE45CE00202F0A /* DB_Litter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A073CB29AE45CE00202F0A /* DB_Litter.swift */; };
 		D5A1255F2A2F297200BA69C9 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1255E2A2F297200BA69C9 /* LoginTests.swift */; };
 		D5A125612A2F2ED400BA69C9 /* AuthResultMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A125602A2F2ED400BA69C9 /* AuthResultMock.swift */; };
@@ -141,6 +151,16 @@
 		D57272CE29ACF4F200A9C72E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		D57272CF29ACF4F200A9C72E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D57272D429ACF50100A9C72E /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D576F5642A5B1B6B0004AF60 /* WeighingListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighingListPresenter.swift; sourceTree = "<group>"; };
+		D576F5652A5B1B6B0004AF60 /* WeighingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighingListViewController.swift; sourceTree = "<group>"; };
+		D576F5662A5B1B6B0004AF60 /* WeighingListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighingListInteractor.swift; sourceTree = "<group>"; };
+		D576F5672A5B1B6B0004AF60 /* WeighingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighingListViewModel.swift; sourceTree = "<group>"; };
+		D576F56C2A5B1B7F0004AF60 /* AddWeightPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightPresenter.swift; sourceTree = "<group>"; };
+		D576F56D2A5B1B7F0004AF60 /* AddWeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewController.swift; sourceTree = "<group>"; };
+		D576F56E2A5B1B7F0004AF60 /* AddWeightInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightInteractor.swift; sourceTree = "<group>"; };
+		D576F56F2A5B1B7F0004AF60 /* AddWeightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewModel.swift; sourceTree = "<group>"; };
+		D576F5742A5B1B8E0004AF60 /* WeighingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeighingList.storyboard; sourceTree = "<group>"; };
+		D576F5762A5B1BA00004AF60 /* AddWeight.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddWeight.storyboard; sourceTree = "<group>"; };
 		D585E62329D5DC7300D3ED9C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D585E62629D5DF9C00D3ED9C /* KittenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenPresenter.swift; sourceTree = "<group>"; };
 		D585E62729D5DF9C00D3ED9C /* KittenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenViewController.swift; sourceTree = "<group>"; };
@@ -178,10 +198,10 @@
 		D59FF7132A0A6F6900147783 /* Advice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Advice.storyboard; sourceTree = "<group>"; };
 		D5A073BF29AE10B000202F0A /* DB_Kitten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Kitten.swift; sourceTree = "<group>"; };
 		D5A073C129AE10C000202F0A /* DB_Adopter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Adopter.swift; sourceTree = "<group>"; };
-		D5A073C329AE10CD00202F0A /* DB_Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Weight.swift; sourceTree = "<group>"; };
+		D5A073C329AE10CD00202F0A /* DB_Weighing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Weighing.swift; sourceTree = "<group>"; };
 		D5A073C529AE113A00202F0A /* DB_Vaccine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Vaccine.swift; sourceTree = "<group>"; };
 		D5A073C729AE3CD100202F0A /* Vaccine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vaccine.swift; sourceTree = "<group>"; };
-		D5A073C929AE412500202F0A /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
+		D5A073C929AE412500202F0A /* Weighing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weighing.swift; sourceTree = "<group>"; };
 		D5A073CB29AE45CE00202F0A /* DB_Litter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Litter.swift; sourceTree = "<group>"; };
 		D5A1255E2A2F297200BA69C9 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		D5A125602A2F2ED400BA69C9 /* AuthResultMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResultMock.swift; sourceTree = "<group>"; };
@@ -327,6 +347,39 @@
 				D57272D429ACF50100A9C72E /* Home.storyboard */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		D576F5612A5B1AE70004AF60 /* Weighing */ = {
+			isa = PBXGroup;
+			children = (
+				D576F5632A5B1B320004AF60 /* AddWeight */,
+				D576F5622A5B1B1E0004AF60 /* WeighingList */,
+			);
+			path = Weighing;
+			sourceTree = "<group>";
+		};
+		D576F5622A5B1B1E0004AF60 /* WeighingList */ = {
+			isa = PBXGroup;
+			children = (
+				D576F5652A5B1B6B0004AF60 /* WeighingListViewController.swift */,
+				D576F5662A5B1B6B0004AF60 /* WeighingListInteractor.swift */,
+				D576F5642A5B1B6B0004AF60 /* WeighingListPresenter.swift */,
+				D576F5672A5B1B6B0004AF60 /* WeighingListViewModel.swift */,
+				D576F5742A5B1B8E0004AF60 /* WeighingList.storyboard */,
+			);
+			path = WeighingList;
+			sourceTree = "<group>";
+		};
+		D576F5632A5B1B320004AF60 /* AddWeight */ = {
+			isa = PBXGroup;
+			children = (
+				D576F56D2A5B1B7F0004AF60 /* AddWeightViewController.swift */,
+				D576F56E2A5B1B7F0004AF60 /* AddWeightInteractor.swift */,
+				D576F56C2A5B1B7F0004AF60 /* AddWeightPresenter.swift */,
+				D576F56F2A5B1B7F0004AF60 /* AddWeightViewModel.swift */,
+				D576F5762A5B1BA00004AF60 /* AddWeight.storyboard */,
+			);
+			path = AddWeight;
 			sourceTree = "<group>";
 		};
 		D585E62529D5DF6E00D3ED9C /* KittenCardModal */ = {
@@ -547,7 +600,7 @@
 				D5E9295529AD16B700ACDAEE /* FosterApp.xcdatamodeld */,
 				D5A073BF29AE10B000202F0A /* DB_Kitten.swift */,
 				D5A073C129AE10C000202F0A /* DB_Adopter.swift */,
-				D5A073C329AE10CD00202F0A /* DB_Weight.swift */,
+				D5A073C329AE10CD00202F0A /* DB_Weighing.swift */,
 				D5A073C529AE113A00202F0A /* DB_Vaccine.swift */,
 				D5A073CB29AE45CE00202F0A /* DB_Litter.swift */,
 				D59A680329E8525F0016F123 /* DB_User.swift */,
@@ -593,6 +646,7 @@
 		D5F0C70A29A90C17002A0F65 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D576F5612A5B1AE70004AF60 /* Weighing */,
 				D59AA7C82A03B1DC008AF45F /* Advices */,
 				D595EC5E29D58DEC00200B46 /* SignUp */,
 				D5B5E24329D4694D00A84476 /* Login  */,
@@ -666,7 +720,7 @@
 				D57272A429ACB41100A9C72E /* Adopter.swift */,
 				D5E9295229AD0D6F00ACDAEE /* Litter.swift */,
 				D5A073C729AE3CD100202F0A /* Vaccine.swift */,
-				D5A073C929AE412500202F0A /* Weight.swift */,
+				D5A073C929AE412500202F0A /* Weighing.swift */,
 				D59A680529E856000016F123 /* User.swift */,
 			);
 			path = Models;
@@ -791,11 +845,13 @@
 				D5C7D9B129F0195900885C48 /* Login.storyboard in Resources */,
 				D593BD9B29DF0617005D8673 /* InfoCardView.xib in Resources */,
 				D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */,
+				D576F5772A5B1BA00004AF60 /* AddWeight.storyboard in Resources */,
 				D57272D529ACF50100A9C72E /* Home.storyboard in Resources */,
 				D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */,
 				D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */,
 				D5C7D9B329F0196C00885C48 /* SignUp.storyboard in Resources */,
 				D59EA0502A125DC800B53542 /* Advices.json in Resources */,
+				D576F5752A5B1B8E0004AF60 /* WeighingList.storyboard in Resources */,
 				D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */,
 				D5B5E24F29D46E3C00A84476 /* GoogleService-Info.plist in Resources */,
 				D57272CA29ACEAD700A9C72E /* LitterHistory.storyboard in Resources */,
@@ -931,17 +987,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D576F56B2A5B1B6B0004AF60 /* WeighingListViewModel.swift in Sources */,
+				D576F5682A5B1B6B0004AF60 /* WeighingListPresenter.swift in Sources */,
 				D59DB7EE29DAC53B00306F0C /* KittenCardModalPresenter.swift in Sources */,
 				D572729F29ACA79100A9C72E /* BaseViewController.swift in Sources */,
 				D5A073C629AE113A00202F0A /* DB_Vaccine.swift in Sources */,
+				D576F5692A5B1B6B0004AF60 /* WeighingListViewController.swift in Sources */,
 				D5A125632A2F64A800BA69C9 /* UserWorker.swift in Sources */,
 				D57272A229ACA79100A9C72E /* Presenter.swift in Sources */,
+				D576F5732A5B1B7F0004AF60 /* AddWeightViewModel.swift in Sources */,
 				D59A680629E856000016F123 /* User.swift in Sources */,
 				D5F0C72629A91D2D002A0F65 /* LitterInteractor.swift in Sources */,
+				D576F5712A5B1B7F0004AF60 /* AddWeightViewController.swift in Sources */,
 				D5F0C71329A90D85002A0F65 /* KittenCardViewController.swift in Sources */,
 				D5A073CC29AE45CE00202F0A /* DB_Litter.swift in Sources */,
 				D59FF7122A0A6F5E00147783 /* AdviceViewModel.swift in Sources */,
-				D5A073CA29AE412500202F0A /* Weight.swift in Sources */,
+				D5A073CA29AE412500202F0A /* Weighing.swift in Sources */,
 				D57272C629ACEAB900A9C72E /* LitterHistoryViewController.swift in Sources */,
 				D5A073C829AE3CD100202F0A /* Vaccine.swift in Sources */,
 				D5B5E24A29D4697C00A84476 /* LoginInteractor.swift in Sources */,
@@ -956,14 +1017,16 @@
 				D57272A029ACA79100A9C72E /* ViewModel.swift in Sources */,
 				D57272C529ACEAB900A9C72E /* LitterHistoryPresenter.swift in Sources */,
 				D595EC6329D58E1500200B46 /* SignUpPresenter.swift in Sources */,
-				D5A073C429AE10CD00202F0A /* DB_Weight.swift in Sources */,
+				D5A073C429AE10CD00202F0A /* DB_Weighing.swift in Sources */,
 				D599DE0A2A151A100004C165 /* BaseTest.swift in Sources */,
 				D5B143722A1B693A00FA5418 /* APIRequest.swift in Sources */,
 				D5E9295729AD16B700ACDAEE /* FosterApp.xcdatamodeld in Sources */,
 				D57272C729ACEAB900A9C72E /* LitterHistoryInteractor.swift in Sources */,
+				D576F5702A5B1B7F0004AF60 /* AddWeightPresenter.swift in Sources */,
 				D57272C829ACEAB900A9C72E /* LitterHistoryViewModel.swift in Sources */,
 				D5AC4B1E2A1E0239008B0C43 /* Extension+UserDefaults.swift in Sources */,
 				D59A680429E8525F0016F123 /* DB_User.swift in Sources */,
+				D576F5722A5B1B7F0004AF60 /* AddWeightInteractor.swift in Sources */,
 				D57272D029ACF4F200A9C72E /* HomePresenter.swift in Sources */,
 				D595EC6529D58E1500200B46 /* SignUpInteractor.swift in Sources */,
 				D59DB7EF29DAC53B00306F0C /* KittenCardModalViewController.swift in Sources */,
@@ -990,6 +1053,7 @@
 				D5B5E24829D4697C00A84476 /* LoginPresenter.swift in Sources */,
 				D5A073C229AE10C000202F0A /* DB_Adopter.swift in Sources */,
 				D57272BF29ACE6F600A9C72E /* AddButton.swift in Sources */,
+				D576F56A2A5B1B6B0004AF60 /* WeighingListInteractor.swift in Sources */,
 				D57272A329ACA79100A9C72E /* LoaderView.swift in Sources */,
 				D57272D129ACF4F200A9C72E /* HomeViewController.swift in Sources */,
 				D5FCBA3229CA09D3008985C9 /* DatePickerField.swift in Sources */,
