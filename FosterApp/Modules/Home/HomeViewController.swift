@@ -25,6 +25,7 @@ class HomeViewController: BaseViewController
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		self.interactor.userIsConnected()
 		NotificationCenter.default.addObserver(forName: NSNotification.Name("userLogged"),
 											   object: nil,
 											   queue: nil) { [interactor] _ in

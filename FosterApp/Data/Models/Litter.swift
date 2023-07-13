@@ -36,3 +36,12 @@ struct Litter: Equatable {
 		self.isFavorite = isFavorite
     }
 }
+
+class LitterCell: BaseCell<Litter> {
+	
+	override var item: Litter? {
+		didSet {
+			textLabel?.text = item?.rescueDate
+		}
+	}
+}
