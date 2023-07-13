@@ -3,4 +3,10 @@
 //  Created by Elora on 09/07/2023.
 //
 
-class AddWeightViewModel: ViewModel { }
+class AddWeightViewModel: ViewModel {
+	
+	var kittenWeightLabel = "Chaton"
+	var mealWeightLabel = "Lait"
+	var kittenWeight: String = ""
+	var mealWeight: String = ""
+}

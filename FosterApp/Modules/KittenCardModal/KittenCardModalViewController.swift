@@ -82,7 +82,7 @@ class KittenCardModalViewController: BaseViewController
 	// MARK: - Actions
     
     @IBAction private func save() {
-        
+//        TODO: kittenId = nil? Mais comment il update du coup? vérifier que ça marche
         let kitten = self.interactor.composeKitten(litter: self.litter,
                                                    firstName: self.nameField.text ?? "",
                                                    secondName: self.secondNameField.text,

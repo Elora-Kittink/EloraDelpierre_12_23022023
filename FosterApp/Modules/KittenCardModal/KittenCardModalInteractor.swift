@@ -76,6 +76,7 @@ class KittenCardModalInteractor: Interactor
 			}
 			self.presenter.display(loader: false)
 			self.presenter.close()
+//			TODO: le 	self.presenter.close() va pas aussi dans le else?
 		} else {
 			worker.updateKittenDB(kitten: kitten)
 			self.presenter.display(kitten: kitten)
