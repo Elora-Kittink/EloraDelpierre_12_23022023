@@ -37,7 +37,7 @@ class KittenCardModalInteractor: Interactor
 					   microship: Int?,
 					   vaccines: [Vaccine]?,
 					   adopters: Adopter?,
-					   weightHistory: [Weight]?,
+					   weightHistory: [Weighing]?,
 					   isEdited: Bool,
 					   kittenId: String?,
 					   isAlive: Bool) -> Kitten {
@@ -58,7 +58,7 @@ class KittenCardModalInteractor: Interactor
 							microship: microship,
 							vaccines: vaccines,
 							adopters: adopters,
-							weightHistory: weightHistory,
+							weighingHistory: weightHistory,
 							isAlive: isAlive)
 		
 		self.presenter.display(loader: false)

@@ -21,7 +21,7 @@ class KittenCardViewModel: ViewModel {
     var microship: String? = ""
     var vaccines: [Vaccine] = []
     var adopters: String? = ""
-    var weightHistory: [Weight] = []
+    var weightHistory: [Weighing] = []
     var isAlive = true
     var kitten: Kitten?
     
