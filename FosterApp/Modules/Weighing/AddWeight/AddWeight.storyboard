@@ -12,12 +12,12 @@
         <!--Add Weight View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="AddWeightViewController" customModule="FosterApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddWeightViewController" id="Y6W-OH-hqX" customClass="AddWeightViewController" customModule="FosterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ara-HI-bU7">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ara-HI-bU7">
                                 <rect key="frame" x="45" y="229" width="303" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8jP-DP-A00" userLabel="kittenWeight">
@@ -70,6 +70,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="beigeClear"/>
                         <constraints>
+                            <constraint firstItem="ara-HI-bU7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="170" id="1Xi-90-KR1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ara-HI-bU7" secondAttribute="trailing" constant="45" id="5pG-D0-4Ab"/>
                             <constraint firstItem="ara-HI-bU7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="DHJ-fq-HYL"/>
                         </constraints>

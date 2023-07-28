@@ -20,8 +20,8 @@ extension DB_Weighing {
 		
 		let DBWeighing = DB_Weighing.findOrCreate(with: weighing.id)
 		DBWeighing?.a_date = weighing.date
-		DBWeighing?.a_kittenWeight = weighing.kittenWeight ?? 0
-		DBWeighing?.a_mealWeight = weighing.mealWeight ?? 0
+		DBWeighing?.a_kittenWeight = weighing.kittenWeight ?? ""
+		DBWeighing?.a_mealWeight = weighing.mealWeight ?? ""
 		DBWeighing?.r_kitten = DBKitten
 		
 		return DBWeighing
@@ -29,7 +29,7 @@ extension DB_Weighing {
 	
     func update(weighing: Weighing) {
         self.a_date = weighing.date
-        self.a_kittenWeight = weighing.kittenWeight ?? 0
-		self.a_mealWeight = weighing.mealWeight ?? 0
+        self.a_kittenWeight = weighing.kittenWeight ?? ""
+		self.a_mealWeight = weighing.mealWeight ?? ""
     }
 }

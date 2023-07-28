@@ -60,8 +60,19 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
         navigationController?.present(vc, animated: true)
     }
     
-    @IBAction private func adopte() {
+    @IBAction private func addWeighing() {
+		let vc = AddWeightViewController.fromStoryboard { vc in
+			vc.kitten = self.viewModel.kitten
+		}
+		navigationController?.present(vc, animated: true)
     }
+	
+	@IBAction private func showWeighingHistory() {
+		let vc = WeighingListViewController.fromStoryboard { vc in
+			vc.kitten = self.viewModel.kitten
+		}
+		navigationController?.present(vc, animated: true)
+	}
 }
 
 extension KittenCardViewController: StoryboardProtocol {

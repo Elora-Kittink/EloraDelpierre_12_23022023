@@ -105,6 +105,9 @@ pesée</string>
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="addWeighing" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6C0-VW-U20"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qi4-Nd-jtn" userLabel="History Stack View">
                                                 <rect key="frame" x="10" y="196.66666666666663" width="373" height="150"/>

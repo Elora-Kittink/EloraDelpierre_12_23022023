@@ -10,7 +10,6 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	
 	// MARK: - Outlets
 	
-//    @IBOutlet private weak var litterTable: UITableView!
     @IBOutlet private weak var addKittenButton: UIButton!
     @IBOutlet private weak var rescueDateTextField: DatePickerField!
     @IBOutlet private weak var saveButton: UIButton!
@@ -47,9 +46,6 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
             interactor.refresh(litterId: self.litterId)
         }
 		self.setupTableViewUI()
-		
-//        self.litterTable.delegate = self
-//        self.litterTable.dataSource = self
         self.interactor.diplayMode(isEditing: isEditMode,
                                    isCreating: isCreateMode,
                                    isDisplaying: isDisplayMode,
@@ -126,48 +122,8 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 								   rescueDate: rescueDateTextField.text?.toDate(format: self.viewModel.dateFormat),
 								   isEditing: self.viewModel.isEditing,
 								   litterId: self.viewModel.id)
-//        self.interactor.refresh(litterId: self.viewModel.id,
-//                                rescueDate: rescueDateTextField.text?.toDate(format: "dd/MM/yyyy"),
-//                                isCreating: self.viewModel.isCreatingNew,
-//                                user: self.user)
     }
 }
-
-//extension LitterViewController: UITableViewDataSource, UITableViewDelegate {
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        min(tableView.frame.height / 1.5, 50)
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        guard let kittens = self.viewModel.kittens else {
-//            return 0
-//        }
-//       return kittens.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "litterCell", for: indexPath)
-//
-//        cell.textLabel?.text = self.viewModel.kittens?[indexPath.row].firstName
-//
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let kittenId = self.viewModel.kittens?[indexPath.row].id else {
-//            return
-//        }
-//		let vc = KittenCardViewController.fromStoryboard { vc in
-//			vc.litterId = self.viewModel.id
-//	//        vc.kittenId = kittenId
-//			vc.litter = self.viewModel.litter
-//			vc.kitten = self.viewModel.kittens?[indexPath.row]
-//		}
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
-//}
 
 extension LitterViewController: StoryboardProtocol {
     static var storyboardName: String {

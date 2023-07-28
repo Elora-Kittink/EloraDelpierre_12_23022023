@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import UtilsKit
 
 class AddWeightViewController: BaseViewController
 <
@@ -47,11 +48,21 @@ class AddWeightViewController: BaseViewController
 	
 	@IBAction private func didTapValidateButton() {
 		let weighing = self.interactor.composeWeighing(weightId: weighing?.id,
-													   kittenWeight: Doub,
+													   kittenWeight: self.kittenWeightTF.text,
 													   mealWeight: self.mealWeightTF.text,
 													   date: Date(),
 													   isEdition: self.isEditingMode)
 		
 		self.interactor.saveWeighing(isNew: !isEditingMode, weighing: weighing, kitten: self.kitten)
+	}
+}
+
+extension  AddWeightViewController: StoryboardProtocol {
+	static var storyboardName: String {
+		"AddWeight"
+	}
+	
+	static var identifier: String? {
+		"AddWeightViewController"
 	}
 }

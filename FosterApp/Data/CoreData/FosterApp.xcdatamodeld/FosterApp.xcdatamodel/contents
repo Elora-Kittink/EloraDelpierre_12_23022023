@@ -50,8 +50,8 @@
     <entity name="DB_Weighing" representedClassName="DB_Weighing" syncable="YES" codeGenerationType="class">
         <attribute name="a_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="a_id" attributeType="String"/>
-        <attribute name="a_kittenWeight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="a_mealWeight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="a_kittenWeight" optional="YES" attributeType="String"/>
+        <attribute name="a_mealWeight" optional="YES" attributeType="String"/>
         <relationship name="r_kitten" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DB_Kitten" inverseName="r_weighing" inverseEntity="DB_Kitten"/>
     </entity>
 </model>

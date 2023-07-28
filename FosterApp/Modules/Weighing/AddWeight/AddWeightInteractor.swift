@@ -13,15 +13,15 @@ class AddWeightInteractor: Interactor
 	let worker = DBWorker()
 	
 	func composeWeighing(weightId: String?,
-						 kittenWeight: Double?,
-						 mealWeight: Double?,
+						 kittenWeight: String?,
+						 mealWeight: String?,
 						 date: Date,
 						 isEdition: Bool) -> Weighing {
 		
 		return Weighing(id: isEdition ? weightId : UUID().uuidString,
 						date: date,
-						kittenWeight: kittenWeight ?? 0,
-						mealWeight: mealWeight ?? 0)
+						kittenWeight: kittenWeight ?? "",
+						mealWeight: mealWeight ?? "")
 		
 	}
 	

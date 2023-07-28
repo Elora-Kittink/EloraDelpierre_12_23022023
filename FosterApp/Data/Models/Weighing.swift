@@ -10,8 +10,8 @@ import Foundation
 struct Weighing: Equatable {
     
     var date: Date?
-    var kittenWeight: Double?
-	var mealWeight: Double?
+    var kittenWeight: String?
+	var mealWeight: String?
 	var id: String?
 	
     init(from coreDataObject: DB_Weighing) {
@@ -21,10 +21,23 @@ struct Weighing: Equatable {
 		self.id = coreDataObject.a_id
     }
 	
-	init(id: String?, date: Date, kittenWeight: Double, mealWeight: Double) {
+	init(id: String?, date: Date, kittenWeight: String, mealWeight: String) {
 		self.date = date
 		self.kittenWeight = kittenWeight
 		self.mealWeight = mealWeight
 		self.id = id
 	}
+}
+//TODO: faire une custom cell avec trois cases : date, pesée chaton, pesée lait
+
+class WeighingCell: BaseCell<Weighing> {
+	
+//	override var item: Weighing? {
+//		didSet {
+//			textLabel?.text = item?.kittens?.compactMap { kitten in
+//				kitten.firstName
+//			}
+//			.joined(separator: ", ") ?? "Pas encore de chaton"
+//		}
+//	}
 }
