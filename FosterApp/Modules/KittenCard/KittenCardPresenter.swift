@@ -43,7 +43,7 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
         self.viewModel?.microship = String(kitten.microship ?? 0)
         self.viewModel?.vaccines = kitten.vaccines ?? []
         self.viewModel?.adopters = "\(kitten.adopters?.firstName) \(kitten.adopters?.lastName)"
-        self.viewModel?.weightHistory = kitten.weightHistory ?? []
+        self.viewModel?.weightHistory = kitten.weighingHistory ?? []
         self.viewModel?.isAlive = kitten.isAlive
 
         self.viewModel?.kitten = kitten

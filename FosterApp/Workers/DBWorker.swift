@@ -139,4 +139,30 @@ struct DBWorker {
         print("💃🏼 Worker succeed get \(String(describing: newFavoriteLitter.a_id)) litter to make favorite")
         newFavoriteLitter.makeFavorite(oldFavorite: oldFavoriteLitter, newFavorite: newFavoriteLitter)
     }
+	
+	// MARK: - Weighing
+	
+	func fetchWeighingFromKittenId(kittenId: String) -> [Weighing]? {
+		
+		let predicate = NSPredicate(format: "r_kitten.a_id == %@", kittenId)
+		let DBweighings = DB_Weighing.getAll(predicate: predicate)
+
+		let allWeighings = DBweighings.map { weighing in
+			Weighing(from: weighing)
+		}
+		return allWeighings
+	}
+	
+	func createWeighing(kitten: Kitten, weighing: Weighing) -> Weighing? {
+		guard let DBWeighing = DB_Weighing.create(weighing: weighing, kitten: kitten) else {
+			print("👹 Worker fail create DB Weighing")
+			return nil}
+		try? CoreDataManager.default.save()
+		print("💃🏼 Worker succeed create new weighing for \(String(describing: kitten.firstName))")
+		return Weighing(from: DBWeighing)
+	}
+	
+	func updateWeighing(weighing: Weighing) {
+		
+	}
 }

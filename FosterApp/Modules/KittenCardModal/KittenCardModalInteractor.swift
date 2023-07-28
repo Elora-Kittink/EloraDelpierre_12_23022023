@@ -37,7 +37,7 @@ class KittenCardModalInteractor: Interactor
 					   microship: Int?,
 					   vaccines: [Vaccine]?,
 					   adopters: Adopter?,
-					   weightHistory: [Weight]?,
+					   weightHistory: [Weighing]?,
 					   isEdited: Bool,
 					   kittenId: String?,
 					   isAlive: Bool) -> Kitten {
@@ -58,7 +58,7 @@ class KittenCardModalInteractor: Interactor
 							microship: microship,
 							vaccines: vaccines,
 							adopters: adopters,
-							weightHistory: weightHistory,
+							weighingHistory: weightHistory,
 							isAlive: isAlive)
 		
 		self.presenter.display(loader: false)
@@ -76,6 +76,7 @@ class KittenCardModalInteractor: Interactor
 			}
 			self.presenter.display(loader: false)
 			self.presenter.close()
+//			TODO: le 	self.presenter.close() va pas aussi dans le else?
 		} else {
 			worker.updateKittenDB(kitten: kitten)
 			self.presenter.display(kitten: kitten)

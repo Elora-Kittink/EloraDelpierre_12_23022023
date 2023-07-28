@@ -29,7 +29,7 @@ struct Kitten: Equatable {
     var microship: Int?
     var vaccines: [Vaccine]?
     var adopters: Adopter?
-    var weightHistory: [Weight]?
+    var weighingHistory: [Weighing]?
     var isAlive: Bool
     
     init?(from coreDataObject: DB_Kitten) {
@@ -55,8 +55,8 @@ struct Kitten: Equatable {
         self.vaccines = (coreDataObject.r_vaccine?.allObjects as? [DB_Vaccine])?.compactMap { vaccine in
              Vaccine(from: vaccine)
         }
-        self.weightHistory = (coreDataObject.r_weight?.allObjects as? [DB_Weight])?.compactMap { weight in
-            Weight(from: weight)
+        self.weighingHistory = (coreDataObject.r_weighing?.allObjects as? [DB_Weighing])?.compactMap { weighing in
+            Weighing(from: weighing)
         }
         self.adopters = Adopter(from: coreDataObject.r_adopter)
         self.isAlive = coreDataObject.a_isAlive
@@ -76,7 +76,7 @@ struct Kitten: Equatable {
          microship: Int?,
          vaccines: [Vaccine]?,
          adopters: Adopter?,
-         weightHistory: [Weight]?,
+         weighingHistory: [Weighing]?,
          isAlive: Bool) {
         self.id = id
 //        self.litter = litter
@@ -92,7 +92,7 @@ struct Kitten: Equatable {
         self.isAdopted = isAdopted
         self.microship = microship
         self.vaccines = vaccines
-        self.weightHistory = weightHistory
+        self.weighingHistory = weighingHistory
         self.adopters = adopters
         self.isAlive = isAlive
     }
