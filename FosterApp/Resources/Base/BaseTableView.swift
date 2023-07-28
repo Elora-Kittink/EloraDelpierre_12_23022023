@@ -36,13 +36,17 @@ class BaseTableView<T: BaseCell<U>, U>: UITableView, UITableViewDelegate, UITabl
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return items.count
+		items.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = self.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? BaseCell<U>
 		cell?.item = items[indexPath.row]
 		return cell ?? UITableViewCell()
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+	didSelect?(items[indexPath.row], indexPath)
 	}
 }
 

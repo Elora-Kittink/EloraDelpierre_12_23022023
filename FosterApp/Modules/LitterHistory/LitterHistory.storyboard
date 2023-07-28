@@ -34,24 +34,8 @@
                                     <constraint firstItem="R99-jN-tRC" firstAttribute="centerY" secondItem="Nfu-C0-Wp6" secondAttribute="centerY" id="glS-Rn-TNj"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FCd-PZ-JJT">
-                                <rect key="frame" x="0.0" y="159" width="393" height="539"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="litterCell" id="gML-DC-clK">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gML-DC-clK" id="Om7-tt-jKq">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOB-mV-dSG" userLabel="Create Litter">
-                                <rect key="frame" x="137" y="706" width="119" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOB-mV-dSG" userLabel="Create Litter">
+                                <rect key="frame" x="137" y="683" width="119" height="35"/>
                                 <color key="backgroundColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -66,16 +50,14 @@
                         <constraints>
                             <constraint firstItem="Nfu-C0-Wp6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="DTN-CT-vql"/>
                             <constraint firstItem="Nfu-C0-Wp6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="L9x-rG-kHe"/>
-                            <constraint firstItem="FCd-PZ-JJT" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="PJ5-jA-PUt"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FCd-PZ-JJT" secondAttribute="bottom" constant="120" id="Q4U-vg-9VL"/>
-                            <constraint firstItem="FCd-PZ-JJT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="R8D-5F-7v9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="AOB-mV-dSG" secondAttribute="bottom" constant="100" id="R8C-s7-Yo7"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Nfu-C0-Wp6" secondAttribute="trailing" id="XTP-Ga-3xO"/>
-                            <constraint firstItem="FCd-PZ-JJT" firstAttribute="top" secondItem="Nfu-C0-Wp6" secondAttribute="bottom" id="ZD8-pv-Eoc"/>
+                            <constraint firstItem="AOB-mV-dSG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Xa5-S6-kMM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addLitterButton" destination="AOB-mV-dSG" id="Nvn-Hy-Tg5"/>
                         <outlet property="headerLabel" destination="R99-jN-tRC" id="k1a-1z-uZx"/>
-                        <outlet property="litterHistoryTableView" destination="FCd-PZ-JJT" id="iNg-Yf-Mc9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

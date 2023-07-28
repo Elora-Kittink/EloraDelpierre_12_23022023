@@ -97,3 +97,12 @@ struct Kitten: Equatable {
         self.isAlive = isAlive
     }
 }
+
+class KittenCell: BaseCell<Kitten> {
+	
+	override var item: Kitten? {
+		didSet {
+			textLabel?.text = item?.firstName
+		}
+	}
+}
