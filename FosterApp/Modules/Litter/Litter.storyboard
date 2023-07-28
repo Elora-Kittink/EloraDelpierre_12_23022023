@@ -19,12 +19,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ti-SV-8cN">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="659"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lv1-zC-oea" userLabel="Content">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="659"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWx-qA-U90">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWx-qA-U90">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Kp-Vq-zad" userLabel="Rescue Date text field" customClass="DatePickerField" customModule="FosterApp">
@@ -82,77 +82,54 @@
                                                     <constraint firstAttribute="height" constant="150" id="TFi-Vf-gNa"/>
                                                 </constraints>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="peB-nY-pdX">
-                                                <rect key="frame" x="0.0" y="180" width="393" height="484"/>
-                                                <color key="backgroundColor" name="beigeClear"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="500" id="rcE-zl-WNO"/>
-                                                </constraints>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="litterCell" id="oWB-UD-Goh">
-                                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oWB-UD-Goh" id="qlL-T1-xX7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </tableViewCellContentView>
-                                                    </tableViewCell>
-                                                </prototypes>
-                                            </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="HVB-pG-ufS">
-                                                <rect key="frame" x="0.0" y="669" width="393" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="plus.app" catalog="system"/>
-                                                <connections>
-                                                    <action selector="addKitten" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Wkr-eM-IHA"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BC-ZV-eW9">
-                                                <rect key="frame" x="184.33333333333334" y="669" width="24.333333333333343" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="4Cm-uj-5fD"/>
-                                                </constraints>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="square.and.arrow.down" catalog="system"/>
-                                                <connections>
-                                                    <action selector="save" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wGA-w7-3MR"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" name="beigeClear"/>
                                         <constraints>
-                                            <constraint firstItem="peB-nY-pdX" firstAttribute="top" secondItem="hWx-qA-U90" secondAttribute="bottom" constant="30" id="2c9-NA-L1n"/>
-                                            <constraint firstAttribute="trailing" secondItem="hWx-qA-U90" secondAttribute="trailing" id="9g3-Sy-blr"/>
-                                            <constraint firstItem="peB-nY-pdX" firstAttribute="leading" secondItem="Lv1-zC-oea" secondAttribute="leading" id="JbA-0v-uKW"/>
-                                            <constraint firstItem="hWx-qA-U90" firstAttribute="leading" secondItem="Lv1-zC-oea" secondAttribute="leading" id="KSg-Ti-B27"/>
-                                            <constraint firstItem="hWx-qA-U90" firstAttribute="top" secondItem="Lv1-zC-oea" secondAttribute="top" id="UqX-bm-bvE"/>
-                                            <constraint firstItem="9BC-ZV-eW9" firstAttribute="centerX" secondItem="Lv1-zC-oea" secondAttribute="centerX" id="WhL-oU-8jl"/>
-                                            <constraint firstItem="9BC-ZV-eW9" firstAttribute="top" secondItem="peB-nY-pdX" secondAttribute="bottom" constant="5" id="gjm-ae-ODn"/>
-                                            <constraint firstItem="HVB-pG-ufS" firstAttribute="top" secondItem="peB-nY-pdX" secondAttribute="bottom" constant="5" id="oNA-GH-QFq"/>
-                                            <constraint firstAttribute="trailing" secondItem="peB-nY-pdX" secondAttribute="trailing" id="qmW-Gg-U0Q"/>
+                                            <constraint firstItem="hWx-qA-U90" firstAttribute="leading" secondItem="Lv1-zC-oea" secondAttribute="leading" id="7K5-10-Fq8"/>
+                                            <constraint firstItem="hWx-qA-U90" firstAttribute="top" secondItem="Lv1-zC-oea" secondAttribute="top" id="901-z3-x0K"/>
+                                            <constraint firstAttribute="trailing" secondItem="hWx-qA-U90" secondAttribute="trailing" id="CJS-yT-Khx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="trailing" secondItem="cOn-lo-5gF" secondAttribute="trailing" id="4WU-wq-2Os"/>
-                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="width" secondItem="EN0-kM-l5n" secondAttribute="width" id="6IU-p6-GX0"/>
-                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="bottom" secondItem="cOn-lo-5gF" secondAttribute="bottom" id="9Ay-Bp-xwb"/>
-                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="top" secondItem="cOn-lo-5gF" secondAttribute="top" id="HwJ-NO-oWu"/>
-                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="height" secondItem="EN0-kM-l5n" secondAttribute="height" priority="750" id="Oaw-K3-6Om"/>
-                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="leading" secondItem="cOn-lo-5gF" secondAttribute="leading" id="l3B-BP-EvL"/>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="trailing" secondItem="cOn-lo-5gF" secondAttribute="trailing" id="4Rz-Nn-UIB"/>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="leading" secondItem="cOn-lo-5gF" secondAttribute="leading" id="b7A-cO-ch1"/>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="width" secondItem="EN0-kM-l5n" secondAttribute="width" id="bNF-RI-VSF"/>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="bottom" secondItem="cOn-lo-5gF" secondAttribute="bottom" id="i0Q-wG-bqL"/>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="height" secondItem="EN0-kM-l5n" secondAttribute="height" priority="750" id="vx7-mc-La1"/>
+                                    <constraint firstItem="Lv1-zC-oea" firstAttribute="top" secondItem="cOn-lo-5gF" secondAttribute="top" id="yTu-Az-EdN"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="cOn-lo-5gF"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="EN0-kM-l5n"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVB-pG-ufS">
+                                <rect key="frame" x="184" y="694.33333333333337" width="25" height="23.666666666666629"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="plus.app" catalog="system"/>
+                                <connections>
+                                    <action selector="addKitten" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Wkr-eM-IHA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BC-ZV-eW9">
+                                <rect key="frame" x="184.66666666666666" y="692.66666666666663" width="24" height="27"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="square.and.arrow.down" catalog="system"/>
+                                <connections>
+                                    <action selector="save" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wGA-w7-3MR"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <viewLayoutGuide key="safeArea" id="vlc-sT-5y4"/>
                         <color key="backgroundColor" name="beigeClear"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="9ti-SV-8cN" secondAttribute="bottom" id="K09-4r-5BD"/>
-                            <constraint firstItem="9ti-SV-8cN" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="S72-RJ-FwZ"/>
-                            <constraint firstItem="9ti-SV-8cN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Wqy-Yh-YWl"/>
-                            <constraint firstItem="9ti-SV-8cN" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="h50-nV-Fya"/>
+                            <constraint firstItem="9BC-ZV-eW9" firstAttribute="centerX" secondItem="HVB-pG-ufS" secondAttribute="centerX" id="0bK-Rz-ilG"/>
+                            <constraint firstItem="9BC-ZV-eW9" firstAttribute="centerY" secondItem="HVB-pG-ufS" secondAttribute="centerY" id="RSQ-ns-b2q"/>
+                            <constraint firstItem="vlc-sT-5y4" firstAttribute="bottom" secondItem="HVB-pG-ufS" secondAttribute="bottom" constant="100" id="ddv-3A-Psd"/>
+                            <constraint firstItem="9ti-SV-8cN" firstAttribute="trailing" secondItem="vlc-sT-5y4" secondAttribute="trailing" id="fd5-Hw-7WJ"/>
+                            <constraint firstItem="9ti-SV-8cN" firstAttribute="top" secondItem="vlc-sT-5y4" secondAttribute="top" id="g10-Fu-TCT"/>
+                            <constraint firstItem="9ti-SV-8cN" firstAttribute="leading" secondItem="vlc-sT-5y4" secondAttribute="leading" id="gnq-M7-nwu"/>
+                            <constraint firstItem="HVB-pG-ufS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="iwp-kE-2oT"/>
+                            <constraint firstItem="vlc-sT-5y4" firstAttribute="bottom" secondItem="9ti-SV-8cN" secondAttribute="bottom" constant="100" id="sVj-QQ-A1v"/>
                         </constraints>
                     </view>
                     <connections>
@@ -160,9 +137,9 @@
                         <outlet property="archiveButton" destination="cDD-pb-jhi" id="qAg-iS-OK0"/>
                         <outlet property="editButton" destination="mNA-gf-pzQ" id="N8S-BR-3jK"/>
                         <outlet property="favoriteButton" destination="3FZ-kj-SKr" id="iNd-7q-sgF"/>
-                        <outlet property="litterTable" destination="peB-nY-pdX" id="SI4-iG-qgy"/>
                         <outlet property="rescueDateTextField" destination="3Kp-Vq-zad" id="SOE-rS-ZPO"/>
                         <outlet property="saveButton" destination="9BC-ZV-eW9" id="Ygk-jF-Fcp"/>
+                        <outlet property="topView" destination="hWx-qA-U90" id="PDe-cH-Ruv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

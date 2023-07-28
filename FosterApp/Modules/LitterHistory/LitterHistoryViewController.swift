@@ -11,25 +11,24 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
     
 	
 	// MARK: - Outlets
-    @IBOutlet private weak var litterHistoryTableView: UITableView!
+//    @IBOutlet private weak var litterHistoryTableView: UITableView!
     @IBOutlet private weak var headerLabel: UILabel!
-    
+	@IBOutlet private weak var addLitterButton: UIButton!
+	
 	// MARK: - Variables
     var user: User!
 //	TODO: comprendre tout ça
 	lazy var  littersTableView: BaseTableView<LitterCell, Litter> = {
-	let littersTableView =  BaseTableView <LitterCell, Litter> (didSelect: didSelect(item:at:))
+	let littersTableView =  BaseTableView <LitterCell, Litter>(didSelect: didSelect(item:at:))
 	return littersTableView
 	}() // homework, Why did we change it to lazy var and into a self executed closure?
 	
-	let litters = [Litter(isOngoing: true, rescueDate: "aujourd'hui"), Litter(isOngoing: true, rescueDate: "demain"), Litter(isOngoing: true, rescueDate: "hier")]
+//	let litters = [Litter(isOngoing: true, rescueDate: "aujourd'hui"), Litter(isOngoing: true, rescueDate: "demain"), Litter(isOngoing: true, rescueDate: "hier")]
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		self.interactor.refresh(user: user)
 		super.viewDidLoad()
 		self.setupUI()
-//		littersTableView.items = self.viewModel.litters ?? []
-		littersTableView.items = litters
 	}
 	
     override func viewWillAppear(_ animated: Bool) {
@@ -41,18 +40,17 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
+		littersTableView.items = self.viewModel.litters ?? []
 		littersTableView.reloadData()
-//        litterHistoryTableView.reloadData()
 //        self.headerLabel.text = self.viewModel.headerText
 	}
 	
 	func setupUI() {
 		self.view.addSubview(littersTableView)
 		littersTableView.translatesAutoresizingMaskIntoConstraints = false
-		littersTableView.backgroundColor = UIColor.purple
 		NSLayoutConstraint.activate([
 			littersTableView.topAnchor.constraint(equalTo: self.view.topAnchor),
-			littersTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+			littersTableView.bottomAnchor.constraint(equalTo: self.addLitterButton.topAnchor, constant: -48),
 			littersTableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
 			littersTableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor )
 		])
