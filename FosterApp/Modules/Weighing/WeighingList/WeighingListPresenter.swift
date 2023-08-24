@@ -7,5 +7,6 @@ class WeighingListPresenter: Presenter<WeighingListViewModel> {
 	
 	func display(weighings: [Weighing]) {
 		self.viewModel?.weights = weighings
+		self.viewModel?.send()
 	}
 }

@@ -82,7 +82,7 @@ final class KittenCardTests: XCTestCase {
 								microship: nil,
 								vaccines: nil,
 								adopters: nil,
-								weightHistory: nil,
+								weighingHistory: nil,
 								isAlive: true)
 		
 		await test.fire { interactor in
@@ -116,7 +116,7 @@ final class KittenCardTests: XCTestCase {
 								microship: nil,
 								vaccines: nil,
 								adopters: nil,
-								weightHistory: nil,
+								weighingHistory: nil,
 								isAlive: true)
 		
 		await test.fire { interactor in
@@ -148,7 +148,7 @@ final class KittenCardTests: XCTestCase {
 								microship: nil,
 								vaccines: nil,
 								adopters: nil,
-								weightHistory: nil,
+								weighingHistory: nil,
 								isAlive: true)
 		let kitten2 = Kitten(	id: "id",
 								litter: self.fetchedLitter,
@@ -164,7 +164,7 @@ final class KittenCardTests: XCTestCase {
 								microship: nil,
 								vaccines: nil,
 								adopters: nil,
-								weightHistory: nil,
+								weighingHistory: nil,
 								isAlive: true)
 		
 		await test.fire { interactor in
@@ -202,7 +202,7 @@ final class KittenCardTests: XCTestCase {
 								microship: nil,
 								vaccines: nil,
 								adopters: nil,
-								weightHistory: nil,
+								weighingHistory: nil,
 								isAlive: true)
 		
 		let kitten2 = Kitten(	id: "notSameId",
@@ -219,7 +219,7 @@ final class KittenCardTests: XCTestCase {
 								microship: nil,
 								vaccines: nil,
 								adopters: nil,
-								weightHistory: nil,
+								weighingHistory: nil,
 								isAlive: true)
 		
 		await test.fire { interactor in
@@ -257,7 +257,7 @@ final class KittenCardTests: XCTestCase {
 								microship: nil,
 								vaccines: nil,
 								adopters: nil,
-								weightHistory: nil,
+								weighingHistory: nil,
 								isAlive: true)
 		
 		await test.fire { interactor in
@@ -298,7 +298,7 @@ final class KittenCardTests: XCTestCase {
 								microship: nil,
 								vaccines: nil,
 								adopters: nil,
-								weightHistory: nil,
+								weighingHistory: nil,
 								isAlive: true)
 		
 		await test.fire { interactor in
@@ -333,7 +333,7 @@ final class KittenCardTests: XCTestCase {
 								microship: nil,
 								vaccines: nil,
 								adopters: nil,
-								weightHistory: nil,
+								weighingHistory: nil,
 								isAlive: true)
 		
 		await test.fire { interactor in
@@ -382,7 +382,7 @@ final class KittenCardTests: XCTestCase {
 								microship: nil,
 								vaccines: nil,
 								adopters: nil,
-								weightHistory: nil,
+								weighingHistory: nil,
 								isAlive: true)
 		
 		await test.fire { interactor in

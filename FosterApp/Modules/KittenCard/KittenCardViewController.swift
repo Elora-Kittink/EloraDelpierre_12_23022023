@@ -71,7 +71,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 		let vc = WeighingListViewController.fromStoryboard { vc in
 			vc.kitten = self.viewModel.kitten
 		}
-		navigationController?.present(vc, animated: true)
+		navigationController?.pushViewController(vc, animated: true)
 	}
 }
 

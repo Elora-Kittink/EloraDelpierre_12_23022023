@@ -9,7 +9,6 @@ class WeighingListInteractor: Interactor
 	WeighingListPresenter
 > {
 	let worker = DBWorker()
-	
 
 	func refresh(kitten: Kitten) {
 		Task {
@@ -17,6 +16,5 @@ class WeighingListInteractor: Interactor
 			self.presenter.display(weighings: weighings ?? [])
 			self.presenter.display(loader: false)
 		}
-		
 	}
 }

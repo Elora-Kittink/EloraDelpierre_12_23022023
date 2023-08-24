@@ -20,28 +20,20 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXz-u3-FhL">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMk-0t-PWB">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMk-0t-PWB" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WRv-Rg-Drs">
-                                                <rect key="frame" x="16" y="315" width="361" height="128"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </tableView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vj1-co-8fq">
                                                 <rect key="frame" x="159" y="114" width="75" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 <connections>
-                                                    <action selector="didTapAddWeight" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GjB-dJ-R5D"/>
+                                                    <action selector="addWeighing" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Zfm-M5-sSN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="WRv-Rg-Drs" secondAttribute="trailing" constant="16" id="vyp-vR-YZr"/>
-                                            <constraint firstItem="WRv-Rg-Drs" firstAttribute="leading" secondItem="WMk-0t-PWB" secondAttribute="leading" constant="16" id="yB3-cD-4Qv"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -66,8 +58,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addWeightButton" destination="Vj1-co-8fq" id="csq-9n-9Gi"/>
-                        <outlet property="tableView" destination="WRv-Rg-Drs" id="Y98-tn-Y1f"/>
+                        <outlet property="addWeighingButton" destination="Vj1-co-8fq" id="k0x-kc-f9v"/>
+                        <outlet property="contentView" destination="WMk-0t-PWB" id="R0f-6D-gbg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

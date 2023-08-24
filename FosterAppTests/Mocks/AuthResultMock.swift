@@ -1,15 +1,9 @@
 import FirebaseAuth
 
+
 protocol MockAuthDataResultProtocol {
 	
 	static var mockUser: MockUser { get }
-}
-
-extension AuthDataResult: MockAuthDataResultProtocol {
-	
-	static var mockUser: MockUser {
-		return MockUser(uid: "", email: "")
-	}
 }
 
 class MockUser: NSObject, UserInfo {
@@ -17,29 +11,37 @@ class MockUser: NSObject, UserInfo {
 	let uid: String
 	let email: String?
 	
+
+	
+	var providerID: String {
+		""
+	}
+	
+	var displayName: String? {
+		 nil
+	}
+	
+	var photoURL: URL? {
+		 nil
+	}
+	
+	var phoneNumber: String? {
+		 nil
+	}
+	
+	var emailVerified: Bool {
+		 false
+	}
+	
 	init(uid: String, email: String?) {
 		self.uid = uid
 		self.email = email
 	}
-	
-	var providerID: String {
-		return ""
-	}
-	
-	var displayName: String? {
-		return nil
-	}
-	
-	var photoURL: URL? {
-		return nil
-	}
-	
-	var phoneNumber: String? {
-		return nil
-	}
-	
-	var emailVerified: Bool {
-		return false
-	}
 }
 
+extension AuthDataResult: MockAuthDataResultProtocol {
+	
+	static var mockUser: MockUser {
+		 MockUser(uid: "", email: "")
+	}
+}

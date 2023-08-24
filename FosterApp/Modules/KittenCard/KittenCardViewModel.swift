@@ -38,5 +38,5 @@ class KittenCardViewModel: ViewModel {
     var microshipLabel = "Puce électronique"
     var adoptersLabel = "Adoptants"
     
-    var infoCardViewModel: [InfoCardViewModel] = []
+    var infoCardViewModel: [ InfoCardViewModel] = []
 }

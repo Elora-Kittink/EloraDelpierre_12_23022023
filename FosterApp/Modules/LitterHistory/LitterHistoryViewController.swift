@@ -11,7 +11,6 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
     
 	
 	// MARK: - Outlets
-//    @IBOutlet private weak var litterHistoryTableView: UITableView!
     @IBOutlet private weak var headerLabel: UILabel!
 	@IBOutlet private weak var addLitterButton: UIButton!
 	
@@ -19,11 +18,10 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
     var user: User!
 //	TODO: comprendre tout ça
 	lazy var  littersTableView: BaseTableView<LitterCell, Litter> = {
-	let littersTableView =  BaseTableView <LitterCell, Litter>(didSelect: didSelect(item:at:))
+		let littersTableView =  BaseTableView <LitterCell, Litter>(didSelect: didSelect(item:at:))
 	return littersTableView
 	}() // homework, Why did we change it to lazy var and into a self executed closure?
-	
-//	let litters = [Litter(isOngoing: true, rescueDate: "aujourd'hui"), Litter(isOngoing: true, rescueDate: "demain"), Litter(isOngoing: true, rescueDate: "hier")]
+
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		self.interactor.refresh(user: user)

@@ -18,16 +18,16 @@ final class SignUpTests: XCTestCase {
 	
 	struct MockUserWorker: UserWorkerProtocol {
 		func userConnected() async throws -> FosterApp.User? {
-			User(mail: "TEST", id: "ID", name: "TEST")
+			User(mail: "MAIL", id: "ID", name: "NAME")
 		}
 		
 		func signUp(mail: String, password: String) async throws -> FosterApp.User {
-			User(mail: "TEST", id: "ID", name: "TEST")
+			User(mail: "MAIL", id: "ID", name: "NAME")
 		}
 		
 		
 		func login(email: String, password: String) async throws -> FosterApp.User {
-			User(mail: "TEST", id: "ID", name: "TEST")
+			User(mail: "MAIL", id: "ID", name: "NAME")
 		}
 	}
 	func testSuccessSignup() async throws {
@@ -43,8 +43,8 @@ final class SignUpTests: XCTestCase {
 		
 		DispatchQueue.main.async {
 			XCTAssertEqual(test.viewModel.userSignedIn?.id, "ID")
-			XCTAssertEqual(test.viewModel.userSignedIn?.mail, "TEST")
-			XCTAssertEqual(test.viewModel.userSignedIn?.name, "TEST")
+			XCTAssertEqual(test.viewModel.userSignedIn?.mail, "MAIL")
+			XCTAssertEqual(test.viewModel.userSignedIn?.name, "NAME")
 		}
 	}
 	

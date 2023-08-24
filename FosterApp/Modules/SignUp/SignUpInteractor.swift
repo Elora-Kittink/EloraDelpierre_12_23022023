@@ -15,7 +15,7 @@ class SignUpInteractor: Interactor
 //	private var userId = ""
 	
 	
-	func signUp(mail: String?, name: String?, password: String?){
+	func signUp(mail: String?, name: String?, password: String?) {
 		guard let mail,
 			  let password,
 			  let name else {
@@ -31,7 +31,7 @@ class SignUpInteractor: Interactor
 				let user = try await self.userWorker.signUp(mail: mail, password: password)
 				let userlog = try await self.userWorker.login(email: user.mail, password: password)
 				worker.createUser(name: name, mail: user.mail, id: user.id)
-//				self.presenter.display(user: userlog)
+				self.presenter.display(user: userlog)
 			} catch {
 				print(error)
 			}
