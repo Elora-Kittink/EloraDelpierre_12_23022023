@@ -9,4 +9,6 @@ class WeighingListViewModel: ViewModel {
 	var firstColumnLabel = "Date"
 	var secondColumnLabel = "Chaton"
 	var thirdColumnLabel = "Lait"
+    
+    let title = "Historique des pesées"
 }

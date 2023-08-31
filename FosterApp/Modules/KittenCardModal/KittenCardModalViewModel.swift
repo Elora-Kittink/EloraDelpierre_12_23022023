@@ -5,6 +5,8 @@
 
 class KittenCardModalViewModel: ViewModel {
     
+    let newKittenTitle = "Nouveau chaton"
+    let updateKittenTitle = "Modifier le chaton"
     // MARK: - labels names
     
     var firtsNameLabel = "Premier nom"

@@ -21,12 +21,31 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 		let littersTableView =  BaseTableView <LitterCell, Litter>(didSelect: didSelect(item:at:))
 	return littersTableView
 	}() // homework, Why did we change it to lazy var and into a self executed closure?
-
+    
+    let emptyView: UIView = {
+        let view = UIView()
+        
+        let label = UILabel()
+        label.text = "Vous n'avez pas encore de portée !"
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(label)
+        
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        
+        return view
+    }()
+    
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		self.interactor.refresh(user: user)
 		super.viewDidLoad()
 		self.setupUI()
+        self.title = self.viewModel.title
 	}
 	
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +59,7 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 		super.refreshUI()
 		littersTableView.items = self.viewModel.litters ?? []
 		littersTableView.reloadData()
+        littersTableView.backgroundView = self.viewModel.litters?.isEmpty ?? true ? self.emptyView : nil
 //        self.headerLabel.text = self.viewModel.headerText
 	}
 	

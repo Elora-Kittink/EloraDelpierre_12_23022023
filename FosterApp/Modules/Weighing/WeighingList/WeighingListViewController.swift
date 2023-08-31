@@ -31,6 +31,7 @@ class WeighingListViewController: BaseViewController
 		self.interactor.refresh(kitten: self.kitten)
 		super.viewDidLoad()
 		self.setupTableViewUI()
+        self.title = self.viewModel.title
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {

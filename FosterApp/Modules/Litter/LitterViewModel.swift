@@ -25,4 +25,6 @@ class LitterViewModel: ViewModel {
     var isTextFieldEnable = true
 	
 	var dateFormat = "dd/MM/yyyy"
+    
+    let title = "Portée"
 }

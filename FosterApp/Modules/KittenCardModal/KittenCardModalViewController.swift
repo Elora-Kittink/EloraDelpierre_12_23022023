@@ -57,6 +57,8 @@ class KittenCardModalViewController: BaseViewController
         self.adoptersLabel.text = self.viewModel.adoptersLabel
         self.rescueDateLabel.text = self.viewModel.rescueDateLabel
         self.commentsLabel.text = self.viewModel.commentLabel
+        
+        self.title = self.isCreatingMode ? self.viewModel.newKittenTitle : self.viewModel.updateKittenTitle
 	}
 	
 	// MARK: - Refresh

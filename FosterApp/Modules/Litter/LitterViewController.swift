@@ -35,6 +35,23 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	return litterTableView
 	}()
 	
+    let emptyView: UIView = {
+        let view = UIView()
+        
+        let label = UILabel()
+        label.text = "Cette portée n'a pas encore de chaton !"
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(label)
+        
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        
+        return view
+    }()
 	
 	// MARK: - View life cycle
     
@@ -50,6 +67,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
                                    isCreating: isCreateMode,
                                    isDisplaying: isDisplayMode,
                                    litterId: litterId)
+        self.title = self.viewModel.title
 	}
 	
 	// MARK: - Refresh
@@ -64,6 +82,8 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
         self.favoriteButton.isHidden = self.viewModel.favoriteBtnHidden
         self.addKittenButton.isHidden = self.viewModel.addKittenBtnHidden
         self.rescueDateTextField.text = self.viewModel.rescueDate
+        
+        self.litterTableView.backgroundView = self.viewModel.kittens?.isEmpty ?? true ? self.emptyView : nil
 //        litterTable.reloadData()
 	}
 

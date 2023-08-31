@@ -9,4 +9,7 @@ class AddWeightViewModel: ViewModel {
 	var mealWeightLabel = "Lait"
 	var kittenWeight: String = ""
 	var mealWeight: String = ""
+    
+    let newWeighingTitle = "Nouvelle pesée"
+    let updateWeighingTitle = "Modifier la pesée"
 }

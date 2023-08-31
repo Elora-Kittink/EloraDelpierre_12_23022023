@@ -30,7 +30,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = self.viewModel.title
         self.interactor.refresh(kitten: self.kitten, litter: self.litter)
     }
     

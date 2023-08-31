@@ -5,6 +5,8 @@
 
 class KittenCardViewModel: ViewModel {
     
+    let title = "Chaton"
+    
     // MARK: - kitten datas
     
     //    var litter: Litter!

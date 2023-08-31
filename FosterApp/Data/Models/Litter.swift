@@ -41,10 +41,11 @@ class LitterCell: BaseCell<Litter> {
 	
 	override var item: Litter? {
 		didSet {
-			textLabel?.text = item?.kittens?.compactMap { kitten in
-				kitten.firstName
-			}
-			.joined(separator: ", ") ?? "Pas encore de chaton"
+            let kittenList = item?.kittens?.compactMap { kitten in
+                kitten.firstName
+            }
+            .joined(separator: ", ")
+            textLabel?.text = kittenList?.isEmpty ?? true ? "Pas de chaton pour l'intant" : kittenList
 		}
 	}
 }
