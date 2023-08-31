@@ -14,6 +14,7 @@ final class LitterTests: XCTestCase {
 	let worker = DBWorker()
 	let litter = Litter(isOngoing: true, rescueDate: "UT")
 	let date = Date(timeIntervalSinceNow: TimeInterval(floatLiteral: 10))
+    let date2 = Date(timeIntervalSinceNow: TimeInterval(floatLiteral: 10))
 	var litterFound: Litter?
 	var fetchedUser: User!
 	
@@ -40,13 +41,17 @@ final class LitterTests: XCTestCase {
 									  rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
+                interactor.saveLitter(user: self.fetchedUser,
+                                      rescueDate: self.date2,
+                                      isEditing: false,
+                                      litterId: nil)
 			}
 		}
 		
 		let DBlitters = try XCTUnwrap(worker.fetchAllLitters(userId: self.fetchedUser.id))
 		
 		DispatchQueue.main.async {
-			XCTAssertEqual(DBlitters.count, 1)
+			XCTAssertEqual(DBlitters.count, 2)
 		}
 	}
 	

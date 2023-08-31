@@ -66,16 +66,20 @@ final class WeighingHistoryTests: XCTestCase {
     func testSuccessCreateWeighing() async throws {
         let test = await BaseTest<AddWeightViewModel, AddWeightPresenter, AddWeightInteractor>()
         
-        let testWeighing = Weighing(id: "id", date: self.date, kittenWeight: "100", mealWeight: "10")
-        let testWeighing2 = Weighing(id: "id", date: self.date, kittenWeight: "200", mealWeight: "20")
+        let testWeighing = Weighing(id: UUID().uuidString, date: self.date, kittenWeight: "100", mealWeight: "10")
+        let testWeighing2 = Weighing(id: UUID().uuidString, date: self.date, kittenWeight: "200", mealWeight: "20")
         
         await test.fire { interactor in
             DispatchQueue.main.async {
                  interactor.saveWeighing(isNew: true, weighing: testWeighing, kitten: self.kittenCreated)
-                interactor.saveWeighing(isNew: true, weighing: testWeighing2, kitten: self.kittenCreated)
+                 interactor.saveWeighing(isNew: true, weighing: testWeighing2, kitten: self.kittenCreated)
             }
         }
+        
         let weighings = try XCTUnwrap(worker.fetchWeighingFromKittenId(kittenId: self.kittenCreated.id ?? ""))
+       
+        
+       
         let firstWeighing = try XCTUnwrap(weighings.first)
         let lastWeighing = try XCTUnwrap(weighings.last)
         
@@ -84,6 +88,85 @@ final class WeighingHistoryTests: XCTestCase {
             XCTAssertEqual(lastWeighing.kittenWeight, "200")
             XCTAssertEqual(firstWeighing.mealWeight, "10")
             XCTAssertEqual(lastWeighing.mealWeight, "20")
+        }
+    }
+    
+   func testFailCreateWeighing() async throws {
+       let test = await BaseTest<AddWeightViewModel, AddWeightPresenter, AddWeightInteractor>()
+       
+       let testWeighing = Weighing(id: nil, date: self.date, kittenWeight: "100", mealWeight: "10")
+       
+       await test.fire { interactor in
+           DispatchQueue.main.async {
+                interactor.saveWeighing(isNew: true, weighing: testWeighing, kitten: self.kittenCreated)
+           }
+       }
+       
+       let weighings = try XCTUnwrap(worker.fetchWeighingFromKittenId(kittenId: self.kittenCreated.id ?? ""))
+       
+       DispatchQueue.main.async {
+           XCTAssertTrue(weighings.isEmpty)
+       }
+    }
+    
+    func testSuccessUpdateWeighing() async throws {
+        let test = await BaseTest<AddWeightViewModel, AddWeightPresenter, AddWeightInteractor>()
+        
+        let testWeighing = Weighing(id: "id", date: self.date, kittenWeight: "100", mealWeight: "10")
+        let testWeighing2 = Weighing(id: "id", date: self.date, kittenWeight: "200", mealWeight: "20")
+        
+        await test.fire { interactor in
+            DispatchQueue.main.async {
+                 interactor.saveWeighing(isNew: true, weighing: testWeighing, kitten: self.kittenCreated)
+                 interactor.saveWeighing(isNew: false, weighing: testWeighing2, kitten: self.kittenCreated)
+            }
+        }
+        
+        let weighings = try XCTUnwrap(worker.fetchWeighingFromKittenId(kittenId: self.kittenCreated.id ?? ""))
+        
+        DispatchQueue.main.async {
+            XCTAssertEqual(weighings.first?.kittenWeight, "200")
+            XCTAssertEqual(weighings.first?.mealWeight, "20")
+        }
+    }
+    
+    func testFailUpdateWeighing() async throws {
+        let test = await BaseTest<AddWeightViewModel, AddWeightPresenter, AddWeightInteractor>()
+        
+        let testWeighing = Weighing(id: "id", date: self.date, kittenWeight: "100", mealWeight: "10")
+        let testWeighing2 = Weighing(id: "notSameId", date: self.date, kittenWeight: "200", mealWeight: "20")
+        
+        await test.fire { interactor in
+            DispatchQueue.main.async {
+                 interactor.saveWeighing(isNew: true, weighing: testWeighing, kitten: self.kittenCreated)
+                 interactor.saveWeighing(isNew: false, weighing: testWeighing2, kitten: self.kittenCreated)
+            }
+        }
+        
+        let weighings = try XCTUnwrap(worker.fetchWeighingFromKittenId(kittenId: self.kittenCreated.id ?? ""))
+        
+        DispatchQueue.main.async {
+            XCTAssertEqual(weighings.first?.kittenWeight, "100")
+            XCTAssertEqual(weighings.first?.mealWeight, "10")
+        }
+    }
+    
+    func testRefresh() async throws {
+        
+        let testWeighing = Weighing(id: "id", date: self.date, kittenWeight: "100", mealWeight: "10")
+        
+        let weighing = worker.createWeighing(kitten: self.kittenCreated, weighing: testWeighing)
+        
+        let test = await BaseTest<WeighingListViewModel, WeighingListPresenter, WeighingListInteractor>()
+        
+        await test.fire { interactor in
+            DispatchQueue.main.async {
+                interactor.refresh(kitten: self.kittenCreated)
+            }
+        }
+        
+        DispatchQueue.main.async {
+            XCTAssertEqual(test.viewModel.weights?.first?.kittenWeight, "100")
         }
     }
 }

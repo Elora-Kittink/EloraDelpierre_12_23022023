@@ -146,7 +146,6 @@ struct DBWorker {
 		
 		let predicate = NSPredicate(format: "r_kitten.a_id == %@", kittenId)
 		let DBweighings = DB_Weighing.getAll(predicate: predicate)
-
 		let allWeighings = DBweighings.map { weighing in
 			Weighing(from: weighing)
 		}
@@ -163,6 +162,14 @@ struct DBWorker {
 	}
 	
 	func updateWeighing(weighing: Weighing) {
-		
+        
+        guard let DBWeighing = DB_Weighing.get(with: weighing.id) else {
+            print("👹 Worker fail update DBWeighing")
+            return
+        }
+        
+        DBWeighing.update(weighing: weighing)
+        print("💃🏼 Worker succeed update DBWeighing")
+        try? CoreDataManager.default.save()
 	}
 }
