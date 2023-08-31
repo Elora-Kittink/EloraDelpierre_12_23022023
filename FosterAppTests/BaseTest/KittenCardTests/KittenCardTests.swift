@@ -57,7 +57,7 @@ final class KittenCardTests: XCTestCase {
 										 isAlive: true)
 			}
 		}
-		
+//		 dead code?
 		let DBlitters = try XCTUnwrap(worker.fetchAllLitters(userId: self.fetchedUser.id))
 		
 		DispatchQueue.main.async {

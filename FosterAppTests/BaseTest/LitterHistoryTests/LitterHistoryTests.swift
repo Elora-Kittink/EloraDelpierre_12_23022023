@@ -72,7 +72,7 @@ final class LitterHistoryTests: XCTestCase {
                             microship: nil,
                             vaccines: nil,
                             adopters: nil,
-                            weightHistory: nil,
+                            weighingHistory: nil,
                             isAlive: true)
         
         _ = worker.createKitten(kitten: kitten,

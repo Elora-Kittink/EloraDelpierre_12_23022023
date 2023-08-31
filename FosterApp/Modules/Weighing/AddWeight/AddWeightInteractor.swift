@@ -18,11 +18,11 @@ class AddWeightInteractor: Interactor
 						 date: Date,
 						 isEdition: Bool) -> Weighing {
 		
+        self.presenter.display(loader: false)
 		return Weighing(id: isEdition ? weightId : UUID().uuidString,
 						date: date,
 						kittenWeight: kittenWeight ?? "",
 						mealWeight: mealWeight ?? "")
-		
 	}
 	
 	func saveWeighing(isNew: Bool,
