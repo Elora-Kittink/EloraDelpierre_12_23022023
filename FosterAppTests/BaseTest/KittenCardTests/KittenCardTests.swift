@@ -134,7 +134,7 @@ final class KittenCardTests: XCTestCase {
 	func testSuccesUpdateKitten() async throws {
 		let test = await BaseTest<KittenCardModalViewModel, KittenCardModalPresenter, KittenCardModalInteractor>()
 		
-		let kitten1 = Kitten(   id:"id",
+		let kitten1 = Kitten(   id: "id",
 								litter: self.fetchedLitter,
 								firstName: "V1",
 								secondName: "Test",
@@ -188,7 +188,7 @@ final class KittenCardTests: XCTestCase {
 	func testFailUpdateKitten() async throws {
 		let test = await BaseTest<KittenCardModalViewModel, KittenCardModalPresenter, KittenCardModalInteractor>()
 		
-		let kitten1 = Kitten(   id:"id",
+		let kitten1 = Kitten(   id: "id",
 								litter: self.fetchedLitter,
 								firstName: "V1",
 								secondName: "Test",

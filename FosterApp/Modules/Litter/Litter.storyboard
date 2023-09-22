@@ -104,7 +104,7 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="cOn-lo-5gF"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="EN0-kM-l5n"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVB-pG-ufS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVB-pG-ufS" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
                                 <rect key="frame" x="135.66666666666666" y="688" width="121.99999999999997" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Ajouter un chaton"/>
@@ -112,7 +112,7 @@
                                     <action selector="addKitten" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Wkr-eM-IHA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BC-ZV-eW9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BC-ZV-eW9" customClass="ButtonPink" customModule="FosterApp" customModuleProvider="target">
                                 <rect key="frame" x="172.66666666666666" y="688" width="48" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Valider"/>

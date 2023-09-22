@@ -73,6 +73,11 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
+        
+        self.isEditMode = self.viewModel.isEditing
+        self.isCreateMode = self.viewModel.isCreatingNew
+        self.isDisplayMode = self.viewModel.isDisplaying
+        
 		litterTableView.items = self.viewModel.kittens ?? []
 		litterTableView.reloadData()
         self.rescueDateTextField.isEnabled = self.viewModel.isTextFieldEnable
@@ -84,6 +89,8 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
         self.rescueDateTextField.text = self.viewModel.rescueDate
         
         self.litterTableView.backgroundView = self.viewModel.kittens?.isEmpty ?? true ? self.emptyView : nil
+        
+        self.litterTableView.isUserInteractionEnabled = self.isEditMode ? false : true
 //        litterTable.reloadData()
 	}
 

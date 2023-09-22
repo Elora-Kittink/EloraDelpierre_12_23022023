@@ -92,6 +92,8 @@
 		D5B143812A1B9E0400FA5418 /* KittenCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B143802A1B9E0400FA5418 /* KittenCardTests.swift */; };
 		D5B143872A1B9F4700FA5418 /* LitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B143862A1B9F4700FA5418 /* LitterTests.swift */; };
 		D5B143892A1B9F5200FA5418 /* HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B143882A1B9F5200FA5418 /* HomeTests.swift */; };
+		D5B48FE42AA1F14B0055C81B /* ButtonPink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B48FE32AA1F14B0055C81B /* ButtonPink.swift */; };
+		D5B48FE62AA1F4500055C81B /* ButtonBeige.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B48FE52AA1F4500055C81B /* ButtonBeige.swift */; };
 		D5B5E24829D4697C00A84476 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24429D4697C00A84476 /* LoginPresenter.swift */; };
 		D5B5E24929D4697C00A84476 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24529D4697C00A84476 /* LoginViewController.swift */; };
 		D5B5E24A29D4697C00A84476 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24629D4697C00A84476 /* LoginInteractor.swift */; };
@@ -223,6 +225,8 @@
 		D5B143802A1B9E0400FA5418 /* KittenCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardTests.swift; sourceTree = "<group>"; };
 		D5B143862A1B9F4700FA5418 /* LitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterTests.swift; sourceTree = "<group>"; };
 		D5B143882A1B9F5200FA5418 /* HomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTests.swift; sourceTree = "<group>"; };
+		D5B48FE32AA1F14B0055C81B /* ButtonPink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPink.swift; sourceTree = "<group>"; };
+		D5B48FE52AA1F4500055C81B /* ButtonBeige.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBeige.swift; sourceTree = "<group>"; };
 		D5B5E24429D4697C00A84476 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		D5B5E24529D4697C00A84476 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D5B5E24629D4697C00A84476 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
@@ -326,6 +330,8 @@
 				D57272BE29ACE6F600A9C72E /* AddButton.swift */,
 				D5FCBA3129CA09D3008985C9 /* DatePickerField.swift */,
 				D59900CC29F6B62500F0F36D /* Alerts.swift */,
+				D5B48FE32AA1F14B0055C81B /* ButtonPink.swift */,
+				D5B48FE52AA1F4500055C81B /* ButtonBeige.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1015,6 +1021,7 @@
 				D59A680629E856000016F123 /* User.swift in Sources */,
 				D5F0C72629A91D2D002A0F65 /* LitterInteractor.swift in Sources */,
 				D576F5712A5B1B7F0004AF60 /* AddWeightViewController.swift in Sources */,
+				D5B48FE42AA1F14B0055C81B /* ButtonPink.swift in Sources */,
 				D5F0C71329A90D85002A0F65 /* KittenCardViewController.swift in Sources */,
 				D5A073CC29AE45CE00202F0A /* DB_Litter.swift in Sources */,
 				D59FF7122A0A6F5E00147783 /* AdviceViewModel.swift in Sources */,
@@ -1023,6 +1030,7 @@
 				D5A073C829AE3CD100202F0A /* Vaccine.swift in Sources */,
 				D5B5E24A29D4697C00A84476 /* LoginInteractor.swift in Sources */,
 				D599CE2329AFB0C500542F9E /* DBWorker.swift in Sources */,
+				D5B48FE62AA1F4500055C81B /* ButtonBeige.swift in Sources */,
 				D59FF70F2A0A6F5E00147783 /* AdvicePresenter.swift in Sources */,
 				D59D09B929DD6B6300813B35 /* InfoCardViewModel.swift in Sources */,
 				D59D09B729DD6B6300813B35 /* InfoCardView.swift in Sources */,
