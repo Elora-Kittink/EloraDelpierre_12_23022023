@@ -235,7 +235,7 @@ des pesées</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-43.511450381679388" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-683" y="-6"/>
         </scene>
     </scenes>
     <resources>

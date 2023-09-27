@@ -45,7 +45,6 @@ class KittenCardModalViewController: BaseViewController
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		print("👹 litter \(litter)")
         self.interactor.refresh(isEdititngMode: isEditingMode, isCreatingMode: isCreatingMode, kitten: kitten)
         
         self.nameLabel.text = self.viewModel.firtsNameLabel

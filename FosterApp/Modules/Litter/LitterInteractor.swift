@@ -72,8 +72,9 @@ class LitterInteractor: Interactor
 				return
 			}
 			
-			worker.createNewLitter(rescueDate: rescueDate, user: user)
+			let newLitter = worker.createNewLitter(rescueDate: rescueDate, user: user)
 			self.presenter.display(loader: false)
+			self.refresh(litterId: newLitter?.id)
 		}
 	}
 	

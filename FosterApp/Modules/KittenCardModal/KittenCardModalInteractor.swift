@@ -74,8 +74,20 @@ class KittenCardModalInteractor: Interactor
 				self.presenter.display(loader: false)
 				return
 			}
+			
 			self.presenter.display(loader: false)
 			self.presenter.close()
+			
+			let vc = LitterViewController.fromStoryboard { vc in
+				vc.litterId = newKitten.litterId
+				vc.isDisplayMode = true
+				vc.isCreateMode = false
+				vc.isEditMode = false
+			}
+			vc.push()
+			
+			
+
 //			TODO: le 	self.presenter.close() va pas aussi dans le else?
 		} else {
 			worker.updateKittenDB(kitten: kitten)
