@@ -56,7 +56,8 @@ class KittenCardModalViewController: BaseViewController
         self.adoptersLabel.text = self.viewModel.adoptersLabel
         self.rescueDateLabel.text = self.viewModel.rescueDateLabel
         self.commentsLabel.text = self.viewModel.commentLabel
-        
+		self.colorField.delegate = self
+		
         self.title = self.isCreatingMode ? self.viewModel.newKittenTitle : self.viewModel.updateKittenTitle
 	}
 	
@@ -116,4 +117,15 @@ extension KittenCardModalViewController: StoryboardProtocol {
     static var identifier: String? {
         "KittenCardModalViewController"
     }
+}
+
+extension KittenCardModalViewController: UITextFieldDelegate {
+//	limit the number of characters for "color" textfield
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+		guard let text = textField.text else {
+			return false
+		}
+		let NStext = (text as NSString).replacingCharacters(in: range, with: string)
+		return NStext.count <= 25
+	}
 }
