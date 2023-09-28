@@ -18,10 +18,15 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     @IBOutlet private weak var editBtn: UIButton!
     @IBOutlet private weak var imageView: UIView!
     @IBOutlet private weak var image: UIImageView!
-    @IBOutlet private weak var stackInfoCards: UIStackView!
-
-    
-    // MARK: - Variables
+	@IBOutlet private weak var birthdate: UILabel!
+	@IBOutlet private weak var color: UILabel!
+	@IBOutlet private weak var secondNameLabel: UILabel!
+	@IBOutlet private weak var adopterGroup: UIView!
+	@IBOutlet private weak var colorGroup: UIView!
+	@IBOutlet private weak var birthdateGroup: UIView!
+	
+	
+	// MARK: - Variables
     
     var litterId = ""
     var litter: Litter!
@@ -32,6 +37,9 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
         super.viewDidLoad()
         self.title = self.viewModel.title
         self.interactor.refresh(kitten: self.kitten, litter: self.litter)
+		self.birthdateGroup.layer.cornerRadius = 12
+		self.colorGroup.layer.cornerRadius = 12
+		self.adopterGroup.layer.cornerRadius = 12
     }
     
     
@@ -39,12 +47,20 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     override func refreshUI() {
         super.refreshUI()
             
-        self.nameLabel.text = self.viewModel.firstName
+		self.microshipLabel.isHidden = self.viewModel.microship?.isEmpty ?? true ? true : false
+		self.secondNameLabel.isHidden = self.viewModel.secondName.isEmpty ?? true ? true : false
+		
+		self.nameLabel.text = self.viewModel.firstName.isEmpty ? "Pas encore de nom" : self.viewModel.firstName
+		
         self.microshipLabel.text = self.viewModel.microship
+		
+		self.birthdate.text = self.viewModel.birthdate
+		self.color.text = self.viewModel.color
+		
         self.viewModel.infoCardViewModel.forEach { info in
             let view = InfoCardView.fromNib()
             view.viewModel = info
-            stackInfoCards.addArrangedSubview(view)
+//            stackInfoCards.addArrangedSubview(view)
         }
     }
     
