@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Hai-dS-1N3">
                                 <rect key="frame" x="71.666666666666686" y="184" width="250" height="100"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-TN-quA">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TEST" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-TN-quA">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -36,9 +36,8 @@
                                     <constraint firstAttribute="width" constant="250" id="cVr-Nb-uFw"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOf-P3-IXM" customClass="ButtonPink" customModule="FosterApp" customModuleProvider="target">
-                                <rect key="frame" x="123" y="697" width="147" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOf-P3-IXM" customClass="ButtonPink" customModule="FosterApp" customModuleProvider="target">
+                                <rect key="frame" x="130.66666666666666" y="394.33333333333331" width="131.99999999999997" height="34.333333333333314"/>
                                 <color key="backgroundColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <state key="normal" title="Button"/>
@@ -47,21 +46,19 @@
                                     <action selector="signUpAction" destination="9IE-CW-Cca" eventType="touchUpInside" id="6XE-e5-zeu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vous n'avez pas encore de compte?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfN-Dq-5SH">
-                                <rect key="frame" x="106.66666666666669" y="661" width="180" height="12"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous n'avez pas encore de compte?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfN-Dq-5SH">
+                                <rect key="frame" x="109.66666666666667" y="358.33333333333331" width="173.66666666666663" height="12"/>
                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-vq-mhu" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
-                                <rect key="frame" x="114" y="397" width="147" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-vq-mhu" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
+                                <rect key="frame" x="168.33333333333334" y="304" width="56.333333333333343" height="34.333333333333314"/>
                                 <color key="backgroundColor" red="0.88627451660000001" green="0.81960785390000002" blue="0.69019609689999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Connectez vous"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Test"/>
                                 <connections>
                                     <action selector="logInAction" destination="9IE-CW-Cca" eventType="touchUpInside" id="fHr-GP-jS3"/>
                                 </connections>
@@ -71,7 +68,13 @@
                         <color key="backgroundColor" red="0.99215686319999996" green="0.97254908080000002" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Hai-dS-1N3" firstAttribute="centerX" secondItem="HZN-X3-U5u" secondAttribute="centerX" id="2DV-6A-ksL"/>
+                            <constraint firstItem="9pa-vq-mhu" firstAttribute="centerX" secondItem="HZN-X3-U5u" secondAttribute="centerX" id="Lsy-9X-8GB"/>
                             <constraint firstItem="Hai-dS-1N3" firstAttribute="top" secondItem="5oQ-5p-bwg" secondAttribute="top" constant="125" id="N7j-Bt-IQ3"/>
+                            <constraint firstItem="ZfN-Dq-5SH" firstAttribute="top" secondItem="9pa-vq-mhu" secondAttribute="bottom" constant="20" id="PfU-cn-1D0"/>
+                            <constraint firstItem="9pa-vq-mhu" firstAttribute="top" secondItem="Hai-dS-1N3" secondAttribute="bottom" constant="20" id="fcZ-WW-qCH"/>
+                            <constraint firstItem="dOf-P3-IXM" firstAttribute="centerX" secondItem="HZN-X3-U5u" secondAttribute="centerX" id="gEc-tT-AMf"/>
+                            <constraint firstItem="dOf-P3-IXM" firstAttribute="top" secondItem="ZfN-Dq-5SH" secondAttribute="bottom" constant="24" id="gNJ-hA-g5r"/>
+                            <constraint firstItem="ZfN-Dq-5SH" firstAttribute="centerX" secondItem="HZN-X3-U5u" secondAttribute="centerX" id="jyL-q8-jdd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xYL-56-lGf"/>

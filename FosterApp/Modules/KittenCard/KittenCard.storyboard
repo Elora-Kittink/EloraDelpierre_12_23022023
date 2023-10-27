@@ -198,7 +198,7 @@
                                                             <string key="content">Nouvelle 
 </string>
                                                             <attributes>
-                                                                <font key="NSFont" metaFont="system" size="12"/>
+                                                                <font key="NSFont" metaFont="cellTitle"/>
                                                             </attributes>
                                                         </fragment>
                                                         <fragment content="pesée">
@@ -289,33 +289,24 @@ des pesées</string>
                                                     <action selector="edit" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5gJ-EP-g7c"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="u32-GM-jJO">
-                                                <rect key="frame" x="32" y="535.66666666666663" width="329" height="80"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="kA8-Ms-C0k">
+                                                <rect key="frame" x="32" y="517.66666666666663" width="329" height="128"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHl-ZN-kcV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="80"/>
-                                                        <color key="backgroundColor" name="border"/>
-                                                        <color key="tintColor" red="0.4929994808" green="0.38997908380000001" blue="0.37609686650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Documents">
-                                                            <backgroundConfiguration key="background" image="stripesBackground"/>
-                                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="21"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLZ-JW-lwu">
-                                                        <rect key="frame" x="189.66666666666663" y="0.0" width="139.33333333333337" height="80"/>
-                                                        <color key="backgroundColor" name="pinkClear"/>
-                                                        <color key="tintColor" red="0.41260569920000001" green="0.32607037100000003" blue="0.31085404420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Galerie">
-                                                            <backgroundConfiguration key="background" image="stripesBackground"/>
-                                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="21"/>
-                                                        </buttonConfiguration>
-                                                    </button>
+                                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGI-au-S55" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="128"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Galerie"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42h-sR-Wov" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
+                                                        <rect key="frame" x="74" y="0.0" width="255" height="128"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Documents"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="hBp-gO-iSo"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.99215686319999996" green="0.97254908080000002" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -324,21 +315,20 @@ des pesées</string>
                                             <constraint firstAttribute="trailing" secondItem="E4U-Oa-kKU" secondAttribute="trailing" constant="32" id="1Ny-sO-dEw"/>
                                             <constraint firstItem="qi4-Nd-jtn" firstAttribute="top" secondItem="JgE-ct-n1I" secondAttribute="bottom" constant="24" id="27k-Dq-2gf"/>
                                             <constraint firstItem="7bQ-qR-cZY" firstAttribute="top" secondItem="i15-QH-pNQ" secondAttribute="top" id="6iJ-ue-65U"/>
+                                            <constraint firstItem="kA8-Ms-C0k" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="8aI-OL-tMm"/>
                                             <constraint firstItem="PhU-br-Pd4" firstAttribute="top" secondItem="4Wy-7u-n1R" secondAttribute="bottom" constant="64" id="ABH-Vw-cNq"/>
                                             <constraint firstItem="i15-QH-pNQ" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="CQ1-I0-sF8"/>
-                                            <constraint firstAttribute="trailing" secondItem="u32-GM-jJO" secondAttribute="trailing" constant="32" id="D1E-oY-Z3q"/>
+                                            <constraint firstAttribute="trailing" secondItem="kA8-Ms-C0k" secondAttribute="trailing" constant="32" id="CZb-DX-Vx9"/>
                                             <constraint firstItem="JgE-ct-n1I" firstAttribute="top" secondItem="E4U-Oa-kKU" secondAttribute="bottom" constant="24" id="G0j-9f-z1W"/>
                                             <constraint firstItem="JgE-ct-n1I" firstAttribute="centerX" secondItem="2yy-RG-8D2" secondAttribute="centerX" id="Gy4-aq-D4F"/>
-                                            <constraint firstItem="u32-GM-jJO" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="M4B-ZQ-izX"/>
                                             <constraint firstItem="7bQ-qR-cZY" firstAttribute="leading" secondItem="i15-QH-pNQ" secondAttribute="trailing" constant="24" id="NTP-tS-2tV"/>
-                                            <constraint firstItem="u32-GM-jJO" firstAttribute="centerX" secondItem="2yy-RG-8D2" secondAttribute="centerX" id="VmV-LA-g4k"/>
                                             <constraint firstItem="PhU-br-Pd4" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="W65-FP-l8u"/>
                                             <constraint firstAttribute="trailing" secondItem="PhU-br-Pd4" secondAttribute="trailing" constant="32" id="XAc-oK-Nlw"/>
                                             <constraint firstItem="E4U-Oa-kKU" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="caw-48-aB3"/>
                                             <constraint firstItem="qi4-Nd-jtn" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="eJ4-Yl-cWg"/>
+                                            <constraint firstItem="kA8-Ms-C0k" firstAttribute="top" secondItem="qi4-Nd-jtn" secondAttribute="bottom" constant="32" id="gCP-gq-VNp"/>
                                             <constraint firstItem="4Wy-7u-n1R" firstAttribute="top" secondItem="i15-QH-pNQ" secondAttribute="bottom" constant="12" id="lcp-3e-xi1"/>
                                             <constraint firstItem="i15-QH-pNQ" firstAttribute="top" secondItem="2yy-RG-8D2" secondAttribute="top" constant="32" id="mOF-jK-Spm"/>
-                                            <constraint firstItem="u32-GM-jJO" firstAttribute="top" secondItem="qi4-Nd-jtn" secondAttribute="bottom" constant="50" id="oOq-gU-FQp"/>
                                             <constraint firstAttribute="trailing" secondItem="7bQ-qR-cZY" secondAttribute="trailing" constant="32" id="oRU-SS-qQi"/>
                                             <constraint firstItem="E4U-Oa-kKU" firstAttribute="top" secondItem="PhU-br-Pd4" secondAttribute="bottom" constant="24" id="rOl-qX-2SK"/>
                                             <constraint firstAttribute="trailing" secondItem="qi4-Nd-jtn" secondAttribute="trailing" constant="32" id="s6W-Lm-VTj"/>
@@ -372,7 +362,9 @@ des pesées</string>
                         <outlet property="birthdateGroup" destination="Ur2-cz-aRI" id="Lrq-PA-06R"/>
                         <outlet property="color" destination="eoR-J6-3HV" id="QnL-Jg-PfW"/>
                         <outlet property="colorGroup" destination="Tzl-zX-9H6" id="OUg-RE-aIn"/>
+                        <outlet property="documentsTile" destination="42h-sR-Wov" id="7KM-Vy-dez"/>
                         <outlet property="editBtn" destination="4Wy-7u-n1R" id="lwh-tM-tAK"/>
+                        <outlet property="galleryTile" destination="kGI-au-S55" id="c7M-K7-Lit"/>
                         <outlet property="image" destination="3eK-db-H3v" id="ErZ-F3-rnu"/>
                         <outlet property="imageView" destination="i15-QH-pNQ" id="59e-Ka-2Jr"/>
                         <outlet property="medicalHistory" destination="2nk-Rw-3rD" id="gyL-M6-EbO"/>
@@ -390,14 +382,8 @@ des pesées</string>
     <resources>
         <image name="photo" width="151" height="167"/>
         <image name="stripesBackground" width="100" height="100"/>
-        <namedColor name="border">
-            <color red="0.9570000171661377" green="0.91399997472763062" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="pink">
             <color red="0.88200002908706665" green="0.6940000057220459" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="pinkClear">
-            <color red="0.98400002717971802" green="0.92199999094009399" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

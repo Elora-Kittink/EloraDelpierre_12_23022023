@@ -47,163 +47,67 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mr6-ys-1um" userLabel="Documents View">
-                                                <rect key="frame" x="211" y="289" width="150" height="150"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" image="medicalFolders" translatesAutoresizingMaskIntoConstraints="NO" id="LLw-4L-ufI">
-                                                        <rect key="frame" x="8" y="8" width="134" height="110.66666666666667"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Administratif" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZ0-Kp-GqK">
-                                                        <rect key="frame" x="0.0" y="126.66666666666667" width="150" height="19.333333333333329"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" name="beige"/>
-                                                <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstItem="LLw-4L-ufI" firstAttribute="top" secondItem="mr6-ys-1um" secondAttribute="top" constant="8" id="4B5-gd-2Wo"/>
-                                                    <constraint firstItem="bZ0-Kp-GqK" firstAttribute="leading" secondItem="mr6-ys-1um" secondAttribute="leading" id="Bql-dw-5SR"/>
-                                                    <constraint firstAttribute="bottom" secondItem="bZ0-Kp-GqK" secondAttribute="bottom" constant="4" id="RCI-VL-3Kb"/>
-                                                    <constraint firstItem="bZ0-Kp-GqK" firstAttribute="top" secondItem="LLw-4L-ufI" secondAttribute="bottom" constant="8" id="SkE-Cr-EdY"/>
-                                                    <constraint firstAttribute="trailing" secondItem="LLw-4L-ufI" secondAttribute="trailing" constant="8" id="hV4-wu-hyz"/>
-                                                    <constraint firstAttribute="trailing" secondItem="bZ0-Kp-GqK" secondAttribute="trailing" id="irB-JV-Ofu"/>
-                                                    <constraint firstAttribute="height" constant="150" id="j2Y-DG-tXT"/>
-                                                    <constraint firstAttribute="width" constant="150" id="toq-6f-Rme"/>
-                                                    <constraint firstItem="LLw-4L-ufI" firstAttribute="leading" secondItem="mr6-ys-1um" secondAttribute="leading" constant="8" id="yro-XB-f1o"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M1k-JE-7x0" userLabel="Gallerie View">
-                                                <rect key="frame" x="32" y="289" width="150" height="150"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="syJ-9p-J1h">
-                                                        <rect key="frame" x="8" y="8" width="134" height="110.66666666666667"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gallerie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mx6-Un-TFZ">
-                                                        <rect key="frame" x="0.0" y="126.66666666666667" width="150" height="19.333333333333329"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" name="beige"/>
-                                                <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="mx6-Un-TFZ" secondAttribute="trailing" id="4aY-gn-2w3"/>
-                                                    <constraint firstAttribute="height" constant="150" id="KR0-2J-Rju"/>
-                                                    <constraint firstItem="syJ-9p-J1h" firstAttribute="leading" secondItem="M1k-JE-7x0" secondAttribute="leading" constant="8" id="W57-K7-9wF"/>
-                                                    <constraint firstItem="syJ-9p-J1h" firstAttribute="top" secondItem="M1k-JE-7x0" secondAttribute="top" constant="8" id="Xf2-a7-szd"/>
-                                                    <constraint firstAttribute="bottom" secondItem="mx6-Un-TFZ" secondAttribute="bottom" constant="4" id="Z5r-QC-Gzt"/>
-                                                    <constraint firstAttribute="width" constant="150" id="Zf2-JZ-4uI"/>
-                                                    <constraint firstItem="mx6-Un-TFZ" firstAttribute="leading" secondItem="M1k-JE-7x0" secondAttribute="leading" id="bdd-cs-qdO"/>
-                                                    <constraint firstAttribute="trailing" secondItem="syJ-9p-J1h" secondAttribute="trailing" constant="8" id="fse-Bu-rTp"/>
-                                                    <constraint firstItem="mx6-Un-TFZ" firstAttribute="top" secondItem="syJ-9p-J1h" secondAttribute="bottom" constant="8" id="pQe-26-HXf"/>
-                                                </constraints>
-                                            </view>
-                                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbc-8B-Ijb" userLabel="Litters View">
+                                            <view alpha="0.90000000000000002" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kbc-8B-Ijb" userLabel="Litters View" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="107" width="150" height="150"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="litter" translatesAutoresizingMaskIntoConstraints="NO" id="16J-7U-qz9">
-                                                        <rect key="frame" x="8" y="8" width="134" height="121"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toutes les portées" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDe-Tc-EwV">
-                                                        <rect key="frame" x="8" y="129" width="134" height="17"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" name="pink"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstItem="TDe-Tc-EwV" firstAttribute="leading" secondItem="kbc-8B-Ijb" secondAttribute="leading" constant="8" id="1em-I6-KiQ"/>
-                                                    <constraint firstAttribute="width" constant="150" id="4aM-NV-FXa"/>
-                                                    <constraint firstAttribute="trailing" secondItem="TDe-Tc-EwV" secondAttribute="trailing" constant="8" id="5Ou-iC-xQb"/>
-                                                    <constraint firstAttribute="bottom" secondItem="TDe-Tc-EwV" secondAttribute="bottom" constant="4" id="65z-Oe-0Sj"/>
-                                                    <constraint firstItem="TDe-Tc-EwV" firstAttribute="top" secondItem="16J-7U-qz9" secondAttribute="bottom" id="NIM-VG-lGz"/>
-                                                    <constraint firstAttribute="height" constant="150" id="aBM-eI-b9x"/>
-                                                    <constraint firstAttribute="trailing" secondItem="16J-7U-qz9" secondAttribute="trailing" constant="8" id="aJ5-Qr-Nxa"/>
-                                                    <constraint firstItem="16J-7U-qz9" firstAttribute="leading" secondItem="kbc-8B-Ijb" secondAttribute="leading" constant="8" id="nQ6-RH-jFc"/>
-                                                    <constraint firstItem="16J-7U-qz9" firstAttribute="top" secondItem="kbc-8B-Ijb" secondAttribute="top" constant="8" id="nrK-pp-rcR"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="1hF-Di-9qc" appends="YES" id="9Wa-4M-V8R"/>
-                                                </connections>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Toutes les portées"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColor">
+                                                        <color key="value" name="pink"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="litter"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f52-G6-LMm" userLabel="Advices View">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f52-G6-LMm" userLabel="Advices View" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
                                                 <rect key="frame" x="211" y="107" width="150" height="150"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="advices" translatesAutoresizingMaskIntoConstraints="NO" id="jZl-KS-0EP">
-                                                        <rect key="frame" x="8" y="8" width="134" height="121"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Conseils" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvf-oC-5ma">
-                                                        <rect key="frame" x="8" y="129" width="134" height="17"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" name="pinkClear"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstItem="jZl-KS-0EP" firstAttribute="leading" secondItem="f52-G6-LMm" secondAttribute="leading" constant="8" id="7Vb-xa-1la"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Nvf-oC-5ma" secondAttribute="trailing" constant="8" id="BX9-iw-Zmn"/>
-                                                    <constraint firstAttribute="trailing" secondItem="jZl-KS-0EP" secondAttribute="trailing" constant="8" id="LBH-9j-41w"/>
-                                                    <constraint firstItem="jZl-KS-0EP" firstAttribute="top" secondItem="f52-G6-LMm" secondAttribute="top" constant="8" id="M1P-bj-fQR"/>
-                                                    <constraint firstAttribute="width" constant="150" id="O9T-77-8FB"/>
-                                                    <constraint firstItem="Nvf-oC-5ma" firstAttribute="top" secondItem="jZl-KS-0EP" secondAttribute="bottom" id="jgW-65-ub4"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Nvf-oC-5ma" secondAttribute="bottom" constant="4" id="lD1-6T-SyS"/>
-                                                    <constraint firstItem="Nvf-oC-5ma" firstAttribute="leading" secondItem="f52-G6-LMm" secondAttribute="leading" constant="8" id="u8k-vb-gRM"/>
-                                                    <constraint firstAttribute="height" constant="150" id="zl9-oz-y6i"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="Pdr-ac-IRZ" appends="YES" id="bSg-sW-6Sc"/>
-                                                </connections>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Conseils"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColor">
+                                                        <color key="value" name="beigeClear"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F98-07-WTI" userLabel="Calendar View">
-                                                <rect key="frame" x="32" y="471" width="150" height="150"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="749" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ftm-Fa-XF1">
-                                                        <rect key="frame" x="8" y="8" width="134" height="110.66666666666666"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agenda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owF-yy-yyT">
-                                                        <rect key="frame" x="0.0" y="126.66666666666661" width="150" height="19.333333333333329"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" name="pinkClear"/>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M1k-JE-7x0" userLabel="Gallerie View" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
+                                                <rect key="frame" x="32" y="289" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="owF-yy-yyT" secondAttribute="bottom" constant="4" id="0cs-wF-H7s"/>
-                                                    <constraint firstAttribute="trailing" secondItem="owF-yy-yyT" secondAttribute="trailing" id="1GV-Yx-xfJ"/>
-                                                    <constraint firstItem="ftm-Fa-XF1" firstAttribute="leading" secondItem="F98-07-WTI" secondAttribute="leading" constant="8" id="6P2-80-PjJ"/>
-                                                    <constraint firstItem="owF-yy-yyT" firstAttribute="top" secondItem="ftm-Fa-XF1" secondAttribute="bottom" constant="8" id="76j-xX-Ey6"/>
-                                                    <constraint firstItem="ftm-Fa-XF1" firstAttribute="top" secondItem="F98-07-WTI" secondAttribute="top" constant="8" id="EIM-Us-5Ab"/>
-                                                    <constraint firstAttribute="height" constant="150" id="F6u-Vz-ufZ"/>
-                                                    <constraint firstItem="owF-yy-yyT" firstAttribute="leading" secondItem="F98-07-WTI" secondAttribute="leading" id="G3n-Uk-mhS"/>
-                                                    <constraint firstAttribute="width" constant="150" id="HVa-QS-cbl"/>
-                                                    <constraint firstAttribute="trailing" secondItem="ftm-Fa-XF1" secondAttribute="trailing" constant="8" id="TCZ-0A-v86"/>
-                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Gallerie"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColor">
+                                                        <color key="value" name="beige"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mr6-ys-1um" userLabel="Documents View" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
+                                                <rect key="frame" x="211" y="289" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <gestureRecognizers/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Administratif"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColor">
+                                                        <color key="value" name="beige"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfV-cV-cCQ" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
+                                                <rect key="frame" x="211" y="482" width="150" height="149"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Agenda"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColor">
+                                                        <color key="value" name="pinkClear"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" name="beigeClear"/>
                                         <constraints>
-                                            <constraint firstItem="kbc-8B-Ijb" firstAttribute="top" secondItem="0oE-a3-sdD" secondAttribute="bottom" constant="62" id="333-Hb-QF5"/>
-                                            <constraint firstAttribute="trailing" secondItem="f52-G6-LMm" secondAttribute="trailing" constant="32" id="6Cl-fp-s3X"/>
-                                            <constraint firstItem="syJ-9p-J1h" firstAttribute="centerX" secondItem="16J-7U-qz9" secondAttribute="centerX" id="A1o-hL-cb0"/>
-                                            <constraint firstItem="F98-07-WTI" firstAttribute="centerX" secondItem="M1k-JE-7x0" secondAttribute="centerX" id="G5v-7c-9Iv"/>
-                                            <constraint firstItem="F98-07-WTI" firstAttribute="top" secondItem="M1k-JE-7x0" secondAttribute="bottom" constant="32" id="Okw-s4-cxN"/>
-                                            <constraint firstItem="f52-G6-LMm" firstAttribute="top" secondItem="yhF-my-ZZV" secondAttribute="bottom" constant="62" id="OpX-Yf-tZ2"/>
-                                            <constraint firstItem="LLw-4L-ufI" firstAttribute="centerX" secondItem="f52-G6-LMm" secondAttribute="centerX" id="VEd-0u-MlU"/>
                                             <constraint firstItem="0oE-a3-sdD" firstAttribute="centerX" secondItem="f8p-Dh-x12" secondAttribute="centerX" id="d1T-k0-TAp"/>
                                             <constraint firstItem="yhF-my-ZZV" firstAttribute="top" secondItem="f8p-Dh-x12" secondAttribute="top" constant="10" id="eI4-9H-D3y"/>
-                                            <constraint firstItem="M1k-JE-7x0" firstAttribute="top" secondItem="kbc-8B-Ijb" secondAttribute="bottom" constant="32" id="iaU-Do-QfT"/>
                                             <constraint firstAttribute="trailing" secondItem="yhF-my-ZZV" secondAttribute="trailing" constant="70" id="lcv-oO-5IN"/>
-                                            <constraint firstItem="mr6-ys-1um" firstAttribute="top" secondItem="f52-G6-LMm" secondAttribute="bottom" constant="32" id="qOs-wi-G3M"/>
-                                            <constraint firstItem="kbc-8B-Ijb" firstAttribute="leading" secondItem="f8p-Dh-x12" secondAttribute="leading" constant="32" id="qbp-T0-GNv"/>
                                             <constraint firstItem="0oE-a3-sdD" firstAttribute="top" secondItem="f8p-Dh-x12" secondAttribute="top" constant="10" id="wgJ-nY-cep"/>
                                         </constraints>
                                     </view>
@@ -227,11 +131,11 @@
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="uCj-ro-QT8"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="adminTile" destination="mr6-ys-1um" id="ACg-Lz-OKU"/>
-                        <outlet property="advicesTiles" destination="f52-G6-LMm" id="BYN-Dq-8fU"/>
-                        <outlet property="calendarTile" destination="F98-07-WTI" id="Gp7-zH-mAG"/>
-                        <outlet property="galerieTile" destination="M1k-JE-7x0" id="p62-80-SEC"/>
-                        <outlet property="littersTiles" destination="kbc-8B-Ijb" id="6aC-IC-wBd"/>
+                        <outlet property="adminTile" destination="mr6-ys-1um" id="tz9-Lu-e2e"/>
+                        <outlet property="advicesTiles" destination="f52-G6-LMm" id="pEt-NW-SIG"/>
+                        <outlet property="calendarTile" destination="bfV-cV-cCQ" id="nCr-Vj-LaK"/>
+                        <outlet property="galerieTile" destination="M1k-JE-7x0" id="cup-82-S94"/>
+                        <outlet property="littersTiles" destination="kbc-8B-Ijb" id="0sX-nb-5UO"/>
                         <outlet property="logOutbutton" destination="yhF-my-ZZV" id="1Vp-BQ-xOx"/>
                         <outlet property="welcomeLabel" destination="0oE-a3-sdD" id="97f-8g-AIX"/>
                     </connections>
@@ -252,12 +156,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="advices" width="245" height="187"/>
-        <image name="calendar" width="285" height="271"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="litter" width="256" height="229"/>
-        <image name="medicalFolders" width="213" height="152"/>
-        <image name="photo" width="151" height="167"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="109"/>
         <namedColor name="beige">
             <color red="0.88599997758865356" green="0.81999999284744263" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

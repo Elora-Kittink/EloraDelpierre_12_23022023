@@ -25,6 +25,8 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 	@IBOutlet private weak var colorGroup: UIView!
 	@IBOutlet private weak var birthdateGroup: UIView!
 	
+	@IBOutlet weak var documentsTile: Tile!
+	@IBOutlet weak var galleryTile: Tile!
 	
 	// MARK: - Variables
     
@@ -40,6 +42,9 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 		self.birthdateGroup.layer.cornerRadius = 12
 		self.colorGroup.layer.cornerRadius = 12
 		self.adopterGroup.layer.cornerRadius = 12
+		
+		self.galleryTile.style = .kitten
+		self.documentsTile.style = .kitten
     }
     
     

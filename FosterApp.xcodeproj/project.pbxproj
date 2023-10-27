@@ -38,6 +38,7 @@
 		D576F5772A5B1BA00004AF60 /* AddWeight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D576F5762A5B1BA00004AF60 /* AddWeight.storyboard */; };
 		D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D585E62329D5DC7300D3ED9C /* Colors.xcassets */; };
 		D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */; };
+		D58A4A462ADFDA9F0041554D /* AdvicesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A4A452ADFDA9F0041554D /* AdvicesData.swift */; };
 		D593BD9B29DF0617005D8673 /* InfoCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59D09BE29DD6CD100813B35 /* InfoCardView.xib */; };
 		D59512462A60391A008A6220 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59512452A60391A008A6220 /* BaseTableView.swift */; };
 		D595EC6329D58E1500200B46 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC5F29D58E1500200B46 /* SignUpPresenter.swift */; };
@@ -80,6 +81,8 @@
 		D5A125612A2F2ED400BA69C9 /* AuthResultMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A125602A2F2ED400BA69C9 /* AuthResultMock.swift */; };
 		D5A125632A2F64A800BA69C9 /* UserWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A125622A2F64A800BA69C9 /* UserWorker.swift */; };
 		D5A125652A2F6B3C00BA69C9 /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A125642A2F6B3C00BA69C9 /* SignUpTests.swift */; };
+		D5A189502ACD81580092B059 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1894F2ACD81580092B059 /* Tile.swift */; };
+		D5A189552ACD82340092B059 /* Tile.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A189542ACD82340092B059 /* Tile.xib */; };
 		D5AC4B1E2A1E0239008B0C43 /* Extension+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC4B1D2A1E0239008B0C43 /* Extension+UserDefaults.swift */; };
 		D5AC4B1F2A1E0F67008B0C43 /* Advices.json in Resources */ = {isa = PBXBuildFile; fileRef = D59EA04F2A125DC800B53542 /* Advices.json */; };
 		D5AC4B212A1E3BC3008B0C43 /* APIRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC4B202A1E3BC3008B0C43 /* APIRequestMock.swift */; };
@@ -170,6 +173,7 @@
 		D585E62829D5DF9C00D3ED9C /* KittenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenInteractor.swift; sourceTree = "<group>"; };
 		D585E62929D5DF9C00D3ED9C /* KittenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenViewModel.swift; sourceTree = "<group>"; };
 		D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KittenCardModal.storyboard; sourceTree = "<group>"; };
+		D58A4A452ADFDA9F0041554D /* AdvicesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesData.swift; sourceTree = "<group>"; };
 		D59512452A60391A008A6220 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
 		D595EC5F29D58E1500200B46 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		D595EC6029D58E1500200B46 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +216,8 @@
 		D5A125602A2F2ED400BA69C9 /* AuthResultMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResultMock.swift; sourceTree = "<group>"; };
 		D5A125622A2F64A800BA69C9 /* UserWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWorker.swift; sourceTree = "<group>"; };
 		D5A125642A2F6B3C00BA69C9 /* SignUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTests.swift; sourceTree = "<group>"; };
+		D5A1894F2ACD81580092B059 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		D5A189542ACD82340092B059 /* Tile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tile.xib; sourceTree = "<group>"; };
 		D5AC4B1D2A1E0239008B0C43 /* Extension+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UserDefaults.swift"; sourceTree = "<group>"; };
 		D5AC4B202A1E3BC3008B0C43 /* APIRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestMock.swift; sourceTree = "<group>"; };
 		D5B143632A1B5D9C00FA5418 /* FosterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FosterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,6 +330,7 @@
 		D57272BD29ACE6D300A9C72E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D5A189512ACD81BB0092B059 /* Tile */,
 				D57272BE29ACE6F600A9C72E /* AddButton.swift */,
 				D5FCBA3129CA09D3008985C9 /* DatePickerField.swift */,
 				D59900CC29F6B62500F0F36D /* Alerts.swift */,
@@ -402,6 +409,14 @@
 			path = KittenCardModal;
 			sourceTree = "<group>";
 		};
+		D58A4A442ADFDA840041554D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D58A4A452ADFDA9F0041554D /* AdvicesData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		D595EC5E29D58DEC00200B46 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +447,7 @@
 		D59AA7C82A03B1DC008AF45F /* Advices */ = {
 			isa = PBXGroup;
 			children = (
+				D58A4A442ADFDA840041554D /* Data */,
 				D59FF70A2A0A6F2A00147783 /* Advice */,
 				D59AA7CA2A03B205008AF45F /* AdvicesViewController.swift */,
 				D59AA7CB2A03B205008AF45F /* AdvicesInteractor.swift */,
@@ -481,8 +497,8 @@
 			isa = PBXGroup;
 			children = (
 				D59FF70C2A0A6F5E00147783 /* AdviceViewController.swift */,
-				D59FF70B2A0A6F5E00147783 /* AdvicePresenter.swift */,
 				D59FF70D2A0A6F5E00147783 /* AdviceInteractor.swift */,
+				D59FF70B2A0A6F5E00147783 /* AdvicePresenter.swift */,
 				D59FF70E2A0A6F5E00147783 /* AdviceViewModel.swift */,
 				D59FF7132A0A6F6900147783 /* Advice.storyboard */,
 			);
@@ -516,6 +532,15 @@
 				D5A125602A2F2ED400BA69C9 /* AuthResultMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D5A189512ACD81BB0092B059 /* Tile */ = {
+			isa = PBXGroup;
+			children = (
+				D5A1894F2ACD81580092B059 /* Tile.swift */,
+				D5A189542ACD82340092B059 /* Tile.xib */,
+			);
+			path = Tile;
 			sourceTree = "<group>";
 		};
 		D5B143642A1B5D9C00FA5418 /* FosterAppTests */ = {
@@ -871,6 +896,7 @@
 				D576F5752A5B1B8E0004AF60 /* WeighingList.storyboard in Resources */,
 				D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */,
 				D5B5E24F29D46E3C00A84476 /* GoogleService-Info.plist in Resources */,
+				D5A189552ACD82340092B059 /* Tile.xib in Resources */,
 				D57272CA29ACEAD700A9C72E /* LitterHistory.storyboard in Resources */,
 				D5F0C70329A90BEF002A0F65 /* LaunchScreen.storyboard in Resources */,
 				D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */,
@@ -1063,6 +1089,7 @@
 				D59AA7CD2A03B205008AF45F /* AdvicesPresenter.swift in Sources */,
 				D57272A529ACB41100A9C72E /* Adopter.swift in Sources */,
 				D57272D329ACF4F200A9C72E /* HomeViewModel.swift in Sources */,
+				D58A4A462ADFDA9F0041554D /* AdvicesData.swift in Sources */,
 				D5B143702A1B67AC00FA5418 /* APIWorker.swift in Sources */,
 				D59DB7F029DAC53B00306F0C /* KittenCardModalInteractor.swift in Sources */,
 				D59DB7F129DAC53B00306F0C /* KittenCardModalViewModel.swift in Sources */,
@@ -1072,6 +1099,7 @@
 				D5B5E24B29D4697C00A84476 /* LoginViewModel.swift in Sources */,
 				D5B5E24829D4697C00A84476 /* LoginPresenter.swift in Sources */,
 				D5A073C229AE10C000202F0A /* DB_Adopter.swift in Sources */,
+				D5A189502ACD81580092B059 /* Tile.swift in Sources */,
 				D57272BF29ACE6F600A9C72E /* AddButton.swift in Sources */,
 				D576F56A2A5B1B6B0004AF60 /* WeighingListInteractor.swift in Sources */,
 				D57272A329ACA79100A9C72E /* LoaderView.swift in Sources */,

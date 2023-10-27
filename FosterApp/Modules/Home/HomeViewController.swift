@@ -9,27 +9,31 @@ import FirebaseCore
 import FirebaseAuth
 
 class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, HomeInteractor> {
-    
-	// MARK: - Outlets
-
-    @IBOutlet private weak var logOutbutton: UIButton!
-
-    @IBOutlet private weak var welcomeLabel: UILabel!
 	
-	@IBOutlet weak var adminTile: UIView!
-	@IBOutlet weak var littersTiles: UIView!
-	@IBOutlet weak var advicesTiles: UIView!
-	@IBOutlet weak var galerieTile: UIView!
-	@IBOutlet weak var calendarTile: UIView!
+	// MARK: - Outlets
+	
+	@IBOutlet private weak var logOutbutton: UIButton!
+	
+	@IBOutlet private weak var welcomeLabel: UILabel!
+	
+	@IBOutlet private weak var adminTile: Tile!
+	@IBOutlet private weak var littersTiles: Tile!
+	@IBOutlet private weak var advicesTiles: Tile!
+	@IBOutlet private weak var galerieTile: Tile!
+	@IBOutlet private weak var calendarTile: Tile!
+	
 	// MARK: - View life cycle
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.adminTile.layer.cornerRadius = 12
-		self.advicesTiles.layer.cornerRadius = 12
-		self.littersTiles.layer.cornerRadius = 12
-		self.galerieTile.layer.cornerRadius = 12
-		self.calendarTile.layer.cornerRadius = 12
+	
+		self.littersTiles.action = {
+			self.didTapLittersTile()
+		}
+		self.advicesTiles.action = {
+			self.didTapAdvicesTile()
+		}
+		
 		
 		self.interactor.userIsConnected()
 		NotificationCenter.default.addObserver(forName: NSNotification.Name("userLogged"),
@@ -38,42 +42,42 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 			self.interactor.userIsConnected()
 		}
 	}
-//	TODO: quand LoginInteractor ou SignUpInteractor close() ça revient sur HomeViewCo,troller mais ça ne refresh pas donc on reste à l'état vide, il faudrait repasser dans le viewdidload
-//	essayer de passer une nottification dans la completion du close() 
+	//	TODO: quand LoginInteractor ou SignUpInteractor close() ça revient sur HomeViewCo,troller mais ça ne refresh pas donc on reste à l'état vide, il faudrait repasser dans le viewdidload
+	//	essayer de passer une nottification dans la completion du close()
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
-        self.welcomeLabel.text = "Bienvenu \(self.viewModel.user?.name ?? "")"
+		self.welcomeLabel.text = "Bienvenu \(self.viewModel.user?.name ?? "")"
 	}
-
+	
 	// MARK: - Actions
-    
-	@IBAction func didTapLittersTile(_ sender: UITapGestureRecognizer) {
+	
+	private func didTapLittersTile() {
 		let vc = LitterHistoryViewController.fromStoryboard { vc in
 			vc.user = self.viewModel.user
 		}
 		navigationController?.pushViewController(vc, animated: true)
 	}
 	
-	@IBAction func didTapAdvicesTile(_ sender: Any) {
+	private func didTapAdvicesTile() {
 		let vc = AdvicesViewController.fromStoryboard()
 		navigationController?.pushViewController(vc, animated: true)
 	}
-
-    @IBAction private func logOut() {
-        self.interactor.logOut()
-    }
+	
+	@IBAction private func logOut() {
+		self.interactor.logOut()
+	}
 }
 
 
 
 
 extension HomeViewController: StoryboardProtocol {
-    static var storyboardName: String {
-        "Home"
-    }
-    
-    static var identifier: String? {
-        "HomeViewController"
-    }
+	static var storyboardName: String {
+		"Home"
+	}
+	
+	static var identifier: String? {
+		"HomeViewController"
+	}
 }
