@@ -42,9 +42,6 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 		self.birthdateGroup.layer.cornerRadius = 12
 		self.colorGroup.layer.cornerRadius = 12
 		self.adopterGroup.layer.cornerRadius = 12
-		
-		self.galleryTile.style = .kitten
-		self.documentsTile.style = .kitten
     }
     
     

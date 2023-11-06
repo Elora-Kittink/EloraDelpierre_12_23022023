@@ -41,4 +41,6 @@ class KittenCardViewModel: ViewModel {
     var adoptersLabel = "Adoptants"
     
     var infoCardViewModel: [ InfoCardViewModel] = []
+	
+	var kittenTiles: [Tiles] = [.medicalHistory, .weighingHistory]
 }

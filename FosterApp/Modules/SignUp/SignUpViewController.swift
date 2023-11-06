@@ -19,6 +19,7 @@ class SignUpViewController: BaseViewController
     @IBOutlet private weak var emailTF: UITextField!
     @IBOutlet private weak var nameTF: UITextField!
     @IBOutlet private weak var passwordTF: UITextField!
+	
     // MARK: - Variables
     
     // MARK: - View life cycle
@@ -54,7 +55,7 @@ class SignUpViewController: BaseViewController
 
 extension SignUpViewController: StoryboardProtocol {
     static var storyboardName: String {
-        "TabBar"
+        "SignUp"
     }
     
     static var identifier: String? {

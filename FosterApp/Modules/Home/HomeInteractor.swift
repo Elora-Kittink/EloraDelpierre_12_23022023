@@ -47,4 +47,23 @@ class HomeInteractor: Interactor
 			print("Error trying to sign out of Firebase: \(error.localizedDescription)")
 		}
 	}
+	
+	func didSelectTile(tileType: Tiles, user: User) {
+		
+		switch tileType {
+			
+		case .litters:
+			LitterHistoryViewController.fromStoryboard {
+				$0.user = user
+			}
+			.push()
+			
+		case .advices:
+			AdvicesViewController.fromStoryboard().push()
+			
+		case .gallery, .admin, .calendar, .contacts, .medicalHistory, .weighingHistory:
+			print("Pas encore implémenté")
+//			TODO: faire une popup "pas encore implémenté"
+		}
+	}
 }

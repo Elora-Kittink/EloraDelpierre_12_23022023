@@ -36,7 +36,7 @@ class LoginViewController: BaseViewController<LoginViewModel,
     
     @IBAction private func signUpAction() {
 // renvoyer vers la page d'inscription
-        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+        let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
             let signupViewController = storyboard.instantiateViewController(identifier: "SignUpViewController")
         navigationController?.pushViewController(signupViewController, animated: true)
     }
@@ -52,7 +52,7 @@ class LoginViewController: BaseViewController<LoginViewModel,
 
 extension LoginViewController: StoryboardProtocol {
     static var storyboardName: String {
-        "TabBar"
+        "Login"
     }
     
     static var identifier: String? {

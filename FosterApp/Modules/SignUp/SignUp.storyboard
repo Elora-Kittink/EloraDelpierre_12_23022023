@@ -12,7 +12,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="1vG-Nf-1bq">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="ZTS-zE-Vhw" customClass="SignUpViewController" customModule="FosterApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="ZTS-zE-Vhw" customClass="SignUpViewController" customModule="FosterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nxg-xz-3Vd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Inscrivez vous"/>
                                 <connections>
-                                    <action selector="signUpAction" destination="ZTS-zE-Vhw" eventType="touchUpInside" id="cfJ-2a-d5V"/>
+                                    <action selector="signUpAction" destination="ZTS-zE-Vhw" eventType="touchUpInside" id="NXN-uV-TWr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vous avez déjà un compte?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU4-f4-Nup">
@@ -81,9 +81,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTF" destination="JrY-kZ-jqd" id="fQl-R9-IuN"/>
-                        <outlet property="nameTF" destination="HAf-y6-XYc" id="C6u-iN-3ec"/>
-                        <outlet property="passwordTF" destination="NaP-2x-Hkt" id="uRb-vm-xTy"/>
+                        <outlet property="emailTF" destination="JrY-kZ-jqd" id="jcI-4t-tDu"/>
+                        <outlet property="nameTF" destination="HAf-y6-XYc" id="DIs-cr-YqP"/>
+                        <outlet property="passwordTF" destination="NaP-2x-Hkt" id="j6t-27-LBd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsp-Y6-G3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

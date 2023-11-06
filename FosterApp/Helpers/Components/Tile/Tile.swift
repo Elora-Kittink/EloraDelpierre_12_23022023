@@ -7,113 +7,119 @@
 
 import Foundation
 import UIKit
+import UtilsKit
 
-@IBDesignable
-class Tile: UIView {
+class Tile: BaseCollectionViewCell {
 	
-	var action: (() -> Void)?
+	let imageView: UIImageView = {
+		let imageView = UIImageView()
+		imageView.translatesAutoresizingMaskIntoConstraints = false
+		imageView.contentMode = .scaleAspectFit
+
+		return imageView
+	}()
 	
-	@IBOutlet private weak var titleLabel: UILabel!
-	@IBOutlet private weak var imageView: UIImageView!
+	let label: UILabel = {
+		let label = UILabel()
+		label.translatesAutoresizingMaskIntoConstraints = false
+		label.textAlignment = .center
+		label.numberOfLines = 0
+		return label
+	}()
 	
-	@IBInspectable var image: UIImage? {
-		didSet {
-			self.imageView.image = self.image
-		}
-	}
-	
-	@IBInspectable var title: String? {
-		didSet {
-			self.titleLabel.text = self.title
-		}
-	}
-	
-	@IBInspectable var backGroundColor: UIColor? {
-		didSet {
-			self.backgroundColor = self.backGroundColor
-		}
-	}
-	var style: TileStyle = .home {
-			didSet {
-				updateStyle()
-			}
-		}
-	
-	// MARK: - Init
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		self.setup()
+		
+		layer.cornerRadius = 15
+		
+		layer.shadowColor = UIColor.gray.cgColor
+				layer.shadowOffset = CGSize(width: 2, height: 4)
+				layer.shadowOpacity = 0.3
+				layer.shadowRadius = 2
+		
+		addSubview(imageView)
+		addSubview(label)
+		
+		NSLayoutConstraint.activate([
+			//				Image
+			imageView.topAnchor.constraint(equalTo: topAnchor, constant: 4),
+			imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
+			imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
+			imageView.bottomAnchor.constraint(equalTo: label.topAnchor, constant: -4),
+			//						Label
+			
+			label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
+			label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
+			label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4),
+			label.heightAnchor.constraint(equalToConstant: 38)
+		])
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		self.setup()
 	}
 	
-	private func setup() {
-		self.xibSetup()
-		self.addGestureRecognizer(UITapGestureRecognizer(target: self,
-														 action: #selector(self.tileAction)))
-		
-		self.imageView.contentMode = .scaleAspectFit
-		self.addSubview(imageView)
-//		imageView.translatesAutoresizingMaskIntoConstraints = false
-//
-//		NSLayoutConstraint.activate([
-//			imageView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-//			imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-//			imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-//		])
-//
-//		NSLayoutConstraint.activate([
-//					titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
-//					titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-//					titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-//					titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
-//				])
-
-		
-		self.layer.cornerRadius = 12
-		self.imageView.image = self.image
-		self.titleLabel.text = self.title
-		self.titleLabel.textAlignment = .center
-		self.titleLabel.numberOfLines = 0
-		self.layer.shadowOffset = CGSize(width: 4, height: 4)
-		self.layer.shadowOpacity = 0.5
-		self.layer.shadowRadius = 4
-		self.layer.shadowColor = UIColor.lightGray.cgColor
-		
-		self.imageView.isHidden = self.imageView.image == nil ? false : true
+	func configure(image: UIImage, text: String) {
+		imageView.image = image
+		label.text = text
+		self.backgroundColor = UIColor(named: "border")
+//		view.layer.cornerRadius = 10
 	}
-
-	@objc
-	private func tileAction() {
-		self.action?()
-	}
-	
-	private func updateStyle() {
-			frame.size = CGSize(width: style.width, height: style.height)
-		}
 }
 
-enum TileStyle {
-	case home, kitten
+enum Tiles {
 	
-	var height: CGFloat {
+	case litters, advices, gallery, admin, calendar, contacts, medicalHistory, weighingHistory
+	
+	var image: UIImage? {
 		switch self {
-		case .home:
-			return 200
-		case .kitten:
-			return 150
+		case .litters:
+			return UIImage(named: "litter")
+		case .advices:
+			return UIImage(named: "advices")
+		case .gallery:
+			return UIImage(named: "photo")
+		case .admin:
+			return UIImage(named: "medicalFolders")
+		case .calendar:
+			return UIImage(named: "calendar")
+		case .contacts:
+			return UIImage(named: "directory")
+		case .medicalHistory:
+			return UIImage(named: "medicalFolders")
+		case .weighingHistory:
+			return UIImage(named: "weight")
 		}
 	}
 	
-	var width: CGFloat {
-		   switch self {
-		   case .home:
-			   return 150
-		   case .kitten:
-			   return 90
-		   }
-	   }
+	var title: String {
+		switch self {
+		case .litters:
+			return "Toutes les portées"
+		case .advices:
+			return "Conseils"
+		case .gallery:
+			return "Gallerie"
+		case .admin:
+			return "Administratif"
+		case .calendar:
+			return "Agenda"
+		case .contacts:
+			return "Contacts"
+		case .medicalHistory:
+			return "Historique médical"
+		case .weighingHistory:
+			return "Historique de pesées"
+		}
+	}
+}
+
+class BaseCollectionViewCell: UICollectionViewCell {
+	
+	// MARK: - Localize
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		
+		self.localize()
+	}
 }

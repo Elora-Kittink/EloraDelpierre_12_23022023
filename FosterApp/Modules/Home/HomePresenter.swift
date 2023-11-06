@@ -3,6 +3,8 @@
 //  Created by Elora on 27/02/2023.
 //
 
+import UIKit
+
 class HomePresenter: Presenter<HomeViewModel> {
     
     func noUserConnected() {
@@ -15,6 +17,7 @@ class HomePresenter: Presenter<HomeViewModel> {
 		self.viewModel?.isUserConnected = true
         self.viewModel?.send()
     }
+	
 //    
 //    func display() {
 //        self.viewModel?.userName = self.viewModel?.user?.name

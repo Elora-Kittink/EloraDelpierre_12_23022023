@@ -47,67 +47,31 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view alpha="0.90000000000000002" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kbc-8B-Ijb" userLabel="Litters View" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
-                                                <rect key="frame" x="32" y="107" width="150" height="150"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <gestureRecognizers/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Toutes les portées"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColor">
-                                                        <color key="value" name="pink"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="litter"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f52-G6-LMm" userLabel="Advices View" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
-                                                <rect key="frame" x="211" y="107" width="150" height="150"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <gestureRecognizers/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Conseils"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColor">
-                                                        <color key="value" name="beigeClear"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M1k-JE-7x0" userLabel="Gallerie View" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
-                                                <rect key="frame" x="32" y="289" width="150" height="150"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <gestureRecognizers/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Gallerie"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColor">
-                                                        <color key="value" name="beige"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mr6-ys-1um" userLabel="Documents View" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
-                                                <rect key="frame" x="211" y="289" width="150" height="150"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <gestureRecognizers/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Administratif"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColor">
-                                                        <color key="value" name="beige"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfV-cV-cCQ" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
-                                                <rect key="frame" x="211" y="482" width="150" height="149"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Agenda"/>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="backGroundColor">
-                                                        <color key="value" name="pinkClear"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Bn-g6-Wcj">
+                                                <rect key="frame" x="24" y="69" width="345" height="617"/>
+                                                <color key="backgroundColor" name="beigeClear"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vKH-3k-Yc4">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="f8p-Dh-x12" id="QJ6-oR-zAB"/>
+                                                    <outlet property="delegate" destination="f8p-Dh-x12" id="uBV-Nv-Z4J"/>
+                                                </connections>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" name="beigeClear"/>
                                         <constraints>
+                                            <constraint firstItem="8Bn-g6-Wcj" firstAttribute="top" secondItem="yhF-my-ZZV" secondAttribute="bottom" constant="24" id="822-2W-8gU"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Bn-g6-Wcj" secondAttribute="trailing" constant="24" id="HWI-WI-4wK"/>
+                                            <constraint firstItem="8Bn-g6-Wcj" firstAttribute="leading" secondItem="f8p-Dh-x12" secondAttribute="leading" constant="24" id="QVo-gQ-M5W"/>
                                             <constraint firstItem="0oE-a3-sdD" firstAttribute="centerX" secondItem="f8p-Dh-x12" secondAttribute="centerX" id="d1T-k0-TAp"/>
                                             <constraint firstItem="yhF-my-ZZV" firstAttribute="top" secondItem="f8p-Dh-x12" secondAttribute="top" constant="10" id="eI4-9H-D3y"/>
                                             <constraint firstAttribute="trailing" secondItem="yhF-my-ZZV" secondAttribute="trailing" constant="70" id="lcv-oO-5IN"/>
+                                            <constraint firstAttribute="bottom" secondItem="8Bn-g6-Wcj" secondAttribute="bottom" constant="24" id="lfe-1y-Ne6"/>
                                             <constraint firstItem="0oE-a3-sdD" firstAttribute="top" secondItem="f8p-Dh-x12" secondAttribute="top" constant="10" id="wgJ-nY-cep"/>
                                         </constraints>
                                     </view>
@@ -131,45 +95,21 @@
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="uCj-ro-QT8"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="adminTile" destination="mr6-ys-1um" id="tz9-Lu-e2e"/>
-                        <outlet property="advicesTiles" destination="f52-G6-LMm" id="pEt-NW-SIG"/>
-                        <outlet property="calendarTile" destination="bfV-cV-cCQ" id="nCr-Vj-LaK"/>
-                        <outlet property="galerieTile" destination="M1k-JE-7x0" id="cup-82-S94"/>
-                        <outlet property="littersTiles" destination="kbc-8B-Ijb" id="0sX-nb-5UO"/>
+                        <outlet property="collectionView" destination="8Bn-g6-Wcj" id="wlM-MO-wYP"/>
                         <outlet property="logOutbutton" destination="yhF-my-ZZV" id="1Vp-BQ-xOx"/>
                         <outlet property="welcomeLabel" destination="0oE-a3-sdD" id="97f-8g-AIX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="1hF-Di-9qc">
-                    <connections>
-                        <action selector="didTapLittersTile:" destination="Y6W-OH-hqX" id="SZ8-RD-6Ou"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="Pdr-ac-IRZ">
-                    <connections>
-                        <action selector="didTapAdvicesTile:" destination="Y6W-OH-hqX" id="SC4-WS-OSn"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="104"/>
-        <image name="litter" width="256" height="229"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="109"/>
-        <namedColor name="beige">
-            <color red="0.88599997758865356" green="0.81999999284744263" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="beigeClear">
             <color red="0.99599999189376831" green="0.98000001907348633" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="pink">
-            <color red="0.88200002908706665" green="0.6940000057220459" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="pinkClear">
-            <color red="0.98400002717971802" green="0.92199999094009399" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

@@ -26,7 +26,6 @@ class AdvicesPresenter: Presenter<AdvicesViewModel> {
    }
    </style>
    """
-		//		Balise CSS à mettre dans chaque Header
 		
 		let updatedSections = sections.sections.map { section in
 			var updatedAdvices = section.advices.map { advice in
@@ -34,7 +33,6 @@ class AdvicesPresenter: Presenter<AdvicesViewModel> {
 				
 				if let range = updatedAdvice.advice.range(of: "<head>") {
 					
-					// Insérer les styles après "<head>"
 					updatedAdvice.advice.insert(contentsOf: cssStyle, at: range.upperBound)
 				}
 				

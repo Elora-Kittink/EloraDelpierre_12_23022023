@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Hai-dS-1N3">
                                 <rect key="frame" x="71.666666666666686" y="184" width="250" height="100"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TEST" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-TN-quA">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-TN-quA">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -54,11 +54,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-vq-mhu" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
-                                <rect key="frame" x="168.33333333333334" y="304" width="56.333333333333343" height="34.333333333333314"/>
+                                <rect key="frame" x="121.00000000000001" y="304" width="151.33333333333337" height="34.333333333333314"/>
                                 <color key="backgroundColor" red="0.88627451660000001" green="0.81960785390000002" blue="0.69019609689999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Test"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Connectez vous "/>
                                 <connections>
                                     <action selector="logInAction" destination="9IE-CW-Cca" eventType="touchUpInside" id="fHr-GP-jS3"/>
                                 </connections>
@@ -79,8 +79,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="xYL-56-lGf"/>
                     <connections>
-                        <outlet property="emailTF" destination="SdB-TN-quA" id="jDz-JE-gKX"/>
-                        <outlet property="passwordTF" destination="bQS-VR-BmM" id="1nf-8t-Z8P"/>
+                        <outlet property="emailTF" destination="SdB-TN-quA" id="25j-eU-kwh"/>
+                        <outlet property="passwordTF" destination="bQS-VR-BmM" id="pN3-6m-EUO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CL0-CZ-85f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
