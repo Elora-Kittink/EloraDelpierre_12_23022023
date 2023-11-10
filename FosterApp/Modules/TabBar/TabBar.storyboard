@@ -18,17 +18,18 @@
                     </tabBar>
                     <connections>
                         <segue destination="GMK-Rl-qrz" kind="relationship" relationship="viewControllers" id="tur-Kz-wio"/>
+                        <segue destination="umP-QF-hpd" kind="relationship" relationship="viewControllers" id="TuA-eW-fF3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kde-92-40l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-135" y="-1505"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="Npj-53-3od">
             <objects>
                 <navigationController storyboardIdentifier="LoginNavigationController" id="GMK-Rl-qrz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="rectangle.portrait.and.arrow.right.fill" catalog="system" id="4Ni-To-2ug"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house" id="4Ni-To-2ug"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZXS-YB-uK7">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,8 +53,38 @@
             </objects>
             <point key="canvasLocation" x="2071" y="-1523"/>
         </scene>
+        <!--SettingsViewController-->
+        <scene sceneID="jaG-dp-nu0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="SettingsViewController" id="xUZ-pV-jAA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Kzr-a8-sMJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K58-dS-XaJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2028" y="-778"/>
+        </scene>
+        <!--Profil-->
+        <scene sceneID="60a-n7-21Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="umP-QF-hpd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profil" image="person.crop.circle" catalog="system" selectedImage="person.crop.circle" id="uhn-2f-tfy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XPv-c9-V3c">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xUZ-pV-jAA" kind="relationship" relationship="rootViewController" id="xbb-IN-78y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1i5-le-pzC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="-720"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="108"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
     </resources>
 </document>

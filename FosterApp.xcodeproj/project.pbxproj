@@ -36,6 +36,11 @@
 		D576F5732A5B1B7F0004AF60 /* AddWeightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576F56F2A5B1B7F0004AF60 /* AddWeightViewModel.swift */; };
 		D576F5752A5B1B8E0004AF60 /* WeighingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D576F5742A5B1B8E0004AF60 /* WeighingList.storyboard */; };
 		D576F5772A5B1BA00004AF60 /* AddWeight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D576F5762A5B1BA00004AF60 /* AddWeight.storyboard */; };
+		D581DBD12AF9220A009B61F7 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581DBCD2AF9220A009B61F7 /* SettingsPresenter.swift */; };
+		D581DBD22AF9220A009B61F7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581DBCE2AF9220A009B61F7 /* SettingsViewController.swift */; };
+		D581DBD32AF9220A009B61F7 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581DBCF2AF9220A009B61F7 /* SettingsInteractor.swift */; };
+		D581DBD42AF9220A009B61F7 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581DBD02AF9220A009B61F7 /* SettingsViewModel.swift */; };
+		D581DBD62AF92218009B61F7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D581DBD52AF92218009B61F7 /* Settings.storyboard */; };
 		D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D585E62329D5DC7300D3ED9C /* Colors.xcassets */; };
 		D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */; };
 		D58EEC7D2AEFE6C900B24C95 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EEC7C2AEFE6C900B24C95 /* BaseTableViewCell.swift */; };
@@ -170,6 +175,11 @@
 		D576F56F2A5B1B7F0004AF60 /* AddWeightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewModel.swift; sourceTree = "<group>"; };
 		D576F5742A5B1B8E0004AF60 /* WeighingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeighingList.storyboard; sourceTree = "<group>"; };
 		D576F5762A5B1BA00004AF60 /* AddWeight.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddWeight.storyboard; sourceTree = "<group>"; };
+		D581DBCD2AF9220A009B61F7 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		D581DBCE2AF9220A009B61F7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D581DBCF2AF9220A009B61F7 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		D581DBD02AF9220A009B61F7 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		D581DBD52AF92218009B61F7 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		D585E62329D5DC7300D3ED9C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D585E62629D5DF9C00D3ED9C /* KittenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenPresenter.swift; sourceTree = "<group>"; };
 		D585E62729D5DF9C00D3ED9C /* KittenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenViewController.swift; sourceTree = "<group>"; };
@@ -402,6 +412,18 @@
 				D576F5762A5B1BA00004AF60 /* AddWeight.storyboard */,
 			);
 			path = AddWeight;
+			sourceTree = "<group>";
+		};
+		D581DBCC2AF921B2009B61F7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D581DBCE2AF9220A009B61F7 /* SettingsViewController.swift */,
+				D581DBCF2AF9220A009B61F7 /* SettingsInteractor.swift */,
+				D581DBCD2AF9220A009B61F7 /* SettingsPresenter.swift */,
+				D581DBD02AF9220A009B61F7 /* SettingsViewModel.swift */,
+				D581DBD52AF92218009B61F7 /* Settings.storyboard */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		D585E62529D5DF6E00D3ED9C /* KittenCardModal */ = {
@@ -704,6 +726,7 @@
 		D5F0C70A29A90C17002A0F65 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D581DBCC2AF921B2009B61F7 /* Settings */,
 				D59431832AF1403200A13187 /* NavBar */,
 				D576F5612A5B1AE70004AF60 /* Weighing */,
 				D59AA7C82A03B1DC008AF45F /* Advices */,
@@ -903,6 +926,7 @@
 				D59FF7142A0A6F6900147783 /* Advice.storyboard in Resources */,
 				D5C7D9B129F0195900885C48 /* Login.storyboard in Resources */,
 				D593BD9B29DF0617005D8673 /* InfoCardView.xib in Resources */,
+				D581DBD62AF92218009B61F7 /* Settings.storyboard in Resources */,
 				D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */,
 				D576F5772A5B1BA00004AF60 /* AddWeight.storyboard in Resources */,
 				D57272D529ACF50100A9C72E /* Home.storyboard in Resources */,
@@ -1063,7 +1087,9 @@
 				D5F0C72629A91D2D002A0F65 /* LitterInteractor.swift in Sources */,
 				D576F5712A5B1B7F0004AF60 /* AddWeightViewController.swift in Sources */,
 				D5B48FE42AA1F14B0055C81B /* ButtonPink.swift in Sources */,
+				D581DBD32AF9220A009B61F7 /* SettingsInteractor.swift in Sources */,
 				D5F0C71329A90D85002A0F65 /* KittenCardViewController.swift in Sources */,
+				D581DBD42AF9220A009B61F7 /* SettingsViewModel.swift in Sources */,
 				D5A073CC29AE45CE00202F0A /* DB_Litter.swift in Sources */,
 				D59FF7122A0A6F5E00147783 /* AdviceViewModel.swift in Sources */,
 				D5A073CA29AE412500202F0A /* Weighing.swift in Sources */,
@@ -1073,6 +1099,7 @@
 				D599CE2329AFB0C500542F9E /* DBWorker.swift in Sources */,
 				D5B48FE62AA1F4500055C81B /* ButtonBeige.swift in Sources */,
 				D59FF70F2A0A6F5E00147783 /* AdvicePresenter.swift in Sources */,
+				D581DBD22AF9220A009B61F7 /* SettingsViewController.swift in Sources */,
 				D59D09B929DD6B6300813B35 /* InfoCardViewModel.swift in Sources */,
 				D59D09B729DD6B6300813B35 /* InfoCardView.swift in Sources */,
 				D5F0C71229A90D85002A0F65 /* KittenCardPresenter.swift in Sources */,
@@ -1116,6 +1143,7 @@
 				D57272A129ACA79100A9C72E /* Interactor.swift in Sources */,
 				D595EC6629D58E1500200B46 /* SignUpViewModel.swift in Sources */,
 				D5B5E24B29D4697C00A84476 /* LoginViewModel.swift in Sources */,
+				D581DBD12AF9220A009B61F7 /* SettingsPresenter.swift in Sources */,
 				D5B5E24829D4697C00A84476 /* LoginPresenter.swift in Sources */,
 				D5A073C229AE10C000202F0A /* DB_Adopter.swift in Sources */,
 				D5A189502ACD81580092B059 /* Tile.swift in Sources */,
