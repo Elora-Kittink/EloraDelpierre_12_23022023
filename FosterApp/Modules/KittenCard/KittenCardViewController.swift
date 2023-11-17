@@ -24,9 +24,9 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 	@IBOutlet private weak var adopterGroup: UIView!
 	@IBOutlet private weak var colorGroup: UIView!
 	@IBOutlet private weak var birthdateGroup: UIView!
-	
-	@IBOutlet weak var documentsTile: Tile!
-	@IBOutlet weak var galleryTile: Tile!
+	@IBOutlet private weak var comment: UILabel!
+	@IBOutlet private weak var documentsTile: Tile!
+	@IBOutlet private weak var galleryTile: Tile!
 	
 	// MARK: - Variables
     
@@ -58,7 +58,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 		
 		self.birthdate.text = self.viewModel.birthdate
 		self.color.text = self.viewModel.color
-		
+		self.comment.text = self.viewModel.comment
         self.viewModel.infoCardViewModel.forEach { info in
             let view = InfoCardView.fromNib()
             view.viewModel = info

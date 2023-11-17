@@ -27,6 +27,7 @@ struct Kitten: Equatable {
     var comment: String?
     var isAdopted: Bool
     var microship: Int?
+	var tattoo: String?
     var vaccines: [Vaccine]?
     var adopters: Adopter?
     var weighingHistory: [Weighing]?
@@ -52,6 +53,7 @@ struct Kitten: Equatable {
         self.comment = coreDataObject.a_comment
         self.isAdopted = coreDataObject.a_isAdopted
         self.microship = Int(coreDataObject.a_microship)
+		self.tattoo = coreDataObject.a_tattoo
         self.vaccines = (coreDataObject.r_vaccine?.allObjects as? [DB_Vaccine])?.compactMap { vaccine in
              Vaccine(from: vaccine)
         }
@@ -73,7 +75,8 @@ struct Kitten: Equatable {
          siblings: [Kitten]?,
          comment: String?,
          isAdopted: Bool,
-         microship: Int?,
+		 microship: Int?,
+		 tattoo: String?,
          vaccines: [Vaccine]?,
          adopters: Adopter?,
          weighingHistory: [Weighing]?,
@@ -91,6 +94,7 @@ struct Kitten: Equatable {
         self.comment = comment
         self.isAdopted = isAdopted
         self.microship = microship
+		self.tattoo = tattoo
         self.vaccines = vaccines
         self.weighingHistory = weighingHistory
         self.adopters = adopters

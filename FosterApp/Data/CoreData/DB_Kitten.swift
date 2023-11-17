@@ -28,6 +28,7 @@ extension DB_Kitten {
         DBkitten?.a_secondName = kitten.secondName
         DBkitten?.a_comment = kitten.comment
         DBkitten?.a_microship = Int64(kitten.microship ?? 0)
+		DBkitten?.a_tattoo = kitten.tattoo
         DBkitten?.a_isAlive = true
         DBkitten?.a_isAdopted = false
         DBkitten?.r_litter = dbLitter
@@ -47,6 +48,7 @@ extension DB_Kitten {
         self.a_color = kitten.color
         self.a_birthdate = kitten.birthdate
         self.a_microship = Int64(kitten.microship ?? 0)
+		self.a_tattoo = kitten.tattoo
         self.a_isAdopted = kitten.isAdopted
         self.a_rescueDate = kitten.rescueDate
         self.a_comment = kitten.comment
