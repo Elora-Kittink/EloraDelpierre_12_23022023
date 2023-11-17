@@ -73,6 +73,8 @@
 		D59DB7F029DAC53B00306F0C /* KittenCardModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */; };
 		D59DB7F129DAC53B00306F0C /* KittenCardModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7ED29DAC53B00306F0C /* KittenCardModalViewModel.swift */; };
 		D59EA0502A125DC800B53542 /* Advices.json in Resources */ = {isa = PBXBuildFile; fileRef = D59EA04F2A125DC800B53542 /* Advices.json */; };
+		D59F2AFF2B076E440014AD2C /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F2AFE2B076E440014AD2C /* AnalyticsManager.swift */; };
+		D59F2B012B07708E0014AD2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D59F2B002B07708E0014AD2C /* GoogleService-Info.plist */; };
 		D59FF70F2A0A6F5E00147783 /* AdvicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59FF70B2A0A6F5E00147783 /* AdvicePresenter.swift */; };
 		D59FF7102A0A6F5E00147783 /* AdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59FF70C2A0A6F5E00147783 /* AdviceViewController.swift */; };
 		D59FF7112A0A6F5E00147783 /* AdviceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59FF70D2A0A6F5E00147783 /* AdviceInteractor.swift */; };
@@ -216,6 +218,8 @@
 		D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalInteractor.swift; sourceTree = "<group>"; };
 		D59DB7ED29DAC53B00306F0C /* KittenCardModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalViewModel.swift; sourceTree = "<group>"; };
 		D59EA04F2A125DC800B53542 /* Advices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Advices.json; sourceTree = "<group>"; };
+		D59F2AFE2B076E440014AD2C /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		D59F2B002B07708E0014AD2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D59FF70B2A0A6F5E00147783 /* AdvicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicePresenter.swift; sourceTree = "<group>"; };
 		D59FF70C2A0A6F5E00147783 /* AdviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceViewController.swift; sourceTree = "<group>"; };
 		D59FF70D2A0A6F5E00147783 /* AdviceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceInteractor.swift; sourceTree = "<group>"; };
@@ -336,6 +340,7 @@
 		D57272BC29ACE6CD00A9C72E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D59F2AFD2B076E2F0014AD2C /* Analytics */,
 				D599DE082A1519CE0004C165 /* BaseTest */,
 				D5A145FF29BA45BF00E2327B /* Extensions */,
 				D57272BD29ACE6D300A9C72E /* Components */,
@@ -529,6 +534,14 @@
 				D59D09BE29DD6CD100813B35 /* InfoCardView.xib */,
 			);
 			path = InfoCards;
+			sourceTree = "<group>";
+		};
+		D59F2AFD2B076E2F0014AD2C /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				D59F2AFE2B076E440014AD2C /* AnalyticsManager.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 		D59FF70A2A0A6F2A00147783 /* Advice */ = {
@@ -758,6 +771,7 @@
 			children = (
 				D572729929ACA77500A9C72E /* Base */,
 				D5F0C6FF29A90BEF002A0F65 /* Assets.xcassets */,
+				D59F2B002B07708E0014AD2C /* GoogleService-Info.plist */,
 				D5F0C70429A90BEF002A0F65 /* Info.plist */,
 				D585E62329D5DC7300D3ED9C /* Colors.xcassets */,
 			);
@@ -925,6 +939,7 @@
 			files = (
 				D59FF7142A0A6F6900147783 /* Advice.storyboard in Resources */,
 				D5C7D9B129F0195900885C48 /* Login.storyboard in Resources */,
+				D59F2B012B07708E0014AD2C /* GoogleService-Info.plist in Resources */,
 				D593BD9B29DF0617005D8673 /* InfoCardView.xib in Resources */,
 				D581DBD62AF92218009B61F7 /* Settings.storyboard in Resources */,
 				D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */,
@@ -1092,6 +1107,7 @@
 				D581DBD42AF9220A009B61F7 /* SettingsViewModel.swift in Sources */,
 				D5A073CC29AE45CE00202F0A /* DB_Litter.swift in Sources */,
 				D59FF7122A0A6F5E00147783 /* AdviceViewModel.swift in Sources */,
+				D59F2AFF2B076E440014AD2C /* AnalyticsManager.swift in Sources */,
 				D5A073CA29AE412500202F0A /* Weighing.swift in Sources */,
 				D57272C629ACEAB900A9C72E /* LitterHistoryViewController.swift in Sources */,
 				D5A073C829AE3CD100202F0A /* Vaccine.swift in Sources */,
