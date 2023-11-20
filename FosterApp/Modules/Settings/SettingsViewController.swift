@@ -26,6 +26,12 @@ class SettingsViewController: BaseViewController
 		self.interactor.userIsConnected()
 	}
 	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+	}
+	
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
@@ -40,10 +46,14 @@ class SettingsViewController: BaseViewController
 	// MARK: - Actions
 	
 	@IBAction private func logOut() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"logout"])
+									
 		self.interactor.logOut()
 	}
 	
 	@IBAction private func didTapEditButton() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"edit_photo"])
+										
 		let vc = UIImagePickerController()
 		vc.sourceType = .photoLibrary
 		vc.delegate = self

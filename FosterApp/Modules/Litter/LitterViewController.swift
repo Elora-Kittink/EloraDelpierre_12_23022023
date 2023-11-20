@@ -70,6 +70,12 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
         self.title = self.viewModel.title
 	}
 	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+	}
+	
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
@@ -106,6 +112,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	}
 	
 	func didSelect(item: Kitten, at indexPath: IndexPath) {
+		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name":"\(item.firstName)"])
 		
 		let vc = KittenCardViewController.fromStoryboard { vc in
 			vc.litterId = self.viewModel.id
@@ -119,12 +126,15 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	
 	// MARK: - Actions
     @IBAction private func makeItFavorite() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"favorite_litter"])
+		
         guard let litterId = litterId else { return }
         self.interactor.makeFavorite(litterId: litterId)
     }
     
     @IBAction private func addKitten() {
-        
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"add_kitten"])
+		
 		let vc = KittenCardModalViewController.fromStoryboard { vc in
 			vc.litter = self.viewModel.litter
 			vc.isCreatingMode = true
@@ -133,10 +143,14 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
         navigationController?.present(vc, animated: true)
     }
     @IBAction private func archiveLitter() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"archive_kitten"])
+		
         self.interactor.archiveLitter(litterId: self.viewModel.id)
     }
     
     @IBAction private func editLitter() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"edit_litter"])
+		
         self.interactor.diplayMode(isEditing: true,
                                    isCreating: false,
                                    isDisplaying: false,
@@ -145,6 +159,8 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     
 
     @IBAction private func save() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"save_litter"])
+		
         self.interactor.saveLitter(user: self.user,
 								   rescueDate: rescueDateTextField.text?.toDate(format: self.viewModel.dateFormat),
 								   isEditing: self.viewModel.isEditing,

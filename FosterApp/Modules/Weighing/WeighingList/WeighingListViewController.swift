@@ -39,6 +39,13 @@ class WeighingListViewController: BaseViewController
 
 		self.interactor.refresh(kitten: self.kitten)
 	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+	}
+	
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
@@ -60,6 +67,7 @@ class WeighingListViewController: BaseViewController
 	}
 	
 	func didSelect(item: Weighing, at indexPath: IndexPath) {
+		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name":"\(item.id)"])
 		
 		let vc = AddWeightViewController.fromStoryboard { vc in
 			vc.kitten = self.kitten
@@ -70,6 +78,8 @@ class WeighingListViewController: BaseViewController
 	}
 	
 	@IBAction private func addWeighing() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"add_weighing"])
+		
 		let vc = AddWeightViewController.fromStoryboard { vc in
 			vc.kitten = self.kitten
 			vc.isEditingMode = false

@@ -34,6 +34,12 @@ class AddWeightViewController: BaseViewController
         self.title = self.isEditingMode ? self.viewModel.updateWeighingTitle : self.viewModel.newWeighingTitle
 	}
 	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+	}
+	
 	// MARK: - Refresh
 	override func refreshUI() {
 		if self.viewModel.needToClose {
@@ -49,6 +55,8 @@ class AddWeightViewController: BaseViewController
 	// MARK: - Actions
 	
 	@IBAction private func didTapValidateButton() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"validate"])
+		
 		let weighing = self.interactor.composeWeighing(weightId: weighing?.id,
 													   kittenWeight: self.kittenWeightTF.text,
 													   mealWeight: self.mealWeightTF.text,

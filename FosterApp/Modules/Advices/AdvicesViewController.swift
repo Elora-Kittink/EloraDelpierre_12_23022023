@@ -23,6 +23,12 @@ class AdvicesViewController: BaseViewController< AdvicesViewModel, AdvicesPresen
 		self.interactor.refresh(url: self.viewModel.advicesUrl)
 	}
 	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+	}
+	
 	// MARK: - Refresh
 	override func refreshUI() {
 		super.refreshUI()
@@ -86,6 +92,7 @@ extension AdvicesViewController: UITableViewDataSource, UITableViewDelegate {
 		return adviceCell
 	}
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name":"\(self.viewModel.sections?.sections[safe: indexPath.section]?.advices[safe: indexPath.row]?.title)"])
 		
 		guard let advice = self.viewModel.sections?.sections[safe: indexPath.section]?.advices[safe: indexPath.row] else {
 			return

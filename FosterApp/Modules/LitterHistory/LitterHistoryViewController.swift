@@ -53,6 +53,12 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 
         self.interactor.refresh(user: user)
     }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+	}
     
 	// MARK: - Refresh
 	override func refreshUI() {
@@ -76,6 +82,8 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 
 	// MARK: - Actions
     @IBAction private func addLitter() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"add_litter"])
+		
 		let vc = LitterViewController.fromStoryboard { vc in
 			vc.isCreateMode = true
 			vc.isDisplayMode = false
@@ -86,6 +94,7 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
     }
 	
 	func didSelect(item: Litter, at indexPath: IndexPath) {
+		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name":"\(item.rescueDate)"])
 		
 		let vc = LitterViewController.fromStoryboard { vc in
 			vc.user = self.user

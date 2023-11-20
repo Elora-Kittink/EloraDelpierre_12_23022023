@@ -22,6 +22,8 @@ struct DBWorker {
         guard let dbUser = DB_User.create(user: user) else {
             print("👹 Worker fail create DB User")
             return nil }
+		AnalyticsManager.shared.log(event: .userCreated, with: ["id":"\(user.id)",
+																"name": "\(user.name)"])
         print("💃🏼 Worker succeed create \(String(describing: dbUser.a_id)) user")
         try? CoreDataManager.default.save()
         return User(from: dbUser)
@@ -31,6 +33,8 @@ struct DBWorker {
         guard let DBUser = DB_User.get(with: id) else {
             print("👹 Worker fail get DB User")
             return nil }
+			AnalyticsManager.shared.log(event: .userFetched, with: ["id":"\(DBUser.a_id)",
+																	"name": "\(DBUser.a_name)"])
         print("💃🏼 Worker succeed get \(String(describing: DBUser.a_id)) user")
         return User(from: DBUser)
     }
@@ -41,6 +45,8 @@ struct DBWorker {
         guard let DBKitten = DB_Kitten.get(with: kittenId) else {
             print("👹 Worker fail get DB Kitten")
             return nil }
+		AnalyticsManager.shared.log(event: .kittenFetched, with: ["id":"\(DBKitten.a_id)",
+																  "name": "\(DBKitten.a_firstName)"])
         print("💃🏼 Worker succeed get \(String(describing: DBKitten.a_id)) kitten")
         return Kitten(from: DBKitten)
     }
@@ -60,6 +66,8 @@ struct DBWorker {
             print("👹 Worker fail create DB Kitten")
             return nil}
         try? CoreDataManager.default.save()
+		AnalyticsManager.shared.log(event: .kittenCreated, with: ["id":"\(kitten.id)",
+																  "name": "\(kitten.firstName)"])
         print("💃🏼 Worker succeed create \(String(describing: DBKitten.a_id)) kitten")
         return Kitten(from: DBKitten)
     }
@@ -82,6 +90,8 @@ struct DBWorker {
         guard let DBLitter = DB_Litter.get(with: litterId) else {
             print("👹 Worker fail get DB Litter")
             return nil}
+		AnalyticsManager.shared.log(event: .litterFetched, with: ["id":"\(DBLitter.a_id)",
+																  "rescue_date": "\(DBLitter.a_rescueDate)"])
         print("💃🏼 Worker succeed get \(String(describing: DBLitter.a_id)) litter")
         return Litter(from: DBLitter)
     }
@@ -157,6 +167,8 @@ struct DBWorker {
 			print("👹 Worker fail create DB Weighing")
 			return nil}
 		try? CoreDataManager.default.save()
+		AnalyticsManager.shared.log(event: .weighingCreated, with: ["id":"\(DBWeighing.a_id)",
+																  "kitten_name": "\(kitten.firstName)"])
 		print("💃🏼 Worker succeed create new weighing for \(String(describing: kitten.firstName))")
 		return Weighing(from: DBWeighing)
 	}

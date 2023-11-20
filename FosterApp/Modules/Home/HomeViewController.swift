@@ -43,6 +43,13 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 			self.interactor.userIsConnected()
 		}
 	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+	}
+	
 	//	TODO: quand LoginInteractor ou SignUpInteractor close() ça revient sur HomeViewCo,troller mais ça ne refresh pas donc on reste à l'état vide, il faudrait repasser dans le viewdidload
 	//	essayer de passer une nottification dans la completion du close()
 	// MARK: - Refresh
@@ -73,6 +80,8 @@ extension HomeViewController: StoryboardProtocol {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		AnalyticsManager.shared.log(event: .collectionViewCellPressed, with: ["cell_name":"\(self.viewModel.homeTiles[safe: indexPath.row]?.title)"])
+		
 		guard let item = self.viewModel.homeTiles[safe: indexPath.row] else { return }
 			guard let user = self.viewModel.user else { return }
 			self.interactor.didSelectTile(tileType: item, user: user)

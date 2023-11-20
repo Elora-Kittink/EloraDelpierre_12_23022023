@@ -27,6 +27,12 @@ class SignUpViewController: BaseViewController
         super.viewDidLoad()
 		self.navigationItem.hidesBackButton = true
     }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+	}
     
     // MARK: - Refresh
     override func refreshUI() {
@@ -40,6 +46,8 @@ class SignUpViewController: BaseViewController
     // MARK: - Actions
     
     @IBAction private func signUpAction() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"signup"])
+		
         Task {
           await self.interactor.signUp(mail: emailTF.text ?? "",
                                    name: nameTF.text ?? "",
@@ -48,6 +56,8 @@ class SignUpViewController: BaseViewController
     }
     
     @IBAction private func logInAction() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"login"])
+		
 //        rediriger vers la page login
 		self.navigationController?.popViewController(animated: true)
     }

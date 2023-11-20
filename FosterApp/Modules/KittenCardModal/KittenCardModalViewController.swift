@@ -61,6 +61,12 @@ class KittenCardModalViewController: BaseViewController
         self.title = self.isCreatingMode ? self.viewModel.newKittenTitle : self.viewModel.updateKittenTitle
 	}
 	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+	}
+	
 	// MARK: - Refresh
 	override func refreshUI() {
         if self.viewModel.needToClose {
@@ -84,6 +90,7 @@ class KittenCardModalViewController: BaseViewController
 	// MARK: - Actions
     
     @IBAction private func save() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"save"])
 //        TODO: kittenId = nil? Mais comment il update du coup? vérifier que ça marche
         let kitten = self.interactor.composeKitten(litter: self.litter,
                                                    firstName: self.nameField.text ?? "",

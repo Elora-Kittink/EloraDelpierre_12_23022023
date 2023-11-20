@@ -66,9 +66,17 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
         }
     }
     
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+	}
+	
     // MARK: - Actions
     
     @IBAction private func edit() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"edit"])
+		
 		let vc = KittenCardModalViewController.fromStoryboard { vc in
 			vc.litter = self.litter
 			vc.kitten = self.kitten
@@ -79,6 +87,8 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     }
     
     @IBAction private func addWeighing() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"add_weight"])
+		
 		let vc = AddWeightViewController.fromStoryboard { vc in
 			vc.kitten = self.viewModel.kitten
 		}
@@ -86,6 +96,8 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     }
 	
 	@IBAction private func showWeighingHistory() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"weighing_history"])
+		
 		let vc = WeighingListViewController.fromStoryboard { vc in
 			vc.kitten = self.viewModel.kitten
 		}

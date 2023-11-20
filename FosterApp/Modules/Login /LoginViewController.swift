@@ -22,6 +22,12 @@ class LoginViewController: BaseViewController<LoginViewModel,
         super.viewDidLoad()
 		self.isModalInPresentation = true
     }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+	}
     
     // MARK: - Refresh
     override func refreshUI() {
@@ -35,6 +41,8 @@ class LoginViewController: BaseViewController<LoginViewModel,
     // MARK: - Actions
     
     @IBAction private func signUpAction() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"signup"])
+		
 // renvoyer vers la page d'inscription
         let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
             let signupViewController = storyboard.instantiateViewController(identifier: "SignUpViewController")
@@ -42,6 +50,8 @@ class LoginViewController: BaseViewController<LoginViewModel,
     }
     
     @IBAction private func logInAction() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"login"])
+		
 		let email = emailTF.text
 		let password = passwordTF.text
         
