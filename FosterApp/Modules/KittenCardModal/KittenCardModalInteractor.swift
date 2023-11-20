@@ -85,14 +85,11 @@ class KittenCardModalInteractor: Interactor
 				vc.isEditMode = false
 			}
 			vc.push()
-			
-			
-
-//			TODO: le 	self.presenter.close() va pas aussi dans le else?
 		} else {
 			worker.updateKittenDB(kitten: kitten)
-			self.presenter.display(kitten: kitten)
 			self.presenter.display(loader: false)
+			self.presenter.display(kitten: kitten)
+			self.presenter.close()
 		}
 	}
 }

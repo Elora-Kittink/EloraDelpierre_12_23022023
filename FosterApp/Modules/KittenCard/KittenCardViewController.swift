@@ -38,6 +38,20 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+//		return from the form with the new kitten by the presenter.close() way
+		NotificationCenter.default.addObserver(forName: NSNotification.Name("newKittenCreated"),
+											   object: nil,
+											   queue: nil) { [interactor] _ in
+			interactor.refresh(kitten: self.kitten, litter: self.litter)
+		}
+//		return from the form with the updated kitten by the presenter.close() way
+		NotificationCenter.default.addObserver(forName: NSNotification.Name("kittenUpdated"),
+											   object: nil,
+											   queue: nil) { [weak interactor] notification in
+			guard let kittenUpdated = notification.userInfo?["kitten"] as? Kitten else { return }
+			interactor?.refresh(kitten: kittenUpdated, litter: self.litter)
+		}
+		
         self.title = self.viewModel.title
         self.interactor.refresh(kitten: self.kitten, litter: self.litter)
 		self.birthdateGroup.layer.cornerRadius = 12

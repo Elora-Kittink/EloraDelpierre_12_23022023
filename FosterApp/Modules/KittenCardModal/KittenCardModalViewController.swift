@@ -67,14 +67,20 @@ class KittenCardModalViewController: BaseViewController
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+		AnalyticsManager.shared.log(event: .pageOpen, with: ["page": "\(Self.self)"])
 	}
 	
 	// MARK: - Refresh
 	override func refreshUI() {
+//		Notification after saved new kitten or updated kitten
+		let userInfo: [AnyHashable: Any] = ["kitten": self.viewModel.kitten]
         if self.viewModel.needToClose {
             self.dismiss(animated: true) {
-                NotificationCenter.default.post(name: NSNotification.Name("newKittenCreated"), object: nil)
+				if self.isEditingMode {
+					NotificationCenter.default.post(name: NSNotification.Name("kittenUpdated"), object: nil, userInfo: userInfo)
+				} else {
+					NotificationCenter.default.post(name: NSNotification.Name("newKittenCreated"), object: nil)
+				}
             }
         }
 		super.refreshUI()
@@ -93,9 +99,8 @@ class KittenCardModalViewController: BaseViewController
 	// MARK: - Actions
     
     @IBAction private func save() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"save"])
-//        TODO: kittenId = nil? Mais comment il update du coup? vérifier que ça marche
-		print("🐯 \(self.kitten?.id)")
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "save"])
+
         let kittenComposed = self.interactor.composeKitten(litter: self.litter,
                                                    firstName: self.nameField.text ?? "",
                                                    secondName: self.secondNameField.text,
@@ -118,7 +123,6 @@ class KittenCardModalViewController: BaseViewController
         self.interactor.refresh(isEdititngMode: self.isEditing,
                                 isCreatingMode: self.isCreatingMode,
                                 kitten: kitten)
-		
     }
 }
 
