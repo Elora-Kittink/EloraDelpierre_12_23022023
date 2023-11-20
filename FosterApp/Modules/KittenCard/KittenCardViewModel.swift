@@ -21,6 +21,7 @@ class KittenCardViewModel: ViewModel {
     var comment: String = ""
     var isAdopted = false
     var microship: String? = ""
+	var tattoo: String? = ""
     var vaccines: [Vaccine] = []
     var adopters: String? = ""
     var weightHistory: [Weighing] = []
@@ -38,6 +39,7 @@ class KittenCardViewModel: ViewModel {
     var siblingsLabel = "Fratrie"
     var commentLabel = "Commentaires"
     var microshipLabel = "Puce électronique"
+	var tattooLabel = "Tatouage"
     var adoptersLabel = "Adoptants"
     
     var infoCardViewModel: [ InfoCardViewModel] = []

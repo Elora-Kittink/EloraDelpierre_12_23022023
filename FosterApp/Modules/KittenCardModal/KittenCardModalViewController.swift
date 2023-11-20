@@ -25,6 +25,8 @@ class KittenCardModalViewController: BaseViewController
     @IBOutlet private weak var sexField: UISegmentedControl!
     @IBOutlet private weak var microshipLabel: UILabel!
     @IBOutlet private weak var microshipField: UITextField!
+	@IBOutlet private weak var tattooLabel: UILabel!
+	@IBOutlet private weak var tattooField: UITextField!
     @IBOutlet private weak var colorLabel: UILabel!
     @IBOutlet private weak var colorField: UITextField!
     @IBOutlet private weak var adoptersLabel: UILabel!
@@ -38,20 +40,21 @@ class KittenCardModalViewController: BaseViewController
 	// MARK: - Variables
 	
     var litter: Litter!
-    var isEditingMode = false
-    var isCreatingMode = false
+	var isEditingMode: Bool!
+    var isCreatingMode: Bool!
     var kitten: Kitten?
     
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        self.interactor.refresh(isEdititngMode: isEditingMode, isCreatingMode: isCreatingMode, kitten: kitten)
+		self.interactor.refresh(isEdititngMode: isEditingMode, isCreatingMode: isCreatingMode, kitten: kitten)
         
         self.nameLabel.text = self.viewModel.firtsNameLabel
         self.secondNameLabel.text = self.viewModel.secondNameLabel
         self.birthdateLabel.text = self.viewModel.birthdateLabel
         self.sexLabel.text = self.viewModel.sexLabel
         self.microshipLabel.text = self.viewModel.microshipLabel
+		self.tattooLabel.text = self.viewModel.tattooLabel
         self.colorLabel.text = self.viewModel.colorLabel
         self.adoptersLabel.text = self.viewModel.adoptersLabel
         self.rescueDateLabel.text = self.viewModel.rescueDateLabel
@@ -92,7 +95,8 @@ class KittenCardModalViewController: BaseViewController
     @IBAction private func save() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"save"])
 //        TODO: kittenId = nil? Mais comment il update du coup? vérifier que ça marche
-        let kitten = self.interactor.composeKitten(litter: self.litter,
+		print("🐯 \(self.kitten?.id)")
+        let kittenComposed = self.interactor.composeKitten(litter: self.litter,
                                                    firstName: self.nameField.text ?? "",
                                                    secondName: self.secondNameField.text,
                                                    birthdate: self.birthdateField.text?.toDate(format: "dd/MM/yyyy"),
@@ -102,18 +106,19 @@ class KittenCardModalViewController: BaseViewController
                                                    comment: self.commentsField.text,
                                                    isAdopted: false,
 												   microship: Int(self.microshipField.text ?? ""),
-												   tattoo: "TEST",
+												   tattoo: self.tattooField.text ?? "",
                                                    vaccines: nil,
                                                    adopters: nil,
                                                    weightHistory: nil,
-                                                   isEdited: false,
-                                                   kittenId: nil,
+                                                   isEdited: isEditingMode,
+												   kittenId: self.kitten?.id,
                                                    isAlive: true)
         
-        self.interactor.saveKitten(isNewKitten: isCreatingMode, kitten: kitten, litter: litter)
+        self.interactor.saveKitten(isNewKitten: isCreatingMode, kitten: kittenComposed, litter: litter)
         self.interactor.refresh(isEdititngMode: self.isEditing,
                                 isCreatingMode: self.isCreatingMode,
                                 kitten: kitten)
+		
     }
 }
 

@@ -18,6 +18,7 @@ class KittenCardModalViewModel: ViewModel {
     var siblingsLabel = "Fratrie"
     var commentLabel = "Commentaires"
     var microshipLabel = "Puce électronique"
+	var tattooLabel = "Tatouage"
     var adoptersLabel = "Adoptants"
     
     // MARK: - kitten datas

@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7bQ-qR-cZY" userLabel="Name PE Stack View">
-                                                <rect key="frame" x="136" y="32" width="225" height="174"/>
+                                                <rect key="frame" x="136" y="32" width="225" height="236"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCZ-NU-7MW">
                                                         <rect key="frame" x="0.0" y="0.0" width="225" height="50"/>
@@ -43,6 +43,12 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NX2-HB-w9p">
                                                         <rect key="frame" x="0.0" y="124" width="225" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9h-2b-iCR" userLabel="Tattoo Label">
+                                                        <rect key="frame" x="0.0" y="186" width="225" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -375,6 +381,7 @@ des pesées</string>
                         <outlet property="microshipLabel" destination="NX2-HB-w9p" id="lSA-SR-6XP"/>
                         <outlet property="nameLabel" destination="mCZ-NU-7MW" id="fof-OI-GkN"/>
                         <outlet property="secondNameLabel" destination="lbU-fz-fGP" id="GN7-U9-D9c"/>
+                        <outlet property="tattooLabel" destination="S9h-2b-iCR" id="Qpi-hn-6d8"/>
                         <outlet property="weightHistory" destination="1to-kT-LOz" id="FOx-hG-Dtj"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var microshipLabel: UILabel!
+	@IBOutlet private weak var tattooLabel: UILabel!
     @IBOutlet private weak var weightHistory: UIView!
     @IBOutlet private weak var medicalHistory: UIView!
     @IBOutlet private weak var editBtn: UIButton!
@@ -50,12 +51,13 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
         super.refreshUI()
             
 		self.microshipLabel.isHidden = self.viewModel.microship?.isEmpty ?? true ? true : false
-		self.secondNameLabel.isHidden = self.viewModel.secondName.isEmpty ?? true ? true : false
+		self.secondNameLabel.isHidden = self.viewModel.secondName.isEmpty ? true : false
+		self.tattooLabel.isHidden = self.viewModel.tattoo?.isEmpty ?? true ? true : false
 		
 		self.nameLabel.text = self.viewModel.firstName.isEmpty ? "Pas encore de nom" : self.viewModel.firstName
 		
         self.microshipLabel.text = self.viewModel.microship
-		
+		self.tattooLabel.text = self.viewModel.tattoo
 		self.birthdate.text = self.viewModel.birthdate
 		self.color.text = self.viewModel.color
 		self.comment.text = self.viewModel.comment

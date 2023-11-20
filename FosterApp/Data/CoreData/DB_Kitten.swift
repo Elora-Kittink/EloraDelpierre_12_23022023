@@ -33,6 +33,7 @@ extension DB_Kitten {
         DBkitten?.a_isAdopted = false
         DBkitten?.r_litter = dbLitter
         
+		print("🐹 id created = \(DBkitten?.a_id)")
         return DBkitten
     }
     

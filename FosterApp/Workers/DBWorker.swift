@@ -45,6 +45,7 @@ struct DBWorker {
         guard let DBKitten = DB_Kitten.get(with: kittenId) else {
             print("👹 Worker fail get DB Kitten")
             return nil }
+		print("🦊 id fetched \(DBKitten.a_id)")
 		AnalyticsManager.shared.log(event: .kittenFetched, with: ["id":"\(DBKitten.a_id)",
 																  "name": "\(DBKitten.a_firstName)"])
         print("💃🏼 Worker succeed get \(String(describing: DBKitten.a_id)) kitten")
@@ -73,9 +74,11 @@ struct DBWorker {
     }
     
     func updateKittenDB(kitten: Kitten) {
+		print("🦁 id created = \(kitten.id)")
         guard let DBKitten = DB_Kitten.get(with: kitten.id) else {
             print("👹 Worker fail get DB Kitten to update")
             return}
+		print("🦁 id created = \(DBKitten.a_id)")
         DBKitten.update(kitten: kitten, litterId: kitten.litterId)
         print("💃🏼 Worker succeed update \(String(describing: DBKitten.a_id)) kitten to update")
         try? CoreDataManager.default.save()
