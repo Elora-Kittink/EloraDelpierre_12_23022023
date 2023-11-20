@@ -46,7 +46,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9h-2b-iCR" userLabel="Tattoo Label">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWO-Yg-33D" userLabel="Tattoo Label">
                                                         <rect key="frame" x="0.0" y="186" width="225" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -187,18 +187,8 @@
                                                     <constraint firstItem="Gmj-q3-wl0" firstAttribute="centerY" secondItem="qmO-88-MwW" secondAttribute="centerY" id="O5O-WA-nOC"/>
                                                 </constraints>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4U-Oa-kKU">
-                                                <rect key="frame" x="32" y="315" width="329" height="80"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="80" id="xnA-Rg-oew"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgE-ct-n1I" userLabel="Weighing" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
-                                                <rect key="frame" x="158.33333333333334" y="419" width="76.666666666666657" height="42.666666666666686"/>
+                                                <rect key="frame" x="158.33333333333334" y="459" width="76.666666666666657" height="42.666666666666686"/>
                                                 <color key="tintColor" red="0.41260569920000001" green="0.32607037100000003" blue="0.31085404420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -223,7 +213,7 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qi4-Nd-jtn" userLabel="History Stack View">
-                                                <rect key="frame" x="32" y="485.66666666666663" width="329" height="80"/>
+                                                <rect key="frame" x="32" y="525.66666666666663" width="329" height="80"/>
                                                 <subviews>
                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nk-Rw-3rD">
                                                         <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="80"/>
@@ -299,7 +289,7 @@ des pesées</string>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="kA8-Ms-C0k">
-                                                <rect key="frame" x="32" y="597.66666666666663" width="329" height="128"/>
+                                                <rect key="frame" x="32" y="637.66666666666663" width="329" height="128"/>
                                                 <subviews>
                                                     <view autoresizesSubviews="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGI-au-S55" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="128"/>
@@ -317,29 +307,39 @@ des pesées</string>
                                                     </view>
                                                 </subviews>
                                             </stackView>
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut lab" translatesAutoresizingMaskIntoConstraints="NO" id="8a0-Gp-xN7">
+                                                <rect key="frame" x="36" y="307" width="321" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="cTt-kX-rYc"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.99215686319999996" green="0.97254908080000002" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="4Wy-7u-n1R" firstAttribute="centerX" secondItem="i15-QH-pNQ" secondAttribute="centerX" id="0Ms-sL-LAB"/>
-                                            <constraint firstAttribute="trailing" secondItem="E4U-Oa-kKU" secondAttribute="trailing" constant="32" id="1Ny-sO-dEw"/>
                                             <constraint firstItem="qi4-Nd-jtn" firstAttribute="top" secondItem="JgE-ct-n1I" secondAttribute="bottom" constant="24" id="27k-Dq-2gf"/>
+                                            <constraint firstItem="8a0-Gp-xN7" firstAttribute="top" secondItem="PhU-br-Pd4" secondAttribute="bottom" constant="16" id="4zY-qq-Kyq"/>
                                             <constraint firstItem="7bQ-qR-cZY" firstAttribute="top" secondItem="i15-QH-pNQ" secondAttribute="top" id="6iJ-ue-65U"/>
                                             <constraint firstItem="kA8-Ms-C0k" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="8aI-OL-tMm"/>
                                             <constraint firstItem="PhU-br-Pd4" firstAttribute="top" secondItem="4Wy-7u-n1R" secondAttribute="bottom" constant="64" id="ABH-Vw-cNq"/>
+                                            <constraint firstItem="JgE-ct-n1I" firstAttribute="top" secondItem="8a0-Gp-xN7" secondAttribute="bottom" constant="24" id="C6D-IH-Q5w"/>
                                             <constraint firstItem="i15-QH-pNQ" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="CQ1-I0-sF8"/>
                                             <constraint firstAttribute="trailing" secondItem="kA8-Ms-C0k" secondAttribute="trailing" constant="32" id="CZb-DX-Vx9"/>
-                                            <constraint firstItem="JgE-ct-n1I" firstAttribute="top" secondItem="E4U-Oa-kKU" secondAttribute="bottom" constant="24" id="G0j-9f-z1W"/>
+                                            <constraint firstAttribute="trailing" secondItem="8a0-Gp-xN7" secondAttribute="trailing" constant="36" id="EfF-ad-gwg"/>
                                             <constraint firstItem="JgE-ct-n1I" firstAttribute="centerX" secondItem="2yy-RG-8D2" secondAttribute="centerX" id="Gy4-aq-D4F"/>
+                                            <constraint firstItem="8a0-Gp-xN7" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="36" id="HzT-4X-Nd4"/>
                                             <constraint firstItem="7bQ-qR-cZY" firstAttribute="leading" secondItem="i15-QH-pNQ" secondAttribute="trailing" constant="24" id="NTP-tS-2tV"/>
                                             <constraint firstItem="PhU-br-Pd4" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="W65-FP-l8u"/>
                                             <constraint firstAttribute="trailing" secondItem="PhU-br-Pd4" secondAttribute="trailing" constant="32" id="XAc-oK-Nlw"/>
-                                            <constraint firstItem="E4U-Oa-kKU" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="caw-48-aB3"/>
                                             <constraint firstItem="qi4-Nd-jtn" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="eJ4-Yl-cWg"/>
                                             <constraint firstItem="kA8-Ms-C0k" firstAttribute="top" secondItem="qi4-Nd-jtn" secondAttribute="bottom" constant="32" id="gCP-gq-VNp"/>
                                             <constraint firstItem="4Wy-7u-n1R" firstAttribute="top" secondItem="i15-QH-pNQ" secondAttribute="bottom" constant="12" id="lcp-3e-xi1"/>
                                             <constraint firstItem="i15-QH-pNQ" firstAttribute="top" secondItem="2yy-RG-8D2" secondAttribute="top" constant="32" id="mOF-jK-Spm"/>
                                             <constraint firstAttribute="trailing" secondItem="7bQ-qR-cZY" secondAttribute="trailing" constant="32" id="oRU-SS-qQi"/>
-                                            <constraint firstItem="E4U-Oa-kKU" firstAttribute="top" secondItem="PhU-br-Pd4" secondAttribute="bottom" constant="24" id="rOl-qX-2SK"/>
                                             <constraint firstAttribute="trailing" secondItem="qi4-Nd-jtn" secondAttribute="trailing" constant="32" id="s6W-Lm-VTj"/>
                                         </constraints>
                                     </view>
@@ -371,7 +371,7 @@ des pesées</string>
                         <outlet property="birthdateGroup" destination="Ur2-cz-aRI" id="Lrq-PA-06R"/>
                         <outlet property="color" destination="eoR-J6-3HV" id="QnL-Jg-PfW"/>
                         <outlet property="colorGroup" destination="Tzl-zX-9H6" id="OUg-RE-aIn"/>
-                        <outlet property="comment" destination="E4U-Oa-kKU" id="Fnh-eZ-TmY"/>
+                        <outlet property="comment" destination="8a0-Gp-xN7" id="aIh-Rr-jqI"/>
                         <outlet property="documentsTile" destination="42h-sR-Wov" id="7KM-Vy-dez"/>
                         <outlet property="editBtn" destination="4Wy-7u-n1R" id="lwh-tM-tAK"/>
                         <outlet property="galleryTile" destination="kGI-au-S55" id="c7M-K7-Lit"/>
@@ -381,7 +381,7 @@ des pesées</string>
                         <outlet property="microshipLabel" destination="NX2-HB-w9p" id="lSA-SR-6XP"/>
                         <outlet property="nameLabel" destination="mCZ-NU-7MW" id="fof-OI-GkN"/>
                         <outlet property="secondNameLabel" destination="lbU-fz-fGP" id="GN7-U9-D9c"/>
-                        <outlet property="tattooLabel" destination="S9h-2b-iCR" id="Qpi-hn-6d8"/>
+                        <outlet property="tattooLabel" destination="dWO-Yg-33D" id="UGn-YQ-kQF"/>
                         <outlet property="weightHistory" destination="1to-kT-LOz" id="FOx-hG-Dtj"/>
                     </connections>
                 </viewController>
@@ -396,6 +396,9 @@ des pesées</string>
         <namedColor name="pink">
             <color red="0.88200002908706665" green="0.6940000057220459" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

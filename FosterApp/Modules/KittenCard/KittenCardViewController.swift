@@ -25,7 +25,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 	@IBOutlet private weak var adopterGroup: UIView!
 	@IBOutlet private weak var colorGroup: UIView!
 	@IBOutlet private weak var birthdateGroup: UIView!
-	@IBOutlet private weak var comment: UILabel!
+	@IBOutlet private weak var comment: UITextView!
 	@IBOutlet private weak var documentsTile: Tile!
 	@IBOutlet private weak var galleryTile: Tile!
 	
@@ -84,7 +84,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		
+	
 		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
 	}
 	
