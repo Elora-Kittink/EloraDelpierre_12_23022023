@@ -14,22 +14,34 @@ class SettingsViewController: BaseViewController
 	
 	// MARK: - Outlets
 	@IBOutlet private weak var nameLabel: UILabel!
-	@IBOutlet private weak var profilePhoto: UIImageView!
 	@IBOutlet private weak var editPhoto: UIButton!
+	@IBOutlet private weak var editAppIcon: UIButton!
+	@IBOutlet private weak var kittensCountLabel: UILabel!
+	@IBOutlet private weak var milkCountLabel: UILabel!
 	
 	// MARK: - Variables
+	
+	let profilePhoto: UIImageView = {
+		let imageView = UIImageView()
+  imageView.translatesAutoresizingMaskIntoConstraints = false
+  imageView.contentMode = .scaleAspectFill
+  imageView.layer.cornerRadius = imageView.bounds.width / 2
+  imageView.clipsToBounds = true
+  return imageView
+}()
 	
 	// MARK: - View life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.interactor.userIsConnected()
+		self.profilePhoto.layer.cornerRadius = profilePhoto.bounds.width / 2
+		self.interactor.refresh()
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+		AnalyticsManager.shared.log(event: .pageOpen, with: ["page": "\(Self.self)"])
 	}
 	
 	// MARK: - Refresh
@@ -41,6 +53,9 @@ class SettingsViewController: BaseViewController
 		} else {
 			self.nameLabel.text = "Bienvenue !"
 		}
+		
+		self.kittensCountLabel.text = "\(self.viewModel.kittensCount)"
+		self.milkCountLabel.text = "\(self.viewModel.milkCount)"
 	}
 
 	// MARK: - Actions
@@ -59,6 +74,10 @@ class SettingsViewController: BaseViewController
 		vc.delegate = self
 		vc.allowsEditing = true
 		present(vc, animated: true)
+	}
+	
+	@IBAction private func didTapEditAppIconButton() {
+		ChooseAppIconViewController.fromStoryboard().modal()
 	}
 }
 

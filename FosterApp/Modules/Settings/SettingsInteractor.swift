@@ -12,7 +12,8 @@ class SettingsInteractor: Interactor
 	let worker = DBWorker()
 	var userWorker: UserWorkerProtocol = UserWorker()
 	
-	func userIsConnected() {
+	
+	func refresh() {
 		
 		Task {
 			do {
@@ -27,7 +28,23 @@ class SettingsInteractor: Interactor
 					return
 				}
 				print("🙋🏼‍♀️ User \(userFetched.name) \(userFetched.id) is connected")
-				self.presenter.presentUserConnected(user: userFetched)
+				
+//				get all kittens & all weighings
+				
+				let allLitters = worker.fetchAllLitters(userId: userFetched.id)
+				   
+				   let allKittens = allLitters.compactMap { litter in
+					   worker.fetchAllKittensLitter(litterId: litter.id ?? "")
+				   }
+					   .flatMap { $0 }
+				   
+				   let allWeighings = allKittens.compactMap { kitten in
+					   worker.fetchWeighingFromKittenId(kittenId: kitten.id ?? "")
+				   }
+					   .flatMap { $0 }
+				
+				
+				self.presenter.display(kittens: allKittens, weighings: allWeighings, user: userFetched)
 			} catch {
 				print(error)
 			}

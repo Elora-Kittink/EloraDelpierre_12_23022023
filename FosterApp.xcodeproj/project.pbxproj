@@ -96,6 +96,12 @@
 		D5AC4B1E2A1E0239008B0C43 /* Extension+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC4B1D2A1E0239008B0C43 /* Extension+UserDefaults.swift */; };
 		D5AC4B1F2A1E0F67008B0C43 /* Advices.json in Resources */ = {isa = PBXBuildFile; fileRef = D59EA04F2A125DC800B53542 /* Advices.json */; };
 		D5AC4B212A1E3BC3008B0C43 /* APIRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC4B202A1E3BC3008B0C43 /* APIRequestMock.swift */; };
+		D5B048B42B0BA58600BC2F93 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B048B32B0BA58600BC2F93 /* Loader.swift */; };
+		D5B048BA2B0CB84500BC2F93 /* ChooseAppIconPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B048B62B0CB84500BC2F93 /* ChooseAppIconPresenter.swift */; };
+		D5B048BB2B0CB84500BC2F93 /* ChooseAppIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B048B72B0CB84500BC2F93 /* ChooseAppIconViewController.swift */; };
+		D5B048BC2B0CB84500BC2F93 /* ChooseAppIconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B048B82B0CB84500BC2F93 /* ChooseAppIconInteractor.swift */; };
+		D5B048BD2B0CB84500BC2F93 /* ChooseAppIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B048B92B0CB84500BC2F93 /* ChooseAppIconViewModel.swift */; };
+		D5B048BF2B0CB87800BC2F93 /* ChooseAppIcon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B048BE2B0CB87800BC2F93 /* ChooseAppIcon.storyboard */; };
 		D5B1436E2A1B5E7A00FA5418 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1436D2A1B5E7A00FA5418 /* BaseTest.swift */; };
 		D5B143702A1B67AC00FA5418 /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1436F2A1B67AC00FA5418 /* APIWorker.swift */; };
 		D5B143722A1B693A00FA5418 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B143712A1B693A00FA5418 /* APIRequest.swift */; };
@@ -240,6 +246,12 @@
 		D5A189542ACD82340092B059 /* Tile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tile.xib; sourceTree = "<group>"; };
 		D5AC4B1D2A1E0239008B0C43 /* Extension+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UserDefaults.swift"; sourceTree = "<group>"; };
 		D5AC4B202A1E3BC3008B0C43 /* APIRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestMock.swift; sourceTree = "<group>"; };
+		D5B048B32B0BA58600BC2F93 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		D5B048B62B0CB84500BC2F93 /* ChooseAppIconPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseAppIconPresenter.swift; path = FosterApp/Modules/Settings/ChooseAppIcon/ChooseAppIconPresenter.swift; sourceTree = SOURCE_ROOT; };
+		D5B048B72B0CB84500BC2F93 /* ChooseAppIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseAppIconViewController.swift; path = FosterApp/Modules/Settings/ChooseAppIcon/ChooseAppIconViewController.swift; sourceTree = SOURCE_ROOT; };
+		D5B048B82B0CB84500BC2F93 /* ChooseAppIconInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseAppIconInteractor.swift; path = FosterApp/Modules/Settings/ChooseAppIcon/ChooseAppIconInteractor.swift; sourceTree = SOURCE_ROOT; };
+		D5B048B92B0CB84500BC2F93 /* ChooseAppIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseAppIconViewModel.swift; path = FosterApp/Modules/Settings/ChooseAppIcon/ChooseAppIconViewModel.swift; sourceTree = SOURCE_ROOT; };
+		D5B048BE2B0CB87800BC2F93 /* ChooseAppIcon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ChooseAppIcon.storyboard; path = FosterApp/Modules/Settings/ChooseAppIcon/ChooseAppIcon.storyboard; sourceTree = SOURCE_ROOT; };
 		D5B143632A1B5D9C00FA5418 /* FosterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FosterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B1436D2A1B5E7A00FA5418 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		D5B1436F2A1B67AC00FA5418 /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
@@ -340,6 +352,7 @@
 		D57272BC29ACE6CD00A9C72E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D5B048B22B0BA57900BC2F93 /* Loader */,
 				D59F2AFD2B076E2F0014AD2C /* Analytics */,
 				D599DE082A1519CE0004C165 /* BaseTest */,
 				D5A145FF29BA45BF00E2327B /* Extensions */,
@@ -422,6 +435,7 @@
 		D581DBCC2AF921B2009B61F7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				D5B048B52B0CB81800BC2F93 /* ChangeAppIcon */,
 				D581DBCE2AF9220A009B61F7 /* SettingsViewController.swift */,
 				D581DBCF2AF9220A009B61F7 /* SettingsInteractor.swift */,
 				D581DBCD2AF9220A009B61F7 /* SettingsPresenter.swift */,
@@ -592,6 +606,26 @@
 				D5A189542ACD82340092B059 /* Tile.xib */,
 			);
 			path = Tile;
+			sourceTree = "<group>";
+		};
+		D5B048B22B0BA57900BC2F93 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				D5B048B32B0BA58600BC2F93 /* Loader.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		D5B048B52B0CB81800BC2F93 /* ChangeAppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				D5B048B72B0CB84500BC2F93 /* ChooseAppIconViewController.swift */,
+				D5B048B82B0CB84500BC2F93 /* ChooseAppIconInteractor.swift */,
+				D5B048B62B0CB84500BC2F93 /* ChooseAppIconPresenter.swift */,
+				D5B048B92B0CB84500BC2F93 /* ChooseAppIconViewModel.swift */,
+				D5B048BE2B0CB87800BC2F93 /* ChooseAppIcon.storyboard */,
+			);
+			path = ChangeAppIcon;
 			sourceTree = "<group>";
 		};
 		D5B143642A1B5D9C00FA5418 /* FosterAppTests */ = {
@@ -941,6 +975,7 @@
 				D5C7D9B129F0195900885C48 /* Login.storyboard in Resources */,
 				D59F2B012B07708E0014AD2C /* GoogleService-Info.plist in Resources */,
 				D593BD9B29DF0617005D8673 /* InfoCardView.xib in Resources */,
+				D5B048BF2B0CB87800BC2F93 /* ChooseAppIcon.storyboard in Resources */,
 				D581DBD62AF92218009B61F7 /* Settings.storyboard in Resources */,
 				D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */,
 				D576F5772A5B1BA00004AF60 /* AddWeight.storyboard in Resources */,
@@ -1091,6 +1126,7 @@
 			files = (
 				D576F56B2A5B1B6B0004AF60 /* WeighingListViewModel.swift in Sources */,
 				D576F5682A5B1B6B0004AF60 /* WeighingListPresenter.swift in Sources */,
+				D5B048BC2B0CB84500BC2F93 /* ChooseAppIconInteractor.swift in Sources */,
 				D59DB7EE29DAC53B00306F0C /* KittenCardModalPresenter.swift in Sources */,
 				D572729F29ACA79100A9C72E /* BaseViewController.swift in Sources */,
 				D5A073C629AE113A00202F0A /* DB_Vaccine.swift in Sources */,
@@ -1111,6 +1147,7 @@
 				D5A073CA29AE412500202F0A /* Weighing.swift in Sources */,
 				D57272C629ACEAB900A9C72E /* LitterHistoryViewController.swift in Sources */,
 				D5A073C829AE3CD100202F0A /* Vaccine.swift in Sources */,
+				D5B048BB2B0CB84500BC2F93 /* ChooseAppIconViewController.swift in Sources */,
 				D5B5E24A29D4697C00A84476 /* LoginInteractor.swift in Sources */,
 				D599CE2329AFB0C500542F9E /* DBWorker.swift in Sources */,
 				D5B48FE62AA1F4500055C81B /* ButtonBeige.swift in Sources */,
@@ -1119,7 +1156,9 @@
 				D59D09B929DD6B6300813B35 /* InfoCardViewModel.swift in Sources */,
 				D59D09B729DD6B6300813B35 /* InfoCardView.swift in Sources */,
 				D5F0C71229A90D85002A0F65 /* KittenCardPresenter.swift in Sources */,
+				D5B048B42B0BA58600BC2F93 /* Loader.swift in Sources */,
 				D5B5E24929D4697C00A84476 /* LoginViewController.swift in Sources */,
+				D5B048BD2B0CB84500BC2F93 /* ChooseAppIconViewModel.swift in Sources */,
 				D59AA7CE2A03B205008AF45F /* AdvicesViewController.swift in Sources */,
 				D5F0C72429A91D2D002A0F65 /* LitterPresenter.swift in Sources */,
 				D57272A029ACA79100A9C72E /* ViewModel.swift in Sources */,
@@ -1173,6 +1212,7 @@
 				D5F0C71E29A91B86002A0F65 /* Kitten.swift in Sources */,
 				D5F0C6F929A90BEA002A0F65 /* SceneDelegate.swift in Sources */,
 				D59AA7D02A03B205008AF45F /* AdvicesViewModel.swift in Sources */,
+				D5B048BA2B0CB84500BC2F93 /* ChooseAppIconPresenter.swift in Sources */,
 				D595EC6429D58E1500200B46 /* SignUpViewController.swift in Sources */,
 				D59900CD29F6B62500F0F36D /* Alerts.swift in Sources */,
 				D57272D229ACF4F200A9C72E /* HomeInteractor.swift in Sources */,
@@ -1357,8 +1397,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50A0D4DD42B6EDA0EDCC6221 /* Pods-FosterApp.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon4 AppIcon3 AppIcon2 AppIcon1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N99GL92MJ5;
@@ -1387,8 +1429,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A4D04655A2C7EAB32D6B24A /* Pods-FosterApp.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon4 AppIcon3 AppIcon2 AppIcon1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N99GL92MJ5;

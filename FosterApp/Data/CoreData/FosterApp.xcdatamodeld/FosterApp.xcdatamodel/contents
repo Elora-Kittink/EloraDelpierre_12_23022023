@@ -19,6 +19,7 @@
         <attribute name="a_isAlive" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_isTestsDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_microship" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="a_photo" optional="YES" attributeType="Binary"/>
         <attribute name="a_rescueDate" optional="YES" attributeType="Date" defaultDateTimeInterval="-31586749821" usesScalarValueType="NO"/>
         <attribute name="a_secondName" optional="YES" attributeType="String"/>
         <attribute name="a_sex" optional="YES" attributeType="String"/>

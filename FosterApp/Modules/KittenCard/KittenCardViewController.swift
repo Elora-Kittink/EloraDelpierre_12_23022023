@@ -67,6 +67,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 		self.microshipLabel.isHidden = self.viewModel.microship?.isEmpty ?? true ? true : false
 		self.secondNameLabel.isHidden = self.viewModel.secondName.isEmpty ? true : false
 		self.tattooLabel.isHidden = self.viewModel.tattoo?.isEmpty ?? true ? true : false
+		self.adopterGroup.isHidden = self.viewModel.isAdopted ? false : true
 		
 		self.nameLabel.text = self.viewModel.firstName.isEmpty ? "Pas encore de nom" : self.viewModel.firstName
 		

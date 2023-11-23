@@ -22,7 +22,7 @@ struct DBWorker {
         guard let dbUser = DB_User.create(user: user) else {
             print("👹 Worker fail create DB User")
             return nil }
-		AnalyticsManager.shared.log(event: .userCreated, with: ["id":"\(user.id)",
+		AnalyticsManager.shared.log(event: .userCreated, with: ["id": "\(user.id)",
 																"name": "\(user.name)"])
         print("💃🏼 Worker succeed create \(String(describing: dbUser.a_id)) user")
         try? CoreDataManager.default.save()
@@ -33,7 +33,7 @@ struct DBWorker {
         guard let DBUser = DB_User.get(with: id) else {
             print("👹 Worker fail get DB User")
             return nil }
-			AnalyticsManager.shared.log(event: .userFetched, with: ["id":"\(DBUser.a_id)",
+			AnalyticsManager.shared.log(event: .userFetched, with: ["id": "\(DBUser.a_id)",
 																	"name": "\(DBUser.a_name)"])
         print("💃🏼 Worker succeed get \(String(describing: DBUser.a_id)) user")
         return User(from: DBUser)
@@ -45,13 +45,12 @@ struct DBWorker {
         guard let DBKitten = DB_Kitten.get(with: kittenId) else {
             print("👹 Worker fail get DB Kitten")
             return nil }
-		print("🦊 id fetched \(DBKitten.a_id)")
-		AnalyticsManager.shared.log(event: .kittenFetched, with: ["id":"\(DBKitten.a_id)",
+		AnalyticsManager.shared.log(event: .kittenFetched, with: ["id": "\(DBKitten.a_id)",
 																  "name": "\(DBKitten.a_firstName)"])
         print("💃🏼 Worker succeed get \(String(describing: DBKitten.a_id)) kitten")
         return Kitten(from: DBKitten)
     }
-    
+	
     func fetchAllKittensLitter(litterId: String) -> [Kitten]? {
         let predicate = NSPredicate(format: "r_litter.a_id = %@", litterId)
         let DBKittens = DB_Kitten.getAll(predicate: predicate)
@@ -67,18 +66,16 @@ struct DBWorker {
             print("👹 Worker fail create DB Kitten")
             return nil}
         try? CoreDataManager.default.save()
-		AnalyticsManager.shared.log(event: .kittenCreated, with: ["id":"\(kitten.id)",
+		AnalyticsManager.shared.log(event: .kittenCreated, with: ["id": "\(kitten.id)",
 																  "name": "\(kitten.firstName)"])
         print("💃🏼 Worker succeed create \(String(describing: DBKitten.a_id)) kitten")
         return Kitten(from: DBKitten)
     }
     
     func updateKittenDB(kitten: Kitten) {
-		print("🦁 id created = \(kitten.id)")
         guard let DBKitten = DB_Kitten.get(with: kitten.id) else {
             print("👹 Worker fail get DB Kitten to update")
             return}
-		print("🦁 id created = \(DBKitten.a_id)")
         DBKitten.update(kitten: kitten, litterId: kitten.litterId)
         print("💃🏼 Worker succeed update \(String(describing: DBKitten.a_id)) kitten to update")
         try? CoreDataManager.default.save()

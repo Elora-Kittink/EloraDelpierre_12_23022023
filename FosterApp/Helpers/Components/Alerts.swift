@@ -37,6 +37,3 @@ struct Alert {
 //        showAlert(on: vc, with: "Alert", message: "Invalid")
 //    }
 }
-
-
-

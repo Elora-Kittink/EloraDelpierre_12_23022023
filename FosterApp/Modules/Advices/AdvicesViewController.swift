@@ -10,8 +10,8 @@ class AdvicesViewController: BaseViewController< AdvicesViewModel, AdvicesPresen
 	
 	// MARK: - Outlets
 	
-	@IBOutlet weak var header: UIView!
-	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet private weak var header: UIView!
+	@IBOutlet private weak var tableView: UITableView!
 	
 	// MARK: - View life cycle
 	override func viewDidLoad() {
@@ -26,7 +26,7 @@ class AdvicesViewController: BaseViewController< AdvicesViewModel, AdvicesPresen
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+		AnalyticsManager.shared.log(event: .pageOpen, with: ["page": "\(Self.self)"])
 	}
 	
 	// MARK: - Refresh

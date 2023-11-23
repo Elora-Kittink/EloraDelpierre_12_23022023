@@ -45,5 +45,4 @@ extension AdviceViewController: StoryboardProtocol {
     static var identifier: String? {
         "AdviceViewController"
     }
-    
 }

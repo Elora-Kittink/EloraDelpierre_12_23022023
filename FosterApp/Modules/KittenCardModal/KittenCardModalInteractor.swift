@@ -60,7 +60,7 @@ class KittenCardModalInteractor: Interactor
 							adopters: adopters,
 							weighingHistory: weightHistory,
 							isAlive: isAlive)
-		print("🐞 id composed = \(kitten.id)")
+
 		self.presenter.display(loader: false)
 		return kitten
 	}
