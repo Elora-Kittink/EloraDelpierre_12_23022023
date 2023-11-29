@@ -35,6 +35,7 @@ class KittenCardModalViewModel: ViewModel {
         var comment: String = ""
         var isAdopted = false
         var microship: String? = ""
+		var tattoo: String = ""
 //        var vaccines: [Vaccine] = []
         var adopters: String? = ""
 //        var weightHistory: [Weight] = []

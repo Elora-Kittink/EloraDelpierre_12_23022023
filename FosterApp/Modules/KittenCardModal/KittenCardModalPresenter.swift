@@ -17,6 +17,7 @@ class KittenCardModalPresenter: Presenter<KittenCardModalViewModel> {
         self.viewModel?.rescueDate = kitten?.rescueDate?.toString(format: "dd/MM/yyyy") ?? ""
         self.viewModel?.comment = kitten?.comment ?? ""
         self.viewModel?.microship = String(kitten?.microship ?? 0)
+		self.viewModel?.tattoo = kitten?.tattoo ?? ""
         self.viewModel?.adopters = ""
 
         self.viewModel?.kitten = kitten

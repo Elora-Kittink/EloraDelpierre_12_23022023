@@ -52,6 +52,27 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 			interactor?.refresh(kitten: kittenUpdated, litter: self.litter)
 		}
 		
+		self.birthdateGroup.layer.shadowColor = UIColor.gray.cgColor
+		self.birthdateGroup.layer.shadowOffset = CGSize(width: 2, height: 4)
+		self.birthdateGroup.layer.shadowOpacity = 0.3
+		self.birthdateGroup.layer.shadowRadius = 2
+		
+		self.adopterGroup.layer.shadowColor = UIColor.gray.cgColor
+		self.adopterGroup.layer.shadowOffset = CGSize(width: 2, height: 4)
+		self.adopterGroup.layer.shadowOpacity = 0.3
+		self.adopterGroup.layer.shadowRadius = 2
+		
+		self.colorGroup.layer.shadowColor = UIColor.gray.cgColor
+		self.colorGroup.layer.shadowOffset = CGSize(width: 2, height: 4)
+		self.colorGroup.layer.shadowOpacity = 0.3
+		self.colorGroup.layer.shadowRadius = 2
+		
+		self.comment.layer.cornerRadius = 10
+		self.comment.layer.shadowColor = UIColor.gray.cgColor
+		self.comment.layer.shadowOffset = CGSize(width: 2, height: 4)
+		self.comment.layer.shadowOpacity = 0.3
+		self.comment.layer.shadowRadius = 2
+		
         self.title = self.viewModel.title
         self.interactor.refresh(kitten: self.kitten, litter: self.litter)
 		self.birthdateGroup.layer.cornerRadius = 12
@@ -66,11 +87,12 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
             
 		self.microshipLabel.isHidden = self.viewModel.microship?.isEmpty ?? true ? true : false
 		self.secondNameLabel.isHidden = self.viewModel.secondName.isEmpty ? true : false
-		self.tattooLabel.isHidden = self.viewModel.tattoo?.isEmpty ?? true ? true : false
+		self.tattooLabel.isHidden = true
 		self.adopterGroup.isHidden = self.viewModel.isAdopted ? false : true
-		
-		self.nameLabel.text = self.viewModel.firstName.isEmpty ? "Pas encore de nom" : self.viewModel.firstName
-		
+//		self.viewModel.tattoo?.isEmpty ?? true ? true : false
+		self.nameLabel.text = self.viewModel.firstName
+		self.secondNameLabel.text = self.viewModel.secondName
+		print("🦊\(self.viewModel.tattoo)")
         self.microshipLabel.text = self.viewModel.microship
 		self.tattooLabel.text = self.viewModel.tattoo
 		self.birthdate.text = self.viewModel.birthdate

@@ -90,6 +90,7 @@ class KittenCardModalViewController: BaseViewController
         self.birthdateField.text = self.viewModel.birthdate
         self.sexField.selectedSegmentIndex = self.viewModel.sex
         self.microshipField.text = self.viewModel.microship
+		self.tattooField.text = self.viewModel.tattoo
         self.colorField.text = self.viewModel.color
         self.adopterField.text = self.viewModel.adopters
         self.rescueDateField.text = self.viewModel.rescueDate
