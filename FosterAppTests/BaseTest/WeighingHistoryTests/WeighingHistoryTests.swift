@@ -38,7 +38,8 @@ final class WeighingHistoryTests: XCTestCase {
                                                                                        siblings: nil,
                                                                                        comment: nil,
                                                                                        isAdopted: false,
-                                                                                       microship: nil,
+																					   microship: nil,
+																					   tattoo: nil,
                                                                                        vaccines: nil,
                                                                                        adopters: nil,
                                                                                        weighingHistory: nil, isAlive: true), litter: self.fetchedLitter))

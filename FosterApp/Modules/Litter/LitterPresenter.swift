@@ -12,8 +12,9 @@ class LitterPresenter: Presenter<LitterViewModel> {
         if rescueDate != nil {
            let dateToString = rescueDate?.toString(format: "dd/MM/yyyy")
             self.viewModel?.rescueDate = dateToString
+			print("🐣 \(self.viewModel?.rescueDate)")
         }
-        
+		print("🐹🐹 \(self.viewModel?.rescueDate)")
         self.viewModel?.isEditing = type.isEditing
         self.viewModel?.isCreatingNew = type.isCreating
         self.viewModel?.isDisplaying = type.isDisplaying

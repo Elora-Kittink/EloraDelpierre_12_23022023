@@ -35,7 +35,7 @@ class KittenCardModalInteractor: Interactor
 					   comment: String?,
 					   isAdopted: Bool,
 					   microship: Int?,
-					   tattoo: String,
+					   tattoo: String?,
 					   vaccines: [Vaccine]?,
 					   adopters: Adopter?,
 					   weightHistory: [Weighing]?,

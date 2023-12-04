@@ -320,14 +320,18 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
+				print("🐹 \(test.viewModel.rescueDate)")
 				interactor.saveLitter(user: self.fetchedUser,
 									  rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
+				print("🐹 \(test.viewModel.rescueDate)")
 				interactor.refresh(litterId: "badId")
+				print("🐹 \(test.viewModel.rescueDate)")
 			}
 		}
 		DispatchQueue.main.async {
+			print("🐹 \(test.viewModel.rescueDate)")
 			XCTAssertEqual(test.viewModel.rescueDate, nil)
 		}
 	}
