@@ -486,13 +486,6 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		D599DE072A1518B90004C165 /* FosterAppTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FosterAppTests;
-			sourceTree = "<group>";
-		};
 		D599DE082A1519CE0004C165 /* BaseTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -738,7 +731,6 @@
 		D5F0C6EA29A90BEA002A0F65 = {
 			isa = PBXGroup;
 			children = (
-				D599DE072A1518B90004C165 /* FosterAppTests */,
 				D5F0C6F529A90BEA002A0F65 /* FosterApp */,
 				D5B5E24E29D46E3C00A84476 /* GoogleService-Info.plist */,
 				D5B143642A1B5D9C00FA5418 /* FosterAppTests */,

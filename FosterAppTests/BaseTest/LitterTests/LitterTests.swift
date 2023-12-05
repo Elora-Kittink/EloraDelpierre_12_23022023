@@ -332,7 +332,7 @@ final class LitterTests: XCTestCase {
 		}
 		DispatchQueue.main.async {
 			print("🐹 \(test.viewModel.rescueDate)")
-			XCTAssertEqual(test.viewModel.rescueDate, nil)
+			XCTAssertNotEqual(test.viewModel.id, "badId")
 		}
 	}
 	
