@@ -1,6 +1,0 @@
-framework module UtilsKit {
-  umbrella header "UtilsKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
