@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "D3A213A5-0499-4035-870A-DD7E9811A4DF",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:FosterApp.xcodeproj",
+          "identifier" : "D5F0C6F229A90BEA002A0F65",
+          "name" : "FosterApp"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:FosterApp.xcodeproj",
+      "identifier" : "D5F0C6F229A90BEA002A0F65",
+      "name" : "FosterApp"
+    },
+    "testRepetitionMode" : "retryOnFailure"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:FosterApp.xcodeproj",
+        "identifier" : "D5B143622A1B5D9C00FA5418",
+        "name" : "FosterAppTests"
+      }
+    }
+  ],
+  "version" : 1
+}

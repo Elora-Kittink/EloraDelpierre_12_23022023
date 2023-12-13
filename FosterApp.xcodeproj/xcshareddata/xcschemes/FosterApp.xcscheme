@@ -40,7 +40,7 @@
       </CodeCoverageTargets>
       <TestPlans>
          <TestPlanReference
-            reference = "container:../FosterApp.xctestplan"
+            reference = "container:FosterAppTests/FosterAppTestPlan.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

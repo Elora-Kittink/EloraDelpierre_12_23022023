@@ -36,6 +36,7 @@
 		D576F5732A5B1B7F0004AF60 /* AddWeightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576F56F2A5B1B7F0004AF60 /* AddWeightViewModel.swift */; };
 		D576F5752A5B1B8E0004AF60 /* WeighingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D576F5742A5B1B8E0004AF60 /* WeighingList.storyboard */; };
 		D576F5772A5B1BA00004AF60 /* AddWeight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D576F5762A5B1BA00004AF60 /* AddWeight.storyboard */; };
+		D580849F2B29BBB700B27E50 /* FosterAppTestPlan.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = D580849E2B29BBB700B27E50 /* FosterAppTestPlan.xctestplan */; };
 		D581DBD12AF9220A009B61F7 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581DBCD2AF9220A009B61F7 /* SettingsPresenter.swift */; };
 		D581DBD22AF9220A009B61F7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581DBCE2AF9220A009B61F7 /* SettingsViewController.swift */; };
 		D581DBD32AF9220A009B61F7 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581DBCF2AF9220A009B61F7 /* SettingsInteractor.swift */; };
@@ -183,6 +184,7 @@
 		D576F56F2A5B1B7F0004AF60 /* AddWeightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeightViewModel.swift; sourceTree = "<group>"; };
 		D576F5742A5B1B8E0004AF60 /* WeighingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeighingList.storyboard; sourceTree = "<group>"; };
 		D576F5762A5B1BA00004AF60 /* AddWeight.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddWeight.storyboard; sourceTree = "<group>"; };
+		D580849E2B29BBB700B27E50 /* FosterAppTestPlan.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FosterAppTestPlan.xctestplan; sourceTree = "<group>"; };
 		D581DBCD2AF9220A009B61F7 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		D581DBCE2AF9220A009B61F7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D581DBCF2AF9220A009B61F7 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
@@ -624,6 +626,7 @@
 		D5B143642A1B5D9C00FA5418 /* FosterAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				D580849E2B29BBB700B27E50 /* FosterAppTestPlan.xctestplan */,
 				D5A1460229BB490600E2327B /* Mocks */,
 				D5B1436C2A1B5E6800FA5418 /* BaseTest */,
 			);
@@ -956,6 +959,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AC4B1F2A1E0F67008B0C43 /* Advices.json in Resources */,
+				D580849F2B29BBB700B27E50 /* FosterAppTestPlan.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
