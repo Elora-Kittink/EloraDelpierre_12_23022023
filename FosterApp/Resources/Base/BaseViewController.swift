@@ -15,7 +15,13 @@ class BaseViewController
     I: Interactor<V, P>
 >:
     UIViewController,
-    NavigationProtocol {
+	NavigationProtocol {
+	
+	func viewWillPresent(controller: UIViewController?, completion: @escaping () -> Void) {
+		completion()
+	}
+	
+	
     
     // MARK: - Variables
     var navigationSegue: Segue?
