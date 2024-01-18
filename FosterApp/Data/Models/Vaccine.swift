@@ -7,6 +7,8 @@
 
 import Foundation
 
+//	MARK:  WIP - future release
+
 struct Vaccine: Equatable {
     
     var date: Date?

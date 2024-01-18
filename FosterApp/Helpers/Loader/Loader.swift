@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// TODO: faire un loader lottie?
 //https://lottiefiles.com/animations/cats-in-a-box-dAceKvs91C
 // https://lottiefiles.com/animations/cat-colors-ZaKZckO9uT
 // https://lottiefiles.com/animations/lovely-cat-XbrvVhd34K

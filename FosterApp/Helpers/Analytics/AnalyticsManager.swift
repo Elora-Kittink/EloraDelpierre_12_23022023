@@ -9,11 +9,12 @@ import Foundation
 import FirebaseAnalytics
 import UtilsKit
 
+//  Analytics manager
 class AnalyticsManager {
 	private init() { }
 	
 	static let shared = AnalyticsManager()
-	 
+//	 prints a message in the console for easier reading
 	func log(event: AnalyticsEventTypes, with parameters: [String: String] = [:]) {
 		Analytics.logEvent(event.rawValue,
 						   parameters: parameters)
@@ -22,6 +23,7 @@ class AnalyticsManager {
 	}
 }
 
+// analytic events type list
 enum AnalyticsEventTypes: String {
 	
 	case userCreated = "tag_event_user_created"

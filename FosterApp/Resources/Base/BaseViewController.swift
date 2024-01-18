@@ -8,6 +8,9 @@ import UIKit
 import Combine
 import UtilsKit
 
+/// `BaseViewController` is a generic class that serves as the foundation for all ViewControllers in the application.
+/// It integrates key components of the Clean Architecture such as ViewModel, Presenter, and Interactor.
+/// It also handles view lifecycle, UI updates, and loading processes.
 class BaseViewController
 <
     V: ViewModel,
@@ -47,7 +50,8 @@ class BaseViewController
     
     // MARK: - View life cycle
     deinit {
-        self.stopLoading()
+		// Cleanup and notifications
+		self.stopLoading()
         NotificationCenter.default.removeObserver(self)
         print("💀 Deinit \(String(describing: self))")
     }
@@ -59,6 +63,7 @@ class BaseViewController
     }
     
     // MARK: - Configure viewModel
+	/// Configures the ViewModel for the Interactor and sets up bindings for UI updates.
     private func configureViewModel(for interactor: inout I) {
         self.subscribers.removeAll()
         
@@ -74,13 +79,15 @@ class BaseViewController
     }
     
     // MARK: - Refresh
+	/// Refreshes the UI based on the ViewModel's state.
     func refreshUI() {
         guard !self.viewModel.needToClose else {
             self.viewModel.needToClose = false
             self.dismiss(animated: true)
             return
         }
-        
+		
+		/// Handling view closing
         if let isLoading = self.viewModel.isLoading {
             if isLoading {
                 self.startLoading()
@@ -93,21 +100,26 @@ class BaseViewController
     }
     
     // MARK: - Loading
+	/// Starts the loading process (e.g., showing a spinner).
     func startLoading() {
         self.display(loader: true)
     }
     
+	/// Stops the loading process.
     func stopLoading() {
         self.display(loader: false)
     }
 }
 
+// MARK: - Private Extension for UIViewController
 private extension UIViewController {
     
+	/// Displays or hides a loader view based on the `loader` flag.
     func display(loader: Bool) {
         let tag = self.hashValue
         
         if loader {
+			// Setup and display the loader view
             let loaderView = LoaderView()
             loaderView.tag = tag
             loaderView.play()
@@ -122,6 +134,7 @@ private extension UIViewController {
                 loaderView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
             ])
         } else {
+			// Find and remove the loader view
             guard let loaderView = self.view?.viewWithTag(tag) as? LoaderView
             else { return }
             
@@ -131,12 +144,16 @@ private extension UIViewController {
     }
 }
 
+// MARK: - Navigation Extensions
 extension BaseViewController {
     
+	/// Presents the view controller modally, optionally within a navigation controller.
+
     func modal(withNavigationController: Bool = false) {
         Segue.modal.present(self, withNavigationController: withNavigationController)
     }
     
+	/// Pushes the view controller onto the navigation stack.
     func push() {
         Segue.push.present(self)
     }

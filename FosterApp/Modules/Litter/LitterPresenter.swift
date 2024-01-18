@@ -5,16 +5,24 @@
 
 import Foundation
 
+/// `LitterPresenter` acts as the middleman between the `LitterInteractor` and `LitterViewModel`.
+/// It processes data received from the interactor and updates the ViewModel.
 class LitterPresenter: Presenter<LitterViewModel> {
   
-    func displayMode(type: LitterLayoutStyle, rescueDate: Date?, litterId: String?, litter: Litter?, kittens: [Kitten]?) {
+	/// Updates the ViewModel based on the current layout style, rescue date, litter ID, litter, and kittens.
+	/// - Parameters:
+	///   - type: The layout style of the litter view.
+	///   - rescueDate: The rescue date of the litter.
+	///   - litterId: The identifier of the litter.
+	///   - litter: The `Litter` object.
+	///   - kittens: An array of `Kitten` objects.
+	func displayMode(type: LitterLayoutStyle, rescueDate: Date?, litterId: String?, litter: Litter?, kittens: [Kitten]?) {
         
         if rescueDate != nil {
            let dateToString = rescueDate?.toString(format: "dd/MM/yyyy")
             self.viewModel?.rescueDate = dateToString
-			print("🐣 \(self.viewModel?.rescueDate)")
         }
-		print("🐹🐹 \(self.viewModel?.rescueDate)")
+		
         self.viewModel?.isEditing = type.isEditing
         self.viewModel?.isCreatingNew = type.isCreating
         self.viewModel?.isDisplaying = type.isDisplaying
@@ -31,6 +39,7 @@ class LitterPresenter: Presenter<LitterViewModel> {
     }
 }
 
+/// Enum representing different layout styles for the litter view.
 enum LitterLayoutStyle {
     case displaying, editing, creating
     

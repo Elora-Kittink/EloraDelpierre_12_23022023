@@ -5,6 +5,7 @@
 
 import FirebaseAuth
 
+/// `HomeInteractor` handles the business logic for the `HomeViewController`.
 class HomeInteractor: Interactor
 <
 	HomeViewModel,
@@ -13,8 +14,9 @@ class HomeInteractor: Interactor
 	let worker = DBWorker()
 	var userWorker: UserWorkerProtocol = UserWorker()
 	
+	/// Checks if a user is currently connected and updates the UI accordingly.
 	func userIsConnected() {
-		
+		// Implementation of user connection check.
 		Task {
 			do {
 				guard let user = try await self.userWorker.userConnected() else {
@@ -36,6 +38,7 @@ class HomeInteractor: Interactor
 		}
 	}
 	
+	/// Logs out the current user.
 	func logOut() {
 		do {
 			try Auth.auth().signOut()
@@ -48,8 +51,9 @@ class HomeInteractor: Interactor
 		}
 	}
 	
+	/// Handles the selection of a tile on the Home screen.
 	func didSelectTile(tileType: Tiles, user: User) {
-		
+		// Implementation of tile selection handling.
 		switch tileType {
 			
 		case .litters:

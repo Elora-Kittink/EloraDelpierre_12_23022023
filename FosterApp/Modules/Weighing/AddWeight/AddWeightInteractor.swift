@@ -5,6 +5,8 @@
 
 import Foundation
 
+/// `AddWeightInteractor` handles the business logic for the `AddWeightViewController`.
+/// It is responsible for composing and saving weighing instances.
 class AddWeightInteractor: Interactor
 <
 	AddWeightViewModel,
@@ -12,12 +14,13 @@ class AddWeightInteractor: Interactor
 > {
 	let worker = DBWorker()
 	
+	/// Creates an instance of `Weighing` from form data.
 	func composeWeighing(weightId: String?,
 						 kittenWeight: String?,
 						 mealWeight: String?,
 						 date: Date,
 						 isEdition: Bool) -> Weighing {
-		
+		// Implementation for composing weighing
         self.presenter.display(loader: false)
 		return Weighing(id: isEdition ? weightId : UUID().uuidString,
 						date: date,
@@ -25,6 +28,7 @@ class AddWeightInteractor: Interactor
 						mealWeight: mealWeight ?? "")
 	}
 	
+	/// Creates or updates a weighing in the database.
 	func saveWeighing(isNew: Bool,
 					  weighing: Weighing,
 					  kitten: Kitten) {

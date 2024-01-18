@@ -5,6 +5,7 @@
 import FirebaseCore
 import FirebaseAuth
 
+/// `SignUpInteractor` handles the business logic for the `SignUpViewController`.
 class SignUpInteractor: Interactor
 <
 	SignUpViewModel,
@@ -14,7 +15,11 @@ class SignUpInteractor: Interactor
 	var userWorker: UserWorkerProtocol = UserWorker()
 //	private var userId = ""
 	
-	
+	/// Initiates the sign-up process with the provided credentials.
+	/// - Parameters:
+	///   - mail: Email address for the new account.
+	///   - name: Name of the user.
+	///   - password: Password for the new account.
 	func signUp(mail: String?, name: String?, password: String?) {
 		guard let mail,
 			  let password,

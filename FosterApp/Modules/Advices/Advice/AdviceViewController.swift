@@ -24,19 +24,9 @@ class AdviceViewController: BaseViewController < AdviceViewModel, AdvicePresente
 		super.viewDidLoad()
         webView.loadHTMLString(html, baseURL: nil)
 	}
-	
-	// MARK: - Refresh
-	override func refreshUI() {
-		super.refreshUI()
-	}
-
-	// MARK: - Actions
 }
 
-//extension AdviceViewController: WKNavigationDelegate {
-//
-//}
-
+// Storyboard Protocol from UtilsKit Pod
 extension AdviceViewController: StoryboardProtocol {
     
     static var storyboardName: String {

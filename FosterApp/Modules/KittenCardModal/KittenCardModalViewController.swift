@@ -6,6 +6,8 @@
 import UIKit
 import UtilsKit
 
+/// A view controller that manages the modal presentation for creating or editing a kitten's details.
+/// This controller inherits from `BaseViewController` and is specialized with `KittenCardModalIconViewModel`, `KittenCardModalPresenter`, and `KittenCardModalInteractor` for its operation.
 class KittenCardModalViewController: BaseViewController
 <
 	KittenCardModalViewModel,
@@ -39,12 +41,18 @@ class KittenCardModalViewController: BaseViewController
     
 	// MARK: - Variables
 	
+	/// The litter associated with the kitten.
     var litter: Litter!
+	/// Indicates if the view controller is in editing mode.
 	var isEditingMode: Bool!
+	/// Indicates if the view controller is in creating mode.
     var isCreatingMode: Bool!
+	/// The kitten being created or edited.
     var kitten: Kitten?
     
 	// MARK: - View life cycle
+	
+	/// Called after the controller's view is loaded into memory.
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.interactor.refresh(isEdititngMode: isEditingMode, isCreatingMode: isCreatingMode, kitten: kitten)
@@ -64,6 +72,7 @@ class KittenCardModalViewController: BaseViewController
         self.title = self.isCreatingMode ? self.viewModel.newKittenTitle : self.viewModel.updateKittenTitle
 	}
 	
+	/// Called when the view has appeared on the screen.
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
@@ -71,6 +80,8 @@ class KittenCardModalViewController: BaseViewController
 	}
 	
 	// MARK: - Refresh
+
+	/// Refreshes the UI with new data stored in the ViewModel.
 	override func refreshUI() {
 //		Notification after saved new kitten or updated kitten
 		let userInfo: [AnyHashable: Any] = ["kitten": self.viewModel.kitten]
@@ -99,6 +110,7 @@ class KittenCardModalViewController: BaseViewController
 
 	// MARK: - Actions
     
+	/// Action for saving the kitten's details.
     @IBAction private func save() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "save"])
 
@@ -127,6 +139,8 @@ class KittenCardModalViewController: BaseViewController
     }
 }
 
+// MARK: - Storyboard Protocol Conformance
+
 extension KittenCardModalViewController: StoryboardProtocol {
     static var storyboardName: String {
         "KittenCardModal"
@@ -136,6 +150,8 @@ extension KittenCardModalViewController: StoryboardProtocol {
         "KittenCardModalViewController"
     }
 }
+
+// MARK: - UITextFieldDelegate Conformance
 
 extension KittenCardModalViewController: UITextFieldDelegate {
 //	limit the number of characters for "color" textfield

@@ -3,6 +3,7 @@
 //  Created by Elora on 27/02/2023.
 //
 
+/// Holds the data required for the `LitterHistoryViewController`.
 class LitterHistoryViewModel: ViewModel {
     
     var litters: [Litter]?

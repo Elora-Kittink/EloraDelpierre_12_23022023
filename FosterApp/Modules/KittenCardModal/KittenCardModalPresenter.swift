@@ -3,9 +3,12 @@
 //  Created by Elora on 03/04/2023.
 //
 
+/// `KittenCardModalPresenter` acts as the middleman between the `KittenCardModalInteractor` and `KittenCardModalViewModel`.
+/// It processes data received from the interactor and updates the ViewModel.
 class KittenCardModalPresenter: Presenter<KittenCardModalViewModel> {
     
-    
+	/// Updates the ViewModel with the kitten's details.
+	/// - Parameter kitten: The `Kitten` object to be displayed.
     func display(kitten: Kitten?) {
         
         self.viewModel?.firstName = kitten?.firstName ?? ""

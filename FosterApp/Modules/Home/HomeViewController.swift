@@ -8,6 +8,8 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 
+/// `HomeViewController` manages the home screen of the application.
+/// This controller inherits from `BaseViewController` and is specialized with `HomeViewModel`, `HomePresenter`, and `HomeInteractor` for its operation.
 class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, HomeInteractor> {
 	
 	// MARK: - Outlets
@@ -18,15 +20,24 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 	
 	// MARK: - View life cycle
 	
+	/// Called after the controller's view is loaded into memory.
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	
+		// Setting up the collection view's data source and delegate.
 		self.collectionView.dataSource = self
 		self.collectionView.delegate = self
+		
+		// Registering the cell class for the collection view.
 		self.collectionView.register(Tile.self, forCellWithReuseIdentifier: "NewTile")
+
+		// Ensuring the collection view's layout is properly configured.
 		self.collectionView.translatesAutoresizingMaskIntoConstraints = false
 		
+		// Checking if a user is currently connected.
 		self.interactor.userIsConnected()
+		
+		// Setting up an observer for the 'userLogged' notification.
 		NotificationCenter.default.addObserver(forName: NSNotification.Name("userLogged"),
 											   object: nil,
 											   queue: nil) { [interactor] _ in
@@ -43,7 +54,7 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 			self.interactor.userIsConnected()
 		}
 	}
-	
+	/// Called when the view is about to be added to a view hierarchy.
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
@@ -53,6 +64,7 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 	//	TODO: quand LoginInteractor ou SignUpInteractor close() ça revient sur HomeViewCo,troller mais ça ne refresh pas donc on reste à l'état vide, il faudrait repasser dans le viewdidload
 	//	essayer de passer une nottification dans la completion du close()
 	// MARK: - Refresh
+	/// Refreshes the UI with new data stored in the ViewModel.
 	override func refreshUI() {
 		super.refreshUI()
 		self.welcomeLabel.text = "Bienvenu \(self.viewModel.user?.name ?? "")"
@@ -66,6 +78,8 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 	}
 }
 
+// MARK: - Storyboard Protocol Conformance
+
 extension HomeViewController: StoryboardProtocol {
 	static var storyboardName: String {
 		"Home"
@@ -76,9 +90,10 @@ extension HomeViewController: StoryboardProtocol {
 	}
 }
 
-// MARK: - UICollectionViewDelegate & UICollectionViewDelegateFlowLayout
+// MARK: - UICollectionViewDelegate & UICollectionViewDelegateFlowLayout Conformance
+
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-	
+	// Implementation of collection view delegate methods.
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		AnalyticsManager.shared.log(event: .collectionViewCellPressed, with: ["cell_name":"\(self.viewModel.homeTiles[safe: indexPath.row]?.title)"])
 		
@@ -98,9 +113,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegate
 	}
 }
 
-// MARK: - UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource Conformance
 extension HomeViewController: UICollectionViewDataSource {
-	
+	// Implementation of collection view data source methods.
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		self.viewModel.homeTiles.count
 	}

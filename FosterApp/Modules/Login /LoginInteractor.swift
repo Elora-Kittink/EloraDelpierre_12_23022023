@@ -6,6 +6,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 
+/// `LoginInteractor` handles the business logic for the login process.
 class LoginInteractor: Interactor
 <
 	LoginViewModel,
@@ -14,6 +15,10 @@ class LoginInteractor: Interactor
 	
 	var userWorker: UserWorkerProtocol = UserWorker()
 	
+	/// Initiates the login process with the provided credentials.
+	/// - Parameters:
+	///   - email: Email address for the account.
+	///   - password: Password for the account.
 	func logIn(email: String?, password: String?) {
 		guard let email,
 			  let password

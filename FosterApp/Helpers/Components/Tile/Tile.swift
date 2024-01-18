@@ -9,8 +9,9 @@ import Foundation
 import UIKit
 import UtilsKit
 
+// custom collectionview cell
 class Tile: BaseCollectionViewCell {
-	
+//	computed variable for image view
 	let imageView: UIImageView = {
 		let imageView = UIImageView()
 		imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,6 +20,7 @@ class Tile: BaseCollectionViewCell {
 		return imageView
 	}()
 	
+//	computed variable for label
 	let label: UILabel = {
 		let label = UILabel()
 		label.translatesAutoresizingMaskIntoConstraints = false
@@ -27,6 +29,7 @@ class Tile: BaseCollectionViewCell {
 		return label
 	}()
 	
+//	initialisation w UI
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		
@@ -54,11 +57,11 @@ class Tile: BaseCollectionViewCell {
 			label.heightAnchor.constraint(equalToConstant: 38)
 		])
 	}
-	
+//	requied initialisation
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 	}
-	
+//	call to set computed variable img & label
 	func configure(image: UIImage, text: String) {
 		imageView.image = image
 		label.text = text
@@ -67,6 +70,7 @@ class Tile: BaseCollectionViewCell {
 	}
 }
 
+// TODO: commenter quand je serais sure de garder
 enum Tiles {
 	
 	case litters, advices, gallery, admin, calendar, contacts, medicalHistory, weighingHistory

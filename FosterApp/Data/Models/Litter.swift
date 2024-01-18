@@ -7,6 +7,24 @@
 
 import Foundation
 
+/// A UITableViewCell subclass representing a litter.
+class LitterCell: BaseCell<Litter> {
+	
+	/// Updates the cell when a new `Litter` item is set.
+	/// Displays a list of kitten names or a placeholder if no kittens are present.
+
+	override var item: Litter? {
+		didSet {
+			let kittenList = item?.kittens?.compactMap { kitten in
+				kitten.firstName
+			}
+			.joined(separator: ", ")
+			textLabel?.text = kittenList?.isEmpty ?? true ? "Pas de chaton pour l'intant" : kittenList
+		}
+	}
+}
+
+// Model structure for a litter.
 struct Litter: Equatable {
 	var id: String?
 	var kittens: [Kitten]?
@@ -14,6 +32,8 @@ struct Litter: Equatable {
 	var rescueDate: String?
 	var isFavorite: Bool
 	
+	/// Initializes a new `Litter` instance from a CoreData `DB_Litter` object.
+	/// - Parameter coreDataObject: The `DB_Litter` instance to convert.
 	init(from coreDataObject: DB_Litter) {
 		self.kittens = (coreDataObject.r_kittens?.allObjects as? [DB_Kitten])?.compactMap { kitten in
 			Kitten(from: kitten)
@@ -24,6 +44,13 @@ struct Litter: Equatable {
 		self.isFavorite = coreDataObject.a_isFavorite
 	}
 	
+	/// Initializes a new `Litter` instance from form data.
+	/// - Parameters:
+	///   - id: Unique identifier for the litter.
+	///   - kittens: Array of `Kitten` instances in the litter.
+	///   - isOngoing: Indicates if the litter is ongoing.
+	///   - rescueDate: Date of the litter's rescue.
+	///   - isFavorite: Indicates if the litter is marked as favorite.
 	init(id: String? = nil,
 		 kittens: [Kitten]? = nil,
 		 isOngoing: Bool,
@@ -34,18 +61,5 @@ struct Litter: Equatable {
 		self.isOngoing = isOngoing
 		self.rescueDate = rescueDate
 		self.isFavorite = isFavorite
-	}
-}
-
-class LitterCell: BaseCell<Litter> {
-	
-	override var item: Litter? {
-		didSet {
-            let kittenList = item?.kittens?.compactMap { kitten in
-                kitten.firstName
-            }
-            .joined(separator: ", ")
-            textLabel?.text = kittenList?.isEmpty ?? true ? "Pas de chaton pour l'intant" : kittenList
-		}
 	}
 }

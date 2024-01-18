@@ -5,6 +5,7 @@
 
 import UIKit
 
+/// `ChooseAppIconViewModel` represents the state and data of the `ChooseAppIconViewController`.
 class ChooseAppIconViewModel: ViewModel {
 	
 	let title = "Changer l'icone"

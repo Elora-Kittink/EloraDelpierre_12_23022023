@@ -6,6 +6,8 @@
 import UIKit
 import UtilsKit
 
+/// `LitterViewController` is a view controller that manages the display and interaction with a specific litter.
+/// This controller inherits from `BaseViewController` and is specialized with `LitterViewModel`, `LitterPresenter`, and `LitterInteractor` for its operation.
 class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter, LitterInteractor> {
 	
 	// MARK: - Outlets
@@ -20,21 +22,27 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	
     // MARK: - Variables
     
+	/// The identifier of the litter being displayed or edited.
     var litterId: String? {
         didSet {
             self.interactor.refresh(litterId: litterId)
         }
     }
+	/// Indicates if the view controller is in create mode.
     var isCreateMode = false
+	/// Indicates if the view controller is in display mode.
     var isDisplayMode = true
+	/// Indicates if the view controller is in edit mode.
     var isEditMode = false
     var user: User!
 	
+	/// A table view for displaying kittens in the litter.
 	lazy var  litterTableView: BaseTableView<KittenCell, Kitten> = {
 	let litterTableView =  BaseTableView <KittenCell, Kitten>(didSelect: didSelect(item: at: ))
 	return litterTableView
 	}()
 	
+	/// A view displayed when there are no kittens in the litter.
     let emptyView: UIView = {
         let view = UIView()
         
@@ -55,6 +63,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	
 	// MARK: - View life cycle
     
+	/// Called after the controller's view is loaded into memory.
 	override func viewDidLoad() {
 		super.viewDidLoad()
         NotificationCenter.default.addObserver(forName: NSNotification.Name("newKittenCreated"),
@@ -70,6 +79,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
         self.title = self.viewModel.title
 	}
 	
+	/// Called when the view has appeared on the screen.
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
@@ -77,9 +87,12 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	}
 	
 	// MARK: - Refresh
+	
+	/// Refreshes the UI with new data stored in the ViewModel.
 	override func refreshUI() {
 		super.refreshUI()
-        
+		// Update UI elements based on the ViewModel's state.
+
         self.isEditMode = self.viewModel.isEditing
         self.isCreateMode = self.viewModel.isCreatingNew
         self.isDisplayMode = self.viewModel.isDisplaying
@@ -100,7 +113,9 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 //        litterTable.reloadData()
 	}
 
+	/// Sets up the UI elements of the table view.
 	func setupTableViewUI() {
+		// Implementation of table view UI setup.
 		self.view.addSubview(litterTableView)
 		litterTableView.translatesAutoresizingMaskIntoConstraints = false
 		NSLayoutConstraint.activate([
@@ -111,6 +126,10 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 		])
 	}
 	
+	/// Handles the selection of a kitten item.
+	/// - Parameters:
+	///   - item: The `Kitten` item selected.
+	///   - indexPath: The index path of the selected item in the table view.
 	func didSelect(item: Kitten, at indexPath: IndexPath) {
 		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name":"\(item.firstName)"])
 		
@@ -125,13 +144,16 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	
 	
 	// MARK: - Actions
-    @IBAction private func makeItFavorite() {
+
+	/// Action for marking the litter as favorite.
+	@IBAction private func makeItFavorite() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"favorite_litter"])
 		
         guard let litterId = litterId else { return }
         self.interactor.makeFavorite(litterId: litterId)
     }
     
+	/// Action for adding a new kitten.
     @IBAction private func addKitten() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"add_kitten"])
 		
@@ -142,12 +164,15 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 		}
         navigationController?.present(vc, animated: true)
     }
+	
+	/// Action for archiving the litter.
     @IBAction private func archiveLitter() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"archive_kitten"])
 		
         self.interactor.archiveLitter(litterId: self.viewModel.id)
     }
     
+	/// Action for editing the litter.
     @IBAction private func editLitter() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"edit_litter"])
 		
@@ -156,8 +181,8 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
                                    isDisplaying: false,
                                    litterId: litterId)
     }
-    
 
+	/// Action for saving the litter.
     @IBAction private func save() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"save_litter"])
 		
@@ -167,6 +192,8 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 								   litterId: self.viewModel.id)
     }
 }
+
+// MARK: - Storyboard Protocol Conformance
 
 extension LitterViewController: StoryboardProtocol {
     static var storyboardName: String {

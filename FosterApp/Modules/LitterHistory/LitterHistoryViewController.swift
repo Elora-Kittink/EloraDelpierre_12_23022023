@@ -5,24 +5,27 @@
 import UtilsKit
 import UIKit
 
+/// `LitterHistoryViewController`  Manages the litter history screen of the application.
+/// This controller inherits from `BaseViewController` and is specialized with `LitterHistoryViewModel`, `LitterHistoryPresenter`, and `LitterHistoryInteractor` for its operation.
 class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	 LitterHistoryPresenter, LitterHistoryInteractor> {
-    
-    
 	
 	// MARK: - Outlets
     @IBOutlet private weak var headerLabel: UILabel!
 	@IBOutlet private weak var addLitterButton: UIButton!
 	
 	// MARK: - Variables
+	
     var user: User!
-//	TODO: comprendre tout ça
+	
+	/// A table view to display litter history, initialized lazily.
 	lazy var  littersTableView: BaseTableView<LitterCell, Litter> = {
 		let littersTableView =  BaseTableView <LitterCell, Litter>(didSelect: didSelect(item:at:))
 	return littersTableView
 	}() // homework, Why did we change it to lazy var and into a self executed closure?
     
-    let emptyView: UIView = {
+	/// A view displayed when there are no litters.
+	let emptyView: UIView = {
         let view = UIView()
         
         let label = UILabel()
@@ -41,6 +44,8 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
     }()
     
 	// MARK: - View life cycle
+	
+	/// Called after the controller's view is loaded into memory.
 	override func viewDidLoad() {
 		self.interactor.refresh(user: user)
 		super.viewDidLoad()
@@ -48,12 +53,13 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
         self.title = self.viewModel.title
 	}
 	
+	/// Called when the view is about to appear on the screen.
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         self.interactor.refresh(user: user)
     }
-	
+	/// Called when the view has appeared on the screen.
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
@@ -61,14 +67,16 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	}
     
 	// MARK: - Refresh
+	
+	/// Refreshes the UI with new data stored in the ViewModel.
 	override func refreshUI() {
 		super.refreshUI()
 		littersTableView.items = self.viewModel.litters ?? []
 		littersTableView.reloadData()
         littersTableView.backgroundView = self.viewModel.litters?.isEmpty ?? true ? self.emptyView : nil
-//        self.headerLabel.text = self.viewModel.headerText
 	}
 	
+	/// Sets up the UI elements of the view controller.
 	func setupUI() {
 		self.view.addSubview(littersTableView)
 		littersTableView.translatesAutoresizingMaskIntoConstraints = false
@@ -81,6 +89,8 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	}
 
 	// MARK: - Actions
+	
+	/// Action for the add litter button.
     @IBAction private func addLitter() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"add_litter"])
 		
@@ -93,6 +103,10 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
         navigationController?.pushViewController(vc, animated: true)
     }
 	
+	/// Handles the selection of a litter item.
+	/// - Parameters:
+	///   - item: The `Litter` item selected.
+	///   - indexPath: The index path of the selected item in the table view.
 	func didSelect(item: Litter, at indexPath: IndexPath) {
 		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name":"\(item.rescueDate)"])
 		
@@ -107,42 +121,7 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	}
 }
 
-
-//extension LitterHistoryViewController: UITableViewDataSource, UITableViewDelegate {
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        min(tableView.frame.height / 1.5, 50)
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        guard let litters = self.viewModel.litters else {
-//            return 0
-//        }
-//       return litters.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "litterCell", for: indexPath)
-//        self.interactor.refreshCell(litter: self.viewModel.litters?[indexPath.row])
-//        cell.textLabel?.text = self.viewModel.kittenList
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let litterId = self.viewModel.litters?[indexPath.row].id else {
-//            return
-//        }
-//		let vc = LitterViewController.fromStoryboard { vc in
-//			vc.user = self.user
-//			vc.litterId = litterId
-//			vc.isDisplayMode = true
-//			vc.isCreateMode = false
-//			vc.isEditMode = false
-//		}
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
-//}
+// MARK: - Storyboard Protocol Conformance
 
 extension LitterHistoryViewController: StoryboardProtocol {
     static var storyboardName: String {

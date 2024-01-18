@@ -5,6 +5,7 @@
 
 import Foundation
 
+/// Holds the data required for the `LitterViewController`.
 class LitterViewModel: ViewModel {
     
     var litter: Litter!

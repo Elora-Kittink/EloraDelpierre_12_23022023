@@ -8,8 +8,16 @@
 import Foundation
 import FirebaseAuth
 
+/// `UserWorker` is responsible for managing Firebase user authentication.
+/// It conforms to `UserWorkerProtocol` and provides functionality for user login, signup, and status checks.
 struct UserWorker: UserWorkerProtocol {
 	
+	/// Authenticates a known user with email and password.
+	/// - Parameters:
+	///   - email: The email address of the user.
+	///   - password: The password of the user.
+	/// - Returns: A `User` object upon successful authentication.
+	/// - Throws: An error if authentication fails.
 	func login(email: String, password: String) async throws -> User {
 		try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<User, Error>) in
 			Auth.auth().signIn(withEmail: email,
@@ -25,6 +33,12 @@ struct UserWorker: UserWorkerProtocol {
 		}
 	}
 	
+	/// Registers a new user in Firebase with an email and password.
+	/// - Parameters:
+	///   - mail: The email address for the new user.
+	///   - password: The password for the new user.
+	/// - Returns: A `User` object upon successful registration.
+	/// - Throws: An error if registration fails.
 	func signUp(mail: String, password: String)  async throws -> User {
 
 		try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<User, Error>) in
@@ -44,6 +58,8 @@ struct UserWorker: UserWorkerProtocol {
 		}
 	}
 	
+	/// Checks if a user is currently connected.
+	/// - Returns: A `User` object if a user is connected, otherwise `nil`.
 	func userConnected() -> User? {
 		
 		guard let currentUser = Auth.auth().currentUser else {
@@ -52,13 +68,18 @@ struct UserWorker: UserWorkerProtocol {
 		return User(from: currentUser)
 	}
 	
+	/// Logs out the current user.
+	/// - Note: This function needs to be completed with logout logic.
 	func logOut() {
-		
+//		TODO: complete
 	}
 }
 
+
+/// Custom error indicating that a user was not found.
 struct UserNotFoundError: Error { }
 
+/// Protocol defining authentication functionalities.
 protocol UserWorkerProtocol {
 	func login(email: String, password: String) async throws -> User
 	func signUp(mail: String, password: String) async throws -> User

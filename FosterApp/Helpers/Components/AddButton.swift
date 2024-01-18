@@ -8,12 +8,13 @@
 import Foundation
 import UIKit
 
+// custom button to reuse
 class AddButton: UIButton {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.setup()
     }
-    
+//    set UI
     private func setup() {
         self.backgroundColor = .systemBlue
         self.layer.cornerRadius = 25

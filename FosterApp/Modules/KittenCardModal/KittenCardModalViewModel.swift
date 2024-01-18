@@ -3,8 +3,10 @@
 //  Created by Elora on 03/04/2023.
 //
 
+/// Holds the data required for the `KittenCardModalViewController`.
 class KittenCardModalViewModel: ViewModel {
     
+	// Properties for labels, kitten data, and other UI elements.
     let newKittenTitle = "Nouveau chaton"
     let updateKittenTitle = "Modifier le chaton"
     // MARK: - labels names

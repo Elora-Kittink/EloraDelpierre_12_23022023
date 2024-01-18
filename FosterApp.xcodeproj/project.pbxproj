@@ -73,7 +73,6 @@
 		D59DB7EF29DAC53B00306F0C /* KittenCardModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */; };
 		D59DB7F029DAC53B00306F0C /* KittenCardModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */; };
 		D59DB7F129DAC53B00306F0C /* KittenCardModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7ED29DAC53B00306F0C /* KittenCardModalViewModel.swift */; };
-		D59EA0502A125DC800B53542 /* Advices.json in Resources */ = {isa = PBXBuildFile; fileRef = D59EA04F2A125DC800B53542 /* Advices.json */; };
 		D59F2AFF2B076E440014AD2C /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F2AFE2B076E440014AD2C /* AnalyticsManager.swift */; };
 		D59F2B012B07708E0014AD2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D59F2B002B07708E0014AD2C /* GoogleService-Info.plist */; };
 		D59FF70F2A0A6F5E00147783 /* AdvicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59FF70B2A0A6F5E00147783 /* AdvicePresenter.swift */; };
@@ -95,7 +94,6 @@
 		D5A189502ACD81580092B059 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1894F2ACD81580092B059 /* Tile.swift */; };
 		D5A189552ACD82340092B059 /* Tile.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A189542ACD82340092B059 /* Tile.xib */; };
 		D5AC4B1E2A1E0239008B0C43 /* Extension+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC4B1D2A1E0239008B0C43 /* Extension+UserDefaults.swift */; };
-		D5AC4B1F2A1E0F67008B0C43 /* Advices.json in Resources */ = {isa = PBXBuildFile; fileRef = D59EA04F2A125DC800B53542 /* Advices.json */; };
 		D5AC4B212A1E3BC3008B0C43 /* APIRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC4B202A1E3BC3008B0C43 /* APIRequestMock.swift */; };
 		D5B048B42B0BA58600BC2F93 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B048B32B0BA58600BC2F93 /* Loader.swift */; };
 		D5B048BA2B0CB84500BC2F93 /* ChooseAppIconPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B048B62B0CB84500BC2F93 /* ChooseAppIconPresenter.swift */; };
@@ -225,7 +223,6 @@
 		D59DB7EB29DAC53B00306F0C /* KittenCardModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalViewController.swift; sourceTree = "<group>"; };
 		D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalInteractor.swift; sourceTree = "<group>"; };
 		D59DB7ED29DAC53B00306F0C /* KittenCardModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenCardModalViewModel.swift; sourceTree = "<group>"; };
-		D59EA04F2A125DC800B53542 /* Advices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Advices.json; sourceTree = "<group>"; };
 		D59F2AFE2B076E440014AD2C /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		D59F2B002B07708E0014AD2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D59FF70B2A0A6F5E00147783 /* AdvicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicePresenter.swift; sourceTree = "<group>"; };
@@ -514,7 +511,6 @@
 			isa = PBXGroup;
 			children = (
 				D59AA7D62A03F7AE008AF45F /* AdvicesResponse.swift */,
-				D59EA04F2A125DC800B53542 /* Advices.json */,
 			);
 			path = Advices;
 			sourceTree = "<group>";
@@ -958,7 +954,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5AC4B1F2A1E0F67008B0C43 /* Advices.json in Resources */,
 				D580849F2B29BBB700B27E50 /* FosterAppTestPlan.xctestplan in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -979,7 +974,6 @@
 				D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */,
 				D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */,
 				D5C7D9B329F0196C00885C48 /* SignUp.storyboard in Resources */,
-				D59EA0502A125DC800B53542 /* Advices.json in Resources */,
 				D576F5752A5B1B8E0004AF60 /* WeighingList.storyboard in Resources */,
 				D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */,
 				D5B5E24F29D46E3C00A84476 /* GoogleService-Info.plist in Resources */,

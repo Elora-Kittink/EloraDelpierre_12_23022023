@@ -5,6 +5,7 @@
 import Foundation
 import UIKit
  
+/// `LoginViewModel` holds the data required for the `LoginViewController`.
 class LoginViewModel: ViewModel {
 	
 	var userConnected: User?

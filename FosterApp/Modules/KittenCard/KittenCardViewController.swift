@@ -6,10 +6,11 @@
 import UIKit
 import UtilsKit
 
+/// `KittenCardViewController` is a  view controller that manages the display and interaction with a specific kitten's details.
+/// This controller inherits from `BaseViewController` and is specialized with `KittenCardViewModel`, `KittenCardPresenter`, and `KittenCardInteractor` for its operation.
 class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCardPresenter, KittenCardInteractor> {
     
     // MARK: - Outlets
-    
     
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var microshipLabel: UILabel!
@@ -36,15 +37,24 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     var kitten: Kitten!
     
     // MARK: - View life cycle
+	
+	/// Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         super.viewDidLoad()
 //		return from the form with the new kitten by the presenter.close() way
+		// Adds an observer for the 'newKittenCreated' notification.
+		// This observer is triggered when a new kitten is created from the form.
+		// It calls the `refresh` method on the interactor to update the view with the new kitten's details.
 		NotificationCenter.default.addObserver(forName: NSNotification.Name("newKittenCreated"),
 											   object: nil,
 											   queue: nil) { [interactor] _ in
 			interactor.refresh(kitten: self.kitten, litter: self.litter)
 		}
 //		return from the form with the updated kitten by the presenter.close() way
+		// Adds an observer for the 'kittenUpdated' notification.
+		// This observer is triggered when an existing kitten's details are updated from the form.
+		// It extracts the updated kitten object from the notification and calls the `refresh` method
+		// on the interactor to update the view with the updated kitten's details.
 		NotificationCenter.default.addObserver(forName: NSNotification.Name("kittenUpdated"),
 											   object: nil,
 											   queue: nil) { [weak interactor] notification in
@@ -82,6 +92,8 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     
     
     // MARK: - Refresh
+	
+	/// Refreshes the UI with new data stored in the ViewModel.
     override func refreshUI() {
         super.refreshUI()
             
@@ -113,6 +125,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 	
     // MARK: - Actions
     
+	/// Action for editing the kitten's details.
     @IBAction private func edit() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"edit"])
 		
@@ -125,6 +138,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
         navigationController?.present(vc, animated: true)
     }
     
+	/// Action for adding a new weighing record for the kitten.
     @IBAction private func addWeighing() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"add_weight"])
 		
@@ -134,6 +148,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 		navigationController?.present(vc, animated: true)
     }
 	
+	/// Action for showing the kitten's weighing history.
 	@IBAction private func showWeighingHistory() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"weighing_history"])
 		
@@ -144,6 +159,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 	}
 }
 
+// MARK: - Storyboard Protocol Conformance
 extension KittenCardViewController: StoryboardProtocol {
     static var storyboardName: String {
         "KittenCard"

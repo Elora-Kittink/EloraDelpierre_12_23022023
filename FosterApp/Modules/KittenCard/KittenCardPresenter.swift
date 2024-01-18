@@ -6,10 +6,17 @@
 import Foundation
 import UIKit
 
+/// `KittenCardPresenter` acts as the middleman between the `KittenCardInteractor` and `KittenCardViewModel`.
+/// It processes data received from the interactor and updates the ViewModel.
 class KittenCardPresenter: Presenter<KittenCardViewModel> {
     
+	/// Updates the ViewModel with kitten and litter details.
+	/// - Parameters:
+	///   - kitten: The `Kitten` object to be displayed.
+	///   - litter: The `Litter` object associated with the kitten.
     func display(kitten: Kitten, litter: Litter) {
-        
+		// Updates the ViewModel with information about the kitten and its associated litter.
+		// This includes setting up various properties such as kitten's name, birthdate, color, etc.
         self.viewModel?.infoCardViewModel = [
             InfoCardViewModel(label: kitten.birthdate?.toString(format: "dd/MM/yyyy"),
                               imageContent: UIImage(named: "birthdate")),

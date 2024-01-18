@@ -3,6 +3,7 @@
 //  Created by Elora on 24/02/2023.
 //
 
+/// Holds the data required for the `KittenCardViewController`.
 class KittenCardViewModel: ViewModel {
     
     let title = "Chaton"

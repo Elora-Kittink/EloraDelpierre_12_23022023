@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// custom button to reuse
 class ButtonBeige: UIButton {
     
     override init(frame: CGRect) {
@@ -20,6 +21,7 @@ class ButtonBeige: UIButton {
         setupButton()
     }
     
+//	configuration
     private func setupButton() {
     
         backgroundColor = UIColor(named: "beige")

@@ -5,6 +5,9 @@
 
 import UtilsKit
 
+
+/// `ChooseAppIconViewController` is a view controller responsible for displaying a list of app icons and handling user selection to change the app's icon.
+/// This controller inherits from `BaseViewController` and is specialized with `ChooseAppIconViewModel`, `ChooseAppIconPresenter`, and `ChooseAppIconInteractor` for its operation.
 class ChooseAppIconViewController: BaseViewController
 <
 	ChooseAppIconViewModel,
@@ -14,11 +17,14 @@ class ChooseAppIconViewController: BaseViewController
 	
 	// MARK: - Outlets
 	
-	// MARK: - Variables
+	/// The table view used to display available app icons.
 	@IBOutlet private weak var tableView: UITableView!
 	
-	
 	// MARK: - View life cycle
+	
+
+	/// Called after the controller's view is loaded into memory.
+	/// Registers UITableViewCell for the table view, sets up delegates, and initializes the view's title.
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -29,17 +35,12 @@ class ChooseAppIconViewController: BaseViewController
 		
 		self.title = self.viewModel.title
 	}
-	
-	// MARK: - Refresh
-	override func refreshUI() {
-		super.refreshUI()
-	}
-
-	// MARK: - Actions
-	
 }
 
 extension ChooseAppIconViewController: UITableViewDelegate {
+	
+	/// Handles the selection of an app icon from the table view.
+	/// Changes the app's icon if the feature is supported.
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let iconName = self.viewModel.icons[indexPath.row]
 		
@@ -56,16 +57,21 @@ extension ChooseAppIconViewController: UITableViewDelegate {
 		
 		tableView.deselectRow(at: indexPath, animated: true)
 	}
+
+	/// Specifies the height for rows in the table view.
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		150
 	}
 }
 
 extension ChooseAppIconViewController: UITableViewDataSource {
+	
+	/// Returns the number of rows in a given section of the table view.
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		self.viewModel.icons.count
 	}
 	
+	/// Provides a cell to be inserted in a particular location of the table view.
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "IconCell", for: indexPath)
 		cell.imageView?.image = UIImage(named: self.viewModel.icons[indexPath.row])
@@ -73,6 +79,7 @@ extension ChooseAppIconViewController: UITableViewDataSource {
 	}
 }
 
+/// Extension conforming to `StoryboardProtocol` for storyboard-based instantiation.
 extension ChooseAppIconViewController: StoryboardProtocol {
 	static var storyboardName: String {
 		"ChooseAppIcon"
