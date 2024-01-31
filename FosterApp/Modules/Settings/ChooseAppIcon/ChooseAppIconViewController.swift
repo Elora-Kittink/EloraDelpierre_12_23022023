@@ -15,6 +15,8 @@ class ChooseAppIconViewController: BaseViewController
 	ChooseAppIconInteractor
 > {
 	
+//	test build Bitrise
+	
 	// MARK: - Outlets
 	
 	/// The table view used to display available app icons.
