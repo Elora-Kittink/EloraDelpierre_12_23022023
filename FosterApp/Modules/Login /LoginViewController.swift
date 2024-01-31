@@ -21,6 +21,7 @@ class LoginViewController: BaseViewController<LoginViewModel,
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.view.hideKeyboardOnTap()
 		self.isModalInPresentation = true
     }
 	

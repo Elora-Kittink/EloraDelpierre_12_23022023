@@ -7,7 +7,8 @@ import UIKit
 import UtilsKit
 
 /// `KittenCardViewController` is a  view controller that manages the display and interaction with a specific kitten's details.
-/// This controller inherits from `BaseViewController` and is specialized with `KittenCardViewModel`, `KittenCardPresenter`, and `KittenCardInteractor` for its operation.
+/// This controller inherits from `BaseViewController` and is specialized with `KittenCardViewModel`, 
+/// `KittenCardPresenter`, and `KittenCardInteractor` for its operation.
 class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCardPresenter, KittenCardInteractor> {
     
     // MARK: - Outlets
@@ -99,9 +100,9 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
             
 		self.microshipLabel.isHidden = self.viewModel.microship?.isEmpty ?? true ? true : false
 		self.secondNameLabel.isHidden = self.viewModel.secondName.isEmpty ? true : false
-		self.tattooLabel.isHidden = true
+		self.tattooLabel.isHidden = self.viewModel.tattoo?.isEmpty ?? true ? true : false
 		self.adopterGroup.isHidden = self.viewModel.isAdopted ? false : true
-//		self.viewModel.tattoo?.isEmpty ?? true ? true : false
+		
 		self.nameLabel.text = self.viewModel.firstName
 		self.secondNameLabel.text = self.viewModel.secondName
 		print("🦊\(self.viewModel.tattoo)")
@@ -115,6 +116,14 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
             view.viewModel = info
 //            stackInfoCards.addArrangedSubview(view)
         }
+		
+		//		Accessibility
+		
+		self.nameLabel.accessibilityLabel = "Prénom: \(self.viewModel.firstName)"
+		self.secondNameLabel.accessibilityLabel = "Second prénom: \(self.viewModel.secondName)"
+		self.microshipLabel.accessibilityLabel = "Puce électronique: \(self.viewModel.microship ?? "non renseigné")"
+		self.tattooLabel.accessibilityLabel = "Tatouage: \(self.viewModel.tattoo ?? "non renseigné")"
+		self.comment.accessibilityValue = "Commentaires"
     }
     
 	override func viewDidAppear(_ animated: Bool) {

@@ -50,12 +50,13 @@ class BaseTableView<T: BaseCell<U>, U>: UITableView, UITableViewDelegate, UITabl
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		items.count
+		 return items.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = self.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? BaseCell<U>
 		cell?.item = items[indexPath.row]
+		cell?.accessibilityTraits = .button
 		return cell ?? UITableViewCell()
 	}
 	

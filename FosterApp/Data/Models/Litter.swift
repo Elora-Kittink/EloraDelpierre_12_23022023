@@ -19,7 +19,8 @@ class LitterCell: BaseCell<Litter> {
 				kitten.firstName
 			}
 			.joined(separator: ", ")
-			textLabel?.text = kittenList?.isEmpty ?? true ? "Pas de chaton pour l'intant" : kittenList
+			textLabel?.text = kittenList?.isEmpty ?? true ? "Portée sans chaton créé" : kittenList
+			textLabel?.accessibilityLabel = "chatons: \(kittenList ?? "aucun chatons dans cette portée pour l'instant")"
 		}
 	}
 }

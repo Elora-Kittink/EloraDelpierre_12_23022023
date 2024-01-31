@@ -27,7 +27,7 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	/// A view displayed when there are no litters.
 	let emptyView: UIView = {
         let view = UIView()
-        
+		view.backgroundColor = .blue
         let label = UILabel()
         label.text = "Vous n'avez pas encore de portée !"
         label.textAlignment = .center
@@ -74,12 +74,15 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 		littersTableView.items = self.viewModel.litters ?? []
 		littersTableView.reloadData()
         littersTableView.backgroundView = self.viewModel.litters?.isEmpty ?? true ? self.emptyView : nil
+		littersTableView.accessibilityValue = "\(self.viewModel.litters?.count ?? 0) portée(s)"
 	}
 	
 	/// Sets up the UI elements of the view controller.
 	func setupUI() {
 		self.view.addSubview(littersTableView)
 		littersTableView.translatesAutoresizingMaskIntoConstraints = false
+		littersTableView.accessibilityLabel = "Liste des portées"
+		
 		NSLayoutConstraint.activate([
 			littersTableView.topAnchor.constraint(equalTo: self.view.topAnchor),
 			littersTableView.bottomAnchor.constraint(equalTo: self.addLitterButton.topAnchor, constant: -48),

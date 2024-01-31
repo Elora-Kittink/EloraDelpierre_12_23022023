@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,20 +24,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8p-Dh-x12" userLabel="Content">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="710"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhF-my-ZZV">
-                                                <rect key="frame" x="288" y="10" width="35" height="35"/>
-                                                <color key="backgroundColor" red="0.88627451660000001" green="0.81960785390000002" blue="0.69019609689999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="nou-L6-Dyt"/>
-                                                    <constraint firstAttribute="width" constant="35" id="vRB-sJ-cPg"/>
-                                                </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="rectangle.portrait.and.arrow.right" catalog="system"/>
-                                                <connections>
-                                                    <action selector="logOut" destination="Y6W-OH-hqX" eventType="touchUpInside" id="juX-9f-GwR"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oE-a3-sdD">
                                                 <rect key="frame" x="176" y="10" width="41.333333333333343" height="35"/>
                                                 <constraints>
@@ -65,14 +51,12 @@
                                         </subviews>
                                         <color key="backgroundColor" name="beigeClear"/>
                                         <constraints>
-                                            <constraint firstItem="8Bn-g6-Wcj" firstAttribute="top" secondItem="yhF-my-ZZV" secondAttribute="bottom" constant="24" id="822-2W-8gU"/>
                                             <constraint firstAttribute="trailing" secondItem="8Bn-g6-Wcj" secondAttribute="trailing" constant="24" id="HWI-WI-4wK"/>
                                             <constraint firstItem="8Bn-g6-Wcj" firstAttribute="leading" secondItem="f8p-Dh-x12" secondAttribute="leading" constant="24" id="QVo-gQ-M5W"/>
                                             <constraint firstItem="0oE-a3-sdD" firstAttribute="centerX" secondItem="f8p-Dh-x12" secondAttribute="centerX" id="d1T-k0-TAp"/>
-                                            <constraint firstItem="yhF-my-ZZV" firstAttribute="top" secondItem="f8p-Dh-x12" secondAttribute="top" constant="10" id="eI4-9H-D3y"/>
-                                            <constraint firstAttribute="trailing" secondItem="yhF-my-ZZV" secondAttribute="trailing" constant="70" id="lcv-oO-5IN"/>
                                             <constraint firstAttribute="bottom" secondItem="8Bn-g6-Wcj" secondAttribute="bottom" constant="24" id="lfe-1y-Ne6"/>
                                             <constraint firstItem="0oE-a3-sdD" firstAttribute="top" secondItem="f8p-Dh-x12" secondAttribute="top" constant="10" id="wgJ-nY-cep"/>
+                                            <constraint firstItem="8Bn-g6-Wcj" firstAttribute="top" secondItem="0oE-a3-sdD" secondAttribute="bottom" constant="24" id="zCQ-3d-BQc"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -96,7 +80,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="8Bn-g6-Wcj" id="wlM-MO-wYP"/>
-                        <outlet property="logOutbutton" destination="yhF-my-ZZV" id="1Vp-BQ-xOx"/>
                         <outlet property="welcomeLabel" destination="0oE-a3-sdD" id="97f-8g-AIX"/>
                     </connections>
                 </viewController>
@@ -107,7 +90,6 @@
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="104"/>
-        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="109"/>
         <namedColor name="beigeClear">
             <color red="0.99599999189376831" green="0.98000001907348633" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

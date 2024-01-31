@@ -75,6 +75,9 @@ extension ChooseAppIconViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "IconCell", for: indexPath)
 		cell.imageView?.image = UIImage(named: self.viewModel.icons[indexPath.row])
+		cell.isAccessibilityElement = true
+		cell.accessibilityTraits = .button
+		cell.accessibilityLabel = "icone chatons dans un carton n°\(indexPath.row)"
 		return cell
 	}
 }

@@ -25,6 +25,7 @@ class SignUpViewController: BaseViewController
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.view.hideKeyboardOnTap()
 		self.navigationItem.hidesBackButton = true
     }
 	

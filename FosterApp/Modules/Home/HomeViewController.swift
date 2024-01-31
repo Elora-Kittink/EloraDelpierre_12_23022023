@@ -14,7 +14,6 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 	
 	// MARK: - Outlets
 	
-	@IBOutlet private weak var logOutbutton: UIButton!
 	@IBOutlet private weak var collectionView: UICollectionView!
 	@IBOutlet private weak var welcomeLabel: UILabel!
 	
@@ -69,12 +68,6 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 		super.refreshUI()
 		self.welcomeLabel.text = "Bienvenu \(self.viewModel.user?.name ?? "")"
 		self.collectionView.reloadData()
-	}
-	
-	// MARK: - Actions
-	
-	@IBAction private func logOut() {
-		self.interactor.logOut()
 	}
 }
 
@@ -133,7 +126,10 @@ extension HomeViewController: UICollectionViewDataSource {
 		}
 				   
 		cell.configure(image: item.image ?? UIImage(), text: item.title)
-				   
+		cell.isAccessibilityElement = true
+		cell.accessibilityTraits = .button
+		cell.accessibilityValue = item.title
+		
 		return cell
 	}
 }

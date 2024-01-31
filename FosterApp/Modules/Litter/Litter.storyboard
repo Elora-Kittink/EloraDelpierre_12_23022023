@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -25,63 +26,90 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="659"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWx-qA-U90">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Kp-Vq-zad" userLabel="Rescue Date text field" customClass="DatePickerField" customModule="FosterApp">
-                                                        <rect key="frame" x="190" y="79" width="97" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date de Sauvetage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnA-w9-dAD" userLabel="Rescue date Label">
-                                                        <rect key="frame" x="29" y="86" width="145" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNA-gf-pzQ" userLabel="Edit Button">
-                                                        <rect key="frame" x="325" y="58" width="46" height="35"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                                        <color key="tintColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Editer">
-                                                            <color key="titleColor" systemColor="tintColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="editLitter" destination="Y6W-OH-hqX" eventType="touchUpInside" id="riz-ha-jw7"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDD-pb-jhi" userLabel="Archive Button">
-                                                        <rect key="frame" x="323" y="107" width="51" height="35"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                                        <color key="tintColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Archiver">
-                                                            <color key="titleColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="archiveLitter" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C9j-BF-Fnk"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FZ-kj-SKr" userLabel="favorite Button">
-                                                        <rect key="frame" x="322" y="8" width="52" height="35"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <color key="tintColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="star.fill" catalog="system">
-                                                            <color key="titleColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="makeItFavorite" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GRy-Ct-5Wq"/>
-                                                        </connections>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fQN-8T-Kdm">
+                                                        <rect key="frame" x="24" y="143" width="345" height="33"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date de sauvetage" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnA-w9-dAD" userLabel="Rescue date Label">
+                                                                <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="33"/>
+                                                                <accessibility key="accessibilityConfiguration">
+                                                                    <bool key="isElement" value="NO"/>
+                                                                </accessibility>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="21/09/2023" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Kp-Vq-zad" userLabel="Rescue Date text field" customClass="DatePickerField" customModule="FosterApp">
+                                                                <rect key="frame" x="252" y="0.0" width="93" height="33"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Dvh-sF-WkF">
+                                                        <rect key="frame" x="281.66666666666669" y="8" width="87.333333333333314" height="111"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FZ-kj-SKr" userLabel="favorite Button">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.333333333333329" height="34.333333333333336"/>
+                                                                <color key="tintColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal">
+                                                                    <color key="titleColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <imageReference key="image" image="star.fill" catalog="system" symbolScale="small"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <imageReference key="image" image="star.fill" catalog="system" symbolScale="small"/>
+                                                                    <color key="baseForegroundColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="makeItFavorite" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GRy-Ct-5Wq"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNA-gf-pzQ" userLabel="Edit Button">
+                                                                <rect key="frame" x="0.0" y="38.333333333333329" width="87.333333333333329" height="34.333333333333329"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                <color key="tintColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Editer">
+                                                                    <color key="titleColor" systemColor="tintColor"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Editer">
+                                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                                                    <color key="baseForegroundColor" systemColor="tintColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="editLitter" destination="Y6W-OH-hqX" eventType="touchUpInside" id="riz-ha-jw7"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDD-pb-jhi" userLabel="Archive Button">
+                                                                <rect key="frame" x="0.0" y="76.666666666666657" width="87.333333333333329" height="34.333333333333343"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                                <color key="tintColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="Archiver">
+                                                                    <color key="titleColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Archiver">
+                                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                                                    <color key="baseForegroundColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="archiveLitter" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C9j-BF-Fnk"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" name="beigeClear"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="TFi-Vf-gNa"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Dvh-sF-WkF" secondAttribute="trailing" constant="24" id="7SO-c8-0ix"/>
+                                                    <constraint firstAttribute="bottom" secondItem="fQN-8T-Kdm" secondAttribute="bottom" constant="24" id="PZT-CF-bol"/>
+                                                    <constraint firstAttribute="height" constant="200" id="TFi-Vf-gNa"/>
+                                                    <constraint firstItem="Dvh-sF-WkF" firstAttribute="top" secondItem="hWx-qA-U90" secondAttribute="top" constant="8" id="TbV-sL-whH"/>
+                                                    <constraint firstItem="fQN-8T-Kdm" firstAttribute="leading" secondItem="hWx-qA-U90" secondAttribute="leading" constant="24" id="i8f-mX-F9v"/>
+                                                    <constraint firstItem="fQN-8T-Kdm" firstAttribute="top" secondItem="Dvh-sF-WkF" secondAttribute="bottom" constant="24" id="jkZ-Kg-707"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fQN-8T-Kdm" secondAttribute="trailing" constant="24" id="vN6-0A-zhP"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -105,17 +133,19 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="EN0-kM-l5n"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVB-pG-ufS" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
-                                <rect key="frame" x="135.66666666666666" y="688" width="121.99999999999997" height="30"/>
+                                <rect key="frame" x="117" y="683.66666666666663" width="159" height="34.333333333333371"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Ajouter un chaton"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ajouter un chaton"/>
                                 <connections>
                                     <action selector="addKitten" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Wkr-eM-IHA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BC-ZV-eW9" customClass="ButtonPink" customModule="FosterApp" customModuleProvider="target">
-                                <rect key="frame" x="172.66666666666666" y="688" width="48" height="30"/>
+                                <rect key="frame" x="158.33333333333334" y="683.66666666666663" width="76.333333333333343" height="34.333333333333371"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Valider"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Valider"/>
                                 <connections>
                                     <action selector="save" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wGA-w7-3MR"/>
                                 </connections>

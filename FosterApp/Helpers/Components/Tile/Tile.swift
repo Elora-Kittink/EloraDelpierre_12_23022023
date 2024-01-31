@@ -24,6 +24,8 @@ class Tile: BaseCollectionViewCell {
 	let label: UILabel = {
 		let label = UILabel()
 		label.translatesAutoresizingMaskIntoConstraints = false
+		label.adjustsFontForContentSizeCategory = true
+		label.font = UIFont.preferredFont(forTextStyle: .body)
 		label.textAlignment = .center
 		label.numberOfLines = 0
 		return label

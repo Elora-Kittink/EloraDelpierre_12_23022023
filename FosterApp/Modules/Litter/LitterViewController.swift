@@ -50,6 +50,8 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
         label.text = "Cette portée n'a pas encore de chaton !"
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
+		label.adjustsFontForContentSizeCategory = true
+		label.font = UIFont.preferredFont(forTextStyle: .body)
         
         view.addSubview(label)
         
@@ -77,6 +79,8 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
                                    isDisplaying: isDisplayMode,
                                    litterId: litterId)
         self.title = self.viewModel.title
+		
+		self.rescueDateTextField.accessibilityLabel = "date de sauvetage de la portée"
 	}
 	
 	/// Called when the view has appeared on the screen.

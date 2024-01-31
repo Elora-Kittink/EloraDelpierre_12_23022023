@@ -38,19 +38,6 @@ class HomeInteractor: Interactor
 		}
 	}
 	
-	/// Logs out the current user.
-	func logOut() {
-		do {
-			try Auth.auth().signOut()
-			self.presenter.noUserConnected()
-			self.presenter.display(loader: false)
-			print("User logged out")
-		} catch let error {
-			// handle error here
-			print("Error trying to sign out of Firebase: \(error.localizedDescription)")
-		}
-	}
-	
 	/// Handles the selection of a tile on the Home screen.
 	func didSelectTile(tileType: Tiles, user: User) {
 		// Implementation of tile selection handling.

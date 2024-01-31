@@ -44,7 +44,7 @@ class AddWeightViewController: BaseViewController
 		// Additional setup after loading the view
 		self.mealWeightLabel.text = self.viewModel.mealWeightLabel
 		self.kittenWeightLabel.text = self.viewModel.kittenWeightLabel
-        
+		
         self.title = self.isEditingMode ? self.viewModel.updateWeighingTitle : self.viewModel.newWeighingTitle
 	}
 	

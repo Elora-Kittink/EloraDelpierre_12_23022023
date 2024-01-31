@@ -78,6 +78,7 @@ extension AdvicesViewController: UITableViewDataSource, UITableViewDelegate {
 		label.font = UIFont.systemFont(ofSize: 28)
 		label.text = section?.sectionTitle
 		label.translatesAutoresizingMaskIntoConstraints = false
+		label.accessibilityTraits = .header
 		
 		view.addSubview(label)
 		
@@ -119,7 +120,7 @@ extension AdvicesViewController: UITableViewDataSource, UITableViewDelegate {
 		let adviceCell: AdviceCell = tableView.dequeueCell(forIndexPath: indexPath)
 		
 		adviceCell.text = advice.title
-		
+		adviceCell.accessibilityTraits = .button
 		
 		//        let cell = tableView.dequeueReusableCell(withIdentifier: "adviceCell", for: indexPath)
 		//        cell.textLabel?.text = advice.title

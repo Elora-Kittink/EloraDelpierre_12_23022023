@@ -38,7 +38,6 @@ class KittenCardModalViewController: BaseViewController
     @IBOutlet private weak var commentsLabel: UILabel!
     @IBOutlet private weak var commentsField: UITextField!
     
-    
 	// MARK: - Variables
 	
 	/// The litter associated with the kitten.
@@ -58,16 +57,36 @@ class KittenCardModalViewController: BaseViewController
 		self.interactor.refresh(isEdititngMode: isEditingMode, isCreatingMode: isCreatingMode, kitten: kitten)
         
         self.nameLabel.text = self.viewModel.firtsNameLabel
+		self.nameLabel.isAccessibilityElement = false
         self.secondNameLabel.text = self.viewModel.secondNameLabel
+		self.secondNameLabel.isAccessibilityElement = false
         self.birthdateLabel.text = self.viewModel.birthdateLabel
+		self.birthdateLabel.isAccessibilityElement = false
         self.sexLabel.text = self.viewModel.sexLabel
+		self.sexLabel.isAccessibilityElement = false
         self.microshipLabel.text = self.viewModel.microshipLabel
+		self.microshipLabel.isAccessibilityElement = false
 		self.tattooLabel.text = self.viewModel.tattooLabel
+		self.tattooLabel.isAccessibilityElement = false
         self.colorLabel.text = self.viewModel.colorLabel
+		self.colorLabel.isAccessibilityElement = false
         self.adoptersLabel.text = self.viewModel.adoptersLabel
+		self.adoptersLabel.isAccessibilityElement = false
         self.rescueDateLabel.text = self.viewModel.rescueDateLabel
+		self.rescueDateLabel.isAccessibilityElement = false
         self.commentsLabel.text = self.viewModel.commentLabel
+		self.commentsLabel.isAccessibilityElement = false
 		self.colorField.delegate = self
+		
+		self.nameField.accessibilityLabel = self.nameLabel.text
+		self.secondNameField.accessibilityLabel = self.secondNameLabel.text
+		self.birthdateField.accessibilityLabel = self.birthdateLabel.text
+		self.microshipField.accessibilityLabel = self.microshipLabel.text
+		self.tattooField.accessibilityLabel = self.tattooLabel.text
+		self.colorField.accessibilityLabel = self.colorLabel.text
+		self.adopterField.accessibilityLabel = self.adoptersLabel.text
+		self.rescueDateField.accessibilityLabel = self.rescueDateLabel.text
+		self.commentsField.accessibilityLabel = self.commentsLabel.text
 		
         self.title = self.isCreatingMode ? self.viewModel.newKittenTitle : self.viewModel.updateKittenTitle
 	}
