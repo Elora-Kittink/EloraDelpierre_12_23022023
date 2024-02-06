@@ -9,7 +9,8 @@ import Foundation
 import Combine
 @testable import FosterApp
 
-@MainActor class BaseTest
+@MainActor 
+class BaseTest
 <
     V: ViewModel,
     P: Presenter<V>,

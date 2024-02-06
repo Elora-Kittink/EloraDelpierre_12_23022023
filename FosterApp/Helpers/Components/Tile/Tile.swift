@@ -51,7 +51,7 @@ class Tile: BaseCollectionViewCell {
 			imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
 			imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
 			imageView.bottomAnchor.constraint(equalTo: label.topAnchor, constant: -4),
-			//						Label
+			//				Label
 			
 			label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
 			label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
@@ -68,7 +68,6 @@ class Tile: BaseCollectionViewCell {
 		imageView.image = image
 		label.text = text
 		self.backgroundColor = UIColor(named: "border")
-//		view.layer.cornerRadius = 10
 	}
 }
 
@@ -81,18 +80,25 @@ enum Tiles {
 		switch self {
 		case .litters:
 			return UIImage(named: "litter")
+			
 		case .advices:
 			return UIImage(named: "advices")
+			
 		case .gallery:
 			return UIImage(named: "photo")
+			
 		case .admin:
 			return UIImage(named: "medicalFolders")
+			
 		case .calendar:
 			return UIImage(named: "calendar")
+			
 		case .contacts:
 			return UIImage(named: "directory")
+			
 		case .medicalHistory:
 			return UIImage(named: "medicalFolders")
+			
 		case .weighingHistory:
 			return UIImage(named: "weight")
 		}

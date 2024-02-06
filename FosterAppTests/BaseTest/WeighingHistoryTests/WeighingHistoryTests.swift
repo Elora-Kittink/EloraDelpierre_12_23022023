@@ -42,8 +42,9 @@ final class WeighingHistoryTests: XCTestCase {
 																					   tattoo: nil,
                                                                                        vaccines: nil,
                                                                                        adopters: nil,
-                                                                                       weighingHistory: nil, isAlive: true), litter: self.fetchedLitter))
-            
+                                                                                       weighingHistory: nil, 
+																					   isAlive: true),
+																		litter: self.fetchedLitter))
         } catch {
             XCTFail(error.localizedDescription)
         }
@@ -54,7 +55,11 @@ final class WeighingHistoryTests: XCTestCase {
         
         await test.fire { interactor in
             DispatchQueue.main.async {
-                self.weighingCreated = interactor.composeWeighing(weightId: "weightId", kittenWeight: "kittenWeight", mealWeight: "mealWeight", date: self.date, isEdition: false)
+                self.weighingCreated = interactor.composeWeighing(weightId: "weightId", 
+																  kittenWeight: "kittenWeight",
+																  mealWeight: "mealWeight",
+																  date: self.date,
+																  isEdition: false)
             }
             
             DispatchQueue.main.async {

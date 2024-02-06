@@ -28,8 +28,6 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 	@IBOutlet private weak var colorGroup: UIView!
 	@IBOutlet private weak var birthdateGroup: UIView!
 	@IBOutlet private weak var comment: UITextView!
-	@IBOutlet private weak var documentsTile: Tile!
-	@IBOutlet private weak var galleryTile: Tile!
 	
 	// MARK: - Variables
     
@@ -90,7 +88,12 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 		self.colorGroup.layer.cornerRadius = 12
 		self.adopterGroup.layer.cornerRadius = 12
     }
-    
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		AnalyticsManager.shared.log(event: .pageOpen, with: ["page": "\(Self.self)"])
+	}
     
     // MARK: - Refresh
 	
@@ -105,7 +108,6 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 		
 		self.nameLabel.text = self.viewModel.firstName
 		self.secondNameLabel.text = self.viewModel.secondName
-		print("🦊\(self.viewModel.tattoo)")
         self.microshipLabel.text = self.viewModel.microship
 		self.tattooLabel.text = self.viewModel.tattoo
 		self.birthdate.text = self.viewModel.birthdate
@@ -125,18 +127,13 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 		self.tattooLabel.accessibilityLabel = "Tatouage: \(self.viewModel.tattoo ?? "non renseigné")"
 		self.comment.accessibilityValue = "Commentaires"
     }
-    
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-	
-		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
-	}
+
 	
     // MARK: - Actions
     
 	/// Action for editing the kitten's details.
     @IBAction private func edit() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"edit"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "edit"])
 		
 		let vc = KittenCardModalViewController.fromStoryboard { vc in
 			vc.litter = self.litter
@@ -149,7 +146,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
     
 	/// Action for adding a new weighing record for the kitten.
     @IBAction private func addWeighing() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"add_weight"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "add_weight"])
 		
 		let vc = AddWeightViewController.fromStoryboard { vc in
 			vc.kitten = self.viewModel.kitten
@@ -159,7 +156,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 	
 	/// Action for showing the kitten's weighing history.
 	@IBAction private func showWeighingHistory() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"weighing_history"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "weighing_history"])
 		
 		let vc = WeighingListViewController.fromStoryboard { vc in
 			vc.kitten = self.viewModel.kitten

@@ -7,7 +7,8 @@ import UIKit
 import UtilsKit
 
 /// `LitterViewController` is a view controller that manages the display and interaction with a specific litter.
-/// This controller inherits from `BaseViewController` and is specialized with `LitterViewModel`, `LitterPresenter`, and `LitterInteractor` for its operation.
+/// This controller inherits from `BaseViewController` and is specialized with `LitterViewModel`, 
+/// `LitterPresenter`, and `LitterInteractor` for its operation.
 class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter, LitterInteractor> {
 	
 	// MARK: - Outlets
@@ -38,7 +39,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	
 	/// A table view for displaying kittens in the litter.
 	lazy var  litterTableView: BaseTableView<KittenCell, Kitten> = {
-	let litterTableView =  BaseTableView <KittenCell, Kitten>(didSelect: didSelect(item: at: ))
+	let litterTableView = BaseTableView <KittenCell, Kitten>(didSelect: didSelect(item: at: ))
 	return litterTableView
 	}()
 	
@@ -87,7 +88,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+		AnalyticsManager.shared.log(event: .pageOpen, with: ["page": "\(Self.self)"])
 	}
 	
 	// MARK: - Refresh
@@ -135,7 +136,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	///   - item: The `Kitten` item selected.
 	///   - indexPath: The index path of the selected item in the table view.
 	func didSelect(item: Kitten, at indexPath: IndexPath) {
-		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name":"\(item.firstName)"])
+		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name": "\(item.firstName ?? "")"])
 		
 		let vc = KittenCardViewController.fromStoryboard { vc in
 			vc.litterId = self.viewModel.id
@@ -151,7 +152,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 
 	/// Action for marking the litter as favorite.
 	@IBAction private func makeItFavorite() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"favorite_litter"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "favorite_litter"])
 		
         guard let litterId = litterId else { return }
         self.interactor.makeFavorite(litterId: litterId)
@@ -159,7 +160,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     
 	/// Action for adding a new kitten.
     @IBAction private func addKitten() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"add_kitten"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "add_kitten"])
 		
 		let vc = KittenCardModalViewController.fromStoryboard { vc in
 			vc.litter = self.viewModel.litter
@@ -171,14 +172,14 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	
 	/// Action for archiving the litter.
     @IBAction private func archiveLitter() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"archive_kitten"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "archive_kitten"])
 		
         self.interactor.archiveLitter(litterId: self.viewModel.id)
     }
     
 	/// Action for editing the litter.
     @IBAction private func editLitter() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"edit_litter"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "edit_litter"])
 		
         self.interactor.diplayMode(isEditing: true,
                                    isCreating: false,
@@ -188,7 +189,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 
 	/// Action for saving the litter.
     @IBAction private func save() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"save_litter"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "save_litter"])
 		
         self.interactor.saveLitter(user: self.user,
 								   rescueDate: rescueDateTextField.text?.toDate(format: self.viewModel.dateFormat),

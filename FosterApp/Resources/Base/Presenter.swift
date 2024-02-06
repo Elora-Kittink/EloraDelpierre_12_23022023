@@ -6,7 +6,8 @@
 import Foundation
 
 /// `Presenter` is responsible for preparing data for display (i.e., updating the ViewModel) and reacting to user inputs.
-@MainActor class Presenter<V: ViewModel> {
+@MainActor 
+class Presenter<V: ViewModel> {
 	
 	// MARK: Variables
 	private let identifier = UUID().uuidString

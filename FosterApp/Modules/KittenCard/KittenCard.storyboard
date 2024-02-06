@@ -278,26 +278,7 @@ des pesées</string>
                                                     <action selector="edit" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5gJ-EP-g7c"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="kA8-Ms-C0k">
-                                                <rect key="frame" x="32" y="624.66666666666663" width="329" height="128"/>
-                                                <subviews>
-                                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGI-au-S55" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="128"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Galerie"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42h-sR-Wov" customClass="Tile" customModule="FosterApp" customModuleProvider="target">
-                                                        <rect key="frame" x="74" y="0.0" width="255" height="128"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Documents"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                </subviews>
-                                            </stackView>
-                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut lab" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8a0-Gp-xN7">
+                                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut lab" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8a0-Gp-xN7">
                                                 <rect key="frame" x="36" y="308.33333333333331" width="321" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -314,11 +295,9 @@ des pesées</string>
                                             <constraint firstItem="qi4-Nd-jtn" firstAttribute="top" secondItem="JgE-ct-n1I" secondAttribute="bottom" constant="24" id="27k-Dq-2gf"/>
                                             <constraint firstItem="8a0-Gp-xN7" firstAttribute="top" secondItem="PhU-br-Pd4" secondAttribute="bottom" constant="16" id="4zY-qq-Kyq"/>
                                             <constraint firstItem="7bQ-qR-cZY" firstAttribute="top" secondItem="i15-QH-pNQ" secondAttribute="top" id="6iJ-ue-65U"/>
-                                            <constraint firstItem="kA8-Ms-C0k" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="8aI-OL-tMm"/>
                                             <constraint firstItem="PhU-br-Pd4" firstAttribute="top" secondItem="4Wy-7u-n1R" secondAttribute="bottom" constant="64" id="ABH-Vw-cNq"/>
                                             <constraint firstItem="JgE-ct-n1I" firstAttribute="top" secondItem="8a0-Gp-xN7" secondAttribute="bottom" constant="24" id="C6D-IH-Q5w"/>
                                             <constraint firstItem="i15-QH-pNQ" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="CQ1-I0-sF8"/>
-                                            <constraint firstAttribute="trailing" secondItem="kA8-Ms-C0k" secondAttribute="trailing" constant="32" id="CZb-DX-Vx9"/>
                                             <constraint firstAttribute="trailing" secondItem="8a0-Gp-xN7" secondAttribute="trailing" constant="36" id="EfF-ad-gwg"/>
                                             <constraint firstItem="JgE-ct-n1I" firstAttribute="centerX" secondItem="2yy-RG-8D2" secondAttribute="centerX" id="Gy4-aq-D4F"/>
                                             <constraint firstItem="8a0-Gp-xN7" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="36" id="HzT-4X-Nd4"/>
@@ -326,7 +305,6 @@ des pesées</string>
                                             <constraint firstItem="PhU-br-Pd4" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="W65-FP-l8u"/>
                                             <constraint firstAttribute="trailing" secondItem="PhU-br-Pd4" secondAttribute="trailing" constant="32" id="XAc-oK-Nlw"/>
                                             <constraint firstItem="qi4-Nd-jtn" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="eJ4-Yl-cWg"/>
-                                            <constraint firstItem="kA8-Ms-C0k" firstAttribute="top" secondItem="qi4-Nd-jtn" secondAttribute="bottom" constant="32" id="gCP-gq-VNp"/>
                                             <constraint firstItem="4Wy-7u-n1R" firstAttribute="top" secondItem="i15-QH-pNQ" secondAttribute="bottom" constant="12" id="lcp-3e-xi1"/>
                                             <constraint firstItem="i15-QH-pNQ" firstAttribute="top" secondItem="2yy-RG-8D2" secondAttribute="top" constant="32" id="mOF-jK-Spm"/>
                                             <constraint firstAttribute="trailing" secondItem="7bQ-qR-cZY" secondAttribute="trailing" constant="32" id="oRU-SS-qQi"/>
@@ -362,9 +340,7 @@ des pesées</string>
                         <outlet property="color" destination="eoR-J6-3HV" id="QnL-Jg-PfW"/>
                         <outlet property="colorGroup" destination="Tzl-zX-9H6" id="OUg-RE-aIn"/>
                         <outlet property="comment" destination="8a0-Gp-xN7" id="aIh-Rr-jqI"/>
-                        <outlet property="documentsTile" destination="42h-sR-Wov" id="7KM-Vy-dez"/>
                         <outlet property="editBtn" destination="4Wy-7u-n1R" id="lwh-tM-tAK"/>
-                        <outlet property="galleryTile" destination="kGI-au-S55" id="c7M-K7-Lit"/>
                         <outlet property="image" destination="3eK-db-H3v" id="ErZ-F3-rnu"/>
                         <outlet property="imageView" destination="i15-QH-pNQ" id="59e-Ka-2Jr"/>
                         <outlet property="medicalHistory" destination="2nk-Rw-3rD" id="gyL-M6-EbO"/>

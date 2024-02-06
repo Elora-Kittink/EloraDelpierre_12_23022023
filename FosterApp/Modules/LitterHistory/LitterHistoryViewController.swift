@@ -6,7 +6,8 @@ import UtilsKit
 import UIKit
 
 /// `LitterHistoryViewController`  Manages the litter history screen of the application.
-/// This controller inherits from `BaseViewController` and is specialized with `LitterHistoryViewModel`, `LitterHistoryPresenter`, and `LitterHistoryInteractor` for its operation.
+/// This controller inherits from `BaseViewController` and is specialized with `LitterHistoryViewModel`, `LitterHistoryPresenter`,
+///  and `LitterHistoryInteractor` for its operation.
 class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	 LitterHistoryPresenter, LitterHistoryInteractor> {
 	
@@ -20,7 +21,7 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	
 	/// A table view to display litter history, initialized lazily.
 	lazy var  littersTableView: BaseTableView<LitterCell, Litter> = {
-		let littersTableView =  BaseTableView <LitterCell, Litter>(didSelect: didSelect(item:at:))
+		let littersTableView = BaseTableView <LitterCell, Litter>(didSelect: didSelect(item:at:))
 	return littersTableView
 	}() // homework, Why did we change it to lazy var and into a self executed closure?
     
@@ -63,7 +64,7 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+		AnalyticsManager.shared.log(event: .pageOpen, with: ["page": "\(Self.self)"])
 	}
     
 	// MARK: - Refresh
@@ -93,25 +94,12 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 
 	// MARK: - Actions
 	
-	/// Action for the add litter button.
-    @IBAction private func addLitter() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"add_litter"])
-		
-		let vc = LitterViewController.fromStoryboard { vc in
-			vc.isCreateMode = true
-			vc.isDisplayMode = false
-			vc.isEditMode = false
-			vc.user = self.user
-		}
-        navigationController?.pushViewController(vc, animated: true)
-    }
-	
 	/// Handles the selection of a litter item.
 	/// - Parameters:
 	///   - item: The `Litter` item selected.
 	///   - indexPath: The index path of the selected item in the table view.
 	func didSelect(item: Litter, at indexPath: IndexPath) {
-		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name":"\(item.rescueDate)"])
+		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name": "\(item.rescueDate ?? "")"])
 		
 		let vc = LitterViewController.fromStoryboard { vc in
 			vc.user = self.user
@@ -119,6 +107,19 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 			vc.isDisplayMode = true
 			vc.isCreateMode = false
 			vc.isEditMode = false
+		}
+		navigationController?.pushViewController(vc, animated: true)
+	}
+	
+	/// Action for the add litter button.
+	@IBAction private func addLitter() {
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "add_litter"])
+		
+		let vc = LitterViewController.fromStoryboard { vc in
+			vc.isCreateMode = true
+			vc.isDisplayMode = false
+			vc.isEditMode = false
+			vc.user = self.user
 		}
 		navigationController?.pushViewController(vc, animated: true)
 	}

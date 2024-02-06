@@ -11,13 +11,6 @@ import CoreDataUtilsKit
 
 final class HomeTests: XCTestCase {
 	
-	override func setUpWithError() throws {
-		try super.setUpWithError()
-		try? CoreDataManager.default.dropDatabase()
-	}
-	
-	let worker = DBWorker()
-	
 	struct MockUserWorker: UserWorkerProtocol {
 		func userConnected() async throws -> FosterApp.User? {
 			FosterApp.User(mail: "TEST", id: "ID", name: "TEST")
@@ -31,6 +24,16 @@ final class HomeTests: XCTestCase {
 			User(mail: "TEST", id: "ID", name: "TEST")
 		}
 	}
+	
+	let worker = DBWorker()
+	
+	override func setUpWithError() throws {
+		try super.setUpWithError()
+		try? CoreDataManager.default.dropDatabase()
+	}
+	
+	
+
 	
 	func testSuccessLogUser() async throws {
 		

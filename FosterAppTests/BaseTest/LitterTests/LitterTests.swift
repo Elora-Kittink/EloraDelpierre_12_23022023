@@ -29,7 +29,7 @@ final class LitterTests: XCTestCase {
 			XCTFail(error.localizedDescription)
 		}
 	}
-		//	MARK: test func createLitter
+	// MARK: - test func createLitter
 	
 	func testSuccesCreateLitter() async throws {
 		
@@ -95,7 +95,7 @@ final class LitterTests: XCTestCase {
 		}
 	}
 	
-	//	MARK: test func updateLitter
+	// MARK: - test func updateLitter
 	
 	func testSuccesUpdateLitter() async throws {
 		let newDate = "25/12/2023"
@@ -110,7 +110,10 @@ final class LitterTests: XCTestCase {
 				do {
 					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters(userId: self.fetchedUser.id))
 					let litterId = try XCTUnwrap(allLitters.first?.id)
-					interactor.saveLitter(user: self.fetchedUser, rescueDate: newDate.toDate(format: "dd/MM/yyyy"), isEditing: true, litterId: litterId)
+					interactor.saveLitter(user: self.fetchedUser, 
+										  rescueDate: newDate.toDate(format: "dd/MM/yyyy"),
+										  isEditing: true,
+										  litterId: litterId)
 					self.litterFound = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litterId))
 				} catch {
 					XCTFail(error.localizedDescription)
@@ -140,7 +143,10 @@ final class LitterTests: XCTestCase {
 				do {
 					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters(userId: self.fetchedUser.id))
 					let litterId = try XCTUnwrap(allLitters.first?.id)
-					interactor.saveLitter(user: self.fetchedUser, rescueDate: newDate.toDate(format: "dd/MM/yyyy"), isEditing: true, litterId: nil)
+					interactor.saveLitter(user: self.fetchedUser, 
+										  rescueDate: newDate.toDate(format: "dd/MM/yyyy"),
+										  isEditing: true,
+										  litterId: nil)
 					self.litterFound = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litterId))
 				} catch {
 					XCTFail(error.localizedDescription)
@@ -156,7 +162,7 @@ final class LitterTests: XCTestCase {
 		}
 	}
 	
-	//	MARK: test func archiveLitter
+	// MARK: - test func archiveLitter
 	
 	func testSuccesArchiveLitter() async throws {
 	
@@ -221,7 +227,7 @@ final class LitterTests: XCTestCase {
 		}
 	}
 	
-	//	MARK: tests makeFavorite
+	// MARK: - tests makeFavorite
 	
 	func testSuccessMakeFavorite() async throws {
 		
@@ -284,7 +290,7 @@ final class LitterTests: XCTestCase {
 		}
 	}
 	
-	// MARK:	tests display
+	// MARK: - tests display
 	
 	func testSuccessDisplayDisplayingMode() async throws {
 		
@@ -320,18 +326,14 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				print("🐹 \(test.viewModel.rescueDate)")
 				interactor.saveLitter(user: self.fetchedUser,
 									  rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
-				print("🐹 \(test.viewModel.rescueDate)")
 				interactor.refresh(litterId: "badId")
-				print("🐹 \(test.viewModel.rescueDate)")
 			}
 		}
 		DispatchQueue.main.async {
-			print("🐹 \(test.viewModel.rescueDate)")
 			XCTAssertNotEqual(test.viewModel.id, "badId")
 		}
 	}

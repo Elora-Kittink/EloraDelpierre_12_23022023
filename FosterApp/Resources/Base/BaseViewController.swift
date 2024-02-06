@@ -20,12 +20,6 @@ class BaseViewController
     UIViewController,
 	NavigationProtocol {
 	
-	func viewWillPresent(controller: UIViewController?, completion: @escaping () -> Void) {
-		completion()
-	}
-	
-	
-    
     // MARK: - Variables
     var navigationSegue: Segue?
     var instanceIdentifier: String?
@@ -61,6 +55,10 @@ class BaseViewController
         
         self.stopLoading()
     }
+	
+	func viewWillPresent(controller: UIViewController?, completion: @escaping () -> Void) {
+		completion()
+	}
     
     // MARK: - Configure viewModel
 	/// Configures the ViewModel for the Interactor and sets up bindings for UI updates.

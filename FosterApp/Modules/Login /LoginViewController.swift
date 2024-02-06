@@ -9,7 +9,8 @@ import FirebaseCore
 import FirebaseAuth
 
 /// `LoginViewController` manages the user interface for user login.
-/// This controller inherits from `BaseViewController` and is specialized with `LoginViewModel`, `LoginPresenter`, and `LoginInteractor` for its operation.
+/// This controller inherits from `BaseViewController` and is specialized with `LoginViewModel`, 
+/// `LoginPresenter`, and `LoginInteractor` for its operation.
 class LoginViewController: BaseViewController<LoginViewModel,
                            LoginPresenter,
                            LoginInteractor> {
@@ -28,7 +29,7 @@ class LoginViewController: BaseViewController<LoginViewModel,
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+		AnalyticsManager.shared.log(event: .pageOpen, with: ["page": "\(Self.self)"])
 	}
     
     // MARK: - Refresh
@@ -44,7 +45,7 @@ class LoginViewController: BaseViewController<LoginViewModel,
     // MARK: - Actions
 	/// Action for the sign-up button, navigates to the sign-up page.
     @IBAction private func signUpAction() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"signup"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "signup"])
 
         let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
             let signupViewController = storyboard.instantiateViewController(identifier: "SignUpViewController")
@@ -53,7 +54,7 @@ class LoginViewController: BaseViewController<LoginViewModel,
     
 	/// Action for the log-in button, initiates the login process.
     @IBAction private func logInAction() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"login"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "login"])
 		
 		let email = emailTF.text
 		let password = passwordTF.text

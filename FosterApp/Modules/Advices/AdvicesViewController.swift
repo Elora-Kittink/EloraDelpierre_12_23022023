@@ -9,7 +9,8 @@ import UtilsKit
 
 /// `AdvicesViewController` manages the user interface for displaying a list of advices.
 /// It allows users to view and select various advices.
-/// This controller inherits from `BaseViewController` and is specialized with `AdvicesViewModel`, `AdvicesPresenter`, and `AdvicesInteractor` for its operation.
+/// This controller inherits from `BaseViewController` and is specialized with `AdvicesViewModel`, 
+/// `AdvicesPresenter`, and `AdvicesInteractor` for its operation.
 class AdvicesViewController: BaseViewController< AdvicesViewModel, AdvicesPresenter, AdvicesInteractor> {
 	
 	// MARK: - Outlets
@@ -134,7 +135,8 @@ extension AdvicesViewController: UITableViewDataSource, UITableViewDelegate {
 	///   - indexPath: The index path of the selected row.
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		// Implementation for handling row selection
-		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name":"\(self.viewModel.sections?.sections[safe: indexPath.section]?.advices[safe: indexPath.row]?.title)"])
+		AnalyticsManager.shared.log(event: .tableViewCellPressed,
+									with: ["cell_name": "\(self.viewModel.sections?.sections[safe: indexPath.section]?.advices[safe: indexPath.row]?.title)"])
 		
 		guard let advice = self.viewModel.sections?.sections[safe: indexPath.section]?.advices[safe: indexPath.row] else {
 			return

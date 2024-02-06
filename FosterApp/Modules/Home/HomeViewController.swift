@@ -9,7 +9,8 @@ import FirebaseCore
 import FirebaseAuth
 
 /// `HomeViewController` manages the home screen of the application.
-/// This controller inherits from `BaseViewController` and is specialized with `HomeViewModel`, `HomePresenter`, and `HomeInteractor` for its operation.
+/// This controller inherits from `BaseViewController` and is specialized with `HomeViewModel`, 
+/// `HomePresenter`, and `HomeInteractor` for its operation.
 class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, HomeInteractor> {
 	
 	// MARK: - Outlets
@@ -57,7 +58,7 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		AnalyticsManager.shared.log(event: .pageOpen,with: ["page": "\(Self.self)"])
+		AnalyticsManager.shared.log(event: .pageOpen, with: ["page": "\(Self.self)"])
 	}
 	
 	//	TODO: quand LoginInteractor ou SignUpInteractor close() ça revient sur HomeViewCo,troller mais ça ne refresh pas donc on reste à l'état vide, il faudrait repasser dans le viewdidload
@@ -88,7 +89,8 @@ extension HomeViewController: StoryboardProtocol {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 	// Implementation of collection view delegate methods.
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		AnalyticsManager.shared.log(event: .collectionViewCellPressed, with: ["cell_name":"\(self.viewModel.homeTiles[safe: indexPath.row]?.title)"])
+		AnalyticsManager.shared.log(event: .collectionViewCellPressed, 
+									with: ["cell_name": "\(self.viewModel.homeTiles[safe: indexPath.row]?.title ?? "")"])
 		
 		guard let item = self.viewModel.homeTiles[safe: indexPath.row] else { return }
 			guard let user = self.viewModel.user else { return }

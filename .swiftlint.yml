@@ -76,7 +76,6 @@ only_rules:
 - no_space_in_method_call
 - nsobject_prefer_isequal
 - number_separator
-- object_literal
 - opening_brace
 - operator_usage_whitespace
 - operator_whitespace
@@ -393,9 +392,6 @@ nsobject_prefer_isequal:
 number_separator:
     severity: warning
     minimum_length: 5
-
-object_literal:
-    severity: warning
 
 opening_brace:
     severity: warning

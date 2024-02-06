@@ -10,8 +10,6 @@ import Foundation
 // structure used to decode the json response &
 struct AdvicesResponse: Decodable {
     
-    let sections: [Section]
-    
     struct Section: Decodable {
         let sectionTitle: String
         let advices: [Advice]
@@ -21,4 +19,6 @@ struct AdvicesResponse: Decodable {
         let title: String
         var advice: String
     }
+	
+	let sections: [Section]
 }

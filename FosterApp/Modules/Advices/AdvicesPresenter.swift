@@ -34,7 +34,7 @@ class AdvicesPresenter: Presenter<AdvicesViewModel> {
    """
 		// Mapping and updating each section with the CSS styles.
 		let updatedSections = sections.sections.map { section in
-			var updatedAdvices = section.advices.map { advice in
+			let updatedAdvices = section.advices.map { advice in
 				var updatedAdvice = advice
 				
 				// Inserting CSS styles into the HTML content of each advice.

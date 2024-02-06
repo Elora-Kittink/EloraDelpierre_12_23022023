@@ -6,8 +6,10 @@
 import UtilsKit
 
 
-/// `ChooseAppIconViewController` is a view controller responsible for displaying a list of app icons and handling user selection to change the app's icon.
-/// This controller inherits from `BaseViewController` and is specialized with `ChooseAppIconViewModel`, `ChooseAppIconPresenter`, and `ChooseAppIconInteractor` for its operation.
+/// `ChooseAppIconViewController` is a view controller responsible for displaying a list of app icons and 
+/// handling user selection to change the app's icon.
+/// This controller inherits from `BaseViewController` and is specialized with `ChooseAppIconViewModel`, 
+/// `ChooseAppIconPresenter`, and `ChooseAppIconInteractor` for its operation.
 class ChooseAppIconViewController: BaseViewController
 <
 	ChooseAppIconViewModel,

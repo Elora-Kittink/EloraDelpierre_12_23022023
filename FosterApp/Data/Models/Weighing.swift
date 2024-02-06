@@ -22,18 +22,33 @@ class WeighingCell: BaseCell<Weighing> {
 		let label = UILabel()
 		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
-		
 	}()
+	
 	private let milkWeightLabel: UILabel! = {
 		let label = UILabel()
 		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 	
+	/// Updates the cell when a new `Weighing` item is set.
+	override var item: Weighing? {
+		didSet {
+			dateLabel.text = item?.date?.toString()
+			kittenWeightLabel.text = "\(item?.kittenWeight ?? "/")g"
+			milkWeightLabel.text = "\(item?.mealWeight ?? "/")g"
+		}
+	}
+	
 	/// Initializes a new `WeighingCell`.
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		self.setupUI()
+	}
+	
+	/// Required initializer using a coder, marked as unavailable.
+	@available(*, unavailable)
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
 	}
 	
 	/// Sets up the UI components within the cell.
@@ -54,21 +69,6 @@ class WeighingCell: BaseCell<Weighing> {
 			milkWeightLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
 			milkWeightLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
 		])}
-	
-	/// Required initializer using a coder, marked as unavailable.
-	@available(*, unavailable)
-	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
-	}
-	
-	/// Updates the cell when a new `Weighing` item is set.
-	override var item: Weighing? {
-		didSet {
-			dateLabel.text = item?.date?.toString()
-			kittenWeightLabel.text = "\(item?.kittenWeight ?? "/")g"
-			milkWeightLabel.text = "\(item?.mealWeight ?? "/")g"
-		}
-	}
 }
 
 // Model structure for a weighing record.

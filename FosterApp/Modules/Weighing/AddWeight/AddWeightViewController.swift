@@ -8,7 +8,8 @@ import UtilsKit
 
 /// `AddWeightViewController` manages the user interface for adding or editing a kitten's weight and meal weight.
 /// It allows users to input weight data and handles the saving of this data.
-/// This controller inherits from `BaseViewController` and is specialized with `AddWeightViewModel`, `AddWeightPresenter`, and `AddWeightInteractor` for its operation.
+/// This controller inherits from `BaseViewController` and is specialized with `AddWeightViewModel`, 
+/// `AddWeightPresenter`, and `AddWeightInteractor` for its operation.
 class AddWeightViewController: BaseViewController
 <
 	AddWeightViewModel,

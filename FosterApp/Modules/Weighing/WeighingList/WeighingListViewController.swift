@@ -8,7 +8,8 @@ import UtilsKit
 
 /// `WeighingListViewController` manages the user interface for displaying a list of weighings.
 /// It allows users to view, add, and edit weighings for a specific kitten.
-/// This controller inherits from `BaseViewController` and is specialized with `WeighingListViewModel`, `WeighingListPresenter`, and `WeighingListInteractor` for its operation.
+/// This controller inherits from `BaseViewController` and is specialized with `WeighingListViewModel`, 
+/// `WeighingListPresenter`, and `WeighingListInteractor` for its operation.
 class WeighingListViewController: BaseViewController
 <
 	WeighingListViewModel,
@@ -28,7 +29,7 @@ class WeighingListViewController: BaseViewController
 	var kitten: Kitten!
 	/// A custom generic table view for displaying weighing types.
 	lazy var weighingsTableView: BaseTableView<WeighingCell, Weighing> = {
-		let weighingsTableView =  BaseTableView<WeighingCell, Weighing>(didSelect: didSelect(item: at:))
+		let weighingsTableView = BaseTableView<WeighingCell, Weighing>(didSelect: didSelect(item: at:))
 	return weighingsTableView
 	}()
 
@@ -85,7 +86,7 @@ class WeighingListViewController: BaseViewController
 	///   - item: The `Weighing` object that was selected.
 	///   - indexPath: The `IndexPath` of the selected item in the table view.
 	func didSelect(item: Weighing, at indexPath: IndexPath) {
-		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name": "\(item.id)"])
+		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name": "\(item.id ?? "")"])
 		// Implementation for handling weighing item selection
 		let vc = AddWeightViewController.fromStoryboard { vc in
 			vc.kitten = self.kitten

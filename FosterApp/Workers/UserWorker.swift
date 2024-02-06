@@ -8,6 +8,16 @@
 import Foundation
 import FirebaseAuth
 
+/// Protocol defining authentication functionalities.
+protocol UserWorkerProtocol {
+	func login(email: String, password: String) async throws -> User
+	func signUp(mail: String, password: String) async throws -> User
+	func userConnected() async throws -> User?
+}
+
+/// Custom error indicating that a user was not found.
+struct UserNotFoundError: Error { }
+
 /// `UserWorker` is responsible for managing Firebase user authentication.
 /// It conforms to `UserWorkerProtocol` and provides functionality for user login, signup, and status checks.
 struct UserWorker: UserWorkerProtocol {
@@ -73,15 +83,4 @@ struct UserWorker: UserWorkerProtocol {
 	func logOut() {
 //		TODO: complete
 	}
-}
-
-
-/// Custom error indicating that a user was not found.
-struct UserNotFoundError: Error { }
-
-/// Protocol defining authentication functionalities.
-protocol UserWorkerProtocol {
-	func login(email: String, password: String) async throws -> User
-	func signUp(mail: String, password: String) async throws -> User
-	func userConnected() async throws -> User?
 }

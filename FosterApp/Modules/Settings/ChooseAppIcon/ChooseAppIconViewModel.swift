@@ -12,4 +12,3 @@ class ChooseAppIconViewModel: ViewModel {
 	
 	let icons = ["AppIcon1", "AppIcon2", "AppIcon3", "AppIcon4"]
 }
-

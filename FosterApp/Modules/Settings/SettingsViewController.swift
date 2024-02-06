@@ -7,7 +7,8 @@ import UtilsKit
 
 /// `SettingsViewController` manages the user interface for the application's settings.
 /// It allows users to edit their profile photo, change the app icon, and view specific user data.
-/// This controller inherits from `BaseViewController` and is specialized with `SettingsViewModel`, `SettingsPresenter`, and `SettingsInteractor` for its operation.
+/// This controller inherits from `BaseViewController` and is specialized with `SettingsViewModel`, 
+/// `SettingsPresenter`, and `SettingsInteractor` for its operation.
 class SettingsViewController: BaseViewController
 <
 	SettingsViewModel,
@@ -75,14 +76,14 @@ class SettingsViewController: BaseViewController
 	// MARK: - Actions
 	/// Logs out the current user and updates the UI accordingly.
 	@IBAction private func logOut() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"logout"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "logout"])
 									
 		self.interactor.logOut()
 	}
 	
 	/// Presents a UIImagePickerController to allow the user to edit their profile photo.
 	@IBAction private func didTapEditButton() {
-		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name":"edit_photo"])
+		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "edit_photo"])
 										
 		let vc = UIImagePickerController()
 		vc.sourceType = .photoLibrary
@@ -114,7 +115,8 @@ extension SettingsViewController: StoryboardProtocol {
 extension SettingsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	
 	/// Sets the profile photo in the `SettingsViewController` with the selected or edited image from the `UIImagePickerController`.
-	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+	func imagePickerController(_ picker: UIImagePickerController,
+							   didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
 		if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
 			self.profilePhoto.image = image
 		}

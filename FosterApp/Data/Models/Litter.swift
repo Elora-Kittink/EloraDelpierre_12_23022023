@@ -52,10 +52,11 @@ struct Litter: Equatable {
 	///   - isOngoing: Indicates if the litter is ongoing.
 	///   - rescueDate: Date of the litter's rescue.
 	///   - isFavorite: Indicates if the litter is marked as favorite.
-	init(id: String? = nil,
-		 kittens: [Kitten]? = nil,
-		 isOngoing: Bool,
-		 rescueDate: String?, isFavorite: Bool = false) {
+	init(isOngoing: Bool,
+		 rescueDate: String?, 
+		 isFavorite: Bool = false, 
+		 id: String? = nil,
+		 kittens: [Kitten]? = nil) {
 		
 		self.id = id
 		self.kittens = kittens

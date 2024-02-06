@@ -7,7 +7,8 @@ import UIKit
 import UtilsKit
 
 /// A view controller that manages the modal presentation for creating or editing a kitten's details.
-/// This controller inherits from `BaseViewController` and is specialized with `KittenCardModalIconViewModel`, `KittenCardModalPresenter`, and `KittenCardModalInteractor` for its operation.
+/// This controller inherits from `BaseViewController` and is specialized with `KittenCardModalIconViewModel`, 
+/// `KittenCardModalPresenter`, and `KittenCardModalInteractor` for its operation.
 class KittenCardModalViewController: BaseViewController
 <
 	KittenCardModalViewModel,

@@ -9,20 +9,6 @@ import Foundation
 import FirebaseAnalytics
 import UtilsKit
 
-//  Analytics manager
-class AnalyticsManager {
-	private init() { }
-	
-	static let shared = AnalyticsManager()
-//	 prints a message in the console for easier reading
-	func log(event: AnalyticsEventTypes, with parameters: [String: String] = [:]) {
-		Analytics.logEvent(event.rawValue,
-						   parameters: parameters)
-//		TODO: créér un log dans ce style
-		print("\(event.rawValue) - \(parameters.values)")
-	}
-}
-
 // analytic events type list
 enum AnalyticsEventTypes: String {
 	
@@ -37,4 +23,18 @@ enum AnalyticsEventTypes: String {
 	case buttonPressed = "tag_button"
 	case tableViewCellPressed = "tag_table_view_cell"
 	case collectionViewCellPressed = "tag_collection_view_cell"
+}
+
+//  Analytics manager
+class AnalyticsManager {
+	static let shared = AnalyticsManager()
+	
+	private init() { }
+//	 prints a message in the console for easier reading
+	func log(event: AnalyticsEventTypes, with parameters: [String: String] = [:]) {
+		Analytics.logEvent(event.rawValue,
+						   parameters: parameters)
+//		TODO: créér un log dans ce style
+		print("\(event.rawValue) - \(parameters.values)")
+	}
 }

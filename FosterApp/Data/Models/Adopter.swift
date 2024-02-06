@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-//	MARK:  WIP - future release
+// MARK: - WIP - future release
 
 struct Adopter: Equatable {
     

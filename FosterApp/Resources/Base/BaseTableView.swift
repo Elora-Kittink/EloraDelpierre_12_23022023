@@ -9,14 +9,22 @@ import Foundation
 import UIKit
 
 
+
+
+/// A generic UITableViewCell subclass that can be configured with any model type.
+/// - Parameter U: The model type that the cell will display.
+class BaseCell<U>: UITableViewCell {
+	var item: U?
+}
+
 /// A generic UITableView subclass that simplifies the setup of table views using generic cell types.
 /// - Parameters:
 ///   - T: The cell type (subclass of `BaseCell`).
 ///   - U: The model type that the cell will display.
 class BaseTableView<T: BaseCell<U>, U>: UITableView, UITableViewDelegate, UITableViewDataSource {
 	
-	// Identifier for cell reuse.
-	let cellId = "BaseCellID"
+	// Closure type for handling cell selection.
+	typealias DidSelectClosure = ((U, IndexPath) -> Void)? // just being fancy here
 	
 	// Array of items (models) that the table view will display.
 	var items = [U]() {
@@ -25,8 +33,8 @@ class BaseTableView<T: BaseCell<U>, U>: UITableView, UITableViewDelegate, UITabl
 		}
 	}
 	
-	// Closure type for handling cell selection.
-	typealias DidSelectClosure = ((U, IndexPath) -> Void)? // just being fancy here
+	// Identifier for cell reuse.
+	let cellId = "BaseCellID"
 	
 	// Closure to be called when a cell is selected.
 	let didSelect: DidSelectClosure
@@ -50,7 +58,7 @@ class BaseTableView<T: BaseCell<U>, U>: UITableView, UITableViewDelegate, UITabl
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		 return items.count
+		items.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,10 +71,4 @@ class BaseTableView<T: BaseCell<U>, U>: UITableView, UITableViewDelegate, UITabl
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 	didSelect?(items[indexPath.row], indexPath)
 	}
-}
-
-/// A generic UITableViewCell subclass that can be configured with any model type.
-/// - Parameter U: The model type that the cell will display.
-class BaseCell<U>: UITableViewCell {
-	var item: U?
 }

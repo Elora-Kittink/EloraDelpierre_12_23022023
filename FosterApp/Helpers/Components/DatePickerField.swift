@@ -15,7 +15,10 @@ class DatePickerField: UITextField {
 // date picker, toolbar & validation button
     let datePicker = UIDatePicker()
     let toolBar = UIToolbar()
-    let validate = UIBarButtonItem(title: "Valider", style: .plain, target: self, action: #selector(validateAndDismiss))
+	let validate = UIBarButtonItem(title: "Valider", 
+								   style: .plain,
+								   target: DatePickerField.self,
+								   action: #selector(validateAndDismiss))
 
 
     
@@ -39,8 +42,10 @@ class DatePickerField: UITextField {
         self.inputAccessoryView = toolBar
         self.inputView = datePicker
     }
+	
 //    validation button action : set date into texfield & dissmiss
-    @objc func validateAndDismiss() {
+    @objc 
+	func validateAndDismiss() {
         self.text = datePicker.date.toString(format: "dd/MM/yyyy")
         self.parentViewController?.view.endEditing(true)
     }

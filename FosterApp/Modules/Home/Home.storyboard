@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbX-wt-9Im">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbX-wt-9Im">
                                 <rect key="frame" x="0.0" y="59" width="393" height="710"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8p-Dh-x12" userLabel="Content">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="710"/>
@@ -75,6 +74,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="beigeClear"/>
+                        <constraints>
+                            <constraint firstItem="rbX-wt-9Im" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Lrl-G8-oob"/>
+                            <constraint firstItem="rbX-wt-9Im" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="WGe-GP-qTe"/>
+                            <constraint firstItem="rbX-wt-9Im" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="ZAk-Kk-oDS"/>
+                            <constraint firstItem="rbX-wt-9Im" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="v3p-Wi-216"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="uCj-ro-QT8"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
