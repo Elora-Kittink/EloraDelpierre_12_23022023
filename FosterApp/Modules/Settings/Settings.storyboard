@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -35,8 +35,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfN-0t-OTA" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
-                                <rect key="frame" x="124.33333333333333" y="751.66666666666663" width="144.66666666666669" height="34.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfN-0t-OTA" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
+                                <rect key="frame" x="124.33333333333333" y="751.66666666666652" width="144.66666666666669" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Se deconnecter"/>
                                 <connections>
@@ -130,9 +130,8 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIb-xI-g9b">
-                                <rect key="frame" x="124" y="675" width="144" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIb-xI-g9b">
+                                <rect key="frame" x="125.00000000000001" y="506.66666666666674" width="143.33333333333337" height="34.333333333333258"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Changer l'icone"/>
                                 <connections>
@@ -150,6 +149,14 @@
                                     <action selector="didTapEditButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MBx-TB-f0A"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qd-vN-nxh">
+                                <rect key="frame" x="95.000000000000014" y="648.66666666666652" width="203.33333333333337" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Supprimer mon compte"/>
+                                <connections>
+                                    <action selector="didTapDeleteAccountButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DGJ-01-IIX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -162,7 +169,12 @@
                             <constraint firstItem="1jK-p7-rEm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50.670000000000002" id="NrN-rV-Spq"/>
                             <constraint firstItem="hua-pG-ikv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UFr-XK-ZSh"/>
                             <constraint firstItem="ZrE-lr-zMm" firstAttribute="trailing" secondItem="JAB-Ud-eyV" secondAttribute="trailing" id="V0N-uh-N8N"/>
+                            <constraint firstItem="NIb-xI-g9b" firstAttribute="top" secondItem="nNj-SY-zXE" secondAttribute="bottom" constant="79.670000000000002" id="WaG-EX-dm9"/>
+                            <constraint firstItem="7Qd-vN-nxh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XSb-PG-bYG"/>
                             <constraint firstItem="1jK-p7-rEm" firstAttribute="top" secondItem="hua-pG-ikv" secondAttribute="bottom" constant="24" id="Z4T-Yc-Ig1"/>
+                            <constraint firstItem="7Qd-vN-nxh" firstAttribute="top" relation="lessThanOrEqual" secondItem="NIb-xI-g9b" secondAttribute="bottom" constant="107" id="kRC-J6-z1X"/>
+                            <constraint firstItem="EfN-0t-OTA" firstAttribute="top" secondItem="7Qd-vN-nxh" secondAttribute="bottom" constant="68.670000000000002" id="ntU-Ym-9oG"/>
+                            <constraint firstItem="NIb-xI-g9b" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ojV-mX-9nF"/>
                             <constraint firstItem="EfN-0t-OTA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qfs-fr-yPH"/>
                             <constraint firstItem="1jK-p7-rEm" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tMv-J5-ApT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="EfN-0t-OTA" secondAttribute="bottom" constant="32" id="tic-N2-0bu"/>

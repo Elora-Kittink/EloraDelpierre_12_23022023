@@ -29,8 +29,7 @@ class SettingsViewController: BaseViewController
 	@IBOutlet private weak var kittensCountLabel: UILabel!
 	/// Label showing the count of milk meals.
 	@IBOutlet private weak var milkCountLabel: UILabel!
-	
-	// MARK: - Variables
+		// MARK: - Variables
 	
 	/// Computed variable for profile image with UI constraints.
 	let profilePhoto: UIImageView = {
@@ -95,7 +94,13 @@ class SettingsViewController: BaseViewController
 	@IBAction private func didTapEditAppIconButton() {
 		ChooseAppIconViewController.fromStoryboard().modal()
 	}
+	
+	@IBAction private func didTapDeleteAccountButton() {
+		self.interactor.deleteAccount()
+	}
 }
+
+
 
 /// Extension for integrating with storyboard via `StoryboardProtocol`.
 extension SettingsViewController: StoryboardProtocol {
@@ -109,7 +114,6 @@ extension SettingsViewController: StoryboardProtocol {
 }
 
 // MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
-
 
 /// Extension for handling image picker delegate methods.
 extension SettingsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

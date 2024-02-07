@@ -52,11 +52,9 @@ class SignUpViewController: BaseViewController
     @IBAction private func signUpAction() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "signup"])
 		
-        Task {
            self.interactor.signUp(mail: emailTF.text ?? "",
                                    name: nameTF.text ?? "",
                                    password: passwordTF.text ?? "")
-        }
     }
     
 	/// Action for the log-in button, redirects to the login page.

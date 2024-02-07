@@ -57,15 +57,12 @@ class SettingsInteractor: Interactor
 	}
 	
 	/// Signs out the current user and updates the UI accordingly.
+
 	func logOut() {
-		do {
-			try Auth.auth().signOut()
-			self.presenter.noUserConnected()
-			self.presenter.display(loader: false)
-			print("User logged out")
-		} catch let error {
-			// handle error here
-			print("Error trying to sign out of Firebase: \(error.localizedDescription)")
-		}
+		self.userWorker.logOut()
+	}
+	
+	func deleteAccount() {
+		self.userWorker.deleteAccount()
 	}
 }

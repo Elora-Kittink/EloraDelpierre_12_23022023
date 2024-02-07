@@ -13,6 +13,8 @@ protocol UserWorkerProtocol {
 	func login(email: String, password: String) async throws -> User
 	func signUp(mail: String, password: String) async throws -> User
 	func userConnected() async throws -> User?
+	func logOut()
+	func deleteAccount()
 }
 
 /// Custom error indicating that a user was not found.
@@ -80,7 +82,28 @@ struct UserWorker: UserWorkerProtocol {
 	
 	/// Logs out the current user.
 	/// - Note: This function needs to be completed with logout logic.
+	 
+//	TODO: faire tests unitaires
 	func logOut() {
-//		TODO: complete
+		do {
+			try Auth.auth().signOut()
+			NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userLogged"), object: nil)
+			print("💃🏼 Firebase success signOut current user")
+		} catch let error {
+			// handle error here
+			print("👹 Firebase fail signout current user")
+			print("Error trying to sign out of Firebase: \(error.localizedDescription)")
+		}
+	}
+	
+	func deleteAccount() {
+		Auth.auth().currentUser?.delete { error in
+			if error != nil {
+				print("👹 Firebase fail delete current user account")
+			} else {
+				print("💃🏼 Firebase success delete current user account")
+			}
+		}
+			self.logOut()
 	}
 }

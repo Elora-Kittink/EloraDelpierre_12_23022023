@@ -1,16 +1,16 @@
 //
-//  HomeTests.swift
+//  SettingsTests.swift
 //  FosterAppTests
 //
-//  Created by Elora on 22/05/2023.
+//  Created by Elora on 06/02/2024.
 //
 
 import XCTest
 import CoreDataUtilsKit
 @testable import FosterApp
 
-final class HomeTests: XCTestCase {
-	
+final class SettingsTests: XCTestCase {
+
 	struct MockUserWorker: UserWorkerProtocol {
 		func userConnected() async throws -> FosterApp.User? {
 			FosterApp.User(mail: "TEST", id: "ID", name: "TEST")
@@ -34,7 +34,7 @@ final class HomeTests: XCTestCase {
 	
 	func testSuccessLogUser() async throws {
 		
-		let test = await BaseTest<HomeViewModel, HomePresenter, HomeInteractor>()
+		let test = await BaseTest<SettingsViewModel, SettingsPresenter, SettingsInteractor>()
 		
 		DispatchQueue.main.async {
 			_ = self.worker.createUser(name: "TEST", mail: "TEST", id: "ID")
@@ -43,7 +43,7 @@ final class HomeTests: XCTestCase {
 		await test.fire { interactor in
 			DispatchQueue.main.async {
 				interactor.userWorker = MockUserWorker()
-				interactor.userIsConnected()
+				interactor.refresh()
 			}
 		}
 		
@@ -56,7 +56,7 @@ final class HomeTests: XCTestCase {
 	
 	func testFailFetchUserLogged() async throws {
 		
-		let test = await BaseTest<HomeViewModel, HomePresenter, HomeInteractor>()
+		let test = await BaseTest<SettingsViewModel, SettingsPresenter, SettingsInteractor>()
 		
 		DispatchQueue.main.async {
 			_ = self.worker.createUser(name: "bad name", mail: "bad mail", id: "bad id")
@@ -65,7 +65,7 @@ final class HomeTests: XCTestCase {
 		await test.fire { interactor in
 			DispatchQueue.main.async {
 				interactor.userWorker = MockUserWorker()
-				interactor.userIsConnected()
+				interactor.refresh()
 			}
 		}
 		
@@ -74,4 +74,20 @@ final class HomeTests: XCTestCase {
 			XCTAssertEqual(test.viewModel.isUserConnected, false)
 		}
 	}
+	
+		func testSuccessLogOut() async throws {
+	
+			let test = await BaseTest<SettingsViewModel, SettingsPresenter, SettingsInteractor>()
+	
+			await test.fire { interactor in
+				DispatchQueue.main.async {
+					interactor.logOut()
+				}
+			}
+	
+			DispatchQueue.main.async {
+				XCTAssertEqual(test.viewModel.user, nil)
+				XCTAssertEqual(test.viewModel.isUserConnected, false)
+			}
+		}
 }

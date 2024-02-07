@@ -28,7 +28,6 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	/// A view displayed when there are no litters.
 	let emptyView: UIView = {
         let view = UIView()
-		view.backgroundColor = .blue
         let label = UILabel()
         label.text = "Vous n'avez pas encore de portée !"
         label.textAlignment = .center
