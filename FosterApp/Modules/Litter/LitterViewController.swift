@@ -191,8 +191,7 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     @IBAction private func save() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "save_litter"])
 		
-        self.interactor.saveLitter(user: self.user,
-								   rescueDate: rescueDateTextField.text?.toDate(format: self.viewModel.dateFormat),
+        self.interactor.saveLitter(rescueDate: rescueDateTextField.text?.toDate(format: self.viewModel.dateFormat),
 								   isEditing: self.viewModel.isEditing,
 								   litterId: self.viewModel.id)
     }

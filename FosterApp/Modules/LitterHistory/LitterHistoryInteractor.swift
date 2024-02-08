@@ -16,7 +16,7 @@ class LitterHistoryInteractor: Interactor
 	/// - Parameter user: The `User` for whom the litter history is being refreshed.
     func refresh(user: User) {
         Task {
-            let litters = worker.fetchAllLitters(userId: user.id)
+            let litters = worker.fetchAllLitters()
             self.presenter.display(litters: litters)
             self.presenter.display(loader: false)
         }

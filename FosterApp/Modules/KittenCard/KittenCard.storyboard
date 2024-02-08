@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsG-2C-oI8">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yy-RG-8D2">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7bQ-qR-cZY" userLabel="Name PE Stack View">
                                                 <rect key="frame" x="136" y="32" width="225" height="136"/>
@@ -330,7 +330,7 @@ des pesées</string>
                             <constraint firstItem="qsG-2C-oI8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="6OP-il-daS"/>
                             <constraint firstItem="qsG-2C-oI8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Pq7-6T-Voa"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qsG-2C-oI8" secondAttribute="trailing" id="XaK-Xg-xa1"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qsG-2C-oI8" secondAttribute="bottom" id="wgi-lU-jZO"/>
+                            <constraint firstAttribute="bottom" secondItem="qsG-2C-oI8" secondAttribute="bottom" id="wgi-lU-jZO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -369,7 +369,7 @@ des pesées</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

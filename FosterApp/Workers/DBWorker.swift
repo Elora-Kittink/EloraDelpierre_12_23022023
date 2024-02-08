@@ -16,48 +16,48 @@ import FirebaseAuth
 /// It provides methods to create, fetch, and update entities like users, kittens, litters, and weighings.
 struct DBWorker {
 	
-    // MARK: - User Operations
-	
-	/// Creates and saves a user in the database.
-	/// - Parameters:
-	///   - name: Name of the user.
-	///   - mail: Email of the user.
-	///   - id: Unique identifier of the user.
-	/// - Returns: An optional `User` object if creation is successful.
-    func createUser(name: String, mail: String, id: String) -> User? {
-        let user = User(mail: mail, id: id, name: name)
-		
-        guard let dbUser = DB_User.create(user: user) else {
-            print("👹 Worker fail create DB User")
-            return nil }
-		
-		AnalyticsManager.shared.log(event: .userCreated, 
-									with: [
-										"id": "\(user.id)",
-										"name": "\(user.name)"
-									])
-        print("💃🏼 Worker succeed create \(String(describing: dbUser.a_id)) user")
-        try? CoreDataManager.default.save()
-        return User(from: dbUser)
-    }
-    
-	/// Fetches a user from the database using their ID.
-	/// - Parameter id: The unique identifier of the user.
-	/// - Returns: An optional `User` object if found.
-    func fetchUser(id: String) -> User? {
-		guard let DBUser = DB_User.get(with: id) else {
-			print("👹 Worker fail get DB User")
-			return nil
-		}
-		
-			AnalyticsManager.shared.log(event: .userFetched, 
-										with: [
-											"id": "\(DBUser.a_id ?? "")",
-											"name": "\(DBUser.a_name ?? "")"
-										])
-        print("💃🏼 Worker succeed get \(String(describing: DBUser.a_id)) user")
-        return User(from: DBUser)
-    }
+//    // MARK: - User Operations
+//	
+//	/// Creates and saves a user in the database.
+//	/// - Parameters:
+//	///   - name: Name of the user.
+//	///   - mail: Email of the user.
+//	///   - id: Unique identifier of the user.
+//	/// - Returns: An optional `User` object if creation is successful.
+//    func createUser(name: String, mail: String, id: String) -> User? {
+//        let user = User(mail: mail, id: id, name: name)
+//		
+//        guard let dbUser = DB_User.create(user: user) else {
+//            print("👹 Worker fail create DB User")
+//            return nil }
+//		
+//		AnalyticsManager.shared.log(event: .userCreated, 
+//									with: [
+//										"id": "\(user.id)",
+//										"name": "\(user.name)"
+//									])
+//        print("💃🏼 Worker succeed create \(String(describing: dbUser.a_id)) user")
+//        try? CoreDataManager.default.save()
+//        return User(from: dbUser)
+//    }
+//    
+//	/// Fetches a user from the database using their ID.
+//	/// - Parameter id: The unique identifier of the user.
+//	/// - Returns: An optional `User` object if found.
+//    func fetchUser(id: String) -> User? {
+//		guard let DBUser = DB_User.get(with: id) else {
+//			print("👹 Worker fail get DB User")
+//			return nil
+//		}
+//		
+//			AnalyticsManager.shared.log(event: .userFetched, 
+//										with: [
+//											"id": "\(DBUser.a_id ?? "")",
+//											"name": "\(DBUser.a_name ?? "")"
+//										])
+//        print("💃🏼 Worker succeed get \(String(describing: DBUser.a_id)) user")
+//        return User(from: DBUser)
+//    }
 	
 	
     
@@ -154,10 +154,9 @@ struct DBWorker {
 	/// Fetches all litters associated with a user from the database.
 	/// - Parameter userId: The unique identifier of the user.
 	/// - Returns: An array of `Litter` objects if found.
-    func fetchAllLitters(userId: String) -> [Litter] {
-        let predicate = NSPredicate(format: "r_user.a_id == %@", userId)
+    func fetchAllLitters() -> [Litter] {
         
-        let litters = DB_Litter.getAll(predicate: predicate)
+        let litters = DB_Litter.getAll()
 
         let allLitters = litters.map { litter in
             Litter(from: litter)
@@ -185,8 +184,8 @@ struct DBWorker {
 	///   - rescueDate: The date of rescue for the new litter.
 	///   - user: The `User` associated with the new litter.
 	/// - Returns: An optional `Litter` object if creation is successful.
-    func createNewLitter(rescueDate: Date, user: User) -> Litter? {
-        guard let newLitter = DB_Litter.create(rescueDate: rescueDate, user: user) else {
+    func createNewLitter(rescueDate: Date) -> Litter? {
+        guard let newLitter = DB_Litter.create(rescueDate: rescueDate) else {
             print("👹 Worker fail create DB Litter")
             return nil
         }

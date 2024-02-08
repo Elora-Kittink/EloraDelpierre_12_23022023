@@ -17,7 +17,7 @@ class DatePickerField: UITextField {
     let toolBar = UIToolbar()
 	let validate = UIBarButtonItem(title: "Valider", 
 								   style: .plain,
-								   target: DatePickerField.self,
+								   target: self,
 								   action: #selector(validateAndDismiss))
 
 

@@ -73,7 +73,7 @@ class LitterInteractor: Interactor
 	///   - rescueDate: The rescue date of the litter.
 	///   - isEditing: A Boolean value indicating if the litter is being edited.
 	///   - litterId: The identifier of the litter, if available.
-	func saveLitter(user: User, rescueDate: Date?, isEditing: Bool, litterId: String?) {
+	func saveLitter(rescueDate: Date?, isEditing: Bool, litterId: String?) {
 		if isEditing {
 			guard let rescueDate, let litterId else {
 				AlertManager.shared.show(actions: [AlertAction(title: "Erreur", style: .default)], message: "Vous devez saisir une date")
@@ -88,7 +88,7 @@ class LitterInteractor: Interactor
 				return
 			}
 			
-			let newLitter = worker.createNewLitter(rescueDate: rescueDate, user: user)
+			let newLitter = worker.createNewLitter(rescueDate: rescueDate)
 			self.presenter.display(loader: false)
 			self.refresh(litterId: newLitter?.id)
 		}

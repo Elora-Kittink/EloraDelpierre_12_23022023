@@ -26,16 +26,11 @@ class SettingsInteractor: Interactor
 					self.presenter.display(loader: false)
 					return
 				}
-				guard let userFetched = worker.fetchUser(id: user.id) else {
-					self.presenter.noUserConnected()
-					self.presenter.display(loader: false)
-					return
-				}
-				print("🙋🏼‍♀️ User \(userFetched.name) \(userFetched.id) is connected")
+				print("🙋🏼‍♀️ User \(user.name) \(user.id) is connected")
 				
 //				get all kittens & all weighings
 				
-				let allLitters = worker.fetchAllLitters(userId: userFetched.id)
+				let allLitters = worker.fetchAllLitters()
 				   
 				   let allKittens = allLitters.compactMap { litter in
 					   worker.fetchAllKittensLitter(litterId: litter.id ?? "")
@@ -48,7 +43,7 @@ class SettingsInteractor: Interactor
 					   .flatMap { $0 }
 				
 //				send data to presenter
-				self.presenter.display(kittens: allKittens, weighings: allWeighings, user: userFetched)
+				self.presenter.display(kittens: allKittens, weighings: allWeighings, user: user)
 			} catch {
 				print(error)
 			}

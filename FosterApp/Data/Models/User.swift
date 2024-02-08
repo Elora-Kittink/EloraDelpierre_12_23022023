@@ -15,18 +15,18 @@ struct User: Equatable {
     var name: String
     var id: String
     
-	/// Initializes a new `User` instance from a CoreData `DB_User` object.
-	/// - Parameter coreDataObject: The `DB_User` instance to convert.
-    init?(from coreDataObject: DB_User) {
-        guard let id = coreDataObject.a_id,
-              let name = coreDataObject.a_name,
-              let mail = coreDataObject.a_mail else {
-            return nil
-        }
-        self.id = id
-        self.name = name
-        self.mail = mail
-    }
+//	/// Initializes a new `User` instance from a CoreData `DB_User` object.
+//	/// - Parameter coreDataObject: The `DB_User` instance to convert.
+//    init?(from coreDataObject: DB_User) {
+//        guard let id = coreDataObject.a_id,
+//              let name = coreDataObject.a_name,
+//              let mail = coreDataObject.a_mail else {
+//            return nil
+//        }
+//        self.id = id
+//        self.name = name
+//        self.mail = mail
+//    }
 	
 	/// Initializes a new `User` instance from form data.
 	/// - Parameters:
