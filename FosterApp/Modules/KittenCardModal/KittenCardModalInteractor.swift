@@ -108,6 +108,9 @@ class KittenCardModalInteractor: Interactor
 			self.presenter.display(loader: false)
 			self.presenter.close()
 			
+			let userInfo: [AnyHashable: Any] = ["litterId": litter.id]
+			NotificationCenter.default.post(name: NSNotification.Name("newKittenInLitter"), object: nil, userInfo: userInfo)
+			
 			let vc = LitterViewController.fromStoryboard { vc in
 				vc.litterId = newKitten.litterId
 				vc.isDisplayMode = true

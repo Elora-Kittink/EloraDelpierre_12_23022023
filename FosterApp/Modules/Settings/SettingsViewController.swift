@@ -76,8 +76,8 @@ class SettingsViewController: BaseViewController
 	/// Logs out the current user and updates the UI accordingly.
 	@IBAction private func logOut() {
 		AnalyticsManager.shared.log(event: .buttonPressed, with: ["button_name": "logout"])
-									
 		self.interactor.logOut()
+		self.tabBarController?.selectedIndex = 0
 	}
 	
 	/// Presents a UIImagePickerController to allow the user to edit their profile photo.

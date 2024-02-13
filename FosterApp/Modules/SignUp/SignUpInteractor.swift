@@ -13,7 +13,6 @@ class SignUpInteractor: Interactor
 > {
 	let worker = DBWorker()
 	var userWorker: UserWorkerProtocol = UserWorker()
-//	private var userId = ""
 	
 	/// Initiates the sign-up process with the provided credentials.
 	/// - Parameters:

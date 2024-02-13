@@ -11,9 +11,11 @@ import CoreDataUtilsKit
 
 
 final class KittenCardTests: XCTestCase {
-	let worker = DBWorker()
+	
+	let DBworker = DBWorker()
+	let userWorker = UserWorker()
 	let date = Date(timeIntervalSinceNow: TimeInterval(floatLiteral: 10))
-	var fetchedUser: User!
+//	var fetchedUser = User(mail: "TEST", id: "ID", name: "TEST")
 	var fetchedLitter: Litter!
 	var litterId: String!
 	var kittenCreated: Kitten?
@@ -22,10 +24,10 @@ final class KittenCardTests: XCTestCase {
 		try super.setUpWithError()
 		try? CoreDataManager.default.dropDatabase()
 		do {
-			let createdUser = try XCTUnwrap(worker.createUser(name: "UT", mail: "UT", id: "UT"))
-			self.fetchedUser = try XCTUnwrap(self.worker.fetchUser(id: createdUser.id))
-			let litter = try XCTUnwrap(self.worker.createNewLitter(rescueDate: date, user: fetchedUser))
-			self.fetchedLitter = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litter.id ?? ""))
+			
+//			self.fetchedUser = try XCTUnwrap(self.userWorker.userConnected())
+			let litter = try XCTUnwrap(self.DBworker.createNewLitter(rescueDate: date))
+			self.fetchedLitter = try XCTUnwrap(self.DBworker.fetchLitterFromId(litterId: litter.id ?? ""))
 			self.litterId = try XCTUnwrap(fetchedLitter.id)
 		} catch {
 			XCTFail(error.localizedDescription)
@@ -59,7 +61,7 @@ final class KittenCardTests: XCTestCase {
 			}
 		}
 //		 dead code?
-		let DBlitters = try XCTUnwrap(worker.fetchAllLitters(userId: self.fetchedUser.id))
+		let DBlitters = try XCTUnwrap(DBworker.fetchAllLitters())
 		
 		DispatchQueue.main.async {
 			XCTAssertEqual(self.kittenCreated?.firstName, "UT")
@@ -92,7 +94,7 @@ final class KittenCardTests: XCTestCase {
 				interactor.saveKitten(isNewKitten: true, kitten: testKitten, litter: self.fetchedLitter)
 			}
 		}
-		let kittens = try XCTUnwrap(worker.fetchAllKittensLitter(litterId: self.litterId))
+		let kittens = try XCTUnwrap(DBworker.fetchAllKittensLitter(litterId: self.litterId))
 		let kitten = try XCTUnwrap(kittens.first)
 		DispatchQueue.main.async {
 			XCTAssertEqual(kitten.firstName, "Test")
@@ -127,7 +129,7 @@ final class KittenCardTests: XCTestCase {
 				interactor.saveKitten(isNewKitten: true, kitten: testKitten, litter: self.fetchedLitter)
 			}
 		}
-		let kittens = try XCTUnwrap(worker.fetchAllKittensLitter(litterId: litterFail.id ?? ""))
+		let kittens = try XCTUnwrap(DBworker.fetchAllKittensLitter(litterId: litterFail.id ?? ""))
 
 		DispatchQueue.main.async {
 			XCTAssertEqual(kittens.count, 0)
@@ -177,7 +179,7 @@ final class KittenCardTests: XCTestCase {
 				interactor.saveKitten(isNewKitten: true, kitten: kitten1, litter: self.fetchedLitter)
 				interactor.saveKitten(isNewKitten: false, kitten: kitten2, litter: self.fetchedLitter)
 				do {
-					let kittens = try XCTUnwrap(self.worker.fetchAllKittensLitter(litterId: self.fetchedLitter.id ?? ""))
+					let kittens = try XCTUnwrap(self.DBworker.fetchAllKittensLitter(litterId: self.fetchedLitter.id ?? ""))
 					self.kittenCreated = try XCTUnwrap(kittens.first)
 				} catch {
 					XCTFail(error.localizedDescription)
@@ -234,7 +236,7 @@ final class KittenCardTests: XCTestCase {
 				interactor.saveKitten(isNewKitten: true, kitten: kitten1, litter: self.fetchedLitter)
 				interactor.saveKitten(isNewKitten: false, kitten: kitten2, litter: self.fetchedLitter)
 				do {
-					let kittens = try XCTUnwrap(self.worker.fetchAllKittensLitter(litterId: self.fetchedLitter.id ?? ""))
+					let kittens = try XCTUnwrap(self.DBworker.fetchAllKittensLitter(litterId: self.fetchedLitter.id ?? ""))
 					self.kittenCreated = try XCTUnwrap(kittens.first)
 				} catch {
 					XCTFail(error.localizedDescription)
@@ -273,12 +275,12 @@ final class KittenCardTests: XCTestCase {
 				interactor.saveKitten(isNewKitten: true, kitten: testKitten, litter: self.fetchedLitter)
 			}
 		}
-		let kittens = try XCTUnwrap(worker.fetchAllKittensLitter(litterId: self.litterId))
+		let kittens = try XCTUnwrap(DBworker.fetchAllKittensLitter(litterId: self.litterId))
 		let kittenId = try XCTUnwrap(kittens.first?.id)
 		
 		DispatchQueue.main.async {
 			do {
-				self.kittenCreated = try XCTUnwrap(self.worker.fetchKittenFromId(kittenId: kittenId))
+				self.kittenCreated = try XCTUnwrap(self.DBworker.fetchKittenFromId(kittenId: kittenId))
 			} catch {
 				XCTFail(error.localizedDescription)
 			}
@@ -317,7 +319,7 @@ final class KittenCardTests: XCTestCase {
 		}
 		
 		DispatchQueue.main.async {
-				self.kittenCreated = self.worker.fetchKittenFromId(kittenId: "bad id")
+				self.kittenCreated = self.DBworker.fetchKittenFromId(kittenId: "bad id")
 		}
 		
 		DispatchQueue.main.async {

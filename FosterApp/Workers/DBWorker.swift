@@ -16,51 +16,6 @@ import FirebaseAuth
 /// It provides methods to create, fetch, and update entities like users, kittens, litters, and weighings.
 struct DBWorker {
 	
-//    // MARK: - User Operations
-//	
-//	/// Creates and saves a user in the database.
-//	/// - Parameters:
-//	///   - name: Name of the user.
-//	///   - mail: Email of the user.
-//	///   - id: Unique identifier of the user.
-//	/// - Returns: An optional `User` object if creation is successful.
-//    func createUser(name: String, mail: String, id: String) -> User? {
-//        let user = User(mail: mail, id: id, name: name)
-//		
-//        guard let dbUser = DB_User.create(user: user) else {
-//            print("👹 Worker fail create DB User")
-//            return nil }
-//		
-//		AnalyticsManager.shared.log(event: .userCreated, 
-//									with: [
-//										"id": "\(user.id)",
-//										"name": "\(user.name)"
-//									])
-//        print("💃🏼 Worker succeed create \(String(describing: dbUser.a_id)) user")
-//        try? CoreDataManager.default.save()
-//        return User(from: dbUser)
-//    }
-//    
-//	/// Fetches a user from the database using their ID.
-//	/// - Parameter id: The unique identifier of the user.
-//	/// - Returns: An optional `User` object if found.
-//    func fetchUser(id: String) -> User? {
-//		guard let DBUser = DB_User.get(with: id) else {
-//			print("👹 Worker fail get DB User")
-//			return nil
-//		}
-//		
-//			AnalyticsManager.shared.log(event: .userFetched, 
-//										with: [
-//											"id": "\(DBUser.a_id ?? "")",
-//											"name": "\(DBUser.a_name ?? "")"
-//										])
-//        print("💃🏼 Worker succeed get \(String(describing: DBUser.a_id)) user")
-//        return User(from: DBUser)
-//    }
-	
-	
-    
 	// MARK: - Kitten Operations
 	
 	/// Fetches a kitten from the database using its ID.
@@ -139,7 +94,7 @@ struct DBWorker {
 	/// - Returns: An optional `Litter` object if found.
     func fetchLitterFromId(litterId: String) -> Litter? {
         guard let DBLitter = DB_Litter.get(with: litterId) else {
-            print("👹 Worker fail get DB Litter")
+            print("👹 Worker fail get \(litterId) DB Litter")
             return nil}
 		
 		AnalyticsManager.shared.log(event: .litterFetched, 

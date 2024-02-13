@@ -35,7 +35,6 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
     var isDisplayMode = true
 	/// Indicates if the view controller is in edit mode.
     var isEditMode = false
-    var user: User!
 	
 	/// A table view for displaying kittens in the litter.
 	lazy var  litterTableView: BaseTableView<KittenCell, Kitten> = {
@@ -69,10 +68,11 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 	/// Called after the controller's view is loaded into memory.
 	override func viewDidLoad() {
 		super.viewDidLoad()
-        NotificationCenter.default.addObserver(forName: NSNotification.Name("newKittenCreated"),
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("newKittenInLitter"),
                                                object: nil,
-                                               queue: nil) { [interactor] _ in
-            interactor.refresh(litterId: self.litterId)
+                                               queue: nil) { [interactor] notification in
+			guard let litterId = notification.userInfo?["litterId"] as? String else { return }
+            interactor.refresh(litterId: litterId)
         }
 		self.setupTableViewUI()
         self.interactor.diplayMode(isEditing: isEditMode,
@@ -112,10 +112,11 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
         self.addKittenButton.isHidden = self.viewModel.addKittenBtnHidden
         self.rescueDateTextField.text = self.viewModel.rescueDate
         
+		self.view.hideKeyboardOnTap()
+		
         self.litterTableView.backgroundView = self.viewModel.kittens?.isEmpty ?? true ? self.emptyView : nil
         
         self.litterTableView.isUserInteractionEnabled = self.isEditMode ? false : true
-//        litterTable.reloadData()
 	}
 
 	/// Sets up the UI elements of the table view.
@@ -140,7 +141,6 @@ class LitterViewController: BaseViewController<LitterViewModel, LitterPresenter,
 		
 		let vc = KittenCardViewController.fromStoryboard { vc in
 			vc.litterId = self.viewModel.id
-	//        vc.kittenId = kittenId
 			vc.litter = self.viewModel.litter
 			vc.kitten = item
 		}

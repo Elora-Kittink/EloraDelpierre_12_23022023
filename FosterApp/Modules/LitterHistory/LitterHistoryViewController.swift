@@ -17,7 +17,6 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	
 	// MARK: - Variables
 	
-    var user: User!
 	
 	/// A table view to display litter history, initialized lazily.
 	lazy var  littersTableView: BaseTableView<LitterCell, Litter> = {
@@ -47,23 +46,23 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 	
 	/// Called after the controller's view is loaded into memory.
 	override func viewDidLoad() {
-		self.interactor.refresh(user: user)
+		self.interactor.refresh()
 		super.viewDidLoad()
 		self.setupUI()
         self.title = self.viewModel.title
 	}
 	
-	/// Called when the view is about to appear on the screen.
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        self.interactor.refresh(user: user)
-    }
 	/// Called when the view has appeared on the screen.
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
 		AnalyticsManager.shared.log(event: .pageOpen, with: ["page": "\(Self.self)"])
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		self.interactor.refresh()
 	}
     
 	// MARK: - Refresh
@@ -101,7 +100,6 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 		AnalyticsManager.shared.log(event: .tableViewCellPressed, with: ["cell_name": "\(item.rescueDate ?? "")"])
 		
 		let vc = LitterViewController.fromStoryboard { vc in
-			vc.user = self.user
 			vc.litterId = item.id
 			vc.isDisplayMode = true
 			vc.isCreateMode = false
@@ -118,7 +116,6 @@ class LitterHistoryViewController: BaseViewController<LitterHistoryViewModel,
 			vc.isCreateMode = true
 			vc.isDisplayMode = false
 			vc.isEditMode = false
-			vc.user = self.user
 		}
 		navigationController?.pushViewController(vc, animated: true)
 	}

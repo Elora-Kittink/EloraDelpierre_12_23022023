@@ -24,12 +24,6 @@ class HomeInteractor: Interactor
 					self.presenter.display(loader: false)
 					return
 				}
-//				guard let userFetched = worker.fetchUser(id: user.id) else {
-//					self.presenter.noUserConnected()
-//					self.presenter.display(loader: false)
-//					return
-//				}
-//				print("🙋🏼‍♀️ User \(userFetched.name) \(userFetched.id) is connected")
 				self.presenter.presentUserConnected(user: user)
 			} catch {
 				print(error)
@@ -44,10 +38,7 @@ class HomeInteractor: Interactor
 		switch tileType {
 			
 		case .litters:
-			LitterHistoryViewController.fromStoryboard {
-				$0.user = user
-			}
-			.push()
+			LitterHistoryViewController.fromStoryboard().push()
 			
 		case .advices:
 			AdvicesViewController.fromStoryboard().push()

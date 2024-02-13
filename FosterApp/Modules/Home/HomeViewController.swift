@@ -44,7 +44,7 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 		
 			
 			let flowLayout = UICollectionViewFlowLayout()
-			flowLayout.scrollDirection = .horizontal // ou .vertical selon vos besoins
+			flowLayout.scrollDirection = .vertical // ou .vertical selon vos besoins
 			flowLayout.minimumLineSpacing = 10 // Espace entre les lignes
 			flowLayout.minimumInteritemSpacing = 10 // Espace entre les cellules d'une ligne
 

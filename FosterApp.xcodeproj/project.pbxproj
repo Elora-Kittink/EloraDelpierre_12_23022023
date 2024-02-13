@@ -44,6 +44,7 @@
 		D581DBD62AF92218009B61F7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D581DBD52AF92218009B61F7 /* Settings.storyboard */; };
 		D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D585E62329D5DC7300D3ED9C /* Colors.xcassets */; };
 		D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */; };
+		D588684F2B752AA70044DE62 /* AdviceMockSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = D588684E2B752AA70044DE62 /* AdviceMockSuccess.json */; };
 		D58EEC7D2AEFE6C900B24C95 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EEC7C2AEFE6C900B24C95 /* BaseTableViewCell.swift */; };
 		D58EEC812AEFE71700B24C95 /* AdviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EEC802AEFE71700B24C95 /* AdviceCell.swift */; };
 		D58EEC832AEFEA9C00B24C95 /* AdviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D58EEC822AEFEA9C00B24C95 /* AdviceCell.xib */; };
@@ -195,6 +196,7 @@
 		D585E62829D5DF9C00D3ED9C /* KittenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenInteractor.swift; sourceTree = "<group>"; };
 		D585E62929D5DF9C00D3ED9C /* KittenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittenViewModel.swift; sourceTree = "<group>"; };
 		D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KittenCardModal.storyboard; sourceTree = "<group>"; };
+		D588684E2B752AA70044DE62 /* AdviceMockSuccess.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AdviceMockSuccess.json; sourceTree = "<group>"; };
 		D58EEC7C2AEFE6C900B24C95 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		D58EEC802AEFE71700B24C95 /* AdviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceCell.swift; sourceTree = "<group>"; };
 		D58EEC822AEFEA9C00B24C95 /* AdviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdviceCell.xib; sourceTree = "<group>"; };
@@ -594,6 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				D5B143752A1B94B800FA5418 /* AdvicesResponseFail.json */,
+				D588684E2B752AA70044DE62 /* AdviceMockSuccess.json */,
 				D5AC4B202A1E3BC3008B0C43 /* APIRequestMock.swift */,
 				D5A125602A2F2ED400BA69C9 /* AuthResultMock.swift */,
 			);
@@ -992,6 +995,7 @@
 				D59431852AF1405300A13187 /* NavBar.storyboard in Resources */,
 				D57272CA29ACEAD700A9C72E /* LitterHistory.storyboard in Resources */,
 				D5F0C70329A90BEF002A0F65 /* LaunchScreen.storyboard in Resources */,
+				D588684F2B752AA70044DE62 /* AdviceMockSuccess.json in Resources */,
 				D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */,
 				D59AA7D22A03B221008AF45F /* Advices.storyboard in Resources */,
 				D5F0C70029A90BEF002A0F65 /* Assets.xcassets in Resources */,

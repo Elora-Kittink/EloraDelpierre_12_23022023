@@ -57,6 +57,8 @@ class KittenCardModalViewController: BaseViewController
 		super.viewDidLoad()
 		self.interactor.refresh(isEdititngMode: isEditingMode, isCreatingMode: isCreatingMode, kitten: kitten)
         
+		self.view.hideKeyboardOnTap()
+		
         self.nameLabel.text = self.viewModel.firtsNameLabel
 		self.nameLabel.isAccessibilityElement = false
         self.secondNameLabel.text = self.viewModel.secondNameLabel
@@ -109,9 +111,7 @@ class KittenCardModalViewController: BaseViewController
             self.dismiss(animated: true) {
 				if self.isEditingMode {
 					NotificationCenter.default.post(name: NSNotification.Name("kittenUpdated"), object: nil, userInfo: userInfo)
-				} else {
-					NotificationCenter.default.post(name: NSNotification.Name("newKittenCreated"), object: nil)
-				}
+				} 
             }
         }
 		super.refreshUI()

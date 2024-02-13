@@ -55,9 +55,11 @@ class SettingsInteractor: Interactor
 
 	func logOut() {
 		self.userWorker.logOut()
+		
 	}
 	
 	func deleteAccount() {
 		self.userWorker.deleteAccount()
+		self.presenter.close()
 	}
 }

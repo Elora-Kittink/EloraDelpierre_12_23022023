@@ -15,26 +15,25 @@ final class LitterHistoryTests: XCTestCase {
 	let date = Date(timeIntervalSinceNow: TimeInterval(floatLiteral: 10))
     let worker = DBWorker()
     
-    func testFailNoUser() async throws {
-        try CoreDataManager.default.dropDatabase()
-        let test = await BaseTest<LitterHistoryViewModel, LitterHistoryPresenter, LitterHistoryInteractor>()
-        
-        await test.fire { interactor in
-            DispatchQueue.main.async {
-                interactor.refresh(user: User(mail: "", id: "", name: ""))
-            }
-        }
-        
-        DispatchQueue.main.async {
-            XCTAssert(test.viewModel.litters == [])
-        }
-    }
+//    func testFailNoUser() async throws {
+//        try CoreDataManager.default.dropDatabase()
+//        let test = await BaseTest<LitterHistoryViewModel, LitterHistoryPresenter, LitterHistoryInteractor>()
+//        
+//        await test.fire { interactor in
+//            DispatchQueue.main.async {
+//                interactor.refresh(user: User(mail: "", id: "", name: ""))
+//            }
+//        }
+//        
+//        DispatchQueue.main.async {
+//            XCTAssert(test.viewModel.litters == [])
+//        }
+//    }
     
     func testSuccessFetchAll() async throws {
         try CoreDataManager.default.dropDatabase()
         
-        let DBUser = worker.createUser(name: "UT", mail: "UT", id: "UT")
-        let DBLitter = worker.createNewLitter(rescueDate: date, user: user)
+        let DBLitter = worker.createNewLitter(rescueDate: date)
 
         try CoreDataManager.default.save()
 
@@ -54,9 +53,7 @@ final class LitterHistoryTests: XCTestCase {
     func testSuccesRefreshCell() async throws {
         try CoreDataManager.default.dropDatabase()
         
-        let DBUser = worker.createUser(name: "UT", mail: "UT", id: "UT")
-        
-        let DBLitter = try XCTUnwrap(worker.createNewLitter(rescueDate: date, user: user))
+        let DBLitter = try XCTUnwrap(worker.createNewLitter(rescueDate: date))
         
 		let kitten = Kitten(id: "UT",
                             litter: DBLitter,

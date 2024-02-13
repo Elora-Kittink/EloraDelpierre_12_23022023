@@ -40,15 +40,6 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 	/// Called after the controller's view is loaded into memory.
     override func viewDidLoad() {
         super.viewDidLoad()
-//		return from the form with the new kitten by the presenter.close() way
-		// Adds an observer for the 'newKittenCreated' notification.
-		// This observer is triggered when a new kitten is created from the form.
-		// It calls the `refresh` method on the interactor to update the view with the new kitten's details.
-		NotificationCenter.default.addObserver(forName: NSNotification.Name("newKittenCreated"),
-											   object: nil,
-											   queue: nil) { [interactor] _ in
-			interactor.refresh(kitten: self.kitten, litter: self.litter)
-		}
 //		return from the form with the updated kitten by the presenter.close() way
 		// Adds an observer for the 'kittenUpdated' notification.
 		// This observer is triggered when an existing kitten's details are updated from the form.
@@ -113,10 +104,10 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 		self.birthdate.text = self.viewModel.birthdate
 		self.color.text = self.viewModel.color
 		self.comment.text = self.viewModel.comment
+		self.comment.isHidden = self.viewModel.comment.isEmpty ? true : false
         self.viewModel.infoCardViewModel.forEach { info in
             let view = InfoCardView.fromNib()
             view.viewModel = info
-//            stackInfoCards.addArrangedSubview(view)
         }
 		
 		//		Accessibility

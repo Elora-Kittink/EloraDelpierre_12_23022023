@@ -12,6 +12,14 @@ import CoreDataUtilsKit
 final class SignUpTests: XCTestCase {
 	
 	struct MockUserWorker: UserWorkerProtocol {
+		func logOut() {
+			
+		}
+		
+		func deleteAccount() {
+			
+		}
+		
 		func userConnected() async throws -> FosterApp.User? {
 			User(mail: "MAIL", id: "ID", name: "NAME")
 		}

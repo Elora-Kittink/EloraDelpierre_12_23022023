@@ -29,11 +29,9 @@ class LoginInteractor: Interactor
 		}
 		
 		self.presenter.display(loader: true)
-//		TODO: worker fail get DBUser, connexion impossible, on arrive pas sur la Home
 		Task {
 			do {
 				let user = try await self.userWorker.login(email: email, password: password)
-				self.presenter.display(user: user)
 			} catch {
 				print(error)
 			}

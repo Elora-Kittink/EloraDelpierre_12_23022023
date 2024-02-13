@@ -16,18 +16,11 @@ final class LitterTests: XCTestCase {
 	let date = Date(timeIntervalSinceNow: TimeInterval(floatLiteral: 10))
     let date2 = Date(timeIntervalSinceNow: TimeInterval(floatLiteral: 10))
 	var litterFound: Litter?
-	var fetchedUser: User!
 	
 	
 	override func setUpWithError() throws {
 		super.setUp()
 		try? CoreDataManager.default.dropDatabase()
-		do {
-			let createdUser = try XCTUnwrap(worker.createUser(name: "UT", mail: "UT", id: "UT"))
-			self.fetchedUser = try XCTUnwrap(self.worker.fetchUser(id: createdUser.id))
-		} catch {
-			XCTFail(error.localizedDescription)
-		}
 	}
 	// MARK: - test func createLitter
 	
@@ -37,18 +30,16 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				interactor.saveLitter(user: self.fetchedUser,
-									  rescueDate: self.date,
+				interactor.saveLitter(rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
-                interactor.saveLitter(user: self.fetchedUser,
-                                      rescueDate: self.date2,
+                interactor.saveLitter(rescueDate: self.date2,
                                       isEditing: false,
                                       litterId: nil)
 			}
 		}
 		
-		let DBlitters = try XCTUnwrap(worker.fetchAllLitters(userId: self.fetchedUser.id))
+		let DBlitters = try XCTUnwrap(worker.fetchAllLitters())
 		
 		DispatchQueue.main.async {
 			XCTAssertEqual(DBlitters.count, 2)
@@ -61,39 +52,37 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				interactor.saveLitter(user: self.fetchedUser,
-									  rescueDate: nil,
+				interactor.saveLitter(rescueDate: nil,
 									  isEditing: false,
 									  litterId: nil)
 			}
 		}
 		
-		let DBlitters = try XCTUnwrap(worker.fetchAllLitters(userId: self.fetchedUser.id))
+		let DBlitters = try XCTUnwrap(worker.fetchAllLitters())
 		
 		DispatchQueue.main.async {
 			XCTAssertEqual(DBlitters.count, 0)
 		}
 	}
 	
-	func testDBFailCreateLitter() async throws {
-		let failUser = User(mail: "TestFail", id: "TestFail", name: "TestFail")
-		let test = await BaseTest<LitterViewModel, LitterPresenter, LitterInteractor>()
-		
-		await test.fire { interactor in
-			DispatchQueue.main.async {
-				interactor.saveLitter(user: failUser,
-									  rescueDate: self.date,
-									  isEditing: false,
-									  litterId: nil)
-			}
-		}
-		
-		let DBlitters = try XCTUnwrap(worker.fetchAllLitters(userId: self.fetchedUser.id))
-		
-		DispatchQueue.main.async {
-			XCTAssertEqual(DBlitters.count, 0)
-		}
-	}
+//	func testDBFailCreateLitter() async throws {
+//		let failUser = User(mail: "TestFail", id: "TestFail", name: "TestFail")
+//		let test = await BaseTest<LitterViewModel, LitterPresenter, LitterInteractor>()
+//		
+//		await test.fire { interactor in
+//			DispatchQueue.main.async {
+//				interactor.saveLitter(rescueDate: self.date,
+//									  isEditing: false,
+//									  litterId: nil)
+//			}
+//		}
+//		
+//		let DBlitters = try XCTUnwrap(worker.fetchAllLitters())
+//		
+//		DispatchQueue.main.async {
+//			XCTAssertEqual(DBlitters.count, 0)
+//		}
+//	}
 	
 	// MARK: - test func updateLitter
 	
@@ -103,15 +92,13 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				interactor.saveLitter(user: self.fetchedUser,
-									  rescueDate: self.date,
+				interactor.saveLitter(rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
 				do {
-					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters(userId: self.fetchedUser.id))
+					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters())
 					let litterId = try XCTUnwrap(allLitters.first?.id)
-					interactor.saveLitter(user: self.fetchedUser, 
-										  rescueDate: newDate.toDate(format: "dd/MM/yyyy"),
+					interactor.saveLitter(rescueDate: newDate.toDate(format: "dd/MM/yyyy"),
 										  isEditing: true,
 										  litterId: litterId)
 					self.litterFound = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litterId))
@@ -121,7 +108,7 @@ final class LitterTests: XCTestCase {
 			}
 		}
 		
-		let DBlitters = try XCTUnwrap(worker.fetchAllLitters(userId: self.fetchedUser.id))
+		let DBlitters = try XCTUnwrap(worker.fetchAllLitters())
 		let litter = try XCTUnwrap(DBlitters.first)
 		
 		DispatchQueue.main.async {
@@ -136,15 +123,13 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				interactor.saveLitter(user: self.fetchedUser,
-									  rescueDate: self.date,
+				interactor.saveLitter(rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
 				do {
-					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters(userId: self.fetchedUser.id))
+					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters())
 					let litterId = try XCTUnwrap(allLitters.first?.id)
-					interactor.saveLitter(user: self.fetchedUser, 
-										  rescueDate: newDate.toDate(format: "dd/MM/yyyy"),
+					interactor.saveLitter(rescueDate: newDate.toDate(format: "dd/MM/yyyy"),
 										  isEditing: true,
 										  litterId: nil)
 					self.litterFound = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litterId))
@@ -154,7 +139,7 @@ final class LitterTests: XCTestCase {
 			}
 		}
 		
-		let DBlitters = try XCTUnwrap(worker.fetchAllLitters(userId: self.fetchedUser.id))
+		let DBlitters = try XCTUnwrap(worker.fetchAllLitters())
 		let litter = try XCTUnwrap(DBlitters.first)
 		
 		DispatchQueue.main.async {
@@ -170,12 +155,11 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				interactor.saveLitter(user: self.fetchedUser,
-									  rescueDate: self.date,
+				interactor.saveLitter(rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
 				do {
-					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters(userId: self.fetchedUser.id))
+					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters())
 					let litterId = try XCTUnwrap(allLitters.first?.id)
 					interactor.archiveLitter(litterId: litterId)
 					self.litterFound = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litterId))
@@ -202,12 +186,11 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				interactor.saveLitter(user: self.fetchedUser,
-									  rescueDate: self.date,
+				interactor.saveLitter(rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
 				do {
-					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters(userId: self.fetchedUser.id))
+					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters())
 					let litterId = try XCTUnwrap(allLitters.first?.id)
 					interactor.archiveLitter(litterId: "badID")
 					self.litterFound = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litterId))
@@ -235,12 +218,11 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				interactor.saveLitter(user: self.fetchedUser,
-									  rescueDate: self.date,
+				interactor.saveLitter(rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
 				do {
-					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters(userId: self.fetchedUser.id))
+					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters())
 					let litterId = try XCTUnwrap(allLitters.first?.id)
 					interactor.makeFavorite(litterId: litterId)
 					self.litterFound = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litterId))
@@ -265,12 +247,11 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				interactor.saveLitter(user: self.fetchedUser,
-									  rescueDate: self.date,
+				interactor.saveLitter(rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
 				do {
-					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters(userId: self.fetchedUser.id))
+					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters())
 					let litterId = try XCTUnwrap(allLitters.first?.id)
 					interactor.makeFavorite(litterId: "badID")
 					self.litterFound = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litterId))
@@ -298,12 +279,11 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				interactor.saveLitter(user: self.fetchedUser,
-									  rescueDate: self.date,
+				interactor.saveLitter(rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
 				do {
-					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters(userId: self.fetchedUser.id))
+					let allLitters = try XCTUnwrap(self.worker.fetchAllLitters())
 					let litterId = try XCTUnwrap(allLitters.first?.id)
 					self.litterFound = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litterId))
 					interactor.refresh(litterId: litterId)
@@ -326,8 +306,7 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				interactor.saveLitter(user: self.fetchedUser,
-									  rescueDate: self.date,
+				interactor.saveLitter(rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
 				interactor.refresh(litterId: "badId")
@@ -392,14 +371,15 @@ final class LitterTests: XCTestCase {
 		
 		await test.fire { interactor in
 			DispatchQueue.main.async {
-				interactor.saveLitter(user: self.fetchedUser,
-									  rescueDate: self.date,
+				interactor.saveLitter(rescueDate: self.date,
 									  isEditing: false,
 									  litterId: nil)
 			}
 		}
 		
-		let DBlitters = try XCTUnwrap(worker.fetchAllLitters(userId: "someBadId"))
+		try? CoreDataManager.default.dropDatabase()
+		
+		let DBlitters = try XCTUnwrap(worker.fetchAllLitters())
 		
 		DispatchQueue.main.async {
 			XCTAssertEqual(DBlitters.count, 0)

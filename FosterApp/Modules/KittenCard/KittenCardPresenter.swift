@@ -49,7 +49,7 @@ class KittenCardPresenter: Presenter<KittenCardViewModel> {
 		
 		self.viewModel?.comment = kitten.comment ?? "?"
 		self.viewModel?.isAdopted = kitten.isAdopted
-		self.viewModel?.microship = String(kitten.microship ?? 0)
+		self.viewModel?.microship = kitten.microship.flatMap { $0 != 0 ? String($0) : "" } ?? ""
 		self.viewModel?.tattoo = kitten.tattoo
 		self.viewModel?.vaccines = kitten.vaccines ?? []
 		self.viewModel?.adopters = "\(kitten.adopters?.firstName ?? "") \(kitten.adopters?.lastName ?? "")"

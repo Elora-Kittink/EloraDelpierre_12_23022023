@@ -12,7 +12,7 @@ import CoreDataUtilsKit
 final class WeighingHistoryTests: XCTestCase {
     let worker = DBWorker()
     let date = Date(timeIntervalSinceNow: TimeInterval(floatLiteral: 10))
-    var fetchedUser: User!
+//    var fetchedUser: User!
     var fetchedLitter: Litter!
     var litterId: String!
     var kittenCreated: Kitten!
@@ -22,9 +22,9 @@ final class WeighingHistoryTests: XCTestCase {
         try super.setUpWithError()
         try? CoreDataManager.default.dropDatabase()
         do {
-            let createdUser = try XCTUnwrap(worker.createUser(name: "UT", mail: "UT", id: "UT"))
-            self.fetchedUser = try XCTUnwrap(self.worker.fetchUser(id: createdUser.id))
-            let litter = try XCTUnwrap(self.worker.createNewLitter(rescueDate: date, user: fetchedUser))
+//            let createdUser = try XCTUnwrap(worker.createUser(name: "UT", mail: "UT", id: "UT"))
+//            self.fetchedUser = try XCTUnwrap(self.worker.fetchUser(id: createdUser.id))
+            let litter = try XCTUnwrap(self.worker.createNewLitter(rescueDate: date))
             self.fetchedLitter = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litter.id ?? ""))
             self.litterId = try XCTUnwrap(fetchedLitter.id)
             self.kittenCreated = try XCTUnwrap(self.worker.createKitten(kitten: Kitten(id: "TEST",

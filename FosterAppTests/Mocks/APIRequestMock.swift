@@ -19,7 +19,7 @@ enum AdvicesMocks: String, Codable {
                             withExtension: "json")
             
         case .mockSucces:
-            return Bundle.main.url(forResource: "Advices",
+            return Bundle.main.url(forResource: "AdviceMockSuccess",
                             withExtension: "json")
         }
     }

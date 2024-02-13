@@ -81,9 +81,6 @@ struct UserWorker: UserWorkerProtocol {
 	}
 	
 	/// Logs out the current user.
-	/// - Note: This function needs to be completed with logout logic.
-	 
-//	TODO: faire tests unitaires
 	func logOut() {
 		do {
 			try Auth.auth().signOut()
