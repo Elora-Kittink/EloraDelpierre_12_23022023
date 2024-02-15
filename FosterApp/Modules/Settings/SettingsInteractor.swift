@@ -26,7 +26,6 @@ class SettingsInteractor: Interactor
 					self.presenter.display(loader: false)
 					return
 				}
-				print("🙋🏼‍♀️ User \(user.name) \(user.id) is connected")
 				
 //				get all kittens & all weighings
 				
@@ -55,7 +54,6 @@ class SettingsInteractor: Interactor
 
 	func logOut() {
 		self.userWorker.logOut()
-		
 	}
 	
 	func deleteAccount() {

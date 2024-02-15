@@ -7,4 +7,7 @@
 /// It processes data received from the interactor and updates the ViewModel.
 class LoginPresenter: Presenter<LoginViewModel> {
 
+	func display() {
+		self.viewModel?.send()
+	}
 }

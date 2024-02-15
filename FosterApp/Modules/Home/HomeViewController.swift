@@ -36,11 +36,13 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 		
 		// Checking if a user is currently connected.
 		self.interactor.userIsConnected()
+//		self.interactor.refresh()
+		
 		
 		// Setting up an observer for the 'userLogged' notification.
 		NotificationCenter.default.addObserver(forName: NSNotification.Name("userLogged"),
 											   object: nil,
-											   queue: nil) { [interactor] _ in
+											   queue: nil) { _ in
 		
 			
 			let flowLayout = UICollectionViewFlowLayout()
@@ -61,8 +63,6 @@ class HomeViewController: BaseViewController< HomeViewModel, HomePresenter, Home
 		AnalyticsManager.shared.log(event: .pageOpen, with: ["page": "\(Self.self)"])
 	}
 	
-	//	TODO: quand LoginInteractor ou SignUpInteractor close() ça revient sur HomeViewCo,troller mais ça ne refresh pas donc on reste à l'état vide, il faudrait repasser dans le viewdidload
-	//	essayer de passer une nottification dans la completion du close()
 	// MARK: - Refresh
 	/// Refreshes the UI with new data stored in the ViewModel.
 	override func refreshUI() {

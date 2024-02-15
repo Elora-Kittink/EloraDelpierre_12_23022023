@@ -33,9 +33,8 @@ class SignUpInteractor: Interactor
 		Task {
 			do {
 				let user = try await self.userWorker.signUp(mail: mail, password: password)
+				self.userWorker.storeUserInUserDefaults(user: User(mail: user.mail, id: user.id, name: name))
 				let userlog = try await self.userWorker.login(email: user.mail, password: password)
-				
-				NotificationCenter.default.post(name: NSNotification.Name(rawValue: "userLogged"), object: nil)
 			} catch {
 				print(error)
 			}

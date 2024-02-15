@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DB_Adopter" representedClassName="DB_Adopter" syncable="YES" codeGenerationType="class">
         <attribute name="a_adress" optional="YES" attributeType="String"/>
         <attribute name="a_comment" optional="YES" attributeType="String"/>
@@ -34,6 +34,7 @@
         <attribute name="a_isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_isOngoing" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="a_rescueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="a_userId" attributeType="String"/>
         <relationship name="r_kittens" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DB_Kitten" inverseName="r_litter" inverseEntity="DB_Kitten"/>
     </entity>
     <entity name="DB_Vaccine" representedClassName="DB_Vaccine" syncable="YES" codeGenerationType="class">

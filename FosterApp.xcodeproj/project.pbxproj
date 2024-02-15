@@ -58,7 +58,6 @@
 		D59900CD29F6B62500F0F36D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59900CC29F6B62500F0F36D /* Alerts.swift */; };
 		D599CE2329AFB0C500542F9E /* DBWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599CE2229AFB0C500542F9E /* DBWorker.swift */; };
 		D599DE0A2A151A100004C165 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599DE092A151A100004C165 /* BaseTest.swift */; };
-		D59A680429E8525F0016F123 /* DB_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680329E8525F0016F123 /* DB_User.swift */; };
 		D59A680629E856000016F123 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680529E856000016F123 /* User.swift */; };
 		D59AA7CD2A03B205008AF45F /* AdvicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AA7C92A03B205008AF45F /* AdvicesPresenter.swift */; };
 		D59AA7CE2A03B205008AF45F /* AdvicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AA7CA2A03B205008AF45F /* AdvicesViewController.swift */; };
@@ -209,7 +208,6 @@
 		D59900CC29F6B62500F0F36D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		D599CE2229AFB0C500542F9E /* DBWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBWorker.swift; sourceTree = "<group>"; };
 		D599DE092A151A100004C165 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
-		D59A680329E8525F0016F123 /* DB_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_User.swift; sourceTree = "<group>"; };
 		D59A680529E856000016F123 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D59AA7C92A03B205008AF45F /* AdvicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesPresenter.swift; sourceTree = "<group>"; };
 		D59AA7CA2A03B205008AF45F /* AdvicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesViewController.swift; sourceTree = "<group>"; };
@@ -736,7 +734,6 @@
 				D5A073C329AE10CD00202F0A /* DB_Weighing.swift */,
 				D5A073C529AE113A00202F0A /* DB_Vaccine.swift */,
 				D5A073CB29AE45CE00202F0A /* DB_Litter.swift */,
-				D59A680329E8525F0016F123 /* DB_User.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1178,7 +1175,6 @@
 				D576F5702A5B1B7F0004AF60 /* AddWeightPresenter.swift in Sources */,
 				D57272C829ACEAB900A9C72E /* LitterHistoryViewModel.swift in Sources */,
 				D5AC4B1E2A1E0239008B0C43 /* Extension+UserDefaults.swift in Sources */,
-				D59A680429E8525F0016F123 /* DB_User.swift in Sources */,
 				D58EEC812AEFE71700B24C95 /* AdviceCell.swift in Sources */,
 				D576F5722A5B1B7F0004AF60 /* AddWeightInteractor.swift in Sources */,
 				D57272D029ACF4F200A9C72E /* HomePresenter.swift in Sources */,

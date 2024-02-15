@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,19 +20,19 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="j3z-5w-Ydn">
                                 <rect key="frame" x="60" y="228" width="273" height="150"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JrY-kZ-jqd">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JrY-kZ-jqd">
                                         <rect key="frame" x="0.0" y="0.0" width="273" height="40.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HAf-y6-XYc" userLabel="NameTF">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HAf-y6-XYc" userLabel="NameTF">
                                         <rect key="frame" x="0.0" y="54.666666666666686" width="273" height="40.666666666666657"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NaP-2x-Hkt">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NaP-2x-Hkt">
                                         <rect key="frame" x="0.0" y="109.33333333333333" width="273" height="40.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                 </subviews>
@@ -40,9 +40,8 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="cqb-yr-s2D"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZb-sj-zlW" customClass="ButtonPink" customModule="FosterApp" customModuleProvider="target">
-                                <rect key="frame" x="123" y="566" width="147" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZb-sj-zlW" customClass="ButtonPink" customModule="FosterApp" customModuleProvider="target">
+                                <rect key="frame" x="130.66666666666666" y="398" width="131.99999999999997" height="34.333333333333314"/>
                                 <color key="backgroundColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <state key="normal" title="Button"/>
@@ -51,17 +50,15 @@
                                     <action selector="signUpAction" destination="ZTS-zE-Vhw" eventType="touchUpInside" id="NXN-uV-TWr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vous avez déjà un compte?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU4-f4-Nup">
-                                <rect key="frame" x="130" y="661" width="131.33333333333331" height="12"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous avez déjà un compte?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU4-f4-Nup">
+                                <rect key="frame" x="125" y="452.33333333333331" width="143" height="13.333333333333314"/>
                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhr-O3-b06" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
-                                <rect key="frame" x="119" y="683" width="147" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhr-O3-b06" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
+                                <rect key="frame" x="123" y="485.66666666666669" width="147" height="34.333333333333314"/>
                                 <color key="backgroundColor" red="0.88627451660000001" green="0.81960785390000002" blue="0.69019609689999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <state key="normal" title="Button"/>
@@ -74,8 +71,14 @@
                         <viewLayoutGuide key="safeArea" id="vh6-pH-rvl"/>
                         <color key="backgroundColor" red="0.99215686319999996" green="0.97254908080000002" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="Zhr-O3-b06" firstAttribute="centerX" secondItem="Nxg-xz-3Vd" secondAttribute="centerX" id="3SP-q0-tU3"/>
+                            <constraint firstItem="hU4-f4-Nup" firstAttribute="centerX" secondItem="Nxg-xz-3Vd" secondAttribute="centerX" id="9WM-2z-9jf"/>
+                            <constraint firstItem="hU4-f4-Nup" firstAttribute="top" secondItem="PZb-sj-zlW" secondAttribute="bottom" constant="20" id="C2T-Ct-tpG"/>
+                            <constraint firstItem="PZb-sj-zlW" firstAttribute="centerX" secondItem="Nxg-xz-3Vd" secondAttribute="centerX" id="CSD-5t-m1A"/>
                             <constraint firstItem="j3z-5w-Ydn" firstAttribute="centerX" secondItem="Nxg-xz-3Vd" secondAttribute="centerX" id="KlY-gn-K8n"/>
                             <constraint firstItem="vh6-pH-rvl" firstAttribute="trailing" secondItem="j3z-5w-Ydn" secondAttribute="trailing" constant="60" id="MZg-JL-pyX"/>
+                            <constraint firstItem="PZb-sj-zlW" firstAttribute="top" secondItem="j3z-5w-Ydn" secondAttribute="bottom" constant="20" id="NBk-VW-Djb"/>
+                            <constraint firstItem="Zhr-O3-b06" firstAttribute="top" secondItem="hU4-f4-Nup" secondAttribute="bottom" constant="20" id="Xiy-QT-Eih"/>
                             <constraint firstItem="j3z-5w-Ydn" firstAttribute="leading" secondItem="vh6-pH-rvl" secondAttribute="leading" constant="60" id="lcL-zk-7lB"/>
                             <constraint firstItem="j3z-5w-Ydn" firstAttribute="top" secondItem="vh6-pH-rvl" secondAttribute="top" constant="169" id="uFU-KS-6b6"/>
                         </constraints>
@@ -93,7 +96,7 @@
     </scenes>
     <resources>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

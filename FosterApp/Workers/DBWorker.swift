@@ -16,6 +16,8 @@ import FirebaseAuth
 /// It provides methods to create, fetch, and update entities like users, kittens, litters, and weighings.
 struct DBWorker {
 	
+	let userWorker = UserWorker()
+	
 	// MARK: - Kitten Operations
 	
 	/// Fetches a kitten from the database using its ID.
@@ -110,8 +112,9 @@ struct DBWorker {
 	/// - Parameter userId: The unique identifier of the user.
 	/// - Returns: An array of `Litter` objects if found.
     func fetchAllLitters() -> [Litter] {
-        
-        let litters = DB_Litter.getAll()
+		guard let user = userWorker.retrieveUser() else { return [] }
+		let predicate = NSPredicate(format: "a_userId == %@", user.id)
+        let litters = DB_Litter.getAll(predicate: predicate)
 
         let allLitters = litters.map { litter in
             Litter(from: litter)
@@ -140,7 +143,8 @@ struct DBWorker {
 	///   - user: The `User` associated with the new litter.
 	/// - Returns: An optional `Litter` object if creation is successful.
     func createNewLitter(rescueDate: Date) -> Litter? {
-        guard let newLitter = DB_Litter.create(rescueDate: rescueDate) else {
+		guard let user = userWorker.retrieveUser() else { return nil }
+		guard let newLitter = DB_Litter.create(rescueDate: rescueDate, userId: user.id) else {
             print("👹 Worker fail create DB Litter")
             return nil
         }

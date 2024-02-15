@@ -4,6 +4,7 @@
 //
 
 import FirebaseAuth
+import UtilsKit
 
 /// `HomeInteractor` handles the business logic for the `HomeViewController`.
 class HomeInteractor: Interactor
@@ -14,16 +15,28 @@ class HomeInteractor: Interactor
 	let worker = DBWorker()
 	var userWorker: UserWorkerProtocol = UserWorker()
 	
+//	
+//	func refresh() {
+//		
+//		guard let user = userWorker.retrieveUser() else {
+//			self.presenter.noUserConnected()
+//			return
+//		}
+//		
+//		self.presenter.presentUserConnected(user: user)
+//	}
+	
 	/// Checks if a user is currently connected and updates the UI accordingly.
 	func userIsConnected() {
 		// Implementation of user connection check.
 		Task {
 			do {
-				guard let user = try await self.userWorker.userConnected() else {
+				guard let firebaseUser = try await self.userWorker.userConnected() else {
 					self.presenter.noUserConnected()
 					self.presenter.display(loader: false)
 					return
 				}
+				guard let user = userWorker.retrieveUser() else { return }
 				self.presenter.presentUserConnected(user: user)
 			} catch {
 				print(error)

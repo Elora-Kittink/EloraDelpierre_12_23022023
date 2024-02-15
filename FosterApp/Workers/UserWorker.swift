@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import CoreDataUtilsKit
 
 /// Protocol defining authentication functionalities.
 protocol UserWorkerProtocol {
@@ -15,6 +16,8 @@ protocol UserWorkerProtocol {
 	func userConnected() async throws -> User?
 	func logOut()
 	func deleteAccount()
+	func storeUserInUserDefaults(user: User)
+	func retrieveUser() -> User?
 }
 
 /// Custom error indicating that a user was not found.
@@ -35,8 +38,10 @@ struct UserWorker: UserWorkerProtocol {
 			Auth.auth().signIn(withEmail: email,
 							   password: password) { authResult, error in
 				if let error {
+					print("👹 Firebase fail login user \(email)")
 					continuation.resume(throwing: error)
 				} else if let user = authResult?.user {
+					print("💃🏼 Firebase succeed login \(user.displayName ?? "no name") \(user.uid) user")
 					continuation.resume(returning: User(from: user))
 				} else {
 					continuation.resume(throwing: UserNotFoundError())
@@ -60,7 +65,7 @@ struct UserWorker: UserWorkerProtocol {
 					print("👹 Firebase fail create user at signup")
 					continuation.resume(throwing: error)
 				} else if let user = authResult?.user {
-					print("💃🏼 Firebase succeed create \(user.uid) user")
+					print("💃🏼 Firebase succeed create \(user.displayName ?? "no name") \(user.uid) user")
 					continuation.resume(returning: User(from: user))
 				} else {
 					print("👹 Firebase fail create user at signup")
@@ -75,8 +80,10 @@ struct UserWorker: UserWorkerProtocol {
 	func userConnected() -> User? {
 		
 		guard let currentUser = Auth.auth().currentUser else {
+			print("👹 No current user connected")
 			return nil
 		}
+		print("💃🏼 Firebase success find current user")
 		return User(from: currentUser)
 	}
 	
@@ -99,8 +106,29 @@ struct UserWorker: UserWorkerProtocol {
 				print("👹 Firebase fail delete current user account")
 			} else {
 				print("💃🏼 Firebase success delete current user account")
+				try? CoreDataManager.default.dropDatabase()
+				self.logOut()
 			}
 		}
-			self.logOut()
+	}
+	
+	func storeUserInUserDefaults(user: User) {
+		let encoder = JSONEncoder()
+		if let encodedUser = try? encoder.encode(user) {
+			UserDefaults.standard.set(encodedUser, forKey: "currentUser")
+		}
+	}
+	
+	func retrieveUser() -> User? {
+		if let userData = UserDefaults.standard.data(forKey: "currentUser") {
+			let decoder = JSONDecoder()
+			do {
+				let user = try decoder.decode(User.self, from: userData)
+				return user
+			} catch {
+				print("Erreur lors du décodage de l'utilisateur : \(error)")
+			}
+		}
+		return nil
 	}
 }

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,31 +29,17 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="pzF-9b-79q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfN-0t-OTA" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
-                                <rect key="frame" x="124.33333333333333" y="751.66666666666652" width="144.66666666666669" height="34.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfN-0t-OTA" customClass="ButtonPink" customModule="FosterApp" customModuleProvider="target">
+                                <rect key="frame" x="32" y="619.66666666666663" width="329" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Se deconnecter"/>
                                 <connections>
                                     <action selector="logOut" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5lC-mo-zKJ"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAB-Ud-eyV">
-                                <rect key="frame" x="186.66666666666666" y="95" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="JAB-Ud-eyV" secondAttribute="height" multiplier="1:1" id="3HV-Tp-88K"/>
-                                    <constraint firstAttribute="width" constant="60" id="XrL-6a-oAX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                <color key="tintColor" name="pink"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="pencil.circle" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
-                                </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nNj-SY-zXE">
                                 <rect key="frame" x="90.666666666666686" y="307" width="212" height="120"/>
@@ -67,17 +51,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="paw2" translatesAutoresizingMaskIntoConstraints="NO" id="H9k-Ye-Xyg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="69.333333333333329"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-wN-QRz">
-                                                        <rect key="frame" x="29.333333333333332" y="58.000000000000007" width="41.333333333333343" height="20.333333333333336"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbk-wN-QRz">
+                                                        <rect key="frame" x="29.333333333333332" y="77.333333333333314" width="41.333333333333343" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chatons sauvés" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR8-iR-ifM">
-                                                        <rect key="frame" x="20" y="86.333333333333314" width="60" height="33.666666666666657"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chatons sauvés" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR8-iR-ifM">
+                                                        <rect key="frame" x="5" y="105.66666666666669" width="89.666666666666671" height="14.333333333333329"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -101,17 +85,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="bottleTime" translatesAutoresizingMaskIntoConstraints="NO" id="AYB-gM-4dB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="70.333333333333329"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnX-Wa-Db1">
-                                                        <rect key="frame" x="29.333333333333346" y="58.000000000000007" width="41.333333333333343" height="20.333333333333336"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnX-Wa-Db1">
+                                                        <rect key="frame" x="29.333333333333346" y="78.333333333333314" width="41.333333333333343" height="20.333333333333329"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biberons donnés" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw2-Vx-qI0">
-                                                        <rect key="frame" x="18.333333333333346" y="86.333333333333314" width="63.333333333333343" height="33.666666666666657"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biberons donnés" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw2-Vx-qI0">
+                                                        <rect key="frame" x="6" y="106.66666666666669" width="88" height="13.333333333333329"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -130,27 +114,30 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIb-xI-g9b">
-                                <rect key="frame" x="125.00000000000001" y="506.66666666666674" width="143.33333333333337" height="34.333333333333258"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIb-xI-g9b" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
+                                <rect key="frame" x="32" y="487" width="329" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Changer l'icone"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Changer l'icone de l'application"/>
                                 <connections>
                                     <action selector="didTapEditAppIconButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CxJ-8I-yQJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jK-p7-rEm" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
-                                <rect key="frame" x="50.666666666666657" y="259" width="291.66666666666674" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jK-p7-rEm" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
+                                <rect key="frame" x="32" y="259" width="329" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="c22-Oz-Xzf"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Editer"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Editer photo">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapEditButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MBx-TB-f0A"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qd-vN-nxh">
-                                <rect key="frame" x="95.000000000000014" y="648.66666666666652" width="203.33333333333337" height="34.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qd-vN-nxh" customClass="ButtonPink" customModule="FosterApp" customModuleProvider="target">
+                                <rect key="frame" x="32" y="553.33333333333337" width="329" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Supprimer mon compte"/>
                                 <connections>
@@ -163,21 +150,25 @@
                         <constraints>
                             <constraint firstItem="nNj-SY-zXE" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1qe-b0-QMf"/>
                             <constraint firstItem="ZrE-lr-zMm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="36" id="2OA-3r-w8q"/>
+                            <constraint firstItem="NIb-xI-g9b" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="7rz-Hx-Eif"/>
                             <constraint firstItem="hua-pG-ikv" firstAttribute="top" secondItem="ZrE-lr-zMm" secondAttribute="bottom" constant="16" id="BVh-oC-mcp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EfN-0t-OTA" secondAttribute="trailing" constant="32" id="FFG-Kf-oEb"/>
                             <constraint firstItem="ZrE-lr-zMm" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HYZ-LP-8eD"/>
-                            <constraint firstItem="JAB-Ud-eyV" firstAttribute="top" secondItem="ZrE-lr-zMm" secondAttribute="top" id="JzY-lX-ON5"/>
-                            <constraint firstItem="1jK-p7-rEm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50.670000000000002" id="NrN-rV-Spq"/>
+                            <constraint firstItem="EfN-0t-OTA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="IVa-xt-BZ6"/>
+                            <constraint firstItem="7Qd-vN-nxh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="Nd0-hG-XIr"/>
+                            <constraint firstItem="1jK-p7-rEm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="T1m-uw-tvz"/>
                             <constraint firstItem="hua-pG-ikv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UFr-XK-ZSh"/>
-                            <constraint firstItem="ZrE-lr-zMm" firstAttribute="trailing" secondItem="JAB-Ud-eyV" secondAttribute="trailing" id="V0N-uh-N8N"/>
-                            <constraint firstItem="NIb-xI-g9b" firstAttribute="top" secondItem="nNj-SY-zXE" secondAttribute="bottom" constant="79.670000000000002" id="WaG-EX-dm9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NIb-xI-g9b" secondAttribute="trailing" constant="32" id="Vhw-q7-Nfh"/>
                             <constraint firstItem="7Qd-vN-nxh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XSb-PG-bYG"/>
                             <constraint firstItem="1jK-p7-rEm" firstAttribute="top" secondItem="hua-pG-ikv" secondAttribute="bottom" constant="24" id="Z4T-Yc-Ig1"/>
-                            <constraint firstItem="7Qd-vN-nxh" firstAttribute="top" relation="lessThanOrEqual" secondItem="NIb-xI-g9b" secondAttribute="bottom" constant="107" id="kRC-J6-z1X"/>
-                            <constraint firstItem="EfN-0t-OTA" firstAttribute="top" secondItem="7Qd-vN-nxh" secondAttribute="bottom" constant="68.670000000000002" id="ntU-Ym-9oG"/>
+                            <constraint firstItem="7Qd-vN-nxh" firstAttribute="top" secondItem="NIb-xI-g9b" secondAttribute="bottom" constant="32" id="av8-wz-iWL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1jK-p7-rEm" secondAttribute="trailing" constant="32" id="bEr-3i-uxb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7Qd-vN-nxh" secondAttribute="trailing" constant="32" id="fPV-OP-Kaf"/>
+                            <constraint firstItem="EfN-0t-OTA" firstAttribute="top" secondItem="7Qd-vN-nxh" secondAttribute="bottom" constant="32" id="ntU-Ym-9oG"/>
                             <constraint firstItem="NIb-xI-g9b" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ojV-mX-9nF"/>
                             <constraint firstItem="EfN-0t-OTA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qfs-fr-yPH"/>
+                            <constraint firstItem="NIb-xI-g9b" firstAttribute="top" secondItem="nNj-SY-zXE" secondAttribute="bottom" constant="60" id="rcJ-fk-Y5C"/>
                             <constraint firstItem="1jK-p7-rEm" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tMv-J5-ApT"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="EfN-0t-OTA" secondAttribute="bottom" constant="32" id="tic-N2-0bu"/>
                             <constraint firstItem="nNj-SY-zXE" firstAttribute="top" secondItem="1jK-p7-rEm" secondAttribute="bottom" constant="14" id="wQQ-nN-5Go"/>
                         </constraints>
                     </view>
@@ -198,10 +189,6 @@
         <image name="adopter1" width="151" height="160"/>
         <image name="bottleTime" width="219" height="343"/>
         <image name="paw2" width="121" height="120"/>
-        <image name="pencil.circle" catalog="system" width="128" height="123"/>
-        <namedColor name="pink">
-            <color red="0.88200002908706665" green="0.6940000057220459" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

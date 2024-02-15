@@ -21,11 +21,12 @@ extension DB_Litter {
 	///   - rescueDate: The date of the litter's rescue.
 	///   - user: The `User` associated with the litter.
 	/// - Returns: An optional `DB_Litter` instance if creation is successful.
-	static func create(rescueDate: Date) -> DB_Litter? {
+	static func create(rescueDate: Date, userId: String) -> DB_Litter? {
 		let litter = DB_Litter.findOrCreate(with: UUID().uuidString)
 		litter?.a_rescueDate = rescueDate
 		litter?.a_isOngoing = true
 		litter?.a_isFavorite = false
+		litter?.a_userId = userId
 		
 		return litter
 	}

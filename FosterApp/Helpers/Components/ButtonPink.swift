@@ -28,13 +28,18 @@ class ButtonPink: UIButton {
         
         layer.borderWidth = 2.0
         layer.borderColor = UIColor(withHexString: "#7E6360")?.cgColor
-        
+		setTitleColor(UIColor(withHexString: "#7E6360"), for: .normal)
         
         layer.cornerRadius = 4.0
         
    
         setTitleColor(UIColor(withHexString: "#7E6360"), for: .normal)
-        titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+		
+        titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+		titleLabel?.adjustsFontForContentSizeCategory = true
+		isAccessibilityElement = true
+		accessibilityTraits = .button
+		
         contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     }
 }
