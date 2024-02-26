@@ -41,7 +41,7 @@ final class LitterHistoryTests: XCTestCase {
         
         await test.fire { interactor in
             DispatchQueue.main.async {
-                interactor.refresh(user: self.user)
+                interactor.refresh()
             }
         }
         

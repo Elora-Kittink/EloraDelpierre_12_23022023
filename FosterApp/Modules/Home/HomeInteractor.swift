@@ -47,6 +47,8 @@ class HomeInteractor: Interactor
 	
 	/// Handles the selection of a tile on the Home screen.
 	func didSelectTile(tileType: Tiles, user: User) {
+		let continueAction = AlertAction(title: "Continuer", style: .default, completion: {})
+		
 		// Implementation of tile selection handling.
 		switch tileType {
 			
@@ -57,8 +59,12 @@ class HomeInteractor: Interactor
 			AdvicesViewController.fromStoryboard().push()
 			
 		case .gallery, .admin, .calendar, .contacts, .medicalHistory, .weighingHistory:
-			print("Pas encore implémenté")
-//			TODO: faire une popup "pas encore implémenté"
+			AlertManager.shared.show(actions: [continueAction],
+									 title: "WIP",
+									 message: "Implémentation future",
+									 alignment: .center,
+									 preferredStyle: .alert,
+									 sourceView: nil)
 		}
 	}
 }

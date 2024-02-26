@@ -97,6 +97,7 @@ class SettingsViewController: BaseViewController
 	
 	@IBAction private func didTapDeleteAccountButton() {
 		self.interactor.deleteAccount()
+		self.tabBarController?.selectedIndex = 0
 	}
 }
 

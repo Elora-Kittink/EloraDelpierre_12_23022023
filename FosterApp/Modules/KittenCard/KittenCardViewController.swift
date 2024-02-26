@@ -154,6 +154,17 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 		}
 		navigationController?.pushViewController(vc, animated: true)
 	}
+	
+	@IBAction private func didTapMedicalHistory() {
+		let continueAction = AlertAction(title: "Continuer", style: .default, completion: {})
+		
+		AlertManager.shared.show(actions: [continueAction],
+								 title: "WIP",
+								 message: "Implémentation future",
+								 alignment: .center,
+								 preferredStyle: .alert,
+								 sourceView: nil)
+	}
 }
 
 // MARK: - Storyboard Protocol Conformance
