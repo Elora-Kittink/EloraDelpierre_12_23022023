@@ -36,10 +36,13 @@ class LoginViewController: BaseViewController<LoginViewModel,
 	/// Refreshes the UI with new data stored in the ViewModel.
     override func refreshUI() {
 		if self.viewModel.needToClose {
+			self.viewModel.needToClose = false
 			self.dismiss(animated: true) {
 				NotificationCenter.default.post(name: NSNotification.Name("userLogged"), object: nil)
 			}
 		}
+		
+		super.refreshUI()
     }
     
     // MARK: - Actions

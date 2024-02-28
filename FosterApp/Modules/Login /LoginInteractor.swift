@@ -32,7 +32,6 @@ class LoginInteractor: Interactor
 		Task {
 			do {
 				let user = try await self.userWorker.login(email: email, password: password)
-				self.presenter.display()
 			} catch {
 				print(error)
 			}

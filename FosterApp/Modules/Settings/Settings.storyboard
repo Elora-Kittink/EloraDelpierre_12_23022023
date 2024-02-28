@@ -236,6 +236,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Changer l'icone de l'application"/>
                                                         <connections>
+                                                            <action selector="didTapEditAppIconButton" destination="37f-pZ-dt5" eventType="touchUpInside" id="ARz-f6-zz0"/>
                                                             <action selector="didTapEditAppIconButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DUy-Js-jJv"/>
                                                         </connections>
                                                     </button>
@@ -248,6 +249,7 @@
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didTapEditButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Fra-rl-uVe"/>
+                                                            <action selector="didTapEditButton" destination="37f-pZ-dt5" eventType="touchUpInside" id="Y2b-P1-1bA"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqx-Db-Wz4" customClass="ButtonPink" customModule="FosterApp" customModuleProvider="target">
@@ -255,6 +257,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Se deconnecter"/>
                                                         <connections>
+                                                            <action selector="logOut" destination="37f-pZ-dt5" eventType="touchUpInside" id="OMZ-y7-uN0"/>
                                                             <action selector="logOut" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SIN-a4-ODT"/>
                                                         </connections>
                                                     </button>
@@ -263,6 +266,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Supprimer mon compte"/>
                                                         <connections>
+                                                            <action selector="didTapDeleteAccountButton" destination="37f-pZ-dt5" eventType="touchUpInside" id="8kO-tj-wwt"/>
                                                             <action selector="didTapDeleteAccountButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hrf-fl-bXY"/>
                                                         </connections>
                                                     </button>

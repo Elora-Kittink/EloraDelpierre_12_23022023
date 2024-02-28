@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -29,10 +28,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fQN-8T-Kdm">
-                                                        <rect key="frame" x="24" y="143" width="345" height="33"/>
+                                                        <rect key="frame" x="24" y="142" width="345" height="34"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date de sauvetage" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnA-w9-dAD" userLabel="Rescue date Label">
-                                                                <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="33"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="34"/>
                                                                 <accessibility key="accessibilityConfiguration">
                                                                     <bool key="isElement" value="NO"/>
                                                                 </accessibility>
@@ -41,32 +40,27 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="21/09/2023" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Kp-Vq-zad" userLabel="Rescue Date text field" customClass="DatePickerField" customModule="FosterApp">
-                                                                <rect key="frame" x="252" y="0.0" width="93" height="33"/>
+                                                                <rect key="frame" x="252" y="0.0" width="93" height="34"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Dvh-sF-WkF">
-                                                        <rect key="frame" x="281.66666666666669" y="8" width="87.333333333333314" height="111"/>
+                                                        <rect key="frame" x="281.66666666666669" y="8" width="87.333333333333314" height="110"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FZ-kj-SKr" userLabel="favorite Button">
-                                                                <rect key="frame" x="0.0" y="0.0" width="87.333333333333329" height="34.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.333333333333329" height="34"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <color key="tintColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal">
-                                                                    <color key="titleColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <imageReference key="image" image="star.fill" catalog="system" symbolScale="small"/>
-                                                                </state>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Favoris">
-                                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
-                                                                </buttonConfiguration>
+                                                                <state key="normal" title="Favoris"/>
                                                                 <connections>
                                                                     <action selector="makeItFavorite" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GRy-Ct-5Wq"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNA-gf-pzQ" userLabel="Edit Button">
-                                                                <rect key="frame" x="0.0" y="38.333333333333329" width="87.333333333333329" height="34.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="38" width="87.333333333333329" height="34"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <color key="tintColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -75,14 +69,13 @@
                                                                 </state>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Editer">
                                                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
-                                                                    <color key="baseForegroundColor" systemColor="tintColor"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="editLitter" destination="Y6W-OH-hqX" eventType="touchUpInside" id="riz-ha-jw7"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDD-pb-jhi" userLabel="Archive Button">
-                                                                <rect key="frame" x="0.0" y="76.666666666666657" width="87.333333333333329" height="34.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="76" width="87.333333333333329" height="34"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <color key="tintColor" red="0.88627451660000001" green="0.70588237050000002" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -179,12 +172,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="beigeClear">
             <color red="0.99599999189376831" green="0.98000001907348633" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

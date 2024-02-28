@@ -78,7 +78,6 @@ struct UserWorker: UserWorkerProtocol {
 	/// Checks if a user is currently connected.
 	/// - Returns: A `User` object if a user is connected, otherwise `nil`.
 	func userConnected() -> User? {
-		
 		guard let currentUser = Auth.auth().currentUser else {
 			print("👹 No current user connected")
 			return nil
