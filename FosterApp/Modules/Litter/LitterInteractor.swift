@@ -16,19 +16,20 @@ class LitterInteractor: Interactor
     LitterPresenter
 > {
     
-    let worker = DBWorker()
-    
+    let DBworker = DBWorker()
+	var userWorker: UserWorkerProtocol = UserWorker()
+	
 	/// Archives a specific litter.
 	/// - Parameter litterId: The identifier of the litter to be archived.
 	func archiveLitter(litterId: String) {
-		worker.archiveLitter(litterId: litterId)
+		DBworker.archiveLitter(litterId: litterId)
 		self.presenter.display(loader: false)
 	}
 
 	/// Marks a specific litter as favorite.
 	/// - Parameter litterId: The identifier of the litter to be marked as favorite.
 	func makeFavorite(litterId: String) {
-		worker.makeFavorite(litterId: litterId)
+		DBworker.makeFavorite(litterId: litterId)
 		self.presenter.display(loader: false)
 	}
     
@@ -80,7 +81,7 @@ class LitterInteractor: Interactor
 				self.presenter.display(loader: false)
 				return
 			}
-			worker.updateLitterDB(litterId: litterId, rescueDate: rescueDate)
+			DBworker.updateLitterDB(litterId: litterId, rescueDate: rescueDate)
 		} else {
 			guard let rescueDate else {
 				AlertManager.shared.show(actions: [AlertAction(title: "Erreur", style: .default)], message: "Vous devez saisir une date")
@@ -88,7 +89,9 @@ class LitterInteractor: Interactor
 				return
 			}
 			
-			let newLitter = worker.createNewLitter(rescueDate: rescueDate)
+			guard let user = userWorker.retrieveUser() else { return }
+			
+			let newLitter = DBworker.createNewLitter(rescueDate: rescueDate, user: user)
 			self.presenter.display(loader: false)
 			self.refresh(litterId: newLitter?.id)
 		}
@@ -98,10 +101,10 @@ class LitterInteractor: Interactor
 	/// - Parameter litterId: The identifier of the litter to be refreshed.
 	func refresh(litterId: String?) {
         Task {
-            guard let litter = worker.fetchLitterFromId(litterId: litterId ?? "") else {
+            guard let litter = DBworker.fetchLitterFromId(litterId: litterId ?? "") else {
                 return
             }
-            let kittens = worker.fetchAllKittensLitter(litterId: litterId ?? "")
+            let kittens = DBworker.fetchAllKittensLitter(litterId: litterId ?? "")
             self.presenter.displayMode(type: LitterLayoutStyle.displaying,
                                        rescueDate: litter.rescueDate?.toDate(format: "dd/MM/yyyy"),
                                        litterId: litterId,

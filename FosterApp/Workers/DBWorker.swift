@@ -86,9 +86,6 @@ struct DBWorker {
         try? CoreDataManager.default.save()
     }
     
-    
-    
-    
 	// MARK: - Litter Operations
 	
 	/// Fetches a litter from the database using its ID.
@@ -111,8 +108,7 @@ struct DBWorker {
 	/// Fetches all litters associated with a user from the database.
 	/// - Parameter userId: The unique identifier of the user.
 	/// - Returns: An array of `Litter` objects if found.
-    func fetchAllLitters() -> [Litter] {
-		guard let user = userWorker.retrieveUser() else { return [] }
+	func fetchAllLitters(user: User) -> [Litter] {
 		let predicate = NSPredicate(format: "a_userId == %@", user.id)
         let litters = DB_Litter.getAll(predicate: predicate)
 
@@ -142,15 +138,15 @@ struct DBWorker {
 	///   - rescueDate: The date of rescue for the new litter.
 	///   - user: The `User` associated with the new litter.
 	/// - Returns: An optional `Litter` object if creation is successful.
-    func createNewLitter(rescueDate: Date) -> Litter? {
-		guard let user = userWorker.retrieveUser() else { return nil }
+	func createNewLitter(rescueDate: Date, user: User) -> Litter? {
+		
 		guard let newLitter = DB_Litter.create(rescueDate: rescueDate, userId: user.id) else {
             print("👹 Worker fail create DB Litter")
             return nil
         }
 		
         try? CoreDataManager.default.save()
-        print("💃🏼 Worker succeed create \(String(describing: newLitter.a_id)) litter")
+		print("💃🏼 Worker succeed create \(String(describing: newLitter.a_id)) litter of user \(user.mail)")
         return Litter(from: newLitter)
     }
     

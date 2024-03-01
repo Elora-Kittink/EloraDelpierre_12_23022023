@@ -12,7 +12,6 @@ class HomeInteractor: Interactor
 	HomeViewModel,
 	HomePresenter
 > {
-	let worker = DBWorker()
 	var userWorker: UserWorkerProtocol = UserWorker()
 	
 	/// Checks if a user is currently connected and updates the UI accordingly.
@@ -20,7 +19,7 @@ class HomeInteractor: Interactor
 		// Implementation of user connection check.
 		Task {
 			do {
-				guard let firebaseUser = try await self.userWorker.userConnected() 
+				guard let _ = try await self.userWorker.userConnected() 
 				else {
 					self.presenter.noUserConnected()
 					self.presenter.display(loader: false)

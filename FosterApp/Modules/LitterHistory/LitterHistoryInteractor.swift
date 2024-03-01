@@ -11,12 +11,15 @@ class LitterHistoryInteractor: Interactor
 > {
     
     let worker = DBWorker()
+	var userWorker: UserWorkerProtocol = UserWorker()
     
 	/// Refreshes the litter history for a given user.
 	/// - Parameter user: The `User` for whom the litter history is being refreshed.
     func refresh() {
         Task {
-            let litters = worker.fetchAllLitters()
+			guard let user = userWorker.retrieveUser() else { return }
+			
+			let litters = worker.fetchAllLitters(user: user)
             self.presenter.display(litters: litters)
             self.presenter.display(loader: false)
         }

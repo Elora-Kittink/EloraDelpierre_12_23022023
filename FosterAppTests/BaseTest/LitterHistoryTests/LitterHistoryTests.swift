@@ -10,11 +10,49 @@ import CoreDataUtilsKit
 @testable import FosterApp
 
 final class LitterHistoryTests: XCTestCase {
-    let user = User(mail: "UT", id: "UT", name: "UT")
-    let litter = Litter(isOngoing: true, rescueDate: "UT")
+	
+	struct MockUserWorker: UserWorkerProtocol {
+		
+		func logOut() {
+			print("logOut")
+		}
+		
+		func deleteAccount() {
+			print("deleteAccount")
+		}
+		
+		func storeUserInUserDefaults(user: FosterApp.User) {
+			print("storeUserInUserDefaults")
+		}
+		
+		func retrieveUser() -> FosterApp.User? {
+			FosterApp.User(mail: "TEST", id: "TEST", name: "TEST")
+		}
+		
+		func userConnected() async throws -> FosterApp.User? {
+			FosterApp.User(mail: "TEST", id: "TEST", name: "TEST")
+		}
+		
+		func signUp(mail: String, password: String) async throws -> FosterApp.User {
+			FosterApp.User(mail: "TEST", id: "TEST", name: "TEST")
+		}
+		
+		func login(email: String, password: String) async throws -> FosterApp.User {
+			User(mail: "TEST", id: "TEST", name: "TEST")
+		}
+	}
+	
+    let user = User(mail: "TEST", id: "TEST", name: "TEST")
+    let litter = Litter(isOngoing: true, rescueDate: "TEST")
 	let date = Date(timeIntervalSinceNow: TimeInterval(floatLiteral: 10))
     let worker = DBWorker()
     
+//	override func setUpWithError() throws {
+//		super.setUp()
+//		try? CoreDataManager.default.dropDatabase()
+//		worker.createNewLitter(rescueDate: date, user: self.user)
+//	}
+	
 //    func testFailNoUser() async throws {
 //        try CoreDataManager.default.dropDatabase()
 //        let test = await BaseTest<LitterHistoryViewModel, LitterHistoryPresenter, LitterHistoryInteractor>()
@@ -30,17 +68,20 @@ final class LitterHistoryTests: XCTestCase {
 //        }
 //    }
     
+	
     func testSuccessFetchAll() async throws {
         try CoreDataManager.default.dropDatabase()
-        
-        let DBLitter = worker.createNewLitter(rescueDate: date)
 
         try CoreDataManager.default.save()
 
+//		worker.createNewLitter(rescueDate: date, user: self.user)
+		
         let test = await BaseTest<LitterHistoryViewModel, LitterHistoryPresenter, LitterHistoryInteractor>()
         
         await test.fire { interactor in
             DispatchQueue.main.async {
+				self.worker.createNewLitter(rescueDate: self.date, user: self.user)
+				interactor.userWorker = MockUserWorker()
                 interactor.refresh()
             }
         }
@@ -53,11 +94,11 @@ final class LitterHistoryTests: XCTestCase {
     func testSuccesRefreshCell() async throws {
         try CoreDataManager.default.dropDatabase()
         
-        let DBLitter = try XCTUnwrap(worker.createNewLitter(rescueDate: date))
+		let DBLitter = try XCTUnwrap(worker.createNewLitter(rescueDate: date, user: self.user))
         
-		let kitten = Kitten(id: "UT",
+		let kitten = Kitten(id: "TEST",
                             litter: DBLitter,
-                            firstName: "Test",
+                            firstName: "TEST",
                             secondName: nil,
                             birthdate: nil,
                             sex: nil,
@@ -88,7 +129,7 @@ final class LitterHistoryTests: XCTestCase {
         }
 
         DispatchQueue.main.async {
-            XCTAssertEqual(test.viewModel.kittenList, "Test")
+            XCTAssertEqual(test.viewModel.kittenList, "TEST")
         }
     }
     

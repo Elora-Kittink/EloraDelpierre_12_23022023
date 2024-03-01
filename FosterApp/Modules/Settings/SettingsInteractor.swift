@@ -29,7 +29,8 @@ class SettingsInteractor: Interactor
 				
 //				get all kittens & all weighings
 				
-				let allLitters = worker.fetchAllLitters()
+				guard let user = userWorker.retrieveUser() else { return }
+				let allLitters = worker.fetchAllLitters(user: user)
 				   
 				   let allKittens = allLitters.compactMap { litter in
 					   worker.fetchAllKittensLitter(litterId: litter.id ?? "")

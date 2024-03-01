@@ -12,10 +12,41 @@ import CoreDataUtilsKit
 
 final class KittenCardTests: XCTestCase {
 	
+	struct MockUserWorker: UserWorkerProtocol {
+		
+		func logOut() {
+			print("logOut")
+		}
+		
+		func deleteAccount() {
+			print("deleteAccount")
+		}
+		
+		func storeUserInUserDefaults(user: FosterApp.User) {
+			print("storeUserInUserDefaults")
+		}
+		
+		func retrieveUser() -> FosterApp.User? {
+			FosterApp.User(mail: "TEST", id: "ID", name: "TEST")
+		}
+		
+		func userConnected() async throws -> FosterApp.User? {
+			FosterApp.User(mail: "TEST", id: "ID", name: "TEST")
+		}
+		
+		func signUp(mail: String, password: String) async throws -> FosterApp.User {
+			FosterApp.User(mail: "TEST", id: "ID", name: "TEST")
+		}
+		
+		func login(email: String, password: String) async throws -> FosterApp.User {
+			User(mail: "TEST", id: "ID", name: "TEST")
+		}
+	}
+	
 	let DBworker = DBWorker()
 	let userWorker = UserWorker()
 	let date = Date(timeIntervalSinceNow: TimeInterval(floatLiteral: 10))
-//	var fetchedUser = User(mail: "TEST", id: "ID", name: "TEST")
+	let user = User(mail: "TEST", id: "TEST", name: "TEST")
 	var fetchedLitter: Litter!
 	var litterId: String!
 	var kittenCreated: Kitten?
@@ -24,9 +55,7 @@ final class KittenCardTests: XCTestCase {
 		try super.setUpWithError()
 		try? CoreDataManager.default.dropDatabase()
 		do {
-			
-//			self.fetchedUser = try XCTUnwrap(self.userWorker.userConnected())
-			let litter = try XCTUnwrap(self.DBworker.createNewLitter(rescueDate: date))
+			let litter = try XCTUnwrap(self.DBworker.createNewLitter(rescueDate: date, user: self.user))
 			self.fetchedLitter = try XCTUnwrap(self.DBworker.fetchLitterFromId(litterId: litter.id ?? ""))
 			self.litterId = try XCTUnwrap(fetchedLitter.id)
 		} catch {
@@ -61,7 +90,7 @@ final class KittenCardTests: XCTestCase {
 			}
 		}
 //		 dead code?
-		let DBlitters = try XCTUnwrap(DBworker.fetchAllLitters())
+		let DBlitters = try XCTUnwrap(DBworker.fetchAllLitters(user: user))
 		
 		DispatchQueue.main.async {
 			XCTAssertEqual(self.kittenCreated?.firstName, "UT")

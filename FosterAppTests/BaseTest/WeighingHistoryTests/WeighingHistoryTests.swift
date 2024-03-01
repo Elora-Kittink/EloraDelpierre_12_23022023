@@ -17,6 +17,7 @@ final class WeighingHistoryTests: XCTestCase {
     var litterId: String!
     var kittenCreated: Kitten!
     var weighingCreated: Weighing?
+	let user = User(mail: "UT", id: "UT", name: "UT")
     
     override func setUpWithError() throws {
         try super.setUpWithError()
@@ -24,7 +25,7 @@ final class WeighingHistoryTests: XCTestCase {
         do {
 //            let createdUser = try XCTUnwrap(worker.createUser(name: "UT", mail: "UT", id: "UT"))
 //            self.fetchedUser = try XCTUnwrap(self.worker.fetchUser(id: createdUser.id))
-            let litter = try XCTUnwrap(self.worker.createNewLitter(rescueDate: date))
+			let litter = try XCTUnwrap(self.worker.createNewLitter(rescueDate: date, user: self.user))
             self.fetchedLitter = try XCTUnwrap(self.worker.fetchLitterFromId(litterId: litter.id ?? ""))
             self.litterId = try XCTUnwrap(fetchedLitter.id)
             self.kittenCreated = try XCTUnwrap(self.worker.createKitten(kitten: Kitten(id: "TEST",
