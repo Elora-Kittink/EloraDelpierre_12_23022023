@@ -115,9 +115,6 @@ extension HomeViewController: UICollectionViewDataSource {
 		self.viewModel.homeTiles.count
 	}
 	
-//	TODO: créer UIcollectionVIewCell custom avec image
-//	Pour le didselectrowat renvoyer vers l'interactor en passant le user qui s'occupera de faire le switch sur les case
-//	et de push les viewcontroller
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
 		guard let item = self.viewModel.homeTiles[safe: indexPath.row]

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		254EFAD2506E36CB75634C55 /* Pods_FosterAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079AD44F9580C27D41EB706 /* Pods_FosterAppTests.framework */; };
-		6794FC8A6FA8CE952A17437F /* Pods_FosterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81990801C67DE0C6FAAB50D /* Pods_FosterApp.framework */; };
+		A42980073ECDDFA625B8E437 /* Pods_FosterApp_FosterAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E310B7868E505A4E7EAB7E /* Pods_FosterApp_FosterAppTests.framework */; };
+		C74098A2F2CD6F878D8BCF81 /* Pods_FosterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51ABE413C1B1C982CC16B5D1 /* Pods_FosterApp.framework */; };
 		D572729F29ACA79100A9C72E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729A29ACA79100A9C72E /* BaseViewController.swift */; };
 		D57272A029ACA79100A9C72E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729B29ACA79100A9C72E /* ViewModel.swift */; };
 		D57272A129ACA79100A9C72E /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729C29ACA79100A9C72E /* Interactor.swift */; };
@@ -43,7 +43,6 @@
 		D581DBD42AF9220A009B61F7 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D581DBD02AF9220A009B61F7 /* SettingsViewModel.swift */; };
 		D581DBD62AF92218009B61F7 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D581DBD52AF92218009B61F7 /* Settings.storyboard */; };
 		D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D585E62329D5DC7300D3ED9C /* Colors.xcassets */; };
-		D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */; };
 		D588684F2B752AA70044DE62 /* AdviceMockSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = D588684E2B752AA70044DE62 /* AdviceMockSuccess.json */; };
 		D58EEC7D2AEFE6C900B24C95 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EEC7C2AEFE6C900B24C95 /* BaseTableViewCell.swift */; };
 		D58EEC812AEFE71700B24C95 /* AdviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58EEC802AEFE71700B24C95 /* AdviceCell.swift */; };
@@ -55,9 +54,7 @@
 		D595EC6429D58E1500200B46 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6029D58E1500200B46 /* SignUpViewController.swift */; };
 		D595EC6529D58E1500200B46 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6129D58E1500200B46 /* SignUpInteractor.swift */; };
 		D595EC6629D58E1500200B46 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6229D58E1500200B46 /* SignUpViewModel.swift */; };
-		D59900CD29F6B62500F0F36D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59900CC29F6B62500F0F36D /* Alerts.swift */; };
 		D599CE2329AFB0C500542F9E /* DBWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599CE2229AFB0C500542F9E /* DBWorker.swift */; };
-		D599DE0A2A151A100004C165 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599DE092A151A100004C165 /* BaseTest.swift */; };
 		D59A680629E856000016F123 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680529E856000016F123 /* User.swift */; };
 		D59AA7CD2A03B205008AF45F /* AdvicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AA7C92A03B205008AF45F /* AdvicesPresenter.swift */; };
 		D59AA7CE2A03B205008AF45F /* AdvicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AA7CA2A03B205008AF45F /* AdvicesViewController.swift */; };
@@ -75,7 +72,6 @@
 		D59DB7F029DAC53B00306F0C /* KittenCardModalInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7EC29DAC53B00306F0C /* KittenCardModalInteractor.swift */; };
 		D59DB7F129DAC53B00306F0C /* KittenCardModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59DB7ED29DAC53B00306F0C /* KittenCardModalViewModel.swift */; };
 		D59F2AFF2B076E440014AD2C /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F2AFE2B076E440014AD2C /* AnalyticsManager.swift */; };
-		D59F2B012B07708E0014AD2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D59F2B002B07708E0014AD2C /* GoogleService-Info.plist */; };
 		D59FF70F2A0A6F5E00147783 /* AdvicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59FF70B2A0A6F5E00147783 /* AdvicePresenter.swift */; };
 		D59FF7102A0A6F5E00147783 /* AdviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59FF70C2A0A6F5E00147783 /* AdviceViewController.swift */; };
 		D59FF7112A0A6F5E00147783 /* AdviceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59FF70D2A0A6F5E00147783 /* AdviceInteractor.swift */; };
@@ -94,9 +90,7 @@
 		D5A125652A2F6B3C00BA69C9 /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A125642A2F6B3C00BA69C9 /* SignUpTests.swift */; };
 		D5A189502ACD81580092B059 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A1894F2ACD81580092B059 /* Tile.swift */; };
 		D5A189552ACD82340092B059 /* Tile.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A189542ACD82340092B059 /* Tile.xib */; };
-		D5AC4B1E2A1E0239008B0C43 /* Extension+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC4B1D2A1E0239008B0C43 /* Extension+UserDefaults.swift */; };
 		D5AC4B212A1E3BC3008B0C43 /* APIRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC4B202A1E3BC3008B0C43 /* APIRequestMock.swift */; };
-		D5B048B42B0BA58600BC2F93 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B048B32B0BA58600BC2F93 /* Loader.swift */; };
 		D5B048BA2B0CB84500BC2F93 /* ChooseAppIconPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B048B62B0CB84500BC2F93 /* ChooseAppIconPresenter.swift */; };
 		D5B048BB2B0CB84500BC2F93 /* ChooseAppIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B048B72B0CB84500BC2F93 /* ChooseAppIconViewController.swift */; };
 		D5B048BC2B0CB84500BC2F93 /* ChooseAppIconInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B048B82B0CB84500BC2F93 /* ChooseAppIconInteractor.swift */; };
@@ -116,7 +110,6 @@
 		D5B5E24929D4697C00A84476 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24529D4697C00A84476 /* LoginViewController.swift */; };
 		D5B5E24A29D4697C00A84476 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24629D4697C00A84476 /* LoginInteractor.swift */; };
 		D5B5E24B29D4697C00A84476 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5E24729D4697C00A84476 /* LoginViewModel.swift */; };
-		D5B5E24F29D46E3C00A84476 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5B5E24E29D46E3C00A84476 /* GoogleService-Info.plist */; };
 		D5C7D9B129F0195900885C48 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7D9B029F0195900885C48 /* Login.storyboard */; };
 		D5C7D9B329F0196C00885C48 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C7D9B229F0196C00885C48 /* SignUp.storyboard */; };
 		D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5E9295029ACFAAC00ACDAEE /* TabBar.storyboard */; };
@@ -137,6 +130,7 @@
 		D5F0C72629A91D2D002A0F65 /* LitterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C72229A91D2D002A0F65 /* LitterInteractor.swift */; };
 		D5F0C72729A91D2D002A0F65 /* LitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0C72329A91D2D002A0F65 /* LitterViewModel.swift */; };
 		D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C72829A91D3C002A0F65 /* Litter.storyboard */; };
+		D5FB37D92B9767B00048060B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D59F2B002B07708E0014AD2C /* GoogleService-Info.plist */; };
 		D5FCBA3229CA09D3008985C9 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FCBA3129CA09D3008985C9 /* DatePickerField.swift */; };
 /* End PBXBuildFile section */
 
@@ -151,11 +145,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14DAA767AF140E2D64A78426 /* Pods-FosterAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterAppTests.release.xcconfig"; path = "Target Support Files/Pods-FosterAppTests/Pods-FosterAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		2079AD44F9580C27D41EB706 /* Pods_FosterAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FosterAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A4D04655A2C7EAB32D6B24A /* Pods-FosterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp.release.xcconfig"; path = "Target Support Files/Pods-FosterApp/Pods-FosterApp.release.xcconfig"; sourceTree = "<group>"; };
-		50A0D4DD42B6EDA0EDCC6221 /* Pods-FosterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp.debug.xcconfig"; path = "Target Support Files/Pods-FosterApp/Pods-FosterApp.debug.xcconfig"; sourceTree = "<group>"; };
-		818E39564CBAC5BC9BB16FAE /* Pods-FosterAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FosterAppTests/Pods-FosterAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1330EC9BCB2E7846ECEC810D /* Pods-FosterApp-FosterAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp-FosterAppTests.release.xcconfig"; path = "Target Support Files/Pods-FosterApp-FosterAppTests/Pods-FosterApp-FosterAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		51ABE413C1B1C982CC16B5D1 /* Pods_FosterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FosterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		740E5CD7247F3D914B9681F9 /* Pods-FosterApp-FosterAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp-FosterAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FosterApp-FosterAppTests/Pods-FosterApp-FosterAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BF46E8B2BB5D8BFCF8500F7 /* Pods-FosterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp.release.xcconfig"; path = "Target Support Files/Pods-FosterApp/Pods-FosterApp.release.xcconfig"; sourceTree = "<group>"; };
+		A072CAA48A92C897CA2EBC47 /* Pods-FosterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp.debug.xcconfig"; path = "Target Support Files/Pods-FosterApp/Pods-FosterApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D572729A29ACA79100A9C72E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D572729B29ACA79100A9C72E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D572729C29ACA79100A9C72E /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -205,9 +199,7 @@
 		D595EC6029D58E1500200B46 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D595EC6129D58E1500200B46 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
 		D595EC6229D58E1500200B46 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		D59900CC29F6B62500F0F36D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		D599CE2229AFB0C500542F9E /* DBWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBWorker.swift; sourceTree = "<group>"; };
-		D599DE092A151A100004C165 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		D59A680529E856000016F123 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D59AA7C92A03B205008AF45F /* AdvicesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesPresenter.swift; sourceTree = "<group>"; };
 		D59AA7CA2A03B205008AF45F /* AdvicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvicesViewController.swift; sourceTree = "<group>"; };
@@ -245,9 +237,7 @@
 		D5A125642A2F6B3C00BA69C9 /* SignUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTests.swift; sourceTree = "<group>"; };
 		D5A1894F2ACD81580092B059 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		D5A189542ACD82340092B059 /* Tile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Tile.xib; sourceTree = "<group>"; };
-		D5AC4B1D2A1E0239008B0C43 /* Extension+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UserDefaults.swift"; sourceTree = "<group>"; };
 		D5AC4B202A1E3BC3008B0C43 /* APIRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestMock.swift; sourceTree = "<group>"; };
-		D5B048B32B0BA58600BC2F93 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		D5B048B62B0CB84500BC2F93 /* ChooseAppIconPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseAppIconPresenter.swift; path = FosterApp/Modules/Settings/ChooseAppIcon/ChooseAppIconPresenter.swift; sourceTree = SOURCE_ROOT; };
 		D5B048B72B0CB84500BC2F93 /* ChooseAppIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseAppIconViewController.swift; path = FosterApp/Modules/Settings/ChooseAppIcon/ChooseAppIconViewController.swift; sourceTree = SOURCE_ROOT; };
 		D5B048B82B0CB84500BC2F93 /* ChooseAppIconInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseAppIconInteractor.swift; path = FosterApp/Modules/Settings/ChooseAppIcon/ChooseAppIconInteractor.swift; sourceTree = SOURCE_ROOT; };
@@ -292,7 +282,7 @@
 		D5F0C72329A91D2D002A0F65 /* LitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterViewModel.swift; sourceTree = "<group>"; };
 		D5F0C72829A91D3C002A0F65 /* Litter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Litter.storyboard; sourceTree = "<group>"; };
 		D5FCBA3129CA09D3008985C9 /* DatePickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
-		D81990801C67DE0C6FAAB50D /* Pods_FosterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FosterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E310B7868E505A4E7EAB7E /* Pods_FosterApp_FosterAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FosterApp_FosterAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,7 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				254EFAD2506E36CB75634C55 /* Pods_FosterAppTests.framework in Frameworks */,
+				A42980073ECDDFA625B8E437 /* Pods_FosterApp_FosterAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,20 +298,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6794FC8A6FA8CE952A17437F /* Pods_FosterApp.framework in Frameworks */,
+				C74098A2F2CD6F878D8BCF81 /* Pods_FosterApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01CC6A7A02B57FBCACDD1D22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51ABE413C1B1C982CC16B5D1 /* Pods_FosterApp.framework */,
+				E5E310B7868E505A4E7EAB7E /* Pods_FosterApp_FosterAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		800CD8B0F644CEEBC7276476 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				50A0D4DD42B6EDA0EDCC6221 /* Pods-FosterApp.debug.xcconfig */,
-				4A4D04655A2C7EAB32D6B24A /* Pods-FosterApp.release.xcconfig */,
-				818E39564CBAC5BC9BB16FAE /* Pods-FosterAppTests.debug.xcconfig */,
-				14DAA767AF140E2D64A78426 /* Pods-FosterAppTests.release.xcconfig */,
+				A072CAA48A92C897CA2EBC47 /* Pods-FosterApp.debug.xcconfig */,
+				9BF46E8B2BB5D8BFCF8500F7 /* Pods-FosterApp.release.xcconfig */,
+				740E5CD7247F3D914B9681F9 /* Pods-FosterApp-FosterAppTests.debug.xcconfig */,
+				1330EC9BCB2E7846ECEC810D /* Pods-FosterApp-FosterAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -353,10 +352,7 @@
 		D57272BC29ACE6CD00A9C72E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				D5B048B22B0BA57900BC2F93 /* Loader */,
 				D59F2AFD2B076E2F0014AD2C /* Analytics */,
-				D599DE082A1519CE0004C165 /* BaseTest */,
-				D5A145FF29BA45BF00E2327B /* Extensions */,
 				D57272BD29ACE6D300A9C72E /* Components */,
 			);
 			path = Helpers;
@@ -368,7 +364,6 @@
 				D5A189512ACD81BB0092B059 /* Tile */,
 				D57272BE29ACE6F600A9C72E /* AddButton.swift */,
 				D5FCBA3129CA09D3008985C9 /* DatePickerField.swift */,
-				D59900CC29F6B62500F0F36D /* Alerts.swift */,
 				D5B48FE32AA1F14B0055C81B /* ButtonPink.swift */,
 				D5B48FE52AA1F4500055C81B /* ButtonBeige.swift */,
 				D58EEC7C2AEFE6C900B24C95 /* BaseTableViewCell.swift */,
@@ -487,14 +482,6 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		D599DE082A1519CE0004C165 /* BaseTest */ = {
-			isa = PBXGroup;
-			children = (
-				D599DE092A151A100004C165 /* BaseTest.swift */,
-			);
-			path = BaseTest;
-			sourceTree = "<group>";
-		};
 		D59AA7C82A03B1DC008AF45F /* Advices */ = {
 			isa = PBXGroup;
 			children = (
@@ -582,14 +569,6 @@
 			path = Workers;
 			sourceTree = "<group>";
 		};
-		D5A145FF29BA45BF00E2327B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				D5AC4B1D2A1E0239008B0C43 /* Extension+UserDefaults.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		D5A1460229BB490600E2327B /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,14 +587,6 @@
 				D5A189542ACD82340092B059 /* Tile.xib */,
 			);
 			path = Tile;
-			sourceTree = "<group>";
-		};
-		D5B048B22B0BA57900BC2F93 /* Loader */ = {
-			isa = PBXGroup;
-			children = (
-				D5B048B32B0BA58600BC2F93 /* Loader.swift */,
-			);
-			path = Loader;
 			sourceTree = "<group>";
 		};
 		D5B048B52B0CB81800BC2F93 /* ChangeAppIcon */ = {
@@ -746,8 +717,8 @@
 				D5B143642A1B5D9C00FA5418 /* FosterAppTests */,
 				D5F0C6F429A90BEA002A0F65 /* Products */,
 				800CD8B0F644CEEBC7276476 /* Pods */,
-				E485B780F421769D7DD67366 /* Frameworks */,
 				D56087F729DB128800F47783 /* Recovered References */,
+				01CC6A7A02B57FBCACDD1D22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -870,15 +841,6 @@
 			path = Litter;
 			sourceTree = "<group>";
 		};
-		E485B780F421769D7DD67366 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D81990801C67DE0C6FAAB50D /* Pods_FosterApp.framework */,
-				2079AD44F9580C27D41EB706 /* Pods_FosterAppTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -886,11 +848,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5B1436B2A1B5D9C00FA5418 /* Build configuration list for PBXNativeTarget "FosterAppTests" */;
 			buildPhases = (
-				F4E67A731579FEB29A8FC724 /* [CP] Check Pods Manifest.lock */,
+				0D7BAE9A1A939F06BDBAF118 /* [CP] Check Pods Manifest.lock */,
 				D5B1435F2A1B5D9C00FA5418 /* Sources */,
 				D5B143602A1B5D9C00FA5418 /* Frameworks */,
 				D5B143612A1B5D9C00FA5418 /* Resources */,
-				BF7E6C5F06C9731CC08704CD /* [CP] Embed Pods Frameworks */,
+				F52E166BA14521A9EA1E7638 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -906,12 +868,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5F0C70729A90BEF002A0F65 /* Build configuration list for PBXNativeTarget "FosterApp" */;
 			buildPhases = (
-				FE98689C5E00CC1C8D532041 /* [CP] Check Pods Manifest.lock */,
+				BA60900A9F4A2A2C3D47E0B0 /* [CP] Check Pods Manifest.lock */,
 				D56087F829DB145B00F47783 /* Swiftlint */,
 				D5F0C6EF29A90BEA002A0F65 /* Sources */,
 				D5F0C6F029A90BEA002A0F65 /* Frameworks */,
 				D5F0C6F129A90BEA002A0F65 /* Resources */,
-				D667D0DCFDCBEF9C4FA69122 /* [CP] Embed Pods Frameworks */,
+				DA8D21A9831DEB8D9E78836E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -975,19 +937,15 @@
 			files = (
 				D59FF7142A0A6F6900147783 /* Advice.storyboard in Resources */,
 				D5C7D9B129F0195900885C48 /* Login.storyboard in Resources */,
-				D59F2B012B07708E0014AD2C /* GoogleService-Info.plist in Resources */,
 				D593BD9B29DF0617005D8673 /* InfoCardView.xib in Resources */,
 				D5B048BF2B0CB87800BC2F93 /* ChooseAppIcon.storyboard in Resources */,
 				D581DBD62AF92218009B61F7 /* Settings.storyboard in Resources */,
 				D5E9295129ACFAAC00ACDAEE /* TabBar.storyboard in Resources */,
 				D576F5772A5B1BA00004AF60 /* AddWeight.storyboard in Resources */,
 				D57272D529ACF50100A9C72E /* Home.storyboard in Resources */,
-				D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */,
-				D585E62F29D5DFCD00D3ED9C /* KittenCardModal.storyboard in Resources */,
 				D5C7D9B329F0196C00885C48 /* SignUp.storyboard in Resources */,
 				D576F5752A5B1B8E0004AF60 /* WeighingList.storyboard in Resources */,
 				D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */,
-				D5B5E24F29D46E3C00A84476 /* GoogleService-Info.plist in Resources */,
 				D5A189552ACD82340092B059 /* Tile.xib in Resources */,
 				D59431852AF1405300A13187 /* NavBar.storyboard in Resources */,
 				D57272CA29ACEAD700A9C72E /* LitterHistory.storyboard in Resources */,
@@ -996,6 +954,7 @@
 				D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */,
 				D59AA7D22A03B221008AF45F /* Advices.storyboard in Resources */,
 				D5F0C70029A90BEF002A0F65 /* Assets.xcassets in Resources */,
+				D5FB37D92B9767B00048060B /* GoogleService-Info.plist in Resources */,
 				D58EEC832AEFEA9C00B24C95 /* AdviceCell.xib in Resources */,
 				D5B143762A1B94B800FA5418 /* AdvicesResponseFail.json in Resources */,
 				D585E62429D5DC7300D3ED9C /* Colors.xcassets in Resources */,
@@ -1005,59 +964,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BF7E6C5F06C9731CC08704CD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FosterAppTests/Pods-FosterAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FosterAppTests/Pods-FosterAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FosterAppTests/Pods-FosterAppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D56087F829DB145B00F47783 /* Swiftlint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint > /dev/null; then\n    swiftlint\nelse\n    echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		D667D0DCFDCBEF9C4FA69122 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F4E67A731579FEB29A8FC724 /* [CP] Check Pods Manifest.lock */ = {
+		0D7BAE9A1A939F06BDBAF118 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1072,14 +979,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FosterAppTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FosterApp-FosterAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FE98689C5E00CC1C8D532041 /* [CP] Check Pods Manifest.lock */ = {
+		BA60900A9F4A2A2C3D47E0B0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1099,6 +1006,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D56087F829DB145B00F47783 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint; then\n    swiftlint\nelse\n  echo \"error: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		DA8D21A9831DEB8D9E78836E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F52E166BA14521A9EA1E7638 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FosterApp-FosterAppTests/Pods-FosterApp-FosterAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FosterApp-FosterAppTests/Pods-FosterApp-FosterAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FosterApp-FosterAppTests/Pods-FosterApp-FosterAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1159,7 +1119,6 @@
 				D59D09B929DD6B6300813B35 /* InfoCardViewModel.swift in Sources */,
 				D59D09B729DD6B6300813B35 /* InfoCardView.swift in Sources */,
 				D5F0C71229A90D85002A0F65 /* KittenCardPresenter.swift in Sources */,
-				D5B048B42B0BA58600BC2F93 /* Loader.swift in Sources */,
 				D5B5E24929D4697C00A84476 /* LoginViewController.swift in Sources */,
 				D5B048BD2B0CB84500BC2F93 /* ChooseAppIconViewModel.swift in Sources */,
 				D59AA7CE2A03B205008AF45F /* AdvicesViewController.swift in Sources */,
@@ -1168,13 +1127,11 @@
 				D57272C529ACEAB900A9C72E /* LitterHistoryPresenter.swift in Sources */,
 				D595EC6329D58E1500200B46 /* SignUpPresenter.swift in Sources */,
 				D5A073C429AE10CD00202F0A /* DB_Weighing.swift in Sources */,
-				D599DE0A2A151A100004C165 /* BaseTest.swift in Sources */,
 				D5B143722A1B693A00FA5418 /* APIRequest.swift in Sources */,
 				D5E9295729AD16B700ACDAEE /* FosterApp.xcdatamodeld in Sources */,
 				D57272C729ACEAB900A9C72E /* LitterHistoryInteractor.swift in Sources */,
 				D576F5702A5B1B7F0004AF60 /* AddWeightPresenter.swift in Sources */,
 				D57272C829ACEAB900A9C72E /* LitterHistoryViewModel.swift in Sources */,
-				D5AC4B1E2A1E0239008B0C43 /* Extension+UserDefaults.swift in Sources */,
 				D58EEC812AEFE71700B24C95 /* AdviceCell.swift in Sources */,
 				D576F5722A5B1B7F0004AF60 /* AddWeightInteractor.swift in Sources */,
 				D57272D029ACF4F200A9C72E /* HomePresenter.swift in Sources */,
@@ -1216,7 +1173,6 @@
 				D59AA7D02A03B205008AF45F /* AdvicesViewModel.swift in Sources */,
 				D5B048BA2B0CB84500BC2F93 /* ChooseAppIconPresenter.swift in Sources */,
 				D595EC6429D58E1500200B46 /* SignUpViewController.swift in Sources */,
-				D59900CD29F6B62500F0F36D /* Alerts.swift in Sources */,
 				D57272D229ACF4F200A9C72E /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1245,7 +1201,7 @@
 /* Begin XCBuildConfiguration section */
 		D5B143692A1B5D9C00FA5418 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 818E39564CBAC5BC9BB16FAE /* Pods-FosterAppTests.debug.xcconfig */;
+			baseConfigurationReference = 740E5CD7247F3D914B9681F9 /* Pods-FosterApp-FosterAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1268,7 +1224,7 @@
 		};
 		D5B1436A2A1B5D9C00FA5418 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14DAA767AF140E2D64A78426 /* Pods-FosterAppTests.release.xcconfig */;
+			baseConfigurationReference = 1330EC9BCB2E7846ECEC810D /* Pods-FosterApp-FosterAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1339,7 +1295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1393,7 +1349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1405,7 +1361,7 @@
 		};
 		D5F0C70829A90BEF002A0F65 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50A0D4DD42B6EDA0EDCC6221 /* Pods-FosterApp.debug.xcconfig */;
+			baseConfigurationReference = A072CAA48A92C897CA2EBC47 /* Pods-FosterApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon4 AppIcon3 AppIcon2 AppIcon1";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
@@ -1414,6 +1370,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TD554J24WN;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FosterApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1432,6 +1390,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1440,7 +1399,7 @@
 		};
 		D5F0C70929A90BEF002A0F65 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A4D04655A2C7EAB32D6B24A /* Pods-FosterApp.release.xcconfig */;
+			baseConfigurationReference = 9BF46E8B2BB5D8BFCF8500F7 /* Pods-FosterApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon4 AppIcon3 AppIcon2 AppIcon1";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
@@ -1467,6 +1426,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

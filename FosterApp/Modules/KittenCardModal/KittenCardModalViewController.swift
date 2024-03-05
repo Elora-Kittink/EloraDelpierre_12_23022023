@@ -106,14 +106,17 @@ class KittenCardModalViewController: BaseViewController
 	/// Refreshes the UI with new data stored in the ViewModel.
 	override func refreshUI() {
 //		Notification after saved new kitten or updated kitten
-		let userInfo: [AnyHashable: Any] = ["kitten": self.viewModel.kitten]
-        if self.viewModel.needToClose {
-            self.dismiss(animated: true) {
-				if self.isEditingMode {
-					NotificationCenter.default.post(name: NSNotification.Name("kittenUpdated"), object: nil, userInfo: userInfo)
-				} 
-            }
-        }
+		
+		if let kitten = self.viewModel.kitten {
+			let userInfo: [AnyHashable: Any] = ["kitten": kitten]
+			if self.viewModel.needToClose {
+				self.dismiss(animated: true) {
+					if self.isEditingMode {
+						NotificationCenter.default.post(name: NSNotification.Name("kittenUpdated"), object: nil, userInfo: userInfo)
+					}
+				}
+			}
+		}
 		super.refreshUI()
         
         self.nameField.text = self.viewModel.firstName

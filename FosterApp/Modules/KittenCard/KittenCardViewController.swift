@@ -156,7 +156,7 @@ class KittenCardViewController: BaseViewController<KittenCardViewModel, KittenCa
 	}
 	
 	@IBAction private func didTapMedicalHistory() {
-		let continueAction = AlertAction(title: "Continuer", style: .default, completion: {})
+		let continueAction = AlertAction(title: "Continuer", style: .default) { }
 		
 		AlertManager.shared.show(actions: [continueAction],
 								 title: "WIP",

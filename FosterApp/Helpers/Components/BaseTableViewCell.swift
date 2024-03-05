@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-// TODO: indispensable? commenter
 class BaseTableViewCell: UITableViewCell {
 	
 	// MARK: - Localize

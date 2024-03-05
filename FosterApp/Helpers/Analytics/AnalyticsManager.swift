@@ -34,7 +34,5 @@ class AnalyticsManager {
 	func log(event: AnalyticsEventTypes, with parameters: [String: String] = [:]) {
 		Analytics.logEvent(event.rawValue,
 						   parameters: parameters)
-//		TODO: créér un log dans ce style
-		print("\(event.rawValue) - \(parameters.values)")
 	}
 }

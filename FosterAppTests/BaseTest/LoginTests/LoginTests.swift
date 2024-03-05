@@ -11,21 +11,15 @@ import CoreDataUtilsKit
 final class LoginTests: XCTestCase {
 
 	struct MockUserWorker: UserWorkerProtocol {
-		func storeUserInUserDefaults(user: FosterApp.User) {
-			
-		}
+		func storeUserInUserDefaults(user: FosterApp.User) { }
 		
 		func retrieveUser() -> FosterApp.User? {
 			FosterApp.User(mail: "", id: "", name: "")
 		}
 		
-		func logOut() {
-			
-		}
+		func logOut() { }
 		
-		func deleteAccount() {
-			
-		}
+		func deleteAccount() { }
 		
 		func userConnected() async throws -> FosterApp.User? {
 			FosterApp.User(mail: "", id: "", name: "")

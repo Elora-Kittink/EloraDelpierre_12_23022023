@@ -36,7 +36,7 @@ class HomeInteractor: Interactor
 	
 	/// Handles the selection of a tile on the Home screen.
 	func didSelectTile(tileType: Tiles, user: User) {
-		let continueAction = AlertAction(title: "Continuer", style: .default, completion: {})
+		let continueAction = AlertAction(title: "Continuer", style: .default) { }
 		
 		// Implementation of tile selection handling.
 		switch tileType {

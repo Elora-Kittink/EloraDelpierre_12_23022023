@@ -8,11 +8,9 @@
 import Foundation
 import CoreDataUtilsKit
 
-//	MARK: - WIP - future release
+// MARK: - WIP - future release
 
 extension DB_Adopter: CoreDataModel {
     public static var primaryKey: String { "a_id" }
     public static var entityName: String { "DB_Adopter" }
 }
-
-

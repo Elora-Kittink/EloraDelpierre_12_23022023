@@ -7,7 +7,7 @@
 
 import Foundation
 
-//	MARK:  WIP - future release
+// MARK: - WIP - future release
 
 struct Vaccine: Equatable {
     

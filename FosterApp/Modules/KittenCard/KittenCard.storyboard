@@ -25,29 +25,29 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7bQ-qR-cZY" userLabel="Name PE Stack View">
-                                                <rect key="frame" x="136" y="32" width="225" height="136"/>
+                                                <rect key="frame" x="136" y="32" width="225" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCZ-NU-7MW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="225" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="225" height="29.333333333333332"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbU-fz-fGP" userLabel="Second Name Label">
-                                                        <rect key="frame" x="0.0" y="62" width="225" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="41.333333333333343" width="225" height="0.0"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NX2-HB-w9p">
-                                                        <rect key="frame" x="0.0" y="74" width="225" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="53.333333333333343" width="225" height="0.0"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWO-Yg-33D" userLabel="Tattoo Label">
-                                                        <rect key="frame" x="0.0" y="86" width="225" height="50"/>
+                                                        <rect key="frame" x="0.0" y="65.333333333333343" width="225" height="14.666666666666671"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -72,7 +72,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lmh-a2-VUh">
-                                                <rect key="frame" x="32" y="200" width="329" height="212"/>
+                                                <rect key="frame" x="32" y="144" width="329" height="212"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PhU-br-Pd4" userLabel="Info Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="329" height="76"/>
@@ -203,7 +203,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgE-ct-n1I" userLabel="Weighing" customClass="ButtonBeige" customModule="FosterApp" customModuleProvider="target">
-                                                <rect key="frame" x="141.33333333333334" y="460.33333333333337" width="110.66666666666666" height="28.333333333333314"/>
+                                                <rect key="frame" x="141.33333333333334" y="404.33333333333331" width="110.66666666666666" height="28.333333333333314"/>
                                                 <color key="tintColor" red="0.41260569920000001" green="0.32607037100000003" blue="0.31085404420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Nouvelle pesée">
@@ -214,9 +214,9 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="qi4-Nd-jtn" userLabel="History Stack View">
-                                                <rect key="frame" x="32" y="512.66666666666663" width="329" height="80"/>
+                                                <rect key="frame" x="32" y="456.66666666666663" width="329" height="80"/>
                                                 <subviews>
-                                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nk-Rw-3rD">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2nk-Rw-3rD">
                                                         <rect key="frame" x="0.0" y="0.0" width="152" height="80"/>
                                                         <color key="backgroundColor" red="0.88627451660000001" green="0.81960785390000002" blue="0.69019609689999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="tintColor" systemColor="systemBrownColor"/>
@@ -245,6 +245,9 @@ médical</string>
                                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                                             <color key="baseForegroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didTapMedicalHistory" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5F5-0Z-NMx"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1to-kT-LOz">
                                                         <rect key="frame" x="177" y="0.0" width="152" height="80"/>
@@ -279,7 +282,7 @@ des pesées</string>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wy-7u-n1R" userLabel="Edit">
-                                                <rect key="frame" x="143" y="424" width="107.33333333333331" height="28.333333333333314"/>
+                                                <rect key="frame" x="143" y="368" width="107.33333333333331" height="28.333333333333314"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Editer">
@@ -307,6 +310,7 @@ des pesées</string>
                                             <constraint firstItem="qi4-Nd-jtn" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="eJ4-Yl-cWg"/>
                                             <constraint firstItem="lmh-a2-VUh" firstAttribute="leading" secondItem="2yy-RG-8D2" secondAttribute="leading" constant="32" id="hPw-YH-Ttc"/>
                                             <constraint firstItem="lmh-a2-VUh" firstAttribute="top" secondItem="7bQ-qR-cZY" secondAttribute="bottom" constant="32" id="hef-Po-FFh"/>
+                                            <constraint firstItem="3eK-db-H3v" firstAttribute="centerY" secondItem="7bQ-qR-cZY" secondAttribute="centerY" id="lPM-sI-28C"/>
                                             <constraint firstItem="i15-QH-pNQ" firstAttribute="top" secondItem="2yy-RG-8D2" secondAttribute="top" constant="32" id="mOF-jK-Spm"/>
                                             <constraint firstAttribute="trailing" secondItem="7bQ-qR-cZY" secondAttribute="trailing" constant="32" id="oRU-SS-qQi"/>
                                             <constraint firstAttribute="trailing" secondItem="qi4-Nd-jtn" secondAttribute="trailing" constant="32" id="s6W-Lm-VTj"/>
@@ -371,7 +375,7 @@ des pesées</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
