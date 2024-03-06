@@ -4,7 +4,7 @@ P12 Foster App
 
 # Foster App
 
-FosterApp is an orphan kitten management application for cat rescue associations. It lets you create and save kittens, record medical and administrative follow-up and provide breeding advice. In particular, you can keep track of each kitten's weight gain and meals, to make sure they are progressing well. 
+FosterApp is a proof of concept (POC) orphan kitten management application designed for cat rescue associations. It enables users to create and save kitten profiles, record medical and administrative follow-ups, and provide breeding advice. Specifically, the app allows for tracking each kitten's weight gain and meals to ensure their healthy progression.
 
 This application was developed as part of a work-study programme, so it was decided to use the company's architecture and libraries. 
 
