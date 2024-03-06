@@ -4,7 +4,7 @@ use_frameworks!
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '14.0'
 
-target 'FosterApp' do
+abstract_target 'Project' do
 	pod 'NetworkUtilsKit'
 	pod 'UtilsKit'
 	pod 'SDWebImage'
@@ -18,7 +18,9 @@ target 'FosterApp' do
 	pod 'FirebaseAnalytics'
 	pod 'FirebaseCrashlytics'
 	
-	target 'FosterAppTests' do
+	target 'FosterApp' do
+		target 'FosterAppTests' do
+		end
 	end
 end
 

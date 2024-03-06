@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A42980073ECDDFA625B8E437 /* Pods_FosterApp_FosterAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E310B7868E505A4E7EAB7E /* Pods_FosterApp_FosterAppTests.framework */; };
-		C74098A2F2CD6F878D8BCF81 /* Pods_FosterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51ABE413C1B1C982CC16B5D1 /* Pods_FosterApp.framework */; };
+		6777F2F30CC55D8D24284180 /* Pods_Project_FosterApp_FosterAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65AADB9893E0B04C9668442 /* Pods_Project_FosterApp_FosterAppTests.framework */; };
 		D572729F29ACA79100A9C72E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729A29ACA79100A9C72E /* BaseViewController.swift */; };
 		D57272A029ACA79100A9C72E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729B29ACA79100A9C72E /* ViewModel.swift */; };
 		D57272A129ACA79100A9C72E /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572729C29ACA79100A9C72E /* Interactor.swift */; };
@@ -132,6 +131,7 @@
 		D5F0C72929A91D3C002A0F65 /* Litter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0C72829A91D3C002A0F65 /* Litter.storyboard */; };
 		D5FB37D92B9767B00048060B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D59F2B002B07708E0014AD2C /* GoogleService-Info.plist */; };
 		D5FCBA3229CA09D3008985C9 /* DatePickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FCBA3129CA09D3008985C9 /* DatePickerField.swift */; };
+		ED2EC33899734FA54CFC8547 /* Pods_Project_FosterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCB7ED4C434E604D896E939 /* Pods_Project_FosterApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,10 +146,12 @@
 
 /* Begin PBXFileReference section */
 		1330EC9BCB2E7846ECEC810D /* Pods-FosterApp-FosterAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp-FosterAppTests.release.xcconfig"; path = "Target Support Files/Pods-FosterApp-FosterAppTests/Pods-FosterApp-FosterAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		51ABE413C1B1C982CC16B5D1 /* Pods_FosterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FosterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		740E5CD7247F3D914B9681F9 /* Pods-FosterApp-FosterAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp-FosterAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FosterApp-FosterAppTests/Pods-FosterApp-FosterAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BF46E8B2BB5D8BFCF8500F7 /* Pods-FosterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp.release.xcconfig"; path = "Target Support Files/Pods-FosterApp/Pods-FosterApp.release.xcconfig"; sourceTree = "<group>"; };
 		A072CAA48A92C897CA2EBC47 /* Pods-FosterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FosterApp.debug.xcconfig"; path = "Target Support Files/Pods-FosterApp/Pods-FosterApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A93909089E88A84EB305591B /* Pods-Project-FosterApp-FosterAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-FosterApp-FosterAppTests.debug.xcconfig"; path = "Target Support Files/Pods-Project-FosterApp-FosterAppTests/Pods-Project-FosterApp-FosterAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C65AADB9893E0B04C9668442 /* Pods_Project_FosterApp_FosterAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_FosterApp_FosterAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04109E8E199CB0BB2D4F154 /* Pods-Project-FosterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-FosterApp.debug.xcconfig"; path = "Target Support Files/Pods-Project-FosterApp/Pods-Project-FosterApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D572729A29ACA79100A9C72E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D572729B29ACA79100A9C72E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D572729C29ACA79100A9C72E /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -282,7 +284,9 @@
 		D5F0C72329A91D2D002A0F65 /* LitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitterViewModel.swift; sourceTree = "<group>"; };
 		D5F0C72829A91D3C002A0F65 /* Litter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Litter.storyboard; sourceTree = "<group>"; };
 		D5FCBA3129CA09D3008985C9 /* DatePickerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerField.swift; sourceTree = "<group>"; };
-		E5E310B7868E505A4E7EAB7E /* Pods_FosterApp_FosterAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FosterApp_FosterAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB43F7B0BA5BEACDE230B01B /* Pods-Project-FosterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-FosterApp.release.xcconfig"; path = "Target Support Files/Pods-Project-FosterApp/Pods-Project-FosterApp.release.xcconfig"; sourceTree = "<group>"; };
+		E4524D0491089584272380C5 /* Pods-Project-FosterApp-FosterAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-FosterApp-FosterAppTests.release.xcconfig"; path = "Target Support Files/Pods-Project-FosterApp-FosterAppTests/Pods-Project-FosterApp-FosterAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		FDCB7ED4C434E604D896E939 /* Pods_Project_FosterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_FosterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,7 +294,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A42980073ECDDFA625B8E437 /* Pods_FosterApp_FosterAppTests.framework in Frameworks */,
+				6777F2F30CC55D8D24284180 /* Pods_Project_FosterApp_FosterAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +302,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C74098A2F2CD6F878D8BCF81 /* Pods_FosterApp.framework in Frameworks */,
+				ED2EC33899734FA54CFC8547 /* Pods_Project_FosterApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +312,8 @@
 		01CC6A7A02B57FBCACDD1D22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				51ABE413C1B1C982CC16B5D1 /* Pods_FosterApp.framework */,
-				E5E310B7868E505A4E7EAB7E /* Pods_FosterApp_FosterAppTests.framework */,
+				FDCB7ED4C434E604D896E939 /* Pods_Project_FosterApp.framework */,
+				C65AADB9893E0B04C9668442 /* Pods_Project_FosterApp_FosterAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -321,6 +325,10 @@
 				9BF46E8B2BB5D8BFCF8500F7 /* Pods-FosterApp.release.xcconfig */,
 				740E5CD7247F3D914B9681F9 /* Pods-FosterApp-FosterAppTests.debug.xcconfig */,
 				1330EC9BCB2E7846ECEC810D /* Pods-FosterApp-FosterAppTests.release.xcconfig */,
+				D04109E8E199CB0BB2D4F154 /* Pods-Project-FosterApp.debug.xcconfig */,
+				DB43F7B0BA5BEACDE230B01B /* Pods-Project-FosterApp.release.xcconfig */,
+				A93909089E88A84EB305591B /* Pods-Project-FosterApp-FosterAppTests.debug.xcconfig */,
+				E4524D0491089584272380C5 /* Pods-Project-FosterApp-FosterAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -979,7 +987,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FosterApp-FosterAppTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Project-FosterApp-FosterAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1001,7 +1009,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FosterApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Project-FosterApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1033,15 +1041,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Project-FosterApp/Pods-Project-FosterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Project-FosterApp/Pods-Project-FosterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FosterApp/Pods-FosterApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Project-FosterApp/Pods-Project-FosterApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F52E166BA14521A9EA1E7638 /* [CP] Embed Pods Frameworks */ = {
@@ -1050,15 +1058,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FosterApp-FosterAppTests/Pods-FosterApp-FosterAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Project-FosterApp-FosterAppTests/Pods-Project-FosterApp-FosterAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FosterApp-FosterAppTests/Pods-FosterApp-FosterAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Project-FosterApp-FosterAppTests/Pods-Project-FosterApp-FosterAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FosterApp-FosterAppTests/Pods-FosterApp-FosterAppTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Project-FosterApp-FosterAppTests/Pods-Project-FosterApp-FosterAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1201,12 +1209,13 @@
 /* Begin XCBuildConfiguration section */
 		D5B143692A1B5D9C00FA5418 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 740E5CD7247F3D914B9681F9 /* Pods-FosterApp-FosterAppTests.debug.xcconfig */;
+			baseConfigurationReference = A93909089E88A84EB305591B /* Pods-Project-FosterApp-FosterAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N99GL92MJ5;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
@@ -1215,6 +1224,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1224,7 +1234,7 @@
 		};
 		D5B1436A2A1B5D9C00FA5418 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1330EC9BCB2E7846ECEC810D /* Pods-FosterApp-FosterAppTests.release.xcconfig */;
+			baseConfigurationReference = E4524D0491089584272380C5 /* Pods-Project-FosterApp-FosterAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1238,6 +1248,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1361,7 +1372,7 @@
 		};
 		D5F0C70829A90BEF002A0F65 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A072CAA48A92C897CA2EBC47 /* Pods-FosterApp.debug.xcconfig */;
+			baseConfigurationReference = D04109E8E199CB0BB2D4F154 /* Pods-Project-FosterApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon4 AppIcon3 AppIcon2 AppIcon1";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
@@ -1399,7 +1410,7 @@
 		};
 		D5F0C70929A90BEF002A0F65 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BF46E8B2BB5D8BFCF8500F7 /* Pods-FosterApp.release.xcconfig */;
+			baseConfigurationReference = DB43F7B0BA5BEACDE230B01B /* Pods-Project-FosterApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon4 AppIcon3 AppIcon2 AppIcon1";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
