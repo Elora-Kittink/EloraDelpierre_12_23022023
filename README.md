@@ -8,6 +8,8 @@ FosterApp is an orphan kitten management application for cat rescue associations
 
 This application was developed as part of a work-study programme, so it was decided to use the company's architecture and libraries. 
 
+<p align="center"><img src="FosterApp_Screenshot/Simulator Screenshot - iPhone 15 - 2024-03-04 at 15.20.24.png" height="500"><img src="FosterApp_Screenshot/Simulator Screenshot - iPhone 15 - 2024-03-04 at 15.21.21.png" height="500"><img src="FosterApp_Screenshot/Simulator Screenshot - iPhone 15 - 2024-03-04 at 15.22.38.png" height="500"><img src="FosterApp_Screenshot/Simulator Screenshot - iPhone 15 - 2024-03-04 at 15.24.03.png" height="500"><img src="FosterApp_Screenshot/Simulator Screenshot - iPhone 15 - 2024-03-04 at 15.25.26.png" height="500"><img src="FosterApp_Screenshot/Simulator Screenshot - iPhone 15 - 2024-03-04 at 15.26.08.png" height="500"><img src="FosterApp_Screenshot/Simulator Screenshot - iPhone 15 - 2024-03-04 at 15.27.32.png" height="500"></p>
+
 ## Pods 
 
   <a href="https://github.com/rgmc95/UtilsKit"><img alt="Swift" src="https://img.shields.io/badge/UtilsKit-02569B?style=flat-square"
