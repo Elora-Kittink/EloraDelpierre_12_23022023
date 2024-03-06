@@ -439,7 +439,7 @@
 		D581DBCC2AF921B2009B61F7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				D5B048B52B0CB81800BC2F93 /* ChangeAppIcon */,
+				D5B048B52B0CB81800BC2F93 /* ChooseAppIcon */,
 				D581DBCE2AF9220A009B61F7 /* SettingsViewController.swift */,
 				D581DBCF2AF9220A009B61F7 /* SettingsInteractor.swift */,
 				D581DBCD2AF9220A009B61F7 /* SettingsPresenter.swift */,
@@ -597,7 +597,7 @@
 			path = Tile;
 			sourceTree = "<group>";
 		};
-		D5B048B52B0CB81800BC2F93 /* ChangeAppIcon */ = {
+		D5B048B52B0CB81800BC2F93 /* ChooseAppIcon */ = {
 			isa = PBXGroup;
 			children = (
 				D5B048B72B0CB84500BC2F93 /* ChooseAppIconViewController.swift */,
@@ -606,7 +606,7 @@
 				D5B048B92B0CB84500BC2F93 /* ChooseAppIconViewModel.swift */,
 				D5B048BE2B0CB87800BC2F93 /* ChooseAppIcon.storyboard */,
 			);
-			path = ChangeAppIcon;
+			path = ChooseAppIcon;
 			sourceTree = "<group>";
 		};
 		D5B143642A1B5D9C00FA5418 /* FosterAppTests */ = {
