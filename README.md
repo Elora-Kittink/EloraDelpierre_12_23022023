@@ -59,3 +59,6 @@ This version of Clean Architecture omits the abstraction layer of protocols, dir
 ## Install
 
 Install pods and run
+```bash
+pod install
+```
