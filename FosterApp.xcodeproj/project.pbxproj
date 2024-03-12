@@ -55,6 +55,7 @@
 		D595EC6629D58E1500200B46 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D595EC6229D58E1500200B46 /* SignUpViewModel.swift */; };
 		D599CE2329AFB0C500542F9E /* DBWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D599CE2229AFB0C500542F9E /* DBWorker.swift */; };
 		D59A680629E856000016F123 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A680529E856000016F123 /* User.swift */; };
+		D59A82E22BA0AFCC00559A2C /* KittenCardModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D585E62E29D5DFCD00D3ED9C /* KittenCardModal.storyboard */; };
 		D59AA7CD2A03B205008AF45F /* AdvicesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AA7C92A03B205008AF45F /* AdvicesPresenter.swift */; };
 		D59AA7CE2A03B205008AF45F /* AdvicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AA7CA2A03B205008AF45F /* AdvicesViewController.swift */; };
 		D59AA7CF2A03B205008AF45F /* AdvicesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59AA7CB2A03B205008AF45F /* AdvicesInteractor.swift */; };
@@ -958,6 +959,7 @@
 				D59431852AF1405300A13187 /* NavBar.storyboard in Resources */,
 				D57272CA29ACEAD700A9C72E /* LitterHistory.storyboard in Resources */,
 				D5F0C70329A90BEF002A0F65 /* LaunchScreen.storyboard in Resources */,
+				D59A82E22BA0AFCC00559A2C /* KittenCardModal.storyboard in Resources */,
 				D588684F2B752AA70044DE62 /* AdviceMockSuccess.json in Resources */,
 				D5F0C71A29A90E48002A0F65 /* KittenCard.storyboard in Resources */,
 				D59AA7D22A03B221008AF45F /* Advices.storyboard in Resources */,

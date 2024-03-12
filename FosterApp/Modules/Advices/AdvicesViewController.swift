@@ -74,7 +74,7 @@ extension AdvicesViewController: UITableViewDataSource, UITableViewDelegate {
 		// Implementation to create and return the header view
 		let section = self.viewModel.sections?.sections[section]
 		let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 100))
-		
+		view.backgroundColor = .white
 		let label = UILabel(frame: CGRect(x: 15, y: 0, width: view.frame.width - 15, height: 40))
 		label.font = UIFont.systemFont(ofSize: 28)
 		label.text = section?.sectionTitle
